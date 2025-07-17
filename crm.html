@@ -1,22 +1,59 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VOKA CRM</title>
 </head>
-<body style="font-family: Arial, sans-serif; padding: 20px; background-color: #eef2f5;">
-  <h1>VOKA CRM – Gestion intelligente de tes clients</h1>
-  <p>Bienvenue dans ton CRM VOKA. Ici tu pourras :</p>
-  <ul>
-    <li>Gérer ta base de clients</li>
-    <li>Envoyer des relances automatiques</li>
-    <li>Voir l’historique de contact</li>
-    <li>Activer le bot de relance ou le bot prospecteur</li>
-    <li>Suivre les leads chauds, tièdes ou froids</li>
-  </ul>
-  <p>Prochaine mise à jour : intégration des bots IA et du tableau dynamique.</p>
+<body style="font-family: Arial, sans-serif; padding: 20px; background-color: #f8f8f8;">
+  <h1>📇 VOKA CRM</h1>
+  <p>Gère tes prospects, clients et automatisations.</p>
 
-  <a href="dashboard.html" style="margin-top: 30px; display: inline-block;">⬅ Retour au Dashboard</a>
+  <h3>🧾 Liste des clients/prospects</h3>
+  <table border="1" cellpadding="8" cellspacing="0" style="background-color: #fff;">
+    <thead>
+      <tr>
+        <th>Nom</th>
+        <th>Email</th>
+        <th>Statut</th>
+        <th>Dernière relance</th>
+        <th>Action</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Jean Dupuis</td>
+        <td>jean@example.com</td>
+        <td>Prospect</td>
+        <td>Il y a 3 jours</td>
+        <td><button>📨 Relancer</button></td>
+      </tr>
+      <!-- ➕ Ajouter d’autres lignes automatiquement -->
+    </tbody>
+  </table>
+
+  <h3>⚙️ Robot de relance automatique</h3>
+  <p>Configure les délais de relance :</p>
+  <label>Relancer après combien de jours ?</label>
+  <input type="number" min="1" max="30" value="3" /> jours<br/><br/>
+  <button>✅ Activer les relances</button>
+
+  <h3>📧 Modèle de courriel intelligent</h3>
+  <textarea rows="6" cols="70">
+Bonjour [NOM],
+
+Nous avons remarqué que vous n’aviez pas encore profité de votre accès VOKA. Avez-vous besoin d’aide ou d’un bonus de relance ?
+
+👉 Cliquez ici pour réserver votre appel : [LIEN]
+
+Bien à vous,  
+L’équipe VOKA
+  </textarea>
+
+  <p>✔️ Ce courriel est conforme aux lois anti-pourriel du Canada / Europe</p>
+
+  <br/><br/>
+  <a href="dashboard.html">⬅ Retour au Dashboard</a>
 </body>
 </html>
+
