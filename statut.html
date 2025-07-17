@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOKA - Statut d’Élévation</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function recommanderUpsell() {
+      const statut = document.getElementById("forfait").value;
+      const recommandation = document.getElementById("recommandation");
+      let message = "";
+
+      switch (statut) {
+        case "start":
+          message = "🎯 Tu es au forfait Découverte. Passe au forfait SIGNATURE pour débloquer ton dashboard complet, CFO, CRM, bots IA et vidéos illimitées.";
+          break;
+        case "signature":
+          message = "🚀 Tu es au forfait SIGNATURE. Pour exploser ton audience et ton accompagnement, pense au forfait EMPIRE (5 vidéos/semaine + optimisation premium).";
+          break;
+        case "empire":
+          message = "👑 Tu es au forfait EMPIRE. Si tu veux un branding VIP 100 % personnalisé, l'étape suivante est le forfait VIP sur mesure.";
+          break;
+        case "vip":
+          message = "🔥 Tu es au sommet de l’univers VOKA. Bienvenue dans le cercle privé des Visionnaires.";
+          break;
+        default:
+          message = "Sélectionne ton forfait pour voir une suggestion d’élévation.";
+      }
+
+      recommandation.innerText = message;
+    }
+  </script>
+</head>
+<body>
+
+  <header><h1>VOKA Dashboard</h1></header>
+
+  <nav>
+    <ul>
+      <li><a href="dashboard.html">Accueil</a></li>
+      <li><a href="formulaire.html">Formulaire</a></li>
+      <li><a href="statut.html" class="active">Statut d’Élévation</a></li>
+      <li><a href="cfo.html">VOKA CFO</a></li>
+      <li><a href="crm.html">VOKA CRM</a></li>
+      <li><a href="bots.html">VOKA Bots</a></li>
+      <li><a href="videos.html">VOKA Vidéos</a></li>
+      <li><a href="tunnel.html">VOKA Tunnel</a></li>
+      <li><a href="calendrier.html">VOKA Calendrier</a></li>
+      <li><a href="ressources.html">VOKA Ressources</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>📶 Statut d’Élévation</h2>
+      <p>Découvre ta position actuelle et l'étape supérieure pour faire grandir ton business avec VOKA.</p>
+
+      <label for="forfait">Sélectionne ton forfait actuel :</label>
+      <select id="forfait" onchange="recommanderUpsell()">
+        <option value="">-- Choisir --</option>
+        <option value="start">Découverte (Start-Up)</option>
+        <option value="signature">Signature</option>
+        <option value="empire">Empire</option>
+        <option value="vip">VIP</option>
+      </select>
+
+      <div id="recommandation" style="margin-top: 30px; background-color: #1a1a1a; padding: 20px; border-left: 5px solid #00baff;">
+        <p>Sélectionne ton forfait pour recevoir un conseil stratégique.</p>
+      </div>
+
+      <p style="margin-top: 20px; color: #888;">
+        En version 2.0, ce robot se déclenchera automatiquement selon les données d’utilisation et les performances du client.
+      </p>
+    </section>
+  </main>
+
+</body>
+</html>
