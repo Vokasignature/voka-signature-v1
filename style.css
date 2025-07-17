@@ -1,4 +1,4 @@
-/* VOKA - Style futuriste Iron Man */
+/* VOKA - Style futuriste premium officiel */
 
 body {
   margin: 0;
@@ -12,13 +12,13 @@ header {
   background-color: #0f0f0f;
   padding: 20px;
   text-align: center;
-  border-bottom: 2px solid #00c3ff;
+  border-bottom: 2px solid #00baff;
 }
 
 header h1 {
   font-size: 2rem;
-  color: #00c3ff;
-  text-shadow: 0 0 8px #00c3ff;
+  color: #00baff;
+  text-shadow: 0 0 8px #00baff;
 }
 
 nav {
@@ -29,7 +29,7 @@ nav {
   top: 0;
   left: 0;
   padding-top: 40px;
-  border-right: 2px solid #00c3ff;
+  border-right: 2px solid #00baff;
 }
 
 nav ul {
@@ -42,7 +42,7 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #00c3ff;
+  color: #00baff;
   text-decoration: none;
   font-weight: bold;
   padding: 10px 20px;
@@ -54,9 +54,9 @@ nav ul li a {
 nav ul li a:hover,
 nav ul li a.active {
   background-color: #1a1a1a;
-  border-left: 4px solid #ff4c4c;
+  border-left: 4px solid #ff3d3d;
   color: #ffffff;
-  box-shadow: inset 5px 0 10px #ff4c4c;
+  box-shadow: inset 5px 0 10px #ff3d3d;
 }
 
 main {
@@ -68,15 +68,15 @@ section {
   background-color: #1a1a1a;
   padding: 30px;
   border-radius: 16px;
-  box-shadow: 0 0 15px #00c3ff33;
+  box-shadow: 0 0 15px #00baff33;
   margin-bottom: 40px;
 }
 
 h2 {
-  color: #ff4c4c;
+  color: #00baff;
   font-size: 1.8rem;
   margin-bottom: 20px;
-  text-shadow: 0 0 4px #ff4c4c;
+  text-shadow: 0 0 4px #00baff;
 }
 
 p, label {
@@ -89,7 +89,7 @@ input, select, textarea, button {
   padding: 12px;
   margin: 10px 0;
   border-radius: 8px;
-  border: 1px solid #00c3ff;
+  border: 1px solid #00baff;
   background-color: #0a0a0a;
   color: #ffffff;
   width: 100%;
@@ -98,12 +98,12 @@ input, select, textarea, button {
 
 input:focus, textarea:focus, select:focus {
   outline: none;
-  border-color: #ff4c4c;
-  box-shadow: 0 0 10px #ff4c4c66;
+  border-color: #ff3d3d;
+  box-shadow: 0 0 10px #ff3d3d66;
 }
 
 button {
-  background-color: #00c3ff;
+  background-color: #00baff;
   color: #000;
   border: none;
   cursor: pointer;
@@ -112,15 +112,15 @@ button {
 }
 
 button:hover {
-  background-color: #ff4c4c;
+  background-color: #ff3d3d;
   color: #fff;
-  box-shadow: 0 0 10px #ff4c4c;
+  box-shadow: 0 0 10px #ff3d3d;
 }
 
 footer {
   text-align: center;
   padding: 20px;
-  border-top: 2px solid #00c3ff;
+  border-top: 2px solid #00baff;
   background-color: #0f0f0f;
   margin-top: 60px;
   color: #888;
@@ -147,11 +147,12 @@ footer {
   margin-left: -110px;
   opacity: 0;
   transition: opacity 0.3s;
-  box-shadow: 0 0 10px #00c3ff66;
+  box-shadow: 0 0 10px #00baff66;
 }
 
 .tooltip:hover .tooltiptext {
   visibility: visible;
   opacity: 1;
 }
+
 
