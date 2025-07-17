@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulaire Client VOKA</title>
+  <style>
+    body {
+      background-color: #111;
+      color: white;
+      font-family: Arial, sans-serif;
+      padding: 40px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #fff;
+    }
+
+    form {
+      max-width: 600px;
+      margin: auto;
+      background-color: #222;
+      padding: 30px;
+      border-radius: 15px;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      margin-bottom: 5px;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      border-radius: 8px;
+      border: none;
+      margin-bottom: 15px;
+    }
+
+    input[type="file"] {
+      background-color: #444;
+      color: white;
+    }
+
+    button {
+      background-color: #00c6ff;
+      border: none;
+      padding: 12px 20px;
+      color: white;
+      font-size: 16px;
+      border-radius: 10px;
+      cursor: pointer;
+      width: 100%;
+    }
+
+    button:hover {
+      background-color: #008fd4;
+    }
+  </style>
+</head>
+<body>
+
+  <h1>Activation de ton Univers VOKA</h1>
+
+  <form action="https://formspree.io/f/mwkgykyo" method="POST" enctype="multipart/form-data">
+    <label for="nom">Nom de ton entreprise</label>
+    <input type="text" name="nom" required>
+
+    <label for="niche">Secteur / Niche</label>
+    <input type="text" name="niche" required>
+
+    <label for="slogan">Slogan (facultatif)</label>
+    <input type="text" name="slogan">
+
+    <label for="logo">Téléverse ton logo (.png, .jpg)</label>
+    <input type="file" name="logo" accept="image/*">
+
+    <label for="script">Texte à dire dans ta vidéo (ou idée principale)</label>
+    <textarea name="script" rows="4" placeholder="Écris ici ce que tu veux dire dans ta vidéo..."></textarea>
+
+    <label for="audio">OU enregistre ta voix</label>
+    <input type="file" name="audio" accept="audio/*">
+
+    <button type="submit">🚀 Lancer mon univers VOKA</button>
+  </form>
+
+</body>
+</html>
