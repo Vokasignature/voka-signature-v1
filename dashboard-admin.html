@@ -8,7 +8,7 @@
   <script>
     function mettreAJourProgression() {
       const objectif = 25000;
-      const actuel = 18460; // ← À modifier manuellement si tu veux tester
+      const actuel = 20000; // ← À modifier manuellement si tu veux tester
       const barre = document.getElementById("barre");
       const pourcentage = Math.min((actuel / objectif) * 100, 100).toFixed(1);
       barre.style.width = pourcentage + "%";
