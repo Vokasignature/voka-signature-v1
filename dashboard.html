@@ -2,71 +2,65 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <title>Dashboard VOKA Signature</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard VOKA</title>
   <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
     body {
+      margin: 0;
+      font-family: Arial, sans-serif;
       display: flex;
-      font-family: sans-serif;
-      background: #0d0d0d;
-      color: white;
-      height: 100vh;
     }
 
     .sidebar {
-      width: 240px;
-      background: #1a1a1a;
-      padding: 2rem 1rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-      box-shadow: 5px 0 10px rgba(0,0,0,0.3);
-    }
-
-    .onglet {
-      background: #2f2f2f;
-      padding: 1rem;
-      border-radius: 8px;
+      width: 230px;
+      height: 100vh;
+      background-color: #111;
       color: white;
+      padding-top: 20px;
+      position: fixed;
+    }
+
+    .sidebar h2 {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .sidebar a {
+      display: block;
+      color: white;
+      padding: 12px 20px;
       text-decoration: none;
-      font-weight: bold;
-      transition: 0.3s;
     }
 
-    .onglet:hover {
-      background: #4b2cff;
+    .sidebar a:hover {
+      background-color: #444;
     }
 
-    .content {
+    .main {
+      margin-left: 230px;
+      padding: 20px;
       flex: 1;
-      padding: 2rem;
-    }
-
-    h1 {
-      margin-bottom: 2rem;
     }
   </style>
 </head>
 <body>
   <div class="sidebar">
-    <a class="onglet" href="#">📊 VOKA CFO</a>
-    <a class="onglet" href="#">🤖 VOKA CRM</a>
-    <a class="onglet" href="#">📹 VOKA Vidéo</a>
-    <a class="onglet" href="#">🧠 VOKA Bots</a>
-    <a class="onglet" href="#">🚀 Tunnel 8.0</a>
-    <a class="onglet" href="#">🗓️ Calendrier</a>
-    <a class="onglet" href="#">📁 Ressources</a>
-    <a class="onglet" href="#">🌟 Témoignage</a>
-    <a class="onglet" href="#">🎁 Boutique</a>
+    <h2>VOKA</h2>
+    <a href="#">Accueil</a>
+    <a href="#">VOKA CFO</a>
+    <a href="#">VOKA CRM</a>
+    <a href="#">VOKA Vidéo</a>
+    <a href="#">VOKA Bots</a>
+    <a href="#">VOKA Tunnel</a>
+    <a href="#">VOKA Calendrier</a>
+    <a href="#">VOKA Ressources</a>
+    <a href="#">VOKA Témoignages</a>
+    <a href="#">VOKA Boutique</a>
   </div>
-  <div class="content">
-    <h1>Bienvenue dans votre Dashboard VOKA Signature ✨</h1>
-    <p>Sélectionnez un onglet à gauche pour commencer.</p>
+
+  <div class="main">
+    <h1>Bienvenue dans VOKA Signature 1.0</h1>
+    <p>Sélectionne une section dans le menu à gauche.</p>
   </div>
 </body>
 </html>
