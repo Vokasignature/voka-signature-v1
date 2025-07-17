@@ -4,38 +4,56 @@
   <meta charset="UTF-8" />
   <title>Dashboard VOKA Signature</title>
   <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
+      display: flex;
+      font-family: sans-serif;
       background: #0d0d0d;
       color: white;
-      font-family: sans-serif;
-      text-align: center;
-      padding: 2rem;
+      height: 100vh;
     }
-    .menu {
+
+    .sidebar {
+      width: 240px;
+      background: #1a1a1a;
+      padding: 2rem 1rem;
       display: flex;
-      flex-wrap: wrap;
+      flex-direction: column;
       gap: 1rem;
-      justify-content: center;
-      margin-top: 2rem;
+      box-shadow: 5px 0 10px rgba(0,0,0,0.3);
     }
+
     .onglet {
-      padding: 1rem 2rem;
       background: #2f2f2f;
-      border-radius: 12px;
+      padding: 1rem;
+      border-radius: 8px;
       color: white;
       text-decoration: none;
       font-weight: bold;
-      box-shadow: 0 0 10px #4b2cff88;
+      transition: 0.3s;
     }
+
     .onglet:hover {
       background: #4b2cff;
-      transition: 0.3s;
+    }
+
+    .content {
+      flex: 1;
+      padding: 2rem;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
     }
   </style>
 </head>
 <body>
-  <h1>Bienvenue dans votre Dashboard VOKA Signature ✨</h1>
-  <div class="menu">
+  <div class="sidebar">
     <a class="onglet" href="#">📊 VOKA CFO</a>
     <a class="onglet" href="#">🤖 VOKA CRM</a>
     <a class="onglet" href="#">📹 VOKA Vidéo</a>
@@ -46,5 +64,10 @@
     <a class="onglet" href="#">🌟 Témoignage</a>
     <a class="onglet" href="#">🎁 Boutique</a>
   </div>
+  <div class="content">
+    <h1>Bienvenue dans votre Dashboard VOKA Signature ✨</h1>
+    <p>Sélectionnez un onglet à gauche pour commencer.</p>
+  </div>
 </body>
 </html>
+
