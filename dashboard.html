@@ -1,12 +1,55 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html>
   <head>
     <meta charset="UTF-8" />
-    <title>Dashboard VOKA</title>
+    <title>Tableau de bord VOKA</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        display: flex;
+        background-color: #0a0a0a;
+        color: white;
+      }
+      .sidebar {
+        width: 240px;
+        background-color: #111111;
+        height: 100vh;
+        padding-top: 30px;
+        box-shadow: 2px 0 10px rgba(255, 255, 255, 0.05);
+      }
+      .sidebar a {
+        display: block;
+        padding: 14px 24px;
+        color: white;
+        text-decoration: none;
+        border-bottom: 1px solid #222;
+      }
+      .sidebar a:hover {
+        background-color: #1a1a1a;
+      }
+      .main {
+        flex: 1;
+        padding: 40px;
+      }
+    </style>
   </head>
-  <body style="font-family: sans-serif; text-align: center; padding: 2rem;">
-    <h1>Bienvenue dans ton Dashboard</h1>
-    <p>Ta plateforme personnalisée arrive très bientôt...</p>
-    <a href="index.html">← Retour à l’accueil</a>
+  <body>
+    <div class="sidebar">
+      <a href="#">🏠 Accueil</a>
+      <a href="#">📹 VOKA Vidéo</a>
+      <a href="#">📊 VOKA CFO</a>
+      <a href="#">🤖 VOKA CRM</a>
+      <a href="#">🌀 Tunnel de vente</a>
+      <a href="#">📚 Bibliothèque</a>
+      <a href="#">🌐 Ressources</a>
+      <a href="#">🗣️ Témoignage</a>
+      <a href="#">💎 Récompenses</a>
+      <a href="#">👤 Mon profil</a>
+    </div>
+    <div class="main">
+      <h1>Bienvenue dans ton Dashboard VOKA Signature</h1>
+      <p>Clique sur les menus à gauche pour naviguer.</p>
+    </div>
   </body>
 </html>
