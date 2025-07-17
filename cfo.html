@@ -6,95 +6,45 @@
   <style>
     body {
       font-family: Arial, sans-serif;
+      background-color: #f9f9f9;
       padding: 40px;
-      background-color: #f5f5f5;
+      margin: 0;
     }
 
-    .box {
-      background-color: white;
+    .container {
+      background-color: #ffffff;
+      padding: 40px;
       border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.1);
-      padding: 30px;
-      max-width: 600px;
-      margin: auto;
+      box-shadow: 0 0 15px rgba(0,0,0,0.08);
+      max-width: 700px;
+      margin: 100px auto;
+      text-align: center;
     }
 
     h1 {
-      color: #5C4BFF;
+      font-size: 30px;
+      margin-bottom: 16px;
     }
 
-    label {
-      display: block;
-      margin-top: 20px;
-      font-weight: bold;
+    p {
+      font-size: 18px;
+      line-height: 1.6;
     }
 
-    input {
-      width: 100%;
-      padding: 12px;
-      border-radius: 8px;
-      border: 1px solid #ccc;
-      margin-top: 8px;
-    }
-
-    .resultat {
-      margin-top: 30px;
-      background-color: #eef;
-      padding: 20px;
-      border-radius: 8px;
+    .icon {
+      font-size: 48px;
+      margin-bottom: 20px;
     }
   </style>
 </head>
 <body>
-
-  <div class="box">
-    <h1>📊 VOKA CFO — Estimation de base</h1>
-
-    <label>Revenus mensuels estimés ($) :
-      <input type="number" id="revenus" placeholder="Ex: 5000">
-    </label>
-
-    <label>Dépenses mensuelles ($) :
-      <input type="number" id="depenses" placeholder="Ex: 1500">
-    </label>
-
-    <label>Taxes (%) :
-      <input type="number" id="taxes" placeholder="Ex: 15">
-    </label>
-
-    <div class="resultat" id="resultat">
-      👉 Remplis les champs ci-dessus pour voir ton estimation.
-    </div>
+  <div class="container">
+    <div class="icon">💼</div>
+    <h1>VOKA CFO — Suivi Financier Intelligent</h1>
+    <p>Suivez vos dépenses, revenus, marges et projections automatiquement.</p>
+    <p>Un outil stratégique pour éviter les erreurs et maximiser vos profits.</p>
+    <p>(Ne remplace pas un CPA — outil d’estimation intelligent)</p>
   </div>
-
-  <script>
-    const revenus = document.getElementById('revenus');
-    const depenses = document.getElementById('depenses');
-    const taxes = document.getElementById('taxes');
-    const resultat = document.getElementById('resultat');
-
-    function calculer() {
-      const r = parseFloat(revenus.value) || 0;
-      const d = parseFloat(depenses.value) || 0;
-      const t = parseFloat(taxes.value) || 0;
-
-      const revenuNet = r - d;
-      const taxesAPayer = (revenuNet * t) / 100;
-      const profitFinal = revenuNet - taxesAPayer;
-
-      resultat.innerHTML = `
-        💰 Revenu net : ${revenuNet.toFixed(2)} $<br>
-        🧾 Taxes estimées : ${taxesAPayer.toFixed(2)} $<br>
-        ✅ Profit final : ${profitFinal.toFixed(2)} $
-      `;
-    }
-
-    revenus.addEventListener('input', calculer);
-    depenses.addEventListener('input', calculer);
-    taxes.addEventListener('input', calculer);
-  </script>
-
 </body>
 </html>
-
 
