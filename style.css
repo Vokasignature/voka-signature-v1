@@ -1,62 +1,69 @@
 body {
   margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+  color: #f9f9f9;
   font-family: 'Segoe UI', 'Roboto', sans-serif;
-  background-color: #0d0d0d;
-  color: #f5f5f5;
   line-height: 1.6;
 }
 
-nav {
-  width: 220px;
-  height: 100vh;
-  background-color: #111;
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 40px 20px;
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  box-shadow: 3px 0 20px rgba(0, 0, 0, 0.7);
+.voka-header {
+  text-align: center;
+  padding: 80px 20px 40px;
+  background: linear-gradient(145deg, #111111, #1a1a1a);
+  border-bottom: 1px solid #333;
 }
 
-nav a {
-  color: #f5f5f5;
+.voka-title {
+  font-size: 48px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 10px;
+  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.voka-subtitle {
+  font-size: 20px;
+  color: #aaa;
+  margin-bottom: 40px;
+}
+
+.voka-button {
+  padding: 14px 28px;
+  background-color: #ff0077;
+  color: #fff;
+  font-weight: bold;
   text-decoration: none;
-  padding: 12px 16px;
-  border-radius: 8px;
-  background: linear-gradient(135deg, #3a0ca3, #7209b7);
-  transition: transform 0.2s, box-shadow 0.2s;
+  border-radius: 50px;
+  box-shadow: 0 4px 15px rgba(255, 0, 119, 0.4);
+  transition: all 0.3s ease;
+}
+
+.voka-button:hover {
+  background-color: #e6006b;
+  box-shadow: 0 6px 18px rgba(255, 0, 119, 0.6);
+}
+
+.voka-intro {
+  padding: 60px 20px;
+  text-align: center;
+  background-color: #121212;
+  font-size: 18px;
+  max-width: 900px;
+  margin: 0 auto;
+  color: #ccc;
+}
+
+.voka-intro strong {
+  color: #fff;
   font-weight: bold;
 }
 
-nav a:hover {
-  transform: scale(1.03);
-  box-shadow: 0 0 12px #7209b7;
-}
-
-main {
-  margin-left: 260px;
-  padding: 60px;
-  background: linear-gradient(180deg, #0d0d0d, #1a1a1a);
-  min-height: 100vh;
-}
-
-h1, h2, h3 {
-  color: #ffffff;
-}
-
-button {
-  background: linear-gradient(135deg, #4cc9f0, #4361ee);
-  color: white;
-  border: none;
-  padding: 12px 20px;
-  border-radius: 8px;
-  cursor: pointer;
-  font-weight: bold;
-  transition: background 0.3s ease;
-}
-
-button:hover {
-  background: linear-gradient(135deg, #4895ef, #3a0ca3);
+.voka-footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+  color: #666;
+  background-color: #0a0a0a;
+  border-top: 1px solid #333;
 }
