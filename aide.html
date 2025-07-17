@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Centre d’aide</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header><h1>Centre d’Aide VOKA</h1></header>
+
+  <nav>
+    <ul>
+      <li><a href="dashboard-admin.html">Dashboard Admin</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="aide.html" class="active">Centre d’Aide</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>🛠️ Besoin d’aide ?</h2>
+      <p>Remplis le formulaire ci-dessous et un agent IA ou un humain te répondra rapidement :</p>
+
+      <form action="https://formspree.io/f/xyzpzzon" method="POST">
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" id="nom" required>
+
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" required>
+
+        <label for="message">Message :</label>
+        <textarea name="message" id="message" rows="5" required></textarea>
+
+        <button type="submit">Envoyer la demande</button>
+      </form>
+
+      <p style="margin-top: 30px;">⏱ Réponse sous 48 h maximum (ou instantanée via bot IA selon le forfait).</p>
+    </section>
+  </main>
+
+</body>
+</html>
