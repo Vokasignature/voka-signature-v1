@@ -1,0 +1,22 @@
+<form action="https://formspree.io/f/xyzpzzon" method="POST" onsubmit="return verifierConditions();">
+  <!-- Autres champs : nom, email, forfait, etc. -->
+
+  <label>
+    <input type="checkbox" id="cgu" name="cgu" required>
+    J’ai lu et j’accepte les <a href="cgu.html" target="_blank">Conditions Générales d’Utilisation</a> de VOKA.
+  </label>
+
+  <input type="hidden" name="preuve-cgu" value="Conditions acceptées ✅">
+
+  <button type="submit">Payer maintenant</button>
+</form>
+
+<script>
+  function verifierConditions() {
+    if (!document.getElementById('cgu').checked) {
+      alert("Tu dois accepter les conditions pour continuer.");
+      return false;
+    }
+    return true;
+  }
+</script>
