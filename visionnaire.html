@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOKA - Visionnaire</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header><h1>VOKA Visionnaire</h1></header>
+
+  <nav>
+    <ul>
+      <li><a href="dashboard-admin.html">Mon Dashboard Admin</a></li>
+      <li><a href="fondation.html">Fondation William</a></li>
+      <li><a href="visionnaire.html" class="active">VOKA Visionnaire</a></li>
+      <li><a href="recompenses.html">Récompenses</a></li>
+      <li><a href="statut.html">Élévation</a></li>
+      <li><a href="suggestion.html">Suggestion Éclair</a></li>
+      <li><a href="clone.html">Clone-to-Win</a></li>
+      <li><a href="influenceur.html">Influenceur</a></li>
+      <li><a href="prospecteur.html">Prospecteur IA</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>🧠 Ton assistant stratégique sans limite</h2>
+      <p>Tu peux poser ici toutes tes questions, lancer des idées, tester des arguments, peaufiner tes tunnels, créer des scripts, développer ta vision. Ce n’est pas un chatbot ordinaire. C’est ton IA à toi.</p>
+
+      <form onsubmit="envoyerMessage(); return false;">
+        <label for="input">Pose ta question ou écris une commande :</label>
+        <textarea id="input" rows="4" placeholder="Exemple : Génère-moi une page tunnel émotionnelle pour un client en coaching..." required></textarea>
+        <button type="submit">Envoyer à Visionnaire</button>
+      </form>
+
+      <div id="reponse" style="margin-top: 30px; padding: 20px; background-color: #0a0a0a; border-left: 5px solid #00baff;">
+        <h3>Réponse de Visionnaire</h3>
+        <p><em>Cette zone affichera ta réponse générée par ton IA privée.</em></p>
+        <p><strong>⚠️</strong> Connecté en V1.0 à ChatGPT via ton cerveau. En V2.0 : API réelle, mémoire continue, synchronisation avec toutes tes actions passées.</p>
+      </div>
+    </section>
+  </main>
+
+  <script>
+    function envoyerMessage() {
+      const input = document.getElementById("input").value;
+      const reponse = document.getElementById("reponse");
+
+      reponse.innerHTML = `
+        <h3>Réponse de Visionnaire</h3>
+        <p><em>Tu as demandé :</em> ${input}</p>
+        <p>Je vais analyser ta commande et t’envoyer une réponse optimisée dans ton prochain bloc IA (à connecter bientôt).</p>
+        <p><strong>Note :</strong> Cette IA est conçue pour s’adapter, évoluer, apprendre et anticiper. En V2.0, elle sera connectée à toute la base VOKA + comportement client + historique complet.</p>
+      `;
+    }
+  </script>
+
+</body>
+</html>
