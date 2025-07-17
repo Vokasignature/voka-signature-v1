@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOKA - Admin</title>
+  <link rel="stylesheet" href="style.css">
+  <script>
+    function mettreAJourProgression() {
+      const objectif = 25000;
+      const actuel = 18460; // ← À modifier manuellement si tu veux tester
+      const barre = document.getElementById("barre");
+      const pourcentage = Math.min((actuel / objectif) * 100, 100).toFixed(1);
+      barre.style.width = pourcentage + "%";
+      document.getElementById("etat").innerText = pourcentage + "% atteint (" + actuel + " $/25 000 $)";
+
+      if (actuel >= 20000) {
+        document.getElementById("alerte").style.display = "block";
+      }
+    }
+
+    window.onload = mettreAJourProgression;
+  </script>
+</head>
+<body>
+
+  <header><h1>VOKA Admin Personnel</h1></header>
+
+  <nav>
+    <ul>
+      <li><a href="dashboard-admin.html" class="active">Mon Dashboard Admin</a></li>
+      <li><a href="fondation.html">Fondation William</a></li>
+      <li><a href="recompenses.html">Récompenses Clients</a></li>
+      <li><a href="statut.html">Statut d’Élévation</a></li>
+      <li><a href="temoignages-admin.html">Témoignages Reçus</a></li>
+      <li><a href="visionnaire.html">VOKA Visionnaire (IA)</a></li>
+      <li><a href="suggestion.html">Suggestion Éclair</a></li>
+      <li><a href="clone.html">Clone-to-Win</a></li>
+      <li><a href="influenceur.html">VOKA Influenceur</a></li>
+      <li><a href="prospecteur.html">Prospecteur IA</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+      <li><a href="aide.html">Centre d’Aide</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section>
+      <h2>Progression vers 25 000 $</h2>
+      <div style="background-color: #0a0a0a; border: 1px solid #00baff; border-radius: 10px; overflow: hidden;">
+        <div id="barre" style="height: 30px; background-color: #00baff; width: 0%; transition: width 0.5s;"></div>
+      </div>
+      <p id="etat" style="margin-top: 10px;">Chargement...</p>
+      <div id="alerte" style="display:none; background-color: #1a1a1a; padding: 20px; margin-top: 20px; border-left: 5px solid #ff3d3d;">
+        <strong>⚠️ Alerte :</strong> Tu as dépassé 20 000 $. Il est temps de chercher un développeur pour lancer la V2.0 de VOKA.
+      </div>
+    </section>
+
+    <section>
+      <h2>🔐 Fondation William (admin)</h2>
+      <p>Accès à la gestion interne de la fondation (partenaires, dons, communication à venir).</p>
+      <p><a href="fondation.html" target="_blank">Ouvrir la page publique de la Fondation</a></p>
+    </section>
+
+    <section>
+      <h2>⚙️ Préparation version 2.0</h2>
+      <ul>
+        <li>📌 Déclenchement automatique d’IA personnalisée</li>
+        <li>📌 Gamification avancée, avatars animés</li>
+        <li>📌 Assistant personnel vocal (dashboard + notifications intelligentes)</li>
+        <li>📌 Géolocalisation de ressources locales (banques, experts, etc.)</li>
+        <li>📌 IA d’analyse émotionnelle des vidéos et témoignages</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>🔎 Statistiques générales</h2>
+      <ul>
+        <li>📊 Nombre de clients actifs : <strong>À connecter</strong></li>
+        <li>📥 Témoignages reçus : <strong>À relier avec tableau admin</strong></li>
+        <li>💬 Messages/Feedbacks : <strong>À connecter</strong></li>
+      </ul>
+    </section>
+  </main>
+
+</body>
+</html>
