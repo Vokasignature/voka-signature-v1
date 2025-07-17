@@ -1,115 +1,57 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOKA - Admin</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    function mettreAJourProgression() {
-      const objectif = 25000;
-      const actuel = 20000; // ← À modifier manuellement si tu veux tester
-      const barre = document.getElementById("barre");
-      const pourcentage = Math.min((actuel / objectif) * 100, 100).toFixed(1);
-      barre.style.width = pourcentage + "%";
-      document.getElementById("etat").innerText = pourcentage + "% atteint (" + actuel + " $/25 000 $)";
-
-      if (actuel >= 20000) {
-        document.getElementById("alerte").style.display = "block";
-      }
-    }
-
-    window.onload = mettreAJourProgression;
-  </script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Dashboard ADMIN – VOKA</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <header><h1>VOKA Admin Personnel</h1></header>
+  <header>
+    <h1>ESPACE ADMINISTRATEUR – VOKA</h1>
+  </header>
 
   <nav>
     <ul>
-      <li><a href="dashboard-admin.html" class="active">Mon Dashboard Admin</a></li>
+      <li><a href="dashboard-admin.html" class="active">Admin</a></li>
+      <li><a href="paiement.html">Preuves CGU</a></li>
+      <li><a href="cgu.html">CGU officielles</a></li>
       <li><a href="fondation.html">Fondation William</a></li>
-      <li><a href="recompenses.html">Récompenses Clients</a></li>
-      <li><a href="statut.html">Statut d’Élévation</a></li>
-      <li><a href="temoignages-admin.html">Témoignages Reçus</a></li>
-      <li><a href="visionnaire.html">VOKA Visionnaire (IA)</a></li>
-      <li><a href="suggestion.html">Suggestion Éclair</a></li>
-      <li><a href="clone.html">Clone-to-Win</a></li>
-      <li><a href="influenceur.html">VOKA Influenceur</a></li>
-      <li><a href="prospecteur.html">Prospecteur IA</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="aide.html">Centre d’Aide</a></li>
+      <li><a href="version2.html">Préparation VOKA 2.0</a></li>
     </ul>
   </nav>
 
   <main>
     <section>
-      <h2>Progression vers 25 000 $</h2>
-      <div style="background-color: #0a0a0a; border: 1px solid #00baff; border-radius: 10px; overflow: hidden;">
-        <div id="barre" style="height: 30px; background-color: #00baff; width: 0%; transition: width 0.5s;"></div>
-      </div>
-      <p id="etat" style="margin-top: 10px;">Chargement...</p>
-      <div id="alerte" style="display:none; background-color: #1a1a1a; padding: 20px; margin-top: 20px; border-left: 5px solid #ff3d3d;">
-        <strong>⚠️ Alerte :</strong> Tu as dépassé 20 000 $. Il est temps de chercher un développeur pour lancer la V2.0 de VOKA.
-      </div>
+      <h2>Bienvenue Michel</h2>
+      <p>Voici ton espace personnel de contrôle de VOKA.</p>
+
+      <h3>💰 Objectif : 25 000 $</h3>
+      <p><strong>Progrès :</strong> <progress value="0" max="25000" id="progressBar"></progress> <span id="progressText">0 $</span></p>
+      <p><em>Une alerte apparaîtra automatiquement à 20 000 $</em></p>
+
+      <h3>📜 Suivi des CGU acceptées</h3>
+      <p><a href="paiement.html">Voir les soumissions CGU →</a></p>
+
+      <h3>🌟 Fondation William</h3>
+      <p><a href="fondation.html">Accéder à la Fondation William →</a></p>
+
+      <h3>🚀 Version 2.0</h3>
+      <p><a href="version2.html">Préparer la version 2.0 →</a></p>
     </section>
-
-    <section>
-      <h2>🔐 Fondation William (admin)</h2>
-      <p>Accès à la gestion interne de la fondation (partenaires, dons, communication à venir).</p>
-      <p><a href="fondation.html" target="_blank">Ouvrir la page publique de la Fondation</a></p>
-    </section>
-
-    <section>
-      <h2>⚙️ Préparation version 2.0</h2>
-      <ul>
-        <li>📌 Déclenchement automatique d’IA personnalisée</li>
-        <li>📌 Gamification avancée, avatars animés</li>
-        <li>📌 Assistant personnel vocal (dashboard + notifications intelligentes)</li>
-        <li>📌 Géolocalisation de ressources locales (banques, experts, etc.)</li>
-        <li>📌 IA d’analyse émotionnelle des vidéos et témoignages</li>
-      </ul>
-    </section>
-
-    <section>
-      <h2>🔎 Statistiques générales</h2>
-      <ul>
-        <li>📊 Nombre de clients actifs : <strong>À connecter</strong></li>
-        <li>📥 Témoignages reçus : <strong>À relier avec tableau admin</strong></li>
-        <li>💬 Messages/Feedbacks : <strong>À connecter</strong></li>
-      </ul>
-    </section>
-    <section>
-  <h2>📄 Preuves CGU Acceptées</h2>
-  <p>Voici la liste des utilisateurs ayant accepté les CGU avant paiement :</p>
-
-  <table style="width: 100%; background-color: #1a1a1a; border-collapse: collapse;">
-    <thead>
-      <tr style="background-color: #0a0a0a;">
-        <th style="padding: 10px; border: 1px solid #00baff;">Nom</th>
-        <th style="padding: 10px; border: 1px solid #00baff;">Email</th>
-        <th style="padding: 10px; border: 1px solid #00baff;">Date</th>
-        <th style="padding: 10px; border: 1px solid #00baff;">Preuve</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td style="padding: 10px; border: 1px solid #00baff;">Julie Tremblay</td>
-        <td style="padding: 10px; border: 1px solid #00baff;">julie@email.com</td>
-        <td style="padding: 10px; border: 1px solid #00baff;">2025-07-17</td>
-        <td style="padding: 10px; border: 1px solid #00baff;">✅ Conditions acceptées</td>
-      </tr>
-      <!-- + lignes à ajouter manuellement ou via intégration V2.0 -->
-    </tbody>
-  </table>
-
-  <p style="margin-top: 20px; font-size: 0.9rem; color: #888;">
-    Ce tableau sera automatisé dans la version 2.0 avec connexion Stripe, base de données, et enregistrement sécurisé dans ton dashboard.
-  </p>
-</section>
-
   </main>
+
+  <script>
+    // Simuler progression vers 25 000 $ — À remplacer avec données réelles
+    const montant = 0; // À modifier dynamiquement plus tard
+    document.getElementById("progressBar").value = montant;
+    document.getElementById("progressText").textContent = `${montant.toLocaleString()} $`;
+
+    if (montant >= 20000) {
+      alert("🚨 Tu as atteint 20 000 $ ! Il est temps de préparer la version 2.0 !");
+    }
+  </script>
 
 </body>
 </html>
