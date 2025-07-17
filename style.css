@@ -1,86 +1,157 @@
+/* VOKA - Style futuriste Iron Man */
+
 body {
   margin: 0;
-  background-color: #0a0a0a;
+  padding: 0;
+  background-color: #000000;
   font-family: 'Roboto', sans-serif;
-  color: white;
+  color: #ffffff;
 }
 
-h1 {
-  color: #0ff;
+header {
+  background-color: #0f0f0f;
+  padding: 20px;
   text-align: center;
-  margin-top: 30px;
+  border-bottom: 2px solid #00c3ff;
 }
 
-h2 {
-  color: #0ff;
+header h1 {
+  font-size: 2rem;
+  color: #00c3ff;
+  text-shadow: 0 0 8px #00c3ff;
 }
 
 nav {
   background-color: #111;
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-  width: 220px;
+  width: 250px;
   height: 100vh;
   position: fixed;
   top: 0;
   left: 0;
-  border-right: 2px solid #0ff;
+  padding-top: 40px;
+  border-right: 2px solid #00c3ff;
 }
 
-nav a {
-  color: white;
+nav ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+nav ul li {
+  margin: 20px 0;
+}
+
+nav ul li a {
+  color: #00c3ff;
   text-decoration: none;
-  margin-bottom: 15px;
   font-weight: bold;
+  padding: 10px 20px;
+  display: block;
+  border-left: 4px solid transparent;
+  transition: 0.3s;
 }
 
-nav a:hover {
-  color: #0ff;
+nav ul li a:hover,
+nav ul li a.active {
+  background-color: #1a1a1a;
+  border-left: 4px solid #ff4c4c;
+  color: #ffffff;
+  box-shadow: inset 5px 0 10px #ff4c4c;
 }
 
 main {
-  margin-left: 240px;
+  margin-left: 270px;
   padding: 40px;
+}
+
+section {
+  background-color: #1a1a1a;
+  padding: 30px;
+  border-radius: 16px;
+  box-shadow: 0 0 15px #00c3ff33;
+  margin-bottom: 40px;
+}
+
+h2 {
+  color: #ff4c4c;
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-shadow: 0 0 4px #ff4c4c;
+}
+
+p, label {
+  color: #dddddd;
+}
+
+input, select, textarea, button {
+  font-family: 'Roboto', sans-serif;
+  font-size: 1rem;
+  padding: 12px;
+  margin: 10px 0;
+  border-radius: 8px;
+  border: 1px solid #00c3ff;
+  background-color: #0a0a0a;
+  color: #ffffff;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+input:focus, textarea:focus, select:focus {
+  outline: none;
+  border-color: #ff4c4c;
+  box-shadow: 0 0 10px #ff4c4c66;
+}
+
+button {
+  background-color: #00c3ff;
+  color: #000;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+button:hover {
+  background-color: #ff4c4c;
+  color: #fff;
+  box-shadow: 0 0 10px #ff4c4c;
 }
 
 footer {
   text-align: center;
   padding: 20px;
+  border-top: 2px solid #00c3ff;
+  background-color: #0f0f0f;
+  margin-top: 60px;
   color: #888;
 }
 
-input, textarea, button {
-  margin: 10px 0;
+.tooltip {
+  position: relative;
+  display: inline-block;
+  cursor: help;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 220px;
+  background-color: #222;
+  color: #fff;
+  text-align: center;
+  border-radius: 8px;
   padding: 10px;
-  font-size: 16px;
-  border-radius: 5px;
-  border: none;
+  position: absolute;
+  z-index: 1;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -110px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 0 10px #00c3ff66;
 }
 
-button {
-  background-color: #0ff;
-  color: #000;
-  cursor: pointer;
-  font-weight: bold;
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
 }
 
-button:hover {
-  background-color: #00cccc;
-}
-
-ul {
-  max-width: 600px;
-  margin: 30px auto;
-  font-size: 16px;
-}
-
-li {
-  margin-bottom: 10px;
-}
-
-iframe {
-  width: 100%;
-  height: 800px;
-  border: none;
-}
