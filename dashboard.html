@@ -1,55 +1,50 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="UTF-8" />
-    <title>Tableau de bord VOKA</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        margin: 0;
-        display: flex;
-        background-color: #0a0a0a;
-        color: white;
-      }
-      .sidebar {
-        width: 240px;
-        background-color: #111111;
-        height: 100vh;
-        padding-top: 30px;
-        box-shadow: 2px 0 10px rgba(255, 255, 255, 0.05);
-      }
-      .sidebar a {
-        display: block;
-        padding: 14px 24px;
-        color: white;
-        text-decoration: none;
-        border-bottom: 1px solid #222;
-      }
-      .sidebar a:hover {
-        background-color: #1a1a1a;
-      }
-      .main {
-        flex: 1;
-        padding: 40px;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="sidebar">
-      <a href="#">🏠 Accueil</a>
-      <a href="#">📹 VOKA Vidéo</a>
-      <a href="#">📊 VOKA CFO</a>
-      <a href="#">🤖 VOKA CRM</a>
-      <a href="#">🌀 Tunnel de vente</a>
-      <a href="#">📚 Bibliothèque</a>
-      <a href="#">🌐 Ressources</a>
-      <a href="#">🗣️ Témoignage</a>
-      <a href="#">💎 Récompenses</a>
-      <a href="#">👤 Mon profil</a>
-    </div>
-    <div class="main">
-      <h1>Bienvenue dans ton Dashboard VOKA Signature</h1>
-      <p>Clique sur les menus à gauche pour naviguer.</p>
-    </div>
-  </body>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard VOKA Signature</title>
+  <style>
+    body {
+      background: #0d0d0d;
+      color: white;
+      font-family: sans-serif;
+      text-align: center;
+      padding: 2rem;
+    }
+    .menu {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      justify-content: center;
+      margin-top: 2rem;
+    }
+    .onglet {
+      padding: 1rem 2rem;
+      background: #2f2f2f;
+      border-radius: 12px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+      box-shadow: 0 0 10px #4b2cff88;
+    }
+    .onglet:hover {
+      background: #4b2cff;
+      transition: 0.3s;
+    }
+  </style>
+</head>
+<body>
+  <h1>Bienvenue dans votre Dashboard VOKA Signature ✨</h1>
+  <div class="menu">
+    <a class="onglet" href="#">📊 VOKA CFO</a>
+    <a class="onglet" href="#">🤖 VOKA CRM</a>
+    <a class="onglet" href="#">📹 VOKA Vidéo</a>
+    <a class="onglet" href="#">🧠 VOKA Bots</a>
+    <a class="onglet" href="#">🚀 Tunnel 8.0</a>
+    <a class="onglet" href="#">🗓️ Calendrier</a>
+    <a class="onglet" href="#">📁 Ressources</a>
+    <a class="onglet" href="#">🌟 Témoignage</a>
+    <a class="onglet" href="#">🎁 Boutique</a>
+  </div>
+</body>
 </html>
