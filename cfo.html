@@ -2,35 +2,99 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VOKA CFO</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 40px;
+      background-color: #f5f5f5;
+    }
+
+    .box {
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
+      padding: 30px;
+      max-width: 600px;
+      margin: auto;
+    }
+
+    h1 {
+      color: #5C4BFF;
+    }
+
+    label {
+      display: block;
+      margin-top: 20px;
+      font-weight: bold;
+    }
+
+    input {
+      width: 100%;
+      padding: 12px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+      margin-top: 8px;
+    }
+
+    .resultat {
+      margin-top: 30px;
+      background-color: #eef;
+      padding: 20px;
+      border-radius: 8px;
+    }
+  </style>
 </head>
-<body style="font-family: Arial, sans-serif; padding: 20px; background-color: #fefefe;">
-  <h1>💰 VOKA CFO</h1>
-  <p>Ton centre de commande financier simplifié.</p>
+<body>
 
-  <h3>📊 Statistiques financières</h3>
-  <ul>
-    <li>Revenus ce mois : 3 250 $</li>
-    <li>Dépenses : 1 020 $</li>
-    <li>Marge nette : 2 230 $</li>
-    <li>Taxes à prévoir : 450 $</li>
-  </ul>
+  <div class="box">
+    <h1>📊 VOKA CFO — Estimation de base</h1>
 
-  <h3>📉 Détection intelligente</h3>
-  <p>⚠️ Alerte : baisse soudaine de revenus détectée depuis 7 jours.</p>
+    <label>Revenus mensuels estimés ($) :
+      <input type="number" id="revenus" placeholder="Ex: 5000">
+    </label>
 
-  <h3>📄 Générer un document :</h3>
-  <ul>
-    <li><button>📥 Télécharger une facture PDF</button></li>
-    <li><button>📥 Télécharger un devis PDF</button></li>
-    <li><button>📥 Rapport de taxes</button></li>
-  </ul>
+    <label>Dépenses mensuelles ($) :
+      <input type="number" id="depenses" placeholder="Ex: 1500">
+    </label>
 
-  <p style="font-size: 0.9em; color: gray;">* Cette interface ne remplace pas un CPA (comptable agréé). Utilisation à titre indicatif seulement.</p>
+    <label>Taxes (%) :
+      <input type="number" id="taxes" placeholder="Ex: 15">
+    </label>
 
-  <br/><br/>
-  <a href="dashboard.html">⬅ Retour au Dashboard</a>
+    <div class="resultat" id="resultat">
+      👉 Remplis les champs ci-dessus pour voir ton estimation.
+    </div>
+  </div>
+
+  <script>
+    const revenus = document.getElementById('revenus');
+    const depenses = document.getElementById('depenses');
+    const taxes = document.getElementById('taxes');
+    const resultat = document.getElementById('resultat');
+
+    function calculer() {
+      const r = parseFloat(revenus.value) || 0;
+      const d = parseFloat(depenses.value) || 0;
+      const t = parseFloat(taxes.value) || 0;
+
+      const revenuNet = r - d;
+      const taxesAPayer = (revenuNet * t) / 100;
+      const profitFinal = revenuNet - taxesAPayer;
+
+      resultat.innerHTML = `
+        💰 Revenu net : ${revenuNet.toFixed(2)} $<br>
+        🧾 Taxes estimées : ${taxesAPayer.toFixed(2)} $<br>
+        ✅ Profit final : ${profitFinal.toFixed(2)} $
+      `;
+    }
+
+    revenus.addEventListener('input', calculer);
+    depenses.addEventListener('input', calculer);
+    taxes.addEventListener('input', calculer);
+  </script>
+
 </body>
 </html>
+
 
