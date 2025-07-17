@@ -1,89 +1,84 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulaire Client VOKA</title>
+  <meta charset="UTF-8">
+  <title>Activation VOKA</title>
   <style>
     body {
-      background-color: #111;
-      color: white;
       font-family: Arial, sans-serif;
+      background-color: #f0f0f0;
       padding: 40px;
     }
 
-    h1 {
-      text-align: center;
-      color: #fff;
-    }
-
     form {
+      background: white;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.1);
       max-width: 600px;
       margin: auto;
-      background-color: #222;
-      padding: 30px;
-      border-radius: 15px;
     }
 
     label {
       display: block;
-      margin-top: 20px;
-      margin-bottom: 5px;
+      margin-bottom: 10px;
+      font-weight: bold;
     }
 
-    input, select, textarea {
+    input, textarea {
       width: 100%;
       padding: 10px;
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
       border-radius: 8px;
-      border: none;
-      margin-bottom: 15px;
-    }
-
-    input[type="file"] {
-      background-color: #444;
-      color: white;
     }
 
     button {
-      background-color: #00c6ff;
-      border: none;
-      padding: 12px 20px;
+      background-color: #5C4BFF;
       color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 8px;
       font-size: 16px;
-      border-radius: 10px;
       cursor: pointer;
-      width: 100%;
     }
 
     button:hover {
-      background-color: #008fd4;
+      background-color: #4539cc;
     }
   </style>
 </head>
 <body>
 
-  <h1>Activation de ton Univers VOKA</h1>
+  <h1>🚀 Activation de ton compte VOKA</h1>
+  <p>Remplis ce petit formulaire pour lancer ton univers personnalisé</p>
 
-  <form action="https://formspree.io/f/xyzpzzon" method="POST" enctype="multipart/form-data">
-    <label for="nom">Nom de ton entreprise</label>
-    <input type="text" name="nom" required>
+  <form action="https://formspree.io/f/xyzpzzon" method="POST">
+    <label>Nom de ton entreprise :
+      <input type="text" name="entreprise" required>
+    </label>
 
-    <label for="niche">Secteur / Niche</label>
-    <input type="text" name="niche" required>
+    <label>Ton slogan (facultatif) :
+      <input type="text" name="slogan">
+    </label>
 
-    <label for="slogan">Slogan (facultatif)</label>
-    <input type="text" name="slogan">
+    <label>Secteur d’activité :
+      <input type="text" name="secteur" required>
+    </label>
 
-    <label for="logo">Téléverse ton logo (.png, .jpg)</label>
-    <input type="file" name="logo" accept="image/*">
+    <label>Lien de ton logo :
+      <input type="url" name="logo">
+    </label>
 
-    <label for="script">Texte à dire dans ta vidéo (ou idée principale)</label>
-    <textarea name="script" rows="4" placeholder="Écris ici ce que tu veux dire dans ta vidéo..."></textarea>
+    <label>Texte ou idée pour ta vidéo (ou colle ta voix ici) :
+      <textarea name="texte_video" rows="5" required></textarea>
+    </label>
 
-    <label for="audio">OU enregistre ta voix</label>
-    <input type="file" name="audio" accept="audio/*">
+    <label>Lien audio (si tu veux qu’on clone ta voix) :
+      <input type="url" name="voix">
+    </label>
 
-    <button type="submit">🚀 Lancer mon univers VOKA</button>
+    <button type="submit">✨ Envoyer mes infos à VOKA</button>
   </form>
 
 </body>
