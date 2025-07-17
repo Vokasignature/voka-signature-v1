@@ -1,70 +1,85 @@
+/* Style général */
 body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #0a0a0a;
+  color: white;
   margin: 0;
   padding: 0;
-  background-color: #0a0a0a;
-  color: #f9f9f9;
-  font-family: 'Segoe UI', 'Roboto', sans-serif;
+}
+
+/* Barre latérale gauche */
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 240px;
+  background: #111;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+  box-shadow: 5px 0 20px rgba(255, 0, 144, 0.2);
+  z-index: 10;
+}
+
+nav h2 {
+  font-size: 22px;
+  margin-bottom: 30px;
+  color: #ff80d5;
+  font-weight: 700;
+  text-shadow: 0 0 10px #ff80d5;
+}
+
+nav a {
+  color: #fff;
+  text-decoration: none;
+  margin: 12px 0;
+  padding: 10px 15px;
+  border-radius: 12px;
+  background: rgba(255, 255, 255, 0.05);
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+nav a:hover {
+  background: #ff80d5;
+  color: #0a0a0a;
+  transform: translateX(8px);
+  box-shadow: 0 0 10px #ff80d5;
+}
+
+/* Contenu principal à droite */
+main {
+  margin-left: 260px;
+  padding: 50px;
+}
+
+/* Titres immersifs */
+main h1 {
+  font-size: 34px;
+  color: #fff;
+  text-shadow: 0 0 10px #fff;
+  margin-bottom: 20px;
+}
+
+main p {
+  font-size: 18px;
+  color: #ccc;
   line-height: 1.6;
 }
 
-.voka-header {
-  text-align: center;
-  padding: 80px 20px 40px;
-  background: linear-gradient(145deg, #111111, #1a1a1a);
-  border-bottom: 1px solid #333;
-}
+/* Responsive */
+@media screen and (max-width: 768px) {
+  nav {
+    width: 100%;
+    height: auto;
+    position: relative;
+    flex-direction: row;
+    overflow-x: scroll;
+  }
 
-.voka-title {
-  font-size: 48px;
-  font-weight: bold;
-  color: #fff;
-  margin-bottom: 10px;
-  text-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+  main {
+    margin-left: 0;
+    padding: 20px;
+  }
 }
-
-.voka-subtitle {
-  font-size: 20px;
-  color: #aaa;
-  margin-bottom: 40px;
-}
-
-.voka-button {
-  padding: 14px 28px;
-  background-color: #ff0077;
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  border-radius: 50px;
-  box-shadow: 0 4px 15px rgba(255, 0, 119, 0.4);
-  transition: all 0.3s ease;
-}
-
-.voka-button:hover {
-  background-color: #e6006b;
-  box-shadow: 0 6px 18px rgba(255, 0, 119, 0.6);
-}
-
-.voka-intro {
-  padding: 60px 20px;
-  text-align: center;
-  background-color: #121212;
-  font-size: 18px;
-  max-width: 900px;
-  margin: 0 auto;
-  color: #ccc;
-}
-
-.voka-intro strong {
-  color: #fff;
-  font-weight: bold;
-}
-
-.voka-footer {
-  text-align: center;
-  padding: 20px;
-  font-size: 14px;
-  color: #666;
-  background-color: #0a0a0a;
-  border-top: 1px solid #333;
-}
-
