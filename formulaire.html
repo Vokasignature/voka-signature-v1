@@ -3,31 +3,54 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOKA - Activation</title>
+  <title>VOKA - Formulaire</title>
   <link rel="stylesheet" href="style.css">
+  <script>
+    function afficherMessageConfirmation() {
+      const confirmation = document.getElementById("confirmation");
+      confirmation.style.display = "block";
+    }
+  </script>
 </head>
 <body>
 
-  <header>
-    <h1>VOKA Dashboard</h1>
-  </header>
-
+  <header><h1>VOKA Dashboard</h1></header>
   <nav>
-    <!-- (menu identique à copier ici) -->
+    <ul>
+      <li><a href="dashboard.html">Accueil</a></li>
+      <li><a href="formulaire.html" class="active">Formulaire</a></li>
+      <li><a href="cfo.html">VOKA CFO</a></li>
+      <li><a href="crm.html">VOKA CRM</a></li>
+      <li><a href="bots.html">VOKA Bots</a></li>
+      <li><a href="videos.html">VOKA Vidéos</a></li>
+      <li><a href="tunnel.html">VOKA Tunnel</a></li>
+      <li><a href="calendrier.html">VOKA Calendrier</a></li>
+      <li><a href="ressources.html">VOKA Ressources</a></li>
+      <li><a href="temoignages.html">VOKA Témoignages</a></li>
+      <li><a href="boutique.html">VOKA Boutique</a></li>
+      <li><a href="partenaires.html">VOKA Partenaires</a></li>
+    </ul>
   </nav>
 
   <main>
-  <main>
-  <section>
-    <h2>Activation automatique</h2>
-    <p>Merci de remplir le formulaire ci-dessous pour démarrer VOKA.</p>
-    <iframe src="https://formspree.io/f/xyzpzzon" width="100%" height="800" style="border:none;"></iframe>
-  </section>
-</main>
+    <section>
+      <h2>Formulaire de démarrage VOKA</h2>
+      <p>Merci de remplir ce formulaire pour qu’on configure ton système automatiquement :</p>
 
+      <iframe 
+        src="https://formspree.io/f/xyzpzzon"
+        width="100%" 
+        height="850" 
+        style="border:none;"
+        onload="setTimeout(afficherMessageConfirmation, 3000)">
+      </iframe>
+
+      <div id="confirmation" style="display:none; margin-top: 30px; padding: 20px; background-color: #0a0a0a; border-left: 5px solid #00c3ff; box-shadow: 0 0 10px #00c3ff99;">
+        <h3 style="color: #00c3ff;">✅ Formulaire envoyé</h3>
+        <p>Merci ! Nos bots VOKA vont se mettre au travail et te livrer ta plateforme personnalisée.</p>
+      </div>
+    </section>
   </main>
 
 </body>
 </html>
-
-
