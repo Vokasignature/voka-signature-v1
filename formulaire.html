@@ -4,6 +4,41 @@
   <meta charset="UTF-8">
   <title>Formulaire de démarrage - VOKA</title>
   <style>
+    <script>
+  document.querySelector("form").addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    const nomEntreprise = document.getElementById("nomEntreprise").value;
+    const logoFichier = document.getElementById("logo").files[0];
+    const forfait = document.querySelector('input[name="forfait"]:checked')?.value || "Signature";
+
+    // Convertir le logo en base64
+    const reader = new FileReader();
+    reader.onloadend = function () {
+      const logoBase64 = reader.result;
+
+      // Stocker dans le localStorage
+      localStorage.setItem("nomEntreprise", nomEntreprise);
+      localStorage.setItem("forfait", forfait);
+      localStorage.setItem("logo", logoBase64);
+
+      alert("Merci ! Vos informations ont été enregistrées.");
+      window.location.href = "dashboard.html";
+    };
+
+    if (logoFichier) {
+      reader.readAsDataURL(logoFichier);
+    } else {
+      localStorage.setItem("nomEntreprise", nomEntreprise);
+      localStorage.setItem("forfait", forfait);
+      localStorage.setItem("logo", ""); // Si aucun logo
+
+      alert("Merci ! Vos informations ont été enregistrées.");
+      window.location.href = "dashboard.html";
+    }
+  });
+</script>
+
     body {
       background-color: #000;
       font-family: 'Roboto', sans-serif;
