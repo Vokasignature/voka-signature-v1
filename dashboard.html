@@ -111,6 +111,71 @@ if (tab === "fondation") {
     </div>
   `;
 }
+else if (tab === "crm") {
+  content.innerHTML = `
+    <div class="crm-container">
+      <h2 style="color:#0b7a95;">📇 VOKA CRM</h2>
+      <p style="color:white;">Gère tes contacts et relance automatiquement tes prospects.</p>
+
+      <input type="text" placeholder="🔍 Rechercher un contact..." class="crm-search" style="margin:10px 0; padding:8px; width:100%; border-radius:5px; border:none;">
+
+      <div class="crm-actions" style="margin:10px 0;">
+        <button style="padding:10px 20px; background-color:#0b7a95; color:white; border:none; border-radius:5px;" onclick="alert('Fonction à venir dans la version 2.0')">➕ Ajouter un contact</button>
+      </div>
+
+      <table style="width:100%; border-collapse:collapse;">
+        <thead>
+          <tr style="color:#0b7a95; text-align:left;">
+            <th style="padding:10px;">Nom</th>
+            <th style="padding:10px;">Email</th>
+            <th style="padding:10px;">Statut</th>
+          </tr>
+        </thead>
+        <tbody style="color:white;">
+          <tr>
+            <td style="padding:10px;">Marie Tremblay</td>
+            <td style="padding:10px;">marie@exemple.com</td>
+            <td style="padding:10px;">À relancer</td>
+          </tr>
+          <tr>
+            <td style="padding:10px;">Jean Dupuis</td>
+            <td style="padding:10px;">jean@entreprise.com</td>
+            <td style="padding:10px;">Client actif</td>
+          </tr>
+        </tbody>
+      </table>
+
+      <p style="color:gray; font-size:0.9em; margin-top:10px;"><em>* Le CRM sera connecté à un bot intelligent dans la version 2.0.</em></p>
+    </div>
+  `;
+}
+
+else if (tab === "bots") {
+  content.innerHTML = `
+    <div class="bots-container">
+      <h2 style="color:#0b7a95;">Bots IA VOKA</h2>
+      <p style="color:white;">Des assistants intelligents adaptés à votre secteur d’activité.</p>
+      <ul style="color:white; margin-left:20px;">
+        <li>🧠 Bot VOKA Visionnaire (accompagnement stratégique)</li>
+        <li>📊 Bot CFO (analyse financière)</li>
+        <li>📩 Bot relance client (manuel ou semi-auto)</li>
+        <li>🔍 Bot prospecteur visuel (planifié pour v2.0)</li>
+      </ul>
+      <p style="color:gray; font-size:0.9em;"><em>* Les bots sont partiellement actifs. Plus d'automatisation dans la version 2.0</em></p>
+    </div>
+  `;
+}
+else if (tab === "calendrier") {
+else if (tab === "calendrier") {
+  content.innerHTML = `
+    <div class="calendar-container">
+      <h2 style="color:#0b7a95;">📅 VOKA Calendrier</h2>
+      <p style="color:white;">Planifie ton rendez-vous stratégique avec VOKA. Choisis ta plage horaire ci-dessous :</p>
+      <div class="calendly-inline-widget" data-url="https://calendly.com/voka/30min" style="min-width:320px; height:630px;"></div>
+      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+  `;
+}
 
   content.innerHTML = `
     <div class="fondation-container">
