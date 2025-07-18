@@ -61,5 +61,73 @@ p {
   50% { transform: scale(1.05); opacity: 1; }
   100% { transform: scale(1); opacity: 0.8; }
 }
+.voka-dark {
+  background: #000;
+  color: #fff;
+  font-family: 'Roboto', sans-serif;
+}
+
+.voka-form {
+  background: #0b0b0b;
+  padding: 30px;
+  border-radius: 12px;
+  border: 1px solid #0b7a95;
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 0 20px #0b7a95aa;
+}
+
+.voka-form label {
+  display: block;
+  margin: 15px 0 5px;
+  color: #fff;
+}
+
+.voka-form input,
+.voka-form select,
+.voka-form textarea {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 6px;
+  background: #111;
+  color: #0b7a95;
+  outline: none;
+}
+
+.voka-button {
+  background: #0b7a95;
+  border: none;
+  color: white;
+  padding: 12px 20px;
+  margin-top: 20px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.voka-button:hover {
+  background: #0da0ba;
+  transform: scale(1.02);
+}
+
+.after-submit {
+  margin-top: 40px;
+  text-align: center;
+  display: none;
+}
+
+.section-title {
+  font-size: 32px;
+  text-align: center;
+  color: #0b7a95;
+}
+
+.section-subtitle {
+  font-size: 16px;
+  text-align: center;
+  color: #aaa;
+}
 
 
