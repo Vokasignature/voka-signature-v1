@@ -1,35 +1,18 @@
-<div style="text-align: center; margin-top: 80px;">
-  <form action="https://ton-lien-stripe.com" method="GET" onsubmit="return validerCGU()">
-    <input type="checkbox" id="cgu" required />
-    <label for="cgu" style="color: #ccc;">J’accepte les <a href="conditions.html" target="_blank" style="color: #0b7a95;">conditions générales d’utilisation</a></label>
-    <br><br>
-    <button type="submit" style="
-      background: linear-gradient(145deg, #0b7a95, #052e4d);
-      color: white;
-      font-size: 1.4em;
-      padding: 18px 35px;
-      border: none;
-      border-radius: 12px;
-      box-shadow: 0 0 18px #0b7a95;
-      cursor: pointer;
-      transition: transform 0.2s ease;
-    "
-    onmouseover="this.style.transform='scale(1.05)'"
-    onmouseout="this.style.transform='scale(1)'"
-    >
-      🚀 Activer mon accès Signature
-    </button>
-  </form>
-</div>
-
-<script>
-  function validerCGU() {
-    const caseCGU = document.getElementById("cgu");
-    if (!caseCGU.checked) {
-      alert("Vous devez accepter les conditions générales d’utilisation pour continuer.");
-      return false;
-    }
-    return true;
-  }
-</script>
-
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Bienvenue sur VOKA</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <section class="hero">
+    <img src="logo-voka.png" alt="VOKA Logo" class="logo" />
+    <h1>Donnez une voix à votre succès</h1>
+    <p>VOKA automatise, propulse et transforme votre entreprise.</p>
+    <a href="https://buy.stripe.com/7sI5mV1Hibkz2e0bIJ" class="cta">Activer mon forfait</a>
+    <a href="conditions.html" class="cgu-link" target="_blank">Lire les conditions d'utilisation</a>
+  </section>
+</body>
+</html>
