@@ -4,13 +4,26 @@
   <meta charset="UTF-8">
   <title>Dashboard VOKA</title>
   <link rel="stylesheet" href="style.css">
+  <style>
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.1); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+    .locked {
+      opacity: 0.4;
+      cursor: not-allowed;
+    }
+  </style>
 </head>
-  <script>
+<body class="dark-mode">
+
+<!-- LOGIQUE JS : récupère nom, forfait et logo -->
+<script>
   const nomEntreprise = localStorage.getItem("nomEntreprise") || "Entreprise X";
   const forfait = localStorage.getItem("forfait") || "Signature";
   const logo = localStorage.getItem("logo");
 
-  // Remplir dynamiquement le nom dans le dashboard
   const profilNom = document.getElementById("profil-nom");
   if (profilNom) profilNom.textContent = nomEntreprise;
 
@@ -23,331 +36,86 @@
   }
 </script>
 
-<body class="dark-mode">
-<div id="profil-container" style="position:absolute; top:20px; right:20px; text-align:right;">
-  <img id="profil-logo" src="logo-voka.png" alt="Logo" style="width:40px; border-radius:50%;"><br>
-  <span id="profil-nom" style="color:white; font-weight:bold;">Entreprise X</span><br>
-  <span id="profil-forfait" style="color:lightgray; font-size:0.8em;">Signature</span>
-</div>
+<!-- SIDEBAR -->
+<aside class="sidebar">
+  <div class="sidebar-logo">
+    <img src="logo-voka.png" alt="Logo VOKA" style="width: 100px;"><br>
+    <span style="color: white; font-size: 0.75em; display: block; margin-top: 5px;">Donnez une voix à votre succès</span>
+  </div>
+  <nav class="sidebar-nav">
+    <button class="tab-button" data-tab="visionnaire">VOKA Visionnaire</button>
+    <button class="tab-button" data-tab="cfo">VOKA CFO</button>
+    <button class="tab-button" data-tab="crm">VOKA CRM</button>
+    <button class="tab-button" data-tab="video">VOKA Vidéo</button>
+    <button class="tab-button" data-tab="bots">VOKA Bots</button>
+    <button class="tab-button" data-tab="tunnel">VOKA Tunnel</button>
+    <button class="tab-button" data-tab="calendrier">VOKA Calendrier</button>
+    <button class="tab-button" data-tab="ressources">VOKA Ressources</button>
+    <button class="tab-button" data-tab="temoignage">VOKA Témoignage</button>
+    <button class="tab-button locked" data-tab="boutique" disabled>🔒 VOKA Boutique</button>
+    <button class="tab-button" data-tab="fondation">Fondation William</button>
+  </nav>
+</aside>
 
-  <!-- Barre latérale gauche -->
-  <aside class="sidebar">
-    <div class="sidebar-logo">
-      <img src="logo-voka.png" alt="Logo VOKA">
-    </div>
-    <nav class="sidebar-nav">
-      <button class="tab-button active" data-tab="visionnaire">VOKA Visionnaire</button>
-      <button class="tab-button" data-tab="cfo">VOKA CFO</button>
-      <button class="tab-button" data-tab="crm">VOKA CRM</button>
-      <button class="tab-button" data-tab="video">VOKA Vidéo</button>
-      <button class="tab-button" data-tab="bots">VOKA Bots</button>
-      <button class="tab-button" data-tab="tunnel">VOKA Tunnel</button>
-      <button class="tab-button" data-tab="calendrier">VOKA Calendrier</button>
-      <button class="tab-button" data-tab="ressources">VOKA Ressources</button>
-      <button class="tab-button" data-tab="temoignage">VOKA Témoignage</button>
-      <button class="tab-button" data-tab="boutique">VOKA Boutique</button>
-      <button class="tab-button" data-tab="fondation">Fondation William</button>
-    </nav>
-  </aside>
+<!-- CONTENU PRINCIPAL -->
+<main class="main-content">
 
-  <!-- Contenu principal -->
-  <main class="main-content">
-
-    <!-- Profil client -->
-    <div class="profil-client">
-      <div class="profil-logo" onmouseover="document.querySelector('.profil-menu').style.display='block'" onmouseout="document.querySelector('.profil-menu').style.display='none'">
-        <img src="logo-voka.png" alt="Logo client">
-        <div class="profil-menu">
-          <p><strong>Entreprise X</strong></p>
-          <p>Forfait : Signature</p>
-          <a href="#">Profil</a>
-          <a href="#">Facturation</a>
-        </div>
+  <!-- PROFIL -->
+  <div class="profil-client">
+    <div class="profil-logo" onmouseover="document.querySelector('.profil-menu').style.display='block'" onmouseout="document.querySelector('.profil-menu').style.display='none'">
+      <img id="profil-logo" src="logo-voka.png" alt="Logo client" style="width:40px; border-radius:50%;"><br>
+      <div class="profil-menu">
+        <p><strong id="profil-nom">Entreprise X</strong></p>
+        <p id="profil-forfait" style="color: lightgray; font-size: 0.8em;">Signature</p>
+        <a href="#">Profil</a><br>
+        <a href="#">Facturation</a>
       </div>
     </div>
+  </div>
 
-    <!-- Barre de progression -->
-    <div class="progress-bar">
-      <svg width="100" height="100">
-        <circle class="bg" cx="50" cy="50" r="45"></circle>
-        <circle class="progress" cx="50" cy="50" r="45" stroke-dasharray="282" stroke-dashoffset="100"></circle>
-      </svg>
-      <p>Évolution</p>
+  <!-- PROGRESSION -->
+  <div class="progress-bar">
+    <svg width="100" height="100">
+      <circle class="bg" cx="50" cy="50" r="45"></circle>
+      <circle class="progress" cx="50" cy="50" r="45" stroke-dasharray="282" stroke-dashoffset="100"></circle>
+    </svg>
+    <p>Évolution</p>
+  </div>
+
+  <!-- CONTENU DYNAMIQUE -->
+  <section id="tab-content">
+    <div style="display: flex; flex-direction: column; align-items: center; justify-content: center; height: 70vh;">
+      <img src="logo-voka.png" alt="Logo VOKA" style="width: 180px; animation: pulse 2s infinite;">
+      <p style="color: white; margin-top: 20px; font-size: 1.2em;">Sélectionne un onglet à gauche pour commencer.</p>
     </div>
+  </section>
+</main>
 
-    <!-- Contenu dynamique -->
-    <section id="tab-content">
-      <h1>Bienvenue dans VOKA</h1>
-      <p>Sélectionnez un onglet à gauche pour commencer.</p>
-    </section>
+<!-- JS POUR CHARGEMENT DYNAMIQUE DES ONGLETS -->
+<script>
+  const buttons = document.querySelectorAll(".tab-button");
+  const content = document.getElementById("tab-content");
 
-  </main>
-
-  <!-- Script JS pour la navigation -->
-  <script>
-    const buttons = document.querySelectorAll(".tab-button");
-    const content = document.getElementById("tab-content");
-
-    buttons.forEach(btn => {
+  buttons.forEach(btn => {
+    if (!btn.disabled) {
       btn.addEventListener("click", () => {
         buttons.forEach(b => b.classList.remove("active"));
         btn.classList.add("active");
 
-       const tab = btn.getAttribute("data-tab");
+        const tab = btn.getAttribute("data-tab");
 
-  else if (tab === "cfo") {
-  content.innerHTML = `
-    <div class="cfo-container">
-      <h2 style="color:#0b7a95;">VOKA CFO</h2>
-      <p style="color:white;">Gérez vos finances comme un pro : suivez vos revenus, vos dépenses et vos taxes en temps réel.</p>
-      <ul style="color:white; margin-left:20px;">
-        <li>💰 Estimation automatique des revenus et marges</li>
-        <li>📊 Suivi des dépenses simplifié</li>
-        <li>📄 Génération de factures et devis PDF (manuelle dans v1.0)</li>
-        <li>🚨 Alerte si pertes ou failles détectées (via analyse manuelle)</li>
-      </ul>
-      <p style="color:gray; font-size:0.9em;"><em>* Ne remplace pas un comptable agréé</em></p>
-    </div>
-  `;
-}
-else if (tab === "crm") {
-  content.innerHTML = `
-    <div class="crm-container">
-      <h2 style="color:#0b7a95;">📇 VOKA CRM</h2>
-      <p style="color:white;">Gère tes contacts et relance automatiquement tes prospects.</p>
-
-      <input type="text" placeholder="🔍 Rechercher un contact..." class="crm-search" style="margin:10px 0; padding:8px; width:100%; border-radius:5px; border:none;">
-
-      <div class="crm-actions" style="margin:10px 0;">
-        <button style="padding:10px 20px; background-color:#0b7a95; color:white; border:none; border-radius:5px;" onclick="alert('Fonction à venir dans la version 2.0')">➕ Ajouter un contact</button>
-      </div>
-
-      <table style="width:100%; border-collapse:collapse;">
-        <thead>
-          <tr style="color:#0b7a95; text-align:left;">
-            <th style="padding:10px;">Nom</th>
-            <th style="padding:10px;">Email</th>
-            <th style="padding:10px;">Statut</th>
-          </tr>
-        </thead>
-        <tbody style="color:white;">
-          <tr>
-            <td style="padding:10px;">Marie Tremblay</td>
-            <td style="padding:10px;">marie@exemple.com</td>
-            <td style="padding:10px;">À relancer</td>
-          </tr>
-          <tr>
-            <td style="padding:10px;">Jean Dupuis</td>
-            <td style="padding:10px;">jean@entreprise.com</td>
-            <td style="padding:10px;">Client actif</td>
-          </tr>
-        </tbody>
-      </table>
-
-      <p style="color:gray; font-size:0.9em; margin-top:10px;"><em>* Le CRM sera connecté à un bot intelligent dans la version 2.0.</em></p>
-    </div>
-  `;
-}
-else if (tab === "video") {
-  content.innerHTML = `
-    <div class="video-container">
-      <h2 style="color:#0b7a95;">🎬 VOKA Vidéo</h2>
-      <p style="color:white;">Soumets ton texte ou ta voix pour générer une vidéo émotionnelle puissante.</p>
-      
-      <form id="videoForm" enctype="multipart/form-data" style="color:white;">
-        <label for="videoText">Ton script (texte) :</label><br>
-        <textarea id="videoText" name="videoText" rows="6" style="width:100%;"></textarea><br><br>
-        
-        <label for="audioUpload">Ou envoie ta voix (fichier audio) :</label><br>
-        <input type="file" id="audioUpload" name="audioUpload" accept="audio/*"><br><br>
-
-        <label for="logoUpload">Ton logo (PNG/JPG) :</label><br>
-        <input type="file" id="logoUpload" name="logoUpload" accept="image/*"><br><br>
-
-        <label for="businessName">Nom de ton entreprise :</label><br>
-        <input type="text" id="businessName" name="businessName" style="width:100%;"><br><br>
-
-        <label for="niche">Secteur/Niche :</label><br>
-        <input type="text" id="niche" name="niche" style="width:100%;"><br><br>
-
-        <input type="checkbox" id="authorization" name="authorization" required>
-        <label for="authorization">J’autorise VOKA à utiliser ce contenu pour générer ma vidéo.</label><br><br>
-
-        <button type="submit" style="background-color:#0b7a95; color:white; padding:10px 20px; border:none; border-radius:5px;">Envoyer pour création</button>
-      </form>
-
-      <p style="color:gray; font-size:0.8em; margin-top:10px;"><em>* Vidéo livrée sous 72 h. Tu peux fournir soit le texte, soit ta voix, ou les deux.</em></p>
-    </div>
-  `;
-}
-
-else if (tab === "bots") {
-  content.innerHTML = `
-    <div class="bots-container">
-      <h2 style="color:#0b7a95;">🤖 VOKA Bots IA</h2>
-      <p style="color:white;">Voici tes bots stratégiques, spécialisés selon ton domaine. Ils t’aident à automatiser ton entreprise comme jamais auparavant.</p>
-
-      <div style="margin-top:30px;">
-        <h3 style="color:#0b7a95;">📌 Bots actuellement actifs :</h3>
-        <ul style="color:white; list-style-type:disc; margin-left:20px;">
-          <li><strong>Bot Stratège :</strong> identifie les prochaines étapes pour ton entreprise</li>
-          <li><strong>Bot CFO :</strong> détecte les failles ou anomalies financières</li>
-          <li><strong>Bot CRM :</strong> relance automatiquement tes clients</li>
-          <li><strong>Bot Clone-to-Win :</strong> duplique les meilleures vidéos ou stratégies</li>
-        </ul>
-
-        <p style="color:white; margin-top:20px;"><em>Ton bot personnalisé selon ta niche est déjà en place.</em></p>
-      </div>
-
-      <div style="margin-top:30px;">
-        <h3 style="color:#0b7a95;">🚀 À venir dans la version 2.0 :</h3>
-        <ul style="color:gray; list-style-type:disc; margin-left:20px;">
-          <li>Bots interconnectés entre eux</li>
-          <li>Capacité de prédiction et d’adaptation en temps réel</li>
-          <li>Suggestions automatiques pour doubler ton chiffre d’affaires</li>
-        </ul>
-        <p style="color:gray; font-size:0.9em;">* Les bots évoluent à chaque utilisateur. Plus tu les utilises, plus ils deviennent intelligents.</p>
-      </div>
-    </div>
-  `;
-}
-else if (tab === "ressources") {
-  content.innerHTML = `
-    <div class="ressources-container">
-      <h2 style="color:#0b7a95;">📚 VOKA Ressources & Documents</h2>
-      <p style="color:white;">La plus grande bibliothèque d’outils et documents pour entrepreneurs.</p>
-      
-      <div class="resource-section">
-        <h3 style="color:#0b7a95;">📄 Documents essentiels</h3>
-        <ul style="color:white; margin-left:20px;">
-          <li><a href="#" style="color:#0b7a95;" target="_blank">Modèle de business plan</a></li>
-          <li><a href="#" style="color:#0b7a95;" target="_blank">Modèle de demande de prêt</a></li>
-          <li><a href="#" style="color:#0b7a95;" target="_blank">Formulaire d’ouverture de compte entreprise</a></li>
-        </ul>
-      </div>
-
-      <div class="resource-section">
-        <h3 style="color:#0b7a95;">💡 Aides & programmes</h3>
-        <ul style="color:white; margin-left:20px;">
-          <li><a href="#" style="color:#0b7a95;" target="_blank">Programmes gouvernementaux pour PME</a></li>
-          <li><a href="#" style="color:#0b7a95;" target="_blank">Ressources pour femmes en affaires</a></li>
-          <li><a href="#" style="color:#0b7a95;" target="_blank">Subventions pour démarrage</a></li>
-        </ul>
-      </div>
-
-      <div class="resource-section">
-        <h3 style="color:#0b7a95;">🛠️ Outils pratiques</h3>
-        <ul style="color:white; margin-left:20px;">
-          <li><a href="#" style="color:#0b7a95;" target="_blank">Générateur de contrat de service</a></li>
-          <li><a href="#" style="color:#0b7a95;" target="_blank">Simulateur de budget d’entreprise</a></li>
-          <li><a href="#" style="color:#0b7a95;" target="_blank">Checklist juridique de lancement</a></li>
-        </ul>
-      </div>
-
-      <p style="color:gray; font-size:0.9em; margin-top:20px;"><em>* Plus de documents disponibles prochainement dans VOKA 2.0 avec carte interactive géolocalisée.</em></p>
-    </div>
-  `;
-}
-else if (tab === "temoignages") {
-  content.innerHTML = `
-    <div class="testimonial-container">
-      <h2 style="color:#0b7a95;">🌟 Témoignages VOKA</h2>
-      <p style="color:white;">Laisse ton avis sur ton expérience avec VOKA. Ton retour est précieux.</p>
-
-      <form id="testimonialForm" style="color:white;">
-        <label for="note">⭐ Note sur 5 :</label><br>
-        <select id="note" name="note" style="margin-bottom:15px;">
-          <option value="5">5 - Excellent</option>
-          <option value="4">4 - Très bon</option>
-          <option value="3">3 - Moyen</option>
-          <option value="2">2 - Faible</option>
-          <option value="1">1 - Mauvais</option>
-        </select><br>
-
-        <label for="message">📝 Ton témoignage :</label><br>
-        <textarea id="message" name="message" rows="4" style="width:100%; margin-bottom:15px;"></textarea><br>
-
-        <label for="audio">🎤 Optionnel : Envoie un audio</label><br>
-        <input type="file" id="audio" name="audio" accept="audio/*" style="margin-bottom:15px;"><br>
-
-        <label for="video">🎥 Optionnel : Envoie une vidéo</label><br>
-        <input type="file" id="video" name="video" accept="video/*" style="margin-bottom:15px;"><br>
-
-        <label style="font-size: 0.9em;">
-          <input type="checkbox" id="consentCheckbox" required>
-          ✅ J’autorise VOKA à utiliser mon témoignage à des fins de marketing.
-        </label><br><br>
-
-        <button type="submit" style="background-color:#0b7a95; color:white; padding:10px 20px; border:none; border-radius:5px;">Soumettre mon témoignage</button>
-      </form>
-
-      <p id="formMessage" style="margin-top:20px; color:lightgreen;"></p>
-    </div>
-  `;
-
-  // Simule un envoi (à remplacer par un vrai traitement si connecté à backend plus tard)
-  document.getElementById("testimonialForm").addEventListener("submit", function(event) {
-    event.preventDefault();
-    document.getElementById("formMessage").textContent = "✅ Merci pour ton témoignage ! Il sera validé sous peu.";
-    this.reset();
+        fetch(tab + ".html")
+          .then(res => res.text())
+          .then(html => {
+            content.innerHTML = html;
+          })
+          .catch(() => {
+            content.innerHTML = "<h2>" + btn.innerText + "</h2><p>Contenu de l’onglet « " + tab + " » à venir.</p>";
+          });
+      });
+    }
   });
-}
-
-else if (tab === "calendrier") {
-  content.innerHTML = `
-    <div class="calendar-container">
-      <h2 style="color:#0b7a95;">📅 VOKA Calendrier</h2>
-      <p style="color:white;">Planifie ton rendez-vous stratégique avec VOKA. Choisis ta plage horaire ci-dessous :</p>
-      <div class="calendly-inline-widget" data-url="https://calendly.com/voka/30min" style="min-width:320px; height:630px;"></div>
-      <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
-    </div>
-  `;
-}
-else if (tab === "tunnel") {
-  content.innerHTML = `
-    <div class="tunnel-container">
-      <h2 style="color:#0b7a95;">🎬 VOKA Tunnel</h2>
-      <p style="color:white;">Ton tunnel de vente immersif est en cours de préparation. Il sera conçu comme un film émotionnel et captivant, inspiré des marques de luxe (Apple, Ferrari, Versace).</p>
-
-      <div style="margin-top:20px;">
-        <h3 style="color:#0b7a95;">🔧 Fonction actuelle :</h3>
-        <ul style="color:white; list-style-type:disc; margin-left:20px;">
-          <li>Accès au lien de paiement ou au formulaire de prise de rendez-vous</li>
-          <li>Vidéo de présentation à intégrer dès qu’elle est prête</li>
-          <li>Bouton puissant d’appel à l’action</li>
-        </ul>
-      </div>
-
-      <div style="margin-top:20px;">
-        <h3 style="color:#0b7a95;">🎯 Objectif du tunnel :</h3>
-        <p style="color:white;">Convertir efficacement en activant les trois cerveaux du prospect : émotion (limbique), logique (cortex) et impulsion (reptilien).</p>
-      </div>
-
-      <div style="text-align:center; margin-top:40px;">
-        <a href="https://calendly.com/voka/30min" target="_blank" style="background-color:#0b7a95; color:white; padding:12px 24px; border:none; border-radius:5px; text-decoration:none; font-weight:bold; box-shadow:0 0 10px #0b7a95;">
-          🚀 Prendre rendez-vous maintenant
-        </a>
-      </div>
-
-      <p style="color:gray; font-size:0.9em; margin-top:20px;">* Ce tunnel sera évolutif et optimisé avec la version 2.0</p>
-    </div>
-  `;
-}
-
-  if (tab === "fondation") {
-  content.innerHTML = `
-    <div class="fondation-container">
-      <h2 style="color:#0b7a95;">Fondation William</h2>
-      <img src="logo-fondation.png" alt="Logo Fondation" style="width:80px; border-radius:10px; margin-bottom:10px;">
-      <p style="color:white;">La Fondation William a pour mission d’aider les enfants atteints d’autisme, de trisomie 21 ou de troubles intellectuels à s’épanouir.</p>
-      <p style="color:white;"><em>L’ouverture officielle est prévue sous peu.</em></p>
-    </div>
-  `;
-} else {
-  content.innerHTML = "<h2>" + btn.innerText + "</h2><p>Contenu de l’onglet " + tab + " à venir.</p>";
-}
-
-  </script>
+</script>
 
 </body>
 </html>
