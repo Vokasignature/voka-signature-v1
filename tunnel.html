@@ -1,18 +1,98 @@
-<div class="tunnel-container">
-  <h2 style="color:#0b7a95;">🎥 VOKA Tunnel</h2>
-  <p style="color:white;">
-    Ton tunnel de vente immersif est en cours de préparation. Il sera conçu comme un film émotionnel et captivant, inspiré des marques de luxe (Apple, Ferrari, Versace).
-  </p>
-  <ul style="color:white; margin-left:20px;">
-    <li>🚀 Accès au lien de paiement ou au formulaire de prise de rendez-vous</li>
-    <li>🎬 Vidéo de présentation à intégrer dès qu’elle est prête</li>
-    <li>📍 Bouton puissant d’appel à l’action</li>
-  </ul>
-  <h3 style="color:#0b7a95;">🎯 Objectif du tunnel :</h3>
-  <p style="color:white;">
-    Convertir efficacement en activant les trois cerveaux du prospect :
-    émotion (limbique), logique (cortex) et impulsion (reptilien).
-  </p>
-  <button class="btn-action" onclick="window.open('https://calendly.com/voka/30min','_blank')">🚀 Prendre rendez-vous maintenant</button>
-  <p style="color:gray; font-size:0.9em; margin-top:10px;"><em>* Ce tunnel sera évolutif et optimisé avec la version 2.0</em></p>
-</div>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Tunnel VOKA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    body {
+      margin: 0;
+      background: linear-gradient(135deg, #000000, #0b7a95);
+      font-family: Roboto, sans-serif;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: auto;
+      padding: 40px 20px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3em;
+      margin-bottom: 20px;
+      color: #0b7a95;
+    }
+
+    p {
+      font-size: 1.3em;
+      line-height: 1.6;
+      margin-bottom: 40px;
+    }
+
+    .video-section {
+      margin: 40px auto;
+    }
+
+    iframe {
+      width: 100%;
+      max-width: 800px;
+      height: 450px;
+      border: none;
+      border-radius: 10px;
+      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #0b7a95;
+      color: white;
+      padding: 15px 35px;
+      border: none;
+      border-radius: 50px;
+      font-size: 1.2em;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .btn:hover {
+      background-color: #0b98b5;
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(11, 122, 149, 0.8);
+    }
+
+    .footer {
+      margin-top: 50px;
+      font-size: 0.9em;
+      color: #aaa;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <h1>Bienvenue dans l’univers VOKA</h1>
+    <p>
+      Ce n’est pas un simple outil. C’est une révolution pour les entrepreneurs modernes. <br />
+      Automatise, propulse, inspire, vends plus intelligemment. <br />
+      Découvre ce que ton entreprise mérite vraiment.
+    </p>
+
+    <div class="video-section">
+      <!-- Tu peux insérer ici une vidéo YouTube, Loom, ou un lien Voka -->
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+    </div>
+
+    <a class="btn" href="https://calendly.com/voka/30min" target="_blank">
+      🔥 Réserve ton appel stratégique maintenant
+    </a>
+
+    <div class="footer">
+      <p>&copy; 2025 VOKA. Tous droits réservés.</p>
+    </div>
+  </div>
+
+</body>
+</html>
