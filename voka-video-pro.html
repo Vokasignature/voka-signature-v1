@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Créer ma Vidéo</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="voka-dark">
+  <div class="content">
+    <h1 class="section-title">🎬 Crée ta Vidéo VOKA</h1>
+    <p class="section-subtitle">Remplis ce formulaire et reçois ta vidéo personnalisée dans les 72h.</p>
+
+    <form action="https://formspree.io/f/YOUR_ID" method="POST" enctype="multipart/form-data" class="voka-form">
+      
+      <label>Nom de l’entreprise</label>
+      <input type="text" name="entreprise" required>
+
+      <label>Public cible</label>
+      <input type="text" name="cible" required>
+
+      <label>Type de message</label>
+      <select name="type-message" required>
+        <option>🎯 Promotion</option>
+        <option>💡 Information</option>
+        <option>❤️ Émotion</option>
+        <option>📈 Conversion</option>
+      </select>
+
+      <label>Texte du message (max 500 mots)</label>
+      <textarea name="script" rows="6" required></textarea>
+
+      <label>Langue</label>
+      <select name="langue" required>
+        <option>Français 🇫🇷</option>
+        <option>Anglais 🇺🇸</option>
+      </select>
+
+      <label>Style de voix souhaité</label>
+      <select name="voix">
+        <option>Masculine - Calme</option>
+        <option>Masculine - Énergique</option>
+        <option>Féminine - Douce</option>
+        <option>Féminine - Inspirante</option>
+      </select>
+
+      <label>Uploader ton logo</label>
+      <input type="file" name="logo" accept="image/*">
+
+      <label>Optionnel : Ajoute ton audio (voix réelle)</label>
+      <input type="file" name="audio" accept="audio/*">
+
+      <button type="submit" class="voka-button">🚀 Envoyer ma demande</button>
+    </form>
+
+    <div class="after-submit">
+      <h3>📦 Vidéo en production</h3>
+      <p>Tu recevras ta vidéo personnalisée directement dans ton espace VOKA dans les 72h.</p>
+    </div>
+  </div>
+</body>
+</html>
