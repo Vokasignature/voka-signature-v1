@@ -1,176 +1,114 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>VOKA - Dashboard</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #0b0b0b;
-      color: #ffffff;
-    }
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dashboard VOKA</title>
+  <link rel="icon" href="logo-voka.png" type="image/png">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- Barre latérale -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="logo-voka.png" alt="Logo VOKA" />
+        <span>Entreprise X</span>
+      </div>
+      <nav class="nav-links">
+        <button onclick="changeContent('accueil')">Accueil</button>
+        <button onclick="changeContent('videos')">VOKA Vidéos</button>
+        <button onclick="changeContent('cfo')">VOKA CFO</button>
+        <button onclick="changeContent('crm')">VOKA CRM</button>
+        <button onclick="changeContent('bots')">VOKA Bots</button>
+        <button onclick="changeContent('tunnel')">VOKA Tunnel</button>
+        <button onclick="changeContent('calendrier')">VOKA Calendrier</button>
+        <button onclick="changeContent('ressources')">VOKA Ressources</button>
+        <button onclick="changeContent('temoignages')">VOKA Témoignage</button>
+        <button onclick="changeContent('boutique')">VOKA Boutique</button>
+        <button onclick="changeContent('visionnaire')">VOKA Visionnaire</button>
+        <button onclick="changeContent('fondation')">Fondation William</button>
+      </nav>
+    </aside>
 
-    .dashboard-container {
-      display: flex;
-      height: 100vh;
-      overflow: hidden;
-    }
+    <!-- Contenu principal -->
+    <main class="main-content">
+      <!-- Profil en haut à droite -->
+      <header class="top-bar">
+        <div class="user-profile" onmouseover="showProfileMenu()" onmouseout="hideProfileMenu()">
+          <img src="logo-voka.png" alt="Logo client" />
+          <div class="profile-menu" id="profileMenu">
+            <p>Entreprise X</p>
+            <p>Forfait : Signature</p>
+            <a href="facturation.html">Facturation</a>
+            <a href="profil.html">Mon Profil</a>
+          </div>
+        </div>
+      </header>
 
-    .sidebar {
-      width: 250px;
-      background: linear-gradient(180deg, #0b7a95, #062e3f);
-      padding: 20px;
-      box-sizing: border-box;
-      border-top-right-radius: 15px;
-      border-bottom-right-radius: 15px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
+      <!-- Contenu dynamique -->
+      <section id="contentZone" class="content-zone">
+        <img src="logo-voka.png" class="main-logo" alt="Logo VOKA" />
+      </section>
+    </main>
+  </div>
 
-    .sidebar .onglet {
-      background: rgba(255, 255, 255, 0.05);
-      border-radius: 12px;
-      padding: 12px 16px;
-      color: #ffffff;
-      font-size: 16px;
-      cursor: pointer;
-      transition: all 0.2s ease-in-out;
-      border-left: 4px solid transparent;
-    }
-
-    .sidebar .onglet:hover,
-    .sidebar .onglet.active {
-      background: rgba(11, 122, 149, 0.2);
-      border-left: 4px solid #0b7a95;
-    }
-
-    .main-content {
-      flex: 1;
-      padding: 40px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: center;
-    }
-
-    .main-content h1 {
-      font-size: 32px;
-      margin-bottom: 10px;
-    }
-
-    .progress-circle {
-      margin: 40px 0;
-    }
-
-    .circular-chart {
-      display: block;
-      margin: 0 auto;
-      max-width: 120px;
-      max-height: 120px;
-    }
-
-    .circle-bg {
-      fill: none;
-      stroke: #444;
-      stroke-width: 3.8;
-    }
-
-    .circle {
-      fill: none;
-      stroke: #0b7a95;
-      stroke-width: 2.8;
-      stroke-linecap: round;
-      animation: progress 1s ease-out forwards;
-    }
-
-    .percentage {
-      fill: white;
-      font-size: 0.5em;
-      text-anchor: middle;
-    }
-
-    @keyframes progress {
-      0% {
-        stroke-dasharray: 0, 100;
+  <script>
+    function changeContent(section) {
+      const zone = document.getElementById('contentZone');
+      switch(section) {
+        case 'accueil':
+          zone.innerHTML = '<h2>Bienvenue sur VOKA</h2><p>Choisis un onglet à gauche pour commencer.</p>';
+          break;
+        case 'videos':
+          zone.innerHTML = '<h2>Générateur de Vidéos</h2><p>Soumets ta voix ou ton texte ici.</p>';
+          break;
+        case 'cfo':
+          zone.innerHTML = '<h2>VOKA CFO</h2><p>Gère tes finances automatiquement.</p>';
+          break;
+        case 'crm':
+          zone.innerHTML = '<h2>VOKA CRM</h2><p>Automatise tes relances clients ici.</p>';
+          break;
+        case 'bots':
+          zone.innerHTML = '<h2>VOKA Bots</h2><p>Ton assistant par niche est activé.</p>';
+          break;
+        case 'tunnel':
+          zone.innerHTML = '<h2>Tunnel 8.0</h2><p>Structure de conversion émotionnelle avancée.</p>';
+          break;
+        case 'calendrier':
+          zone.innerHTML = '<h2>Calendrier</h2><iframe src="https://tonliencalendly.com" width="100%" height="500" style="border:none;"></iframe>';
+          break;
+        case 'ressources':
+          zone.innerHTML = '<h2>Ressources</h2><p>Modèles de PDF, banques, documents utiles ici.</p>';
+          break;
+        case 'temoignages':
+          zone.innerHTML = '<h2>Témoignages</h2><p>Ajoute ton avis vocal, écrit ou vidéo ici.</p>';
+          break;
+        case 'boutique':
+          zone.innerHTML = '<h2>Boutique</h2><p>Bouteilles, t-shirts, stylos… Bientôt disponible.</p>';
+          break;
+        case 'visionnaire':
+          zone.innerHTML = '<h2>VOKA Visionnaire</h2><p>L’assistant IA stratégique t’écoute.</p>';
+          break;
+        case 'fondation':
+          zone.innerHTML = `
+            <h2>Fondation William</h2>
+            <p>La Fondation William a pour mission d’aider les enfants atteints d’autisme, de trisomie 21 ou de troubles intellectuels à s’épanouir.</p>
+            <p>Ouverture officielle prévue sous peu.</p>
+          `;
+          break;
       }
     }
 
-    .logo-container {
-      position: absolute;
-      top: 20px;
-      right: 20px;
-      text-align: right;
+    function showProfileMenu() {
+      document.getElementById("profileMenu").style.display = "block";
     }
 
-    .logo-container img {
-      height: 40px;
-      margin-bottom: 5px;
+    function hideProfileMenu() {
+      document.getElementById("profileMenu").style.display = "none";
     }
-
-    .logo-container .profil-info {
-      font-size: 14px;
-      color: #ccc;
-    }
-
-    .logo-container .profil-info a {
-      color: #0b7a95;
-      text-decoration: none;
-      font-weight: bold;
-    }
-  </style>
-</head>
-<body>
-
-  <div class="dashboard-container">
-
-    <div class="sidebar">
-      <div class="onglet active">Accueil</div>
-      <div class="onglet">VOKA CFO</div>
-      <div class="onglet">VOKA CRM</div>
-      <div class="onglet">VOKA Vidéo</div>
-      <div class="onglet">VOKA Tunnel</div>
-      <div class="onglet">VOKA Visionnaire</div>
-      <div class="onglet">VOKA Calendrier</div>
-      <div class="onglet">VOKA Ressources</div>
-      <div class="onglet">VOKA Témoignages</div>
-      <div class="onglet">VOKA Fondation William</div>
-    </div>
-
-    <div class="main-content">
-      <h1>Bienvenue sur votre espace VOKA</h1>
-      <p>Vous êtes actuellement sur le forfait <strong>Signature</strong>.</p>
-
-      <div class="progress-circle">
-        <svg viewBox="0 0 36 36" class="circular-chart">
-          <path class="circle-bg"
-                d="M18 2.0845
-                   a 15.9155 15.9155 0 0 1 0 31.831
-                   a 15.9155 15.9155 0 0 1 0 -31.831"/>
-          <path class="circle"
-                stroke-dasharray="68, 100"
-                d="M18 2.0845
-                   a 15.9155 15.9155 0 0 1 0 31.831
-                   a 15.9155 15.9155 0 0 1 0 -31.831"/>
-          <text x="18" y="20.35" class="percentage">68%</text>
-        </svg>
-      </div>
-
-      <p>Continuez ainsi pour débloquer toutes les fonctionnalités de la version 2.0 !</p>
-    </div>
-
-    <div class="logo-container">
-      <img src="logo-voka.png" alt="Logo Entreprise X">
-      <div class="profil-info">
-        Entreprise X – <strong>Signature</strong><br>
-        <a href="#">Voir profil</a> | <a href="#">Facturation</a>
-      </div>
-    </div>
-
-  </div>
-
+  </script>
 </body>
 </html>
 
