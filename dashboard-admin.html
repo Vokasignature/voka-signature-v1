@@ -3,55 +3,132 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard ADMIN – VOKA</title>
+  <title>Dashboard Admin</title>
   <link rel="stylesheet" href="style.css" />
-</head>
-<body>
-
-  <header>
-    <h1>ESPACE ADMINISTRATEUR – VOKA</h1>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="dashboard-admin.html" class="active">Admin</a></li>
-      <li><a href="paiement.html">Preuves CGU</a></li>
-      <li><a href="cgu.html">CGU officielles</a></li>
-      <li><a href="fondation.html">Fondation William</a></li>
-      <li><a href="version2.html">Préparation VOKA 2.0</a></li>
-    </ul>
-  </nav>
-
-  <main>
-    <section>
-      <h2>Bienvenue Michel</h2>
-      <p>Voici ton espace personnel de contrôle de VOKA.</p>
-
-      <h3>💰 Objectif : 25 000 $</h3>
-      <p><strong>Progrès :</strong> <progress value="0" max="25000" id="progressBar"></progress> <span id="progressText">0 $</span></p>
-      <p><em>Une alerte apparaîtra automatiquement à 20 000 $</em></p>
-
-      <h3>📜 Suivi des CGU acceptées</h3>
-      <p><a href="paiement.html">Voir les soumissions CGU →</a></p>
-
-      <h3>🌟 Fondation William</h3>
-      <p><a href="fondation.html">Accéder à la Fondation William →</a></p>
-
-      <h3>🚀 Version 2.0</h3>
-      <p><a href="version2.html">Préparer la version 2.0 →</a></p>
-    </section>
-  </main>
-
+  <link rel="icon" href="logo-voka.png" />
   <script>
-    // Simuler progression vers 25 000 $ — À remplacer avec données réelles
-    const montant = 0; // À modifier dynamiquement plus tard
-    document.getElementById("progressBar").value = montant;
-    document.getElementById("progressText").textContent = `${montant.toLocaleString()} $`;
+    function toggleMode() {
+      document.body.classList.toggle('light-mode');
+    }
 
-    if (montant >= 20000) {
-      alert("🚨 Tu as atteint 20 000 $ ! Il est temps de préparer la version 2.0 !");
+    function showContent(contentId) {
+      const sections = document.querySelectorAll(".main-content");
+      sections.forEach(section => section.style.display = "none");
+      document.getElementById(contentId).style.display = "block";
+
+      const links = document.querySelectorAll("nav li");
+      links.forEach(link => link.classList.remove("active"));
+      document.querySelector(`[data-id='${contentId}']`).classList.add("active");
+    }
+
+    window.onload = () => {
+      showContent('home');
     }
   </script>
+</head>
+<body>
+  <div class="dashboard">
+    <aside class="sidebar">
+      <img src="logo-voka.png" alt="Logo VOKA" class="logo"/>
+      <ul>
+        <li class="active" data-id="home" onclick="showContent('home')">Accueil</li>
+        <li data-id="videos" onclick="showContent('videos')">Mes vidéos</li>
+        <li data-id="commande" onclick="showContent('commande')">Commander</li>
+        <li data-id="inspiration" onclick="showContent('inspiration')">Inspiration</li>
+        <li data-id="stats" onclick="showContent('stats')">Statistiques</li>
+        <li data-id="boosts" onclick="showContent('boosts')">Upsells</li>
+        <li data-id="cfo" onclick="showContent('cfo')">VOKA CFO</li>
+        <li data-id="crm" onclick="showContent('crm')">VOKA CRM</li>
+        <li data-id="bots" onclick="showContent('bots')">Bots IA</li>
+        <li data-id="calendar" onclick="window.open('https://calendly.com/voka/30min')">Calendrier</li>
+        <li data-id="ressources" onclick="showContent('ressources')">Ressources</li>
+        <li data-id="temoignages" onclick="showContent('temoignages')">Témoignages</li>
+        <li data-id="boutique" onclick="showContent('boutique')">Boutique</li>
+        <li data-id="visionnaire" onclick="showContent('visionnaire')">VOKA Visionnaire</li>
+        <li data-id="fondation" onclick="showContent('fondation')">Fondation William</li>
+      </ul>
+    </aside>
 
+    <div class="main">
+      <header>
+        <div class="user-info">
+          <img src="logo-voka.png" class="user-logo" />
+          <div class="dropdown">
+            <span>Administrateur</span>
+            <div class="dropdown-content">
+              <p>Forfait : VIP</p>
+              <a href="#">Facturation</a>
+            </div>
+          </div>
+        </div>
+        <button class="mode-toggle" onclick="toggleMode()">🌙/☀️</button>
+      </header>
+
+      <!-- CONTENU AU CENTRE -->
+      <main class="main-panel">
+        <section id="home" class="main-content">
+          <img src="logo-voka.png" class="logo-animated" />
+        </section>
+
+        <section id="videos" class="main-content" style="display: none;">
+          <h2>Vidéos générées</h2>
+        </section>
+
+        <section id="commande" class="main-content" style="display: none;">
+          <h2>Commander une vidéo</h2>
+          <iframe src="https://formspree.io/f/xyzpzzon" width="100%" height="500" style="border:none;"></iframe>
+        </section>
+
+        <section id="inspiration" class="main-content" style="display: none;">
+          <h2>Inspiration virale</h2>
+        </section>
+
+        <section id="stats" class="main-content" style="display: none;">
+          <h2>Statistiques</h2>
+          <p>Taux de clics, vues, conversions, tunnel…</p>
+        </section>
+
+        <section id="boosts" class="main-content" style="display: none;">
+          <h2>Upsells & boosts</h2>
+        </section>
+
+        <section id="cfo" class="main-content" style="display: none;">
+          <h2>VOKA CFO (Admin)</h2>
+        </section>
+
+        <section id="crm" class="main-content" style="display: none;">
+          <h2>CRM Admin</h2>
+        </section>
+
+        <section id="bots" class="main-content" style="display: none;">
+          <h2>Bots IA</h2>
+        </section>
+
+        <section id="ressources" class="main-content" style="display: none;">
+          <h2>Bibliothèque ressources</h2>
+        </section>
+
+        <section id="temoignages" class="main-content" style="display: none;">
+          <h2>Témoignages clients</h2>
+        </section>
+
+        <section id="boutique" class="main-content" style="display: none;">
+          <h2>Boutique VOKA</h2>
+        </section>
+
+        <section id="visionnaire" class="main-content" style="display: none;">
+          <h2>VOKA Visionnaire</h2>
+          <p>L'assistant IA le plus intelligent de la plateforme. Il analyse tout. Il évolue. Il apprend.</p>
+        </section>
+
+        <section id="fondation" class="main-content" style="display: none;">
+          <h2>Fondation William</h2>
+          <p>
+            Cet espace est privé pour le fondateur. Suivi de l’avancement, vision, mission.
+          </p>
+        </section>
+      </main>
+    </div>
+  </div>
 </body>
 </html>
