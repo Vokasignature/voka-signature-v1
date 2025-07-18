@@ -1,133 +1,153 @@
+/* Police Roboto */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
 body {
   margin: 0;
   font-family: 'Roboto', sans-serif;
-  background-color: #000;
-  color: #fff;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100vh;
+  background-color: #0a0a0a;
+  color: #ffffff;
 }
 
-.hero {
-  text-align: center;
-  max-width: 600px;
-  padding: 40px;
+.dashboard-container {
+  display: flex;
+  height: 100vh;
+  overflow: hidden;
+}
+
+/* --- Barre latérale --- */
+.sidebar {
+  width: 260px;
+  background: linear-gradient(180deg, #0b7a95, #06303a);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
 }
 
 .logo {
-  width: 140px;
-  animation: pulse 3s infinite ease-in-out;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.logo img {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.logo span {
+  display: block;
+  font-size: 18px;
+  font-weight: bold;
+  color: #ffffff;
+}
+
+.nav-links button {
+  background: rgba(255, 255, 255, 0.05);
+  color: #ffffff;
+  border: 1px solid transparent;
+  border-radius: 12px;
+  padding: 12px;
+  margin-bottom: 12px;
+  cursor: pointer;
+  font-size: 15px;
+  transition: all 0.3s ease;
+  text-align: left;
+  width: 100%;
+}
+
+.nav-links button:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: #0b7a95;
+}
+
+/* --- Contenu principal --- */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #121212;
+  position: relative;
+}
+
+.top-bar {
+  display: flex;
+  justify-content: flex-end;
   margin-bottom: 20px;
 }
 
-h1 {
-  font-size: 2.5rem;
-  color: #0b7a95;
-  margin-bottom: 15px;
-}
-
-p {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
-}
-
-.cta {
-  display: inline-block;
-  padding: 15px 25px;
-  background: linear-gradient(45deg, #0b7a95, #052e4d);
-  color: #fff;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 8px;
-  margin-bottom: 15px;
-  transition: 0.3s;
-}
-
-.cta:hover {
-  background: linear-gradient(45deg, #0b7a95, #83090e);
-}
-
-.cgu-link {
-  display: block;
-  margin-top: 10px;
-  font-size: 0.9rem;
-  color: #ccc;
-  text-decoration: underline;
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 0.8; }
-  50% { transform: scale(1.05); opacity: 1; }
-  100% { transform: scale(1); opacity: 0.8; }
-}
-.voka-dark {
-  background: #000;
-  color: #fff;
-  font-family: 'Roboto', sans-serif;
-}
-
-.voka-form {
-  background: #0b0b0b;
-  padding: 30px;
-  border-radius: 12px;
-  border: 1px solid #0b7a95;
-  max-width: 600px;
-  margin: auto;
-  box-shadow: 0 0 20px #0b7a95aa;
-}
-
-.voka-form label {
-  display: block;
-  margin: 15px 0 5px;
-  color: #fff;
-}
-
-.voka-form input,
-.voka-form select,
-.voka-form textarea {
-  width: 100%;
-  padding: 10px;
-  border: none;
-  border-radius: 6px;
-  background: #111;
-  color: #0b7a95;
-  outline: none;
-}
-
-.voka-button {
-  background: #0b7a95;
-  border: none;
-  color: white;
-  padding: 12px 20px;
-  margin-top: 20px;
-  font-size: 16px;
-  border-radius: 6px;
+.user-profile {
+  position: relative;
   cursor: pointer;
-  transition: 0.3s;
 }
 
-.voka-button:hover {
-  background: #0da0ba;
-  transform: scale(1.02);
+.user-profile img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
 }
 
-.after-submit {
-  margin-top: 40px;
-  text-align: center;
+.profile-menu {
   display: none;
+  position: absolute;
+  right: 0;
+  background-color: #1f1f1f;
+  border: 1px solid #0b7a95;
+  padding: 10px;
+  border-radius: 10px;
+  z-index: 10;
+  width: 180px;
+  text-align: left;
 }
 
-.section-title {
-  font-size: 32px;
-  text-align: center;
+.profile-menu p {
+  margin: 5px 0;
+  font-size: 14px;
+  color: #ffffff;
+}
+
+.profile-menu a {
+  display: block;
+  margin-top: 8px;
+  text-decoration: none;
   color: #0b7a95;
+  font-weight: bold;
 }
 
-.section-subtitle {
+.content-zone {
+  background-color: #181818;
+  border-radius: 16px;
+  padding: 40px;
+  height: calc(100% - 60px);
+  overflow-y: auto;
+}
+
+.content-zone h2 {
+  color: #0b7a95;
+  font-size: 28px;
+  margin-bottom: 10px;
+}
+
+.content-zone p {
   font-size: 16px;
-  text-align: center;
-  color: #aaa;
+  color: #eeeeee;
 }
 
+.main-logo {
+  display: block;
+  margin: 0 auto;
+  width: 150px;
+  opacity: 0.3;
+}
+
+/* Scrollbar personnalisée */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #0a0a0a;
+}
+::-webkit-scrollbar-thumb {
+  background: #0b7a95;
+  border-radius: 10px;
+}
 
