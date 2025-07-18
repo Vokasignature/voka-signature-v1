@@ -1,115 +1,80 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
   <title>Dashboard VOKA</title>
-  <link rel="icon" href="logo-voka.png" type="image/png">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
-<body>
-  <div class="dashboard-container">
-    
-    <!-- Barre latérale -->
-    <aside class="sidebar">
-      <div class="logo">
-        <img src="logo-voka.png" alt="Logo VOKA" />
-        <span>Entreprise X</span>
-      </div>
-      <nav class="nav-links">
-        <button onclick="changeContent('accueil')">Accueil</button>
-        <button onclick="changeContent('videos')">VOKA Vidéos</button>
-        <button onclick="changeContent('cfo')">VOKA CFO</button>
-        <button onclick="changeContent('crm')">VOKA CRM</button>
-        <button onclick="changeContent('bots')">VOKA Bots</button>
-        <button onclick="changeContent('tunnel')">VOKA Tunnel</button>
-        <button onclick="changeContent('calendrier')">VOKA Calendrier</button>
-        <button onclick="changeContent('ressources')">VOKA Ressources</button>
-        <button onclick="changeContent('temoignages')">VOKA Témoignage</button>
-        <button onclick="changeContent('boutique')">VOKA Boutique</button>
-        <button onclick="changeContent('visionnaire')">VOKA Visionnaire</button>
-        <button onclick="changeContent('fondation')">Fondation William</button>
-      </nav>
-    </aside>
+<body class="dark-mode">
 
-    <!-- Contenu principal -->
-    <main class="main-content">
-      <!-- Profil en haut à droite -->
-      <header class="top-bar">
-        <div class="user-profile" onmouseover="showProfileMenu()" onmouseout="hideProfileMenu()">
-          <img src="logo-voka.png" alt="Logo client" />
-          <div class="profile-menu" id="profileMenu">
-            <p>Entreprise X</p>
-            <p>Forfait : Signature</p>
-            <a href="facturation.html">Facturation</a>
-            <a href="profil.html">Mon Profil</a>
-          </div>
+  <!-- Barre latérale gauche -->
+  <aside class="sidebar">
+    <div class="sidebar-logo">
+      <img src="logo-voka.png" alt="Logo VOKA">
+    </div>
+    <nav class="sidebar-nav">
+      <button class="tab-button active" data-tab="visionnaire">VOKA Visionnaire</button>
+      <button class="tab-button" data-tab="cfo">VOKA CFO</button>
+      <button class="tab-button" data-tab="crm">VOKA CRM</button>
+      <button class="tab-button" data-tab="video">VOKA Vidéo</button>
+      <button class="tab-button" data-tab="bots">VOKA Bots</button>
+      <button class="tab-button" data-tab="tunnel">VOKA Tunnel</button>
+      <button class="tab-button" data-tab="calendrier">VOKA Calendrier</button>
+      <button class="tab-button" data-tab="ressources">VOKA Ressources</button>
+      <button class="tab-button" data-tab="temoignage">VOKA Témoignage</button>
+      <button class="tab-button" data-tab="boutique">VOKA Boutique</button>
+      <button class="tab-button" data-tab="fondation">Fondation William</button>
+    </nav>
+  </aside>
+
+  <!-- Contenu principal -->
+  <main class="main-content">
+
+    <!-- Profil client -->
+    <div class="profil-client">
+      <div class="profil-logo" onmouseover="document.querySelector('.profil-menu').style.display='block'" onmouseout="document.querySelector('.profil-menu').style.display='none'">
+        <img src="logo-voka.png" alt="Logo client">
+        <div class="profil-menu">
+          <p><strong>Entreprise X</strong></p>
+          <p>Forfait : Signature</p>
+          <a href="#">Profil</a>
+          <a href="#">Facturation</a>
         </div>
-      </header>
+      </div>
+    </div>
 
-      <!-- Contenu dynamique -->
-      <section id="contentZone" class="content-zone">
-        <img src="logo-voka.png" class="main-logo" alt="Logo VOKA" />
-      </section>
-    </main>
-  </div>
+    <!-- Barre de progression -->
+    <div class="progress-bar">
+      <svg width="100" height="100">
+        <circle class="bg" cx="50" cy="50" r="45"></circle>
+        <circle class="progress" cx="50" cy="50" r="45" stroke-dasharray="282" stroke-dashoffset="100"></circle>
+      </svg>
+      <p>Évolution</p>
+    </div>
 
+    <!-- Contenu dynamique -->
+    <section id="tab-content">
+      <h1>Bienvenue dans VOKA</h1>
+      <p>Sélectionnez un onglet à gauche pour commencer.</p>
+    </section>
+
+  </main>
+
+  <!-- Script JS pour la navigation -->
   <script>
-    function changeContent(section) {
-      const zone = document.getElementById('contentZone');
-      switch(section) {
-        case 'accueil':
-          zone.innerHTML = '<h2>Bienvenue sur VOKA</h2><p>Choisis un onglet à gauche pour commencer.</p>';
-          break;
-        case 'videos':
-          zone.innerHTML = '<h2>Générateur de Vidéos</h2><p>Soumets ta voix ou ton texte ici.</p>';
-          break;
-        case 'cfo':
-          zone.innerHTML = '<h2>VOKA CFO</h2><p>Gère tes finances automatiquement.</p>';
-          break;
-        case 'crm':
-          zone.innerHTML = '<h2>VOKA CRM</h2><p>Automatise tes relances clients ici.</p>';
-          break;
-        case 'bots':
-          zone.innerHTML = '<h2>VOKA Bots</h2><p>Ton assistant par niche est activé.</p>';
-          break;
-        case 'tunnel':
-          zone.innerHTML = '<h2>Tunnel 8.0</h2><p>Structure de conversion émotionnelle avancée.</p>';
-          break;
-        case 'calendrier':
-          zone.innerHTML = '<h2>Calendrier</h2><iframe src="https://tonliencalendly.com" width="100%" height="500" style="border:none;"></iframe>';
-          break;
-        case 'ressources':
-          zone.innerHTML = '<h2>Ressources</h2><p>Modèles de PDF, banques, documents utiles ici.</p>';
-          break;
-        case 'temoignages':
-          zone.innerHTML = '<h2>Témoignages</h2><p>Ajoute ton avis vocal, écrit ou vidéo ici.</p>';
-          break;
-        case 'boutique':
-          zone.innerHTML = '<h2>Boutique</h2><p>Bouteilles, t-shirts, stylos… Bientôt disponible.</p>';
-          break;
-        case 'visionnaire':
-          zone.innerHTML = '<h2>VOKA Visionnaire</h2><p>L’assistant IA stratégique t’écoute.</p>';
-          break;
-        case 'fondation':
-          zone.innerHTML = `
-            <h2>Fondation William</h2>
-            <p>La Fondation William a pour mission d’aider les enfants atteints d’autisme, de trisomie 21 ou de troubles intellectuels à s’épanouir.</p>
-            <p>Ouverture officielle prévue sous peu.</p>
-          `;
-          break;
-      }
-    }
+    const buttons = document.querySelectorAll(".tab-button");
+    const content = document.getElementById("tab-content");
 
-    function showProfileMenu() {
-      document.getElementById("profileMenu").style.display = "block";
-    }
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        buttons.forEach(b => b.classList.remove("active"));
+        btn.classList.add("active");
 
-    function hideProfileMenu() {
-      document.getElementById("profileMenu").style.display = "none";
-    }
+        const tab = btn.getAttribute("data-tab");
+        content.innerHTML = "<h2>" + btn.innerText + "</h2><p>Contenu de l’onglet " + tab + " à venir.</p>";
+      });
+    });
   </script>
+
 </body>
 </html>
-
-
