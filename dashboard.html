@@ -2,48 +2,76 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Dashboard VOKA</title>
   <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
 </head>
-<body>
+<body class="dark-mode">
 
-  <header>
-    <h1>DASHBOARD CLIENT – VOKA</h1>
-  </header>
-
-  <nav>
-    <ul>
-      <li><a href="dashboard.html" class="active">Dashboard</a></li>
-      <li><a href="cfo.html">VOKA CFO</a></li>
-      <li><a href="crm.html">VOKA CRM</a></li>
-      <li><a href="bots.html">VOKA Bots</a></li>
-      <li><a href="calendrier.html">Mon Calendrier</a></li>
-      <li><a href="formulaire.html">Formulaire d’accueil</a></li>
-      <li><a href="video.html">Mes Vidéos</a></li>
-      <li><a href="suggestion.html">Suggestion Éclair</a></li>
-      <li><a href="clone.html">Clone-to-Win</a></li>
-      <li><a href="visionnaire.html">VOKA Visionnaire</a></li>
-      <li><a href="influenceur.html">VOKA Influenceur</a></li>
-      <li><a href="prospecteur.html">VOKA Prospecteur</a></li>
-      <li><a href="ressources.html">Ressources & Documents</a></li>
-      <li><a href="temoignage.html">Témoignage</a></li>
-      <li><a href="boutique.html">Boutique VOKA</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="aide.html">Aide</a></li>
-      <li><a href="cgu.html">CGU</a></li>
+  <div class="sidebar">
+    <div class="logo-container">
+      <img src="logo-voka.png" alt="VOKA" class="logo">
+    </div>
+    <ul class="nav-links">
+      <li class="nav-item active"><span class="icon">🏠</span>Accueil</li>
+      <li class="nav-item"><span class="icon">🎥</span>Mes vidéos</li>
+      <li class="nav-item"><span class="icon">📝</span>Commander une vidéo</li>
+      <li class="nav-item"><span class="icon">💡</span>Inspiration virale</li>
+      <li class="nav-item"><span class="icon">📊</span>Statistiques & impact</li>
+      <li class="nav-item"><span class="icon">🚀</span>Upsells & boosts 🔒</li>
+      <li class="nav-item"><span class="icon">📈</span>CFO 🔒</li>
+      <li class="nav-item" onclick="showFoundationInfo()"><span class="icon">❤️</span>Fondation William</li>
     </ul>
-  </nav>
+  </div>
 
-  <main>
-    <section>
-      <h2>Bienvenue dans ton univers VOKA</h2>
-      <p>Choisis un module dans le menu ci-dessus pour accéder à tes outils automatisés.</p>
-      <p>Ton dashboard est optimisé pour la performance, l’automatisation et ton succès.</p>
-    </section>
-  </main>
+  <div class="main-content">
+    <div class="topbar">
+      <div class="toggle-mode">
+        <label for="modeToggle">Mode clair</label>
+        <input type="checkbox" id="modeToggle" onclick="toggleMode()">
+      </div>
+      <div class="profile" onmouseover="showProfile()" onmouseout="hideProfile()">
+        <span>Entreprise X</span>
+        <div class="profile-dropdown" id="profileDropdown">
+          <p>Nom : Entreprise X</p>
+          <p>Forfait : Signature</p>
+          <a href="paiement.html">Voir facturation</a>
+        </div>
+      </div>
+    </div>
 
+    <div class="dashboard-welcome">
+      <h1>Bienvenue sur votre dashboard</h1>
+      <p>Vous pouvez naviguer dans les onglets à gauche pour accéder à toutes vos fonctionnalités.</p>
+    </div>
+
+    <div id="foundationInfo" class="foundation-box hidden">
+      <h2>Fondation William</h2>
+      <p>La Fondation William a pour mission d’aider les enfants atteints d’autisme, de trisomie 21 ou de troubles intellectuels à s’épanouir. 
+        Elle offrira du soutien émotionnel, éducatif et humain à travers une plateforme et une application dédiée.
+        <br><strong>Ouverture officielle sous peu.</strong>
+      </p>
+    </div>
+  </div>
+
+  <script>
+    function toggleMode() {
+      document.body.classList.toggle('dark-mode');
+      document.body.classList.toggle('light-mode');
+    }
+
+    function showProfile() {
+      document.getElementById('profileDropdown').style.display = 'block';
+    }
+
+    function hideProfile() {
+      document.getElementById('profileDropdown').style.display = 'none';
+    }
+
+    function showFoundationInfo() {
+      document.getElementById('foundationInfo').classList.toggle('hidden');
+    }
+  </script>
 </body>
 </html>
-
 
