@@ -1,65 +1,21 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOKA - Témoignages</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<div class="temoignage-container">
+  <h2 style="color:#0b7a95;">🌟 VOKA Témoignages</h2>
+  <p style="color:white;">Partage ton expérience VOKA :</p>
+  <form>
+    <label style="color:white;">⭐ Note de 1 à 5 :</label><br>
+    <input type="number" min="1" max="5" style="width:50px;"><br><br>
 
-  <header><h1>VOKA Dashboard</h1></header>
-  <nav>
-    <ul>
-      <li><a href="dashboard.html">Accueil</a></li>
-      <li><a href="formulaire.html">Formulaire</a></li>
-      <li><a href="cfo.html">VOKA CFO</a></li>
-      <li><a href="crm.html">VOKA CRM</a></li>
-      <li><a href="bots.html">VOKA Bots</a></li>
-      <li><a href="videos.html">VOKA Vidéos</a></li>
-      <li><a href="tunnel.html">VOKA Tunnel</a></li>
-      <li><a href="calendrier.html">VOKA Calendrier</a></li>
-      <li><a href="ressources.html">VOKA Ressources</a></li>
-      <li><a href="temoignages.html" class="active">VOKA Témoignages</a></li>
-      <li><a href="boutique.html">VOKA Boutique</a></li>
-      <li><a href="partenaires.html">VOKA Partenaires</a></li>
-    </ul>
-  </nav>
+    <label style="color:white;">📝 Ton témoignage écrit :</label><br>
+    <textarea rows="4" cols="50" placeholder="Écris ton témoignage ici..."></textarea><br><br>
 
-  <main>
-    <section>
-      <h2>Donne ton témoignage</h2>
-      <p>Partage ton expérience avec VOKA. Merci de ton retour !</p>
+    <label style="color:white;">🎤 Enregistrement audio :</label><br>
+    <input type="file" accept="audio/*"><br><br>
 
-      <form action="https://formspree.io/f/xyzpzzon" method="POST" enctype="multipart/form-data">
-        <label for="nom">Nom complet :</label>
-        <input type="text" id="nom" name="nom" required>
+    <label style="color:white;">🎥 Vidéo (optionnel) :</label><br>
+    <input type="file" accept="video/*"><br><br>
 
-        <label for="email">Adresse e-mail :</label>
-        <input type="email" id="email" name="email" required>
+    <input type="checkbox" required> <span style="color:white;">J’autorise VOKA à utiliser ce témoignage.</span><br><br>
 
-        <label for="temoignage">Témoignage écrit :</label>
-        <textarea id="temoignage" name="temoignage" rows="5" placeholder="Décris ton expérience..." required></textarea>
-
-        <label for="audio">Témoignage vocal (facultatif) :</label>
-        <input type="file" id="audio" name="audio" accept="audio/*">
-
-        <label for="video">Témoignage vidéo (facultatif) :</label>
-        <input type="file" id="video" name="video" accept="video/*">
-
-        <label>
-          <input type="checkbox" name="autorisation" required>
-          J’autorise VOKA à utiliser mon témoignage à des fins de promotion.
-        </label>
-
-        <button type="submit">Envoyer mon témoignage</button>
-      </form>
-
-      <div style="margin-top: 30px; background-color: #0a0a0a; padding: 20px; border-left: 5px solid #00baff;">
-        <p>🎁 <strong>Astuce :</strong> un bonus exclusif peut être débloqué si ton témoignage est validé 💎</p>
-      </div>
-    </section>
-  </main>
-
-</body>
-</html>
+    <button class="btn-action" type="submit">📤 Envoyer</button>
+  </form>
+</div>
