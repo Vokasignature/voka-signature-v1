@@ -5,6 +5,24 @@
   <title>Dashboard VOKA</title>
   <link rel="stylesheet" href="style.css">
 </head>
+  <script>
+  const nomEntreprise = localStorage.getItem("nomEntreprise") || "Entreprise X";
+  const forfait = localStorage.getItem("forfait") || "Signature";
+  const logo = localStorage.getItem("logo");
+
+  // Remplir dynamiquement le nom dans le dashboard
+  const profilNom = document.getElementById("profil-nom");
+  if (profilNom) profilNom.textContent = nomEntreprise;
+
+  const profilForfait = document.getElementById("profil-forfait");
+  if (profilForfait) profilForfait.textContent = forfait;
+
+  const logoImg = document.getElementById("profil-logo");
+  if (logoImg && logo) {
+    logoImg.src = logo;
+  }
+</script>
+
 <body class="dark-mode">
 
   <!-- Barre latérale gauche -->
