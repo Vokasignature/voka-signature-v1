@@ -1,65 +1,28 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Paiement sécurisé VOKA</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
+<section class="forfait-section" style="background: #0a0a0a; color: white; padding: 60px 20px; text-align: center;">
+  <h2 style="color: #0b7a95; font-size: 2.2em;">🚀 Forfait Signature VOKA</h2>
+  <p style="font-size: 1.2em;">Accès complet et illimité à VOKA Version 1.0</p>
+  
+  <div style="margin-top: 40px;">
+    <!-- Paiement mensuel -->
+    <a href="https://buy.stripe.com/test_9AQ6oK12Z9XK0zyaEG" target="_blank" style="background:#0b7a95; padding: 15px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; color:white; display:inline-block; margin: 10px;">
+      🔓 Débuter maintenant – 997 $/mois
+    </a>
 
-  <header><h1>Paiement sécurisé – VOKA</h1></header>
+    <!-- Paiement pack 3 mois (10% de rabais) -->
+    <a href="https://buy.stripe.com/test_bIY9B40uR0FY33CdQQ" target="_blank" style="background:#0b7a95; padding: 15px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; color:white; display:inline-block; margin: 10px;">
+      🎁 Pack 3 mois – 2697 $ (au lieu de 2991 $)
+    </a>
 
-  <main>
-    <section>
-      <h2>💳 Finalise ton inscription</h2>
+    <!-- Rendez-vous -->
+    <a href="https://calendly.com/voka/30min" target="_blank" style="background:#444; padding: 15px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; color:white; display:inline-block; margin: 10px;">
+      📅 Prendre un rendez-vous
+    </a>
+  </div>
 
-      <form action="https://formspree.io/f/xyzpzzon" method="POST" onsubmit="return verifierConditions();">
-        
-        <label for="nom">Nom complet :</label>
-        <input type="text" id="nom" name="nom" required>
-
-        <label for="email">Adresse e-mail :</label>
-        <input type="email" id="email" name="email" required>
-
-        <label for="forfait">Choisis ton forfait :</label>
-        <select name="forfait" id="forfait" required>
-          <option value="Découverte - 497$">Découverte – 497 $</option>
-          <option value="Signature - 2497$">Signature – 2497 $</option>
-          <option value="Empire - 4997$">Empire – 4997 $</option>
-          <option value="VIP - Sur devis">VIP – Sur devis</option>
-        </select>
-
-        <label>
-          <input type="checkbox" id="cgu" name="cgu" required>
-          J’ai lu et j’accepte les <a href="cgu.html" target="_blank">Conditions Générales d’Utilisation</a>.
-        </label>
-
-        <!-- Données cachées pour tableau admin -->
-        <input type="hidden" name="preuve-cgu" value="✅ Conditions acceptées (CGU)">
-        <input type="hidden" name="date" value="" id="dateInput">
-
-        <button type="submit">✅ Payer maintenant</button>
-      </form>
-
-      <p style="margin-top: 30px; font-size: 0.9rem; color: #888;">
-        ⚠️ Le traitement est manuel pour l’instant (V1.0). En V2.0, Stripe + automatisation complète seront connectés.
-      </p>
-    </section>
-  </main>
-
-  <script>
-    function verifierConditions() {
-      if (!document.getElementById('cgu').checked) {
-        alert("Tu dois accepter les conditions pour continuer.");
-        return false;
-      }
-      const now = new Date().toISOString().split('T')[0];
-      document.getElementById('dateInput').value = now;
-      return true;
-    }
-  </script>
-
-</body>
-</html>
-
+  <div style="margin-top: 20px;">
+    <label style="color:white;">
+      <input type="checkbox" required> 
+      J’ai lu et j’accepte les <a href="conditions.html" target="_blank" style="color:#0b7a95;">Conditions Générales d’Utilisation</a>
+    </label>
+  </div>
+</section>
