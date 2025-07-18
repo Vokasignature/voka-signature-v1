@@ -96,6 +96,22 @@
        const tab = btn.getAttribute("data-tab");
 
 if (tab === "fondation") {
+  else if (tab === "cfo") {
+  content.innerHTML = `
+    <div class="cfo-container">
+      <h2 style="color:#0b7a95;">VOKA CFO</h2>
+      <p style="color:white;">Gérez vos finances comme un pro : suivez vos revenus, vos dépenses et vos taxes en temps réel.</p>
+      <ul style="color:white; margin-left:20px;">
+        <li>💰 Estimation automatique des revenus et marges</li>
+        <li>📊 Suivi des dépenses simplifié</li>
+        <li>📄 Génération de factures et devis PDF (manuelle dans v1.0)</li>
+        <li>🚨 Alerte si pertes ou failles détectées (via analyse manuelle)</li>
+      </ul>
+      <p style="color:gray; font-size:0.9em;"><em>* Ne remplace pas un comptable agréé</em></p>
+    </div>
+  `;
+}
+
   content.innerHTML = `
     <div class="fondation-container">
       <h2 style="color:#0b7a95;">Fondation William</h2>
