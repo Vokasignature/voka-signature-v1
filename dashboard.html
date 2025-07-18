@@ -3,125 +3,156 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>VOKA Dashboard</title>
+  <title>Dashboard VOKA</title>
   <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="logo-voka.png" />
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle('light-mode');
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+      display: flex;
+      height: 100vh;
     }
 
-    function showContent(contentId) {
-      const sections = document.querySelectorAll(".main-content");
-      sections.forEach(section => section.style.display = "none");
-      document.getElementById(contentId).style.display = "block";
-
-      const links = document.querySelectorAll("nav li");
-      links.forEach(link => link.classList.remove("active"));
-      document.querySelector(`[data-id='${contentId}']`).classList.add("active");
+    aside {
+      width: 260px;
+      background-color: #0a0a0a;
+      padding: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+      border-right: 1px solid #0b7a95;
     }
 
-    window.onload = () => {
-      showContent('home');
+    .onglet {
+      background: linear-gradient(135deg, #051d25, #0b7a95);
+      padding: 12px 18px;
+      border-radius: 12px;
+      color: white;
+      font-weight: bold;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      cursor: pointer;
+      transition: 0.3s ease;
     }
-  </script>
+
+    .onglet:hover {
+      background: linear-gradient(135deg, #0b7a95, #052e4d);
+    }
+
+    .onglet.locked {
+      filter: blur(1px);
+      opacity: 0.5;
+      cursor: not-allowed;
+      position: relative;
+    }
+
+    .onglet.locked::after {
+      content: "🔒";
+      position: absolute;
+      right: 20px;
+    }
+
+    main {
+      flex-grow: 1;
+      padding: 40px;
+      overflow-y: auto;
+      background-color: #000;
+    }
+
+    .logo-centre {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%;
+    }
+
+    .logo-centre img {
+      width: 280px;
+      animation: pulse 3s infinite ease-in-out;
+    }
+
+    .profil {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background-color: #0a0a0a;
+      border: 1px solid #0b7a95;
+      border-radius: 12px;
+      padding: 12px 20px;
+      color: white;
+      text-align: right;
+    }
+
+    .profil:hover .details {
+      display: block;
+    }
+
+    .details {
+      display: none;
+      margin-top: 10px;
+    }
+
+    @keyframes pulse {
+      0% { transform: scale(1); opacity: 0.8; }
+      50% { transform: scale(1.05); opacity: 1; }
+      100% { transform: scale(1); opacity: 0.8; }
+    }
+
+    .fondation {
+      font-size: 0.9rem;
+      margin-top: 40px;
+      color: #999;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <div class="dashboard">
-    <aside class="sidebar">
-      <img src="logo-voka.png" alt="Logo VOKA" class="logo"/>
-      <ul>
-        <li class="active" data-id="home" onclick="showContent('home')">Accueil</li>
-        <li data-id="videos" onclick="showContent('videos')">Mes vidéos</li>
-        <li data-id="commande" onclick="showContent('commande')">Commander</li>
-        <li data-id="inspiration" onclick="showContent('inspiration')">Inspiration</li>
-        <li data-id="stats" onclick="showContent('stats')">Statistiques</li>
-        <li data-id="boosts" onclick="showContent('boosts')">Upsell</li>
-        <li data-id="cfo" onclick="showContent('cfo')">VOKA CFO</li>
-        <li data-id="crm" class="locked">VOKA CRM 🔒</li>
-        <li data-id="bots" class="locked">Bots IA 🔒</li>
-        <li data-id="calendar" onclick="window.open('https://calendly.com/voka/30min')">Calendrier</li>
-        <li data-id="ressources" onclick="showContent('ressources')">Ressources</li>
-        <li data-id="temoignages" onclick="showContent('temoignages')">Témoignages</li>
-        <li data-id="boutique" class="locked">Boutique 🔒</li>
-        <li data-id="fondation" onclick="showContent('fondation')">Fondation William</li>
-      </ul>
-    </aside>
+  <!-- Barre latérale -->
+  <aside>
+    <div class="onglet">🏠 Accueil</div>
+    <div class="onglet">🎥 VOKA Vidéos</div>
+    <div class="onglet">📹 Commander une vidéo</div>
+    <div class="onglet">🚀 Inspiration virale</div>
+    <div class="onglet">📊 Statistiques</div>
+    <div class="onglet">💰 CFO</div>
+    <div class="onglet">🤖 CRM</div>
+    <div class="onglet">🧠 VOKA Visionnaire</div>
+    <div class="onglet">📅 Calendrier</div>
+    <div class="onglet">📁 Ressources</div>
+    <div class="onglet">🛍️ Boutique</div>
+    <div class="onglet">📢 Témoignages</div>
+    <div class="onglet">⚙️ Tunnel</div>
+    <div class="onglet">📈 Upsell & boosts</div>
+    <div class="onglet locked">🔒 Fonctions avancées</div>
+    <div class="onglet">💙 Fondation William</div>
+  </aside>
 
-    <div class="main">
-      <header>
-        <div class="user-info">
-          <img src="logo-voka.png" class="user-logo" />
-          <div class="dropdown">
-            <span>Entreprise X</span>
-            <div class="dropdown-content">
-              <p>Forfait : Signature</p>
-              <a href="#">Facturation</a>
-            </div>
-          </div>
-        </div>
-        <button class="mode-toggle" onclick="toggleMode()">🌙/☀️</button>
-      </header>
-
-      <!-- CONTENU AU CENTRE -->
-      <main class="main-panel">
-        <section id="home" class="main-content">
-          <img src="logo-voka.png" class="logo-animated" />
-        </section>
-
-        <section id="videos" class="main-content" style="display: none;">
-          <h2>Mes vidéos</h2>
-          <p>Ici s’affichent tes vidéos générées automatiquement.</p>
-        </section>
-
-        <section id="commande" class="main-content" style="display: none;">
-          <h2>Commander une vidéo</h2>
-          <iframe src="https://formspree.io/f/xyzpzzon" width="100%" height="500" style="border:none;"></iframe>
-        </section>
-
-        <section id="inspiration" class="main-content" style="display: none;">
-          <h2>Inspiration virale</h2>
-          <p>Explore les vidéos les plus percutantes du moment.</p>
-        </section>
-
-        <section id="stats" class="main-content" style="display: none;">
-          <h2>Statistiques & impact</h2>
-          <p>Analyse la performance de ton contenu.</p>
-        </section>
-
-        <section id="boosts" class="main-content" style="display: none;">
-          <h2>Upsells & boosts</h2>
-          <p>Débloque des options premium pour aller plus loin.</p>
-        </section>
-
-        <section id="cfo" class="main-content" style="display: none;">
-          <h2>VOKA CFO</h2>
-          <p>Ton assistant financier pour suivre tes résultats.</p>
-        </section>
-
-        <section id="ressources" class="main-content" style="display: none;">
-          <h2>Ressources</h2>
-          <p>Tous les documents utiles à ton succès.</p>
-        </section>
-
-        <section id="temoignages" class="main-content" style="display: none;">
-          <h2>Témoignages</h2>
-          <p>Partage ton expérience et découvre les avis.</p>
-        </section>
-
-        <section id="fondation" class="main-content" style="display: none;">
-          <h2>Fondation William</h2>
-          <p>
-            La Fondation William a pour mission d’aider les enfants atteints d’autisme,
-            de trisomie 21 ou de troubles intellectuels à s’épanouir.
-            <br><br>
-            L’ouverture officielle est prévue sous peu. ❤️
-          </p>
-        </section>
-      </main>
+  <!-- Contenu central -->
+  <main>
+    <div class="logo-centre">
+      <img src="logo-voka.png" alt="Logo VOKA" />
     </div>
+  </main>
+
+  <!-- Profil client -->
+  <div class="profil">
+    <div><strong>Entreprise X</strong> (Forfait Signature)</div>
+    <div class="details">
+      <a href="facturation.html" style="color:#0b7a95;">Voir factures</a><br>
+      <a href="profil.html" style="color:#0b7a95;">Modifier profil</a>
+    </div>
+  </div>
+
+  <!-- Fondation -->
+  <div class="fondation">
+    La Fondation William vise à aider les enfants atteints d’autisme, trisomie 21 ou troubles intellectuels.<br>
+    <em>(En construction – ouverture officielle sous peu.)</em>
   </div>
 </body>
 </html>
+
 
 
