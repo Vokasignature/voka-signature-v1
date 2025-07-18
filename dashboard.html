@@ -186,19 +186,115 @@ else if (tab === "video") {
 else if (tab === "bots") {
   content.innerHTML = `
     <div class="bots-container">
-      <h2 style="color:#0b7a95;">Bots IA VOKA</h2>
-      <p style="color:white;">Des assistants intelligents adaptés à votre secteur d’activité.</p>
-      <ul style="color:white; margin-left:20px;">
-        <li>🧠 Bot VOKA Visionnaire (accompagnement stratégique)</li>
-        <li>📊 Bot CFO (analyse financière)</li>
-        <li>📩 Bot relance client (manuel ou semi-auto)</li>
-        <li>🔍 Bot prospecteur visuel (planifié pour v2.0)</li>
-      </ul>
-      <p style="color:gray; font-size:0.9em;"><em>* Les bots sont partiellement actifs. Plus d'automatisation dans la version 2.0</em></p>
+      <h2 style="color:#0b7a95;">🤖 VOKA Bots IA</h2>
+      <p style="color:white;">Voici tes bots stratégiques, spécialisés selon ton domaine. Ils t’aident à automatiser ton entreprise comme jamais auparavant.</p>
+
+      <div style="margin-top:30px;">
+        <h3 style="color:#0b7a95;">📌 Bots actuellement actifs :</h3>
+        <ul style="color:white; list-style-type:disc; margin-left:20px;">
+          <li><strong>Bot Stratège :</strong> identifie les prochaines étapes pour ton entreprise</li>
+          <li><strong>Bot CFO :</strong> détecte les failles ou anomalies financières</li>
+          <li><strong>Bot CRM :</strong> relance automatiquement tes clients</li>
+          <li><strong>Bot Clone-to-Win :</strong> duplique les meilleures vidéos ou stratégies</li>
+        </ul>
+
+        <p style="color:white; margin-top:20px;"><em>Ton bot personnalisé selon ta niche est déjà en place.</em></p>
+      </div>
+
+      <div style="margin-top:30px;">
+        <h3 style="color:#0b7a95;">🚀 À venir dans la version 2.0 :</h3>
+        <ul style="color:gray; list-style-type:disc; margin-left:20px;">
+          <li>Bots interconnectés entre eux</li>
+          <li>Capacité de prédiction et d’adaptation en temps réel</li>
+          <li>Suggestions automatiques pour doubler ton chiffre d’affaires</li>
+        </ul>
+        <p style="color:gray; font-size:0.9em;">* Les bots évoluent à chaque utilisateur. Plus tu les utilises, plus ils deviennent intelligents.</p>
+      </div>
     </div>
   `;
 }
-else if (tab === "calendrier") {
+else if (tab === "ressources") {
+  content.innerHTML = `
+    <div class="ressources-container">
+      <h2 style="color:#0b7a95;">📚 VOKA Ressources & Documents</h2>
+      <p style="color:white;">La plus grande bibliothèque d’outils et documents pour entrepreneurs.</p>
+      
+      <div class="resource-section">
+        <h3 style="color:#0b7a95;">📄 Documents essentiels</h3>
+        <ul style="color:white; margin-left:20px;">
+          <li><a href="#" style="color:#0b7a95;" target="_blank">Modèle de business plan</a></li>
+          <li><a href="#" style="color:#0b7a95;" target="_blank">Modèle de demande de prêt</a></li>
+          <li><a href="#" style="color:#0b7a95;" target="_blank">Formulaire d’ouverture de compte entreprise</a></li>
+        </ul>
+      </div>
+
+      <div class="resource-section">
+        <h3 style="color:#0b7a95;">💡 Aides & programmes</h3>
+        <ul style="color:white; margin-left:20px;">
+          <li><a href="#" style="color:#0b7a95;" target="_blank">Programmes gouvernementaux pour PME</a></li>
+          <li><a href="#" style="color:#0b7a95;" target="_blank">Ressources pour femmes en affaires</a></li>
+          <li><a href="#" style="color:#0b7a95;" target="_blank">Subventions pour démarrage</a></li>
+        </ul>
+      </div>
+
+      <div class="resource-section">
+        <h3 style="color:#0b7a95;">🛠️ Outils pratiques</h3>
+        <ul style="color:white; margin-left:20px;">
+          <li><a href="#" style="color:#0b7a95;" target="_blank">Générateur de contrat de service</a></li>
+          <li><a href="#" style="color:#0b7a95;" target="_blank">Simulateur de budget d’entreprise</a></li>
+          <li><a href="#" style="color:#0b7a95;" target="_blank">Checklist juridique de lancement</a></li>
+        </ul>
+      </div>
+
+      <p style="color:gray; font-size:0.9em; margin-top:20px;"><em>* Plus de documents disponibles prochainement dans VOKA 2.0 avec carte interactive géolocalisée.</em></p>
+    </div>
+  `;
+}
+else if (tab === "temoignages") {
+  content.innerHTML = `
+    <div class="testimonial-container">
+      <h2 style="color:#0b7a95;">🌟 Témoignages VOKA</h2>
+      <p style="color:white;">Laisse ton avis sur ton expérience avec VOKA. Ton retour est précieux.</p>
+
+      <form id="testimonialForm" style="color:white;">
+        <label for="note">⭐ Note sur 5 :</label><br>
+        <select id="note" name="note" style="margin-bottom:15px;">
+          <option value="5">5 - Excellent</option>
+          <option value="4">4 - Très bon</option>
+          <option value="3">3 - Moyen</option>
+          <option value="2">2 - Faible</option>
+          <option value="1">1 - Mauvais</option>
+        </select><br>
+
+        <label for="message">📝 Ton témoignage :</label><br>
+        <textarea id="message" name="message" rows="4" style="width:100%; margin-bottom:15px;"></textarea><br>
+
+        <label for="audio">🎤 Optionnel : Envoie un audio</label><br>
+        <input type="file" id="audio" name="audio" accept="audio/*" style="margin-bottom:15px;"><br>
+
+        <label for="video">🎥 Optionnel : Envoie une vidéo</label><br>
+        <input type="file" id="video" name="video" accept="video/*" style="margin-bottom:15px;"><br>
+
+        <label style="font-size: 0.9em;">
+          <input type="checkbox" id="consentCheckbox" required>
+          ✅ J’autorise VOKA à utiliser mon témoignage à des fins de marketing.
+        </label><br><br>
+
+        <button type="submit" style="background-color:#0b7a95; color:white; padding:10px 20px; border:none; border-radius:5px;">Soumettre mon témoignage</button>
+      </form>
+
+      <p id="formMessage" style="margin-top:20px; color:lightgreen;"></p>
+    </div>
+  `;
+
+  // Simule un envoi (à remplacer par un vrai traitement si connecté à backend plus tard)
+  document.getElementById("testimonialForm").addEventListener("submit", function(event) {
+    event.preventDefault();
+    document.getElementById("formMessage").textContent = "✅ Merci pour ton témoignage ! Il sera validé sous peu.";
+    this.reset();
+  });
+}
+
 else if (tab === "calendrier") {
   content.innerHTML = `
     <div class="calendar-container">
@@ -206,6 +302,36 @@ else if (tab === "calendrier") {
       <p style="color:white;">Planifie ton rendez-vous stratégique avec VOKA. Choisis ta plage horaire ci-dessous :</p>
       <div class="calendly-inline-widget" data-url="https://calendly.com/voka/30min" style="min-width:320px; height:630px;"></div>
       <script type="text/javascript" src="https://assets.calendly.com/assets/external/widget.js" async></script>
+    </div>
+  `;
+}
+else if (tab === "tunnel") {
+  content.innerHTML = `
+    <div class="tunnel-container">
+      <h2 style="color:#0b7a95;">🎬 VOKA Tunnel</h2>
+      <p style="color:white;">Ton tunnel de vente immersif est en cours de préparation. Il sera conçu comme un film émotionnel et captivant, inspiré des marques de luxe (Apple, Ferrari, Versace).</p>
+
+      <div style="margin-top:20px;">
+        <h3 style="color:#0b7a95;">🔧 Fonction actuelle :</h3>
+        <ul style="color:white; list-style-type:disc; margin-left:20px;">
+          <li>Accès au lien de paiement ou au formulaire de prise de rendez-vous</li>
+          <li>Vidéo de présentation à intégrer dès qu’elle est prête</li>
+          <li>Bouton puissant d’appel à l’action</li>
+        </ul>
+      </div>
+
+      <div style="margin-top:20px;">
+        <h3 style="color:#0b7a95;">🎯 Objectif du tunnel :</h3>
+        <p style="color:white;">Convertir efficacement en activant les trois cerveaux du prospect : émotion (limbique), logique (cortex) et impulsion (reptilien).</p>
+      </div>
+
+      <div style="text-align:center; margin-top:40px;">
+        <a href="https://calendly.com/voka/30min" target="_blank" style="background-color:#0b7a95; color:white; padding:12px 24px; border:none; border-radius:5px; text-decoration:none; font-weight:bold; box-shadow:0 0 10px #0b7a95;">
+          🚀 Prendre rendez-vous maintenant
+        </a>
+      </div>
+
+      <p style="color:gray; font-size:0.9em; margin-top:20px;">* Ce tunnel sera évolutif et optimisé avec la version 2.0</p>
     </div>
   `;
 }
