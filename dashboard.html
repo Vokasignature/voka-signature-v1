@@ -95,7 +95,6 @@
 
        const tab = btn.getAttribute("data-tab");
 
-if (tab === "fondation") {
   else if (tab === "cfo") {
   content.innerHTML = `
     <div class="cfo-container">
@@ -152,33 +151,32 @@ else if (tab === "crm") {
 else if (tab === "video") {
   content.innerHTML = `
     <div class="video-container">
-      <h2 style="color:#0b7a95;">🎥 VOKA Vidéo</h2>
-      <p style="color:white;">Génère des vidéos émotionnelles et percutantes en 72h, grâce à notre système alimenté par l'intelligence artificielle.</p>
+      <h2 style="color:#0b7a95;">🎬 VOKA Vidéo</h2>
+      <p style="color:white;">Soumets ton texte ou ta voix pour générer une vidéo émotionnelle puissante.</p>
       
-      <div style="margin-top:20px;">
-        <h3 style="color:#0b7a95;">1. Dépose ton message (texte ou voix)</h3>
-        <p style="color:white;">Tu peux choisir de :</p>
-        <ul style="color:white;">
-          <li>📝 Écrire ton script (200 mots max)</li>
-          <li>🎙️ Enregistrer ta voix (option recommandée)</li>
-        </ul>
-
-        <p style="color:white;"><strong>Fichier reçu = vidéo livrée dans ton dashboard dans les 72h.</strong></p>
+      <form id="videoForm" enctype="multipart/form-data" style="color:white;">
+        <label for="videoText">Ton script (texte) :</label><br>
+        <textarea id="videoText" name="videoText" rows="6" style="width:100%;"></textarea><br><br>
         
-        <div style="margin-top:20px;">
-          <button style="padding:10px 20px; background-color:#0b7a95; color:white; border:none; border-radius:5px; margin-right:10px;" onclick="alert('Redirige vers un espace de dépôt dans la version 2.0')">📤 Envoyer mon script</button>
-          <button style="padding:10px 20px; background-color:#0b7a95; color:white; border:none; border-radius:5px;" onclick="alert('Fonction d’enregistrement vocal à venir')">🎙️ Enregistrer ma voix</button>
-        </div>
-      </div>
+        <label for="audioUpload">Ou envoie ta voix (fichier audio) :</label><br>
+        <input type="file" id="audioUpload" name="audioUpload" accept="audio/*"><br><br>
 
-      <div style="margin-top:30px;">
-        <h3 style="color:#0b7a95;">2. Historique de tes vidéos</h3>
-        <ul style="color:white; list-style-type:disc; margin-left:20px;">
-          <li>✅ Vidéo “Tunnel Émotionnel” – Livrée le 12 juillet</li>
-          <li>⏳ Vidéo virale #1 – En traitement</li>
-        </ul>
-        <p style="color:gray; font-size:0.9em;"><em>* Dans la version 2.0, les vidéos seront générées automatiquement depuis le dashboard.</em></p>
-      </div>
+        <label for="logoUpload">Ton logo (PNG/JPG) :</label><br>
+        <input type="file" id="logoUpload" name="logoUpload" accept="image/*"><br><br>
+
+        <label for="businessName">Nom de ton entreprise :</label><br>
+        <input type="text" id="businessName" name="businessName" style="width:100%;"><br><br>
+
+        <label for="niche">Secteur/Niche :</label><br>
+        <input type="text" id="niche" name="niche" style="width:100%;"><br><br>
+
+        <input type="checkbox" id="authorization" name="authorization" required>
+        <label for="authorization">J’autorise VOKA à utiliser ce contenu pour générer ma vidéo.</label><br><br>
+
+        <button type="submit" style="background-color:#0b7a95; color:white; padding:10px 20px; border:none; border-radius:5px;">Envoyer pour création</button>
+      </form>
+
+      <p style="color:gray; font-size:0.8em; margin-top:10px;"><em>* Vidéo livrée sous 72 h. Tu peux fournir soit le texte, soit ta voix, ou les deux.</em></p>
     </div>
   `;
 }
@@ -336,6 +334,7 @@ else if (tab === "tunnel") {
   `;
 }
 
+  if (tab === "fondation") {
   content.innerHTML = `
     <div class="fondation-container">
       <h2 style="color:#0b7a95;">Fondation William</h2>
