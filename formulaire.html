@@ -2,55 +2,99 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOKA - Formulaire</title>
-  <link rel="stylesheet" href="style.css">
-  <script>
-    function afficherMessageConfirmation() {
-      const confirmation = document.getElementById("confirmation");
-      confirmation.style.display = "block";
+  <title>Formulaire de démarrage - VOKA</title>
+  <style>
+    body {
+      background-color: #000;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      padding: 40px;
+      max-width: 700px;
+      margin: auto;
     }
-  </script>
+    h1 {
+      color: #0b7a95;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+    label {
+      display: block;
+      margin-top: 20px;
+      color: #00d6ff;
+    }
+    input, select, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: none;
+      border-radius: 8px;
+      background-color: #111;
+      color: #fff;
+    }
+    input[type="submit"] {
+      background-color: #0b7a95;
+      color: white;
+      margin-top: 30px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+    input[type="submit"]:hover {
+      background-color: #08859f;
+    }
+    .checkbox {
+      display: flex;
+      align-items: center;
+      margin-top: 20px;
+    }
+    .checkbox input {
+      width: auto;
+      margin-right: 10px;
+    }
+    .checkbox label {
+      margin: 0;
+      color: #aaa;
+    }
+    a {
+      color: #00d6ff;
+      text-decoration: underline;
+    }
+  </style>
 </head>
 <body>
 
-  <header><h1>VOKA Dashboard</h1></header>
-  <nav>
-    <ul>
-      <li><a href="dashboard.html">Accueil</a></li>
-      <li><a href="formulaire.html" class="active">Formulaire</a></li>
-      <li><a href="cfo.html">VOKA CFO</a></li>
-      <li><a href="crm.html">VOKA CRM</a></li>
-      <li><a href="bots.html">VOKA Bots</a></li>
-      <li><a href="videos.html">VOKA Vidéos</a></li>
-      <li><a href="tunnel.html">VOKA Tunnel</a></li>
-      <li><a href="calendrier.html">VOKA Calendrier</a></li>
-      <li><a href="ressources.html">VOKA Ressources</a></li>
-      <li><a href="temoignages.html">VOKA Témoignages</a></li>
-      <li><a href="boutique.html">VOKA Boutique</a></li>
-      <li><a href="partenaires.html">VOKA Partenaires</a></li>
-    </ul>
-  </nav>
+  <h1>Démarrez avec VOKA</h1>
 
-  <main>
-    <section>
-      <h2>Formulaire de démarrage VOKA</h2>
-      <p>Merci de remplir ce formulaire pour qu’on configure ton système automatiquement :</p>
+  <form action="https://formspree.io/f/xyzpzzon" method="POST" enctype="multipart/form-data">
+    
+    <label for="nom">Nom de l’entreprise</label>
+    <input type="text" name="nom" required>
 
-      <iframe 
-        src="https://formspree.io/f/xyzpzzon"
-        width="100%" 
-        height="850" 
-        style="border:none;"
-        onload="setTimeout(afficherMessageConfirmation, 3000)">
-      </iframe>
+    <label for="logo">Logo de l’entreprise (PNG ou JPG)</label>
+    <input type="file" name="logo" accept="image/png, image/jpeg">
 
-      <div id="confirmation" style="display:none; margin-top: 30px; padding: 20px; background-color: #0a0a0a; border-left: 5px solid #00c3ff; box-shadow: 0 0 10px #00c3ff99;">
-        <h3 style="color: #00c3ff;">✅ Formulaire envoyé</h3>
-        <p>Merci ! Nos bots VOKA vont se mettre au travail et te livrer ta plateforme personnalisée.</p>
-      </div>
-    </section>
-  </main>
+    <label for="secteur">Secteur d’activité</label>
+    <select name="secteur" required>
+      <option value="coaching">Coaching</option>
+      <option value="construction">Construction</option>
+      <option value="immobilier">Immobilier</option>
+      <option value="services">Services</option>
+      <option value="e-commerce">E-commerce</option>
+      <option value="autre">Autre</option>
+    </select>
+
+    <label for="video">Texte ou message vocal à transformer en vidéo</label>
+    <textarea name="video" rows="5" placeholder="Décrivez votre message ici..."></textarea>
+
+    <label for="email">Adresse courriel</label>
+    <input type="email" name="email" required>
+
+    <div class="checkbox">
+      <input type="checkbox" name="cgu" required>
+      <label>J’ai lu et j’accepte les <a href="conditions.html" target="_blank">Conditions Générales d’Utilisation</a>.</label>
+    </div>
+
+    <input type="submit" value="Soumettre et démarrer">
+  </form>
 
 </body>
 </html>
