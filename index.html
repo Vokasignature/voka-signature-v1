@@ -1,40 +1,132 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOKA - Dashboard</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VOKA | Donnez une voix à votre succès</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background: radial-gradient(circle at top left, #0b7a95 10%, #000 90%);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    header {
+      padding: 40px 30px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 50px;
+      margin-bottom: 10px;
+      letter-spacing: 2px;
+    }
+
+    header p {
+      font-size: 20px;
+      color: #ccc;
+      margin-top: 0;
+    }
+
+    .actions {
+      text-align: center;
+      margin-top: 30px;
+    }
+
+    .btn {
+      background: linear-gradient(135deg, #0b7a95, #052e4d);
+      color: white;
+      padding: 15px 35px;
+      font-size: 18px;
+      margin: 10px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
+    }
+
+    .btn:hover {
+      background: linear-gradient(135deg, #0b7a95, #0b5f73);
+    }
+
+    .forfaits {
+      margin-top: 50px;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 25px;
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.03);
+      border: 1px solid rgba(255,255,255,0.1);
+      border-radius: 15px;
+      padding: 30px;
+      width: 280px;
+      color: white;
+      box-shadow: 0 0 12px rgba(11, 122, 149, 0.4);
+      transition: 0.3s ease;
+    }
+
+    .card:hover {
+      box-shadow: 0 0 20px rgba(11, 122, 149, 0.6);
+    }
+
+    .card h2 {
+      font-size: 24px;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 15px;
+      color: #aaa;
+    }
+
+    footer {
+      margin-top: 80px;
+      text-align: center;
+      color: #666;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
   <header>
-    <h1>VOKA Dashboard</h1>
+    <h1>VOKA</h1>
+    <p>Donnez une voix à votre succès</p>
+    <div class="actions">
+      <a href="dashboard.html"><button class="btn">Accéder à mon Espace</button></a>
+      <a href="#forfaits"><button class="btn">Voir les Forfaits</button></a>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="dashboard.html">Accueil</a></li>
-      <li><a href="formulaire.html">Activation Client</a></li>
-      <li><a href="cfo.html">VOKA CFO</a></li>
-      <li><a href="crm.html">VOKA CRM</a></li>
-      <li><a href="bots.html">VOKA Bots</a></li>
-      <li><a href="videos.html">VOKA Vidéos</a></li>
-      <li><a href="tunnel.html">VOKA Tunnel</a></li>
-      <li><a href="calendrier.html">VOKA Calendrier</a></li>
-      <li><a href="ressources.html">VOKA Ressources</a></li>
-      <li><a href="temoignages.html">VOKA Témoignages</a></li>
-      <li><a href="boutique.html">VOKA Boutique</a></li>
-      <li><a href="partenaires.html">VOKA Partenaires</a></li>
-    </ul>
-  </nav>
+  <section class="forfaits" id="forfaits">
+    <div class="card">
+      <h2>Découverte</h2>
+      <p>Mini site + vidéo IA + CFO basique. Pour découvrir VOKA.</p>
+    </div>
+    <div class="card">
+      <h2>Signature</h2>
+      <p>Dashboard complet, bots IA, CRM, vidéos, CFO. Version PRO.</p>
+    </div>
+    <div class="card">
+      <h2>Empire</h2>
+      <p>Vidéos premium, closeurs, optimisation continue et suivi stratégique.</p>
+    </div>
+    <div class="card">
+      <h2>VIP</h2>
+      <p>Version 100 % personnalisée, branding de luxe, tunnel haute conversion.</p>
+    </div>
+  </section>
 
-  <main>
-    <section>
-      <h2>Bienvenue dans ton univers VOKA</h2>
-      <p>Choisis une section dans le menu pour commencer.</p>
-    </section>
-  </main>
+  <footer>
+    &copy; 2025 VOKA. Tous droits réservés.
+  </footer>
 
 </body>
 </html>
+
