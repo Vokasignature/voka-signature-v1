@@ -2,35 +2,38 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Choix de forfait - VOKA</title>
+  <title>Paiement - VOKA</title>
   <link rel="stylesheet" href="style.css">
-</head>
-<body class="dark-mode">
-  <div class="content">
-    <h2 style="color:#0b7a95;">Choisis ton forfait VOKA Signature</h2>
-    <form id="formulairePaiement">
-      <label><input type="radio" name="forfait" value="997"> Mensuel – 997 $/mois</label><br>
-      <label><input type="radio" name="forfait" value="pack"> Pack 3 / 6 / 12 mois avec rabais</label><br><br>
-
-      <label>
-        <input type="checkbox" id="cgu"> J’accepte les <a href="conditions.html" target="_blank">Conditions Générales d’Utilisation</a>
-      </label><br><br>
-
-      <button type="submit">Valider et accéder au paiement</button>
-    </form>
-  </div>
-
   <script>
-    document.getElementById('formulairePaiement').addEventListener('submit', function(e) {
-      if (!document.getElementById('cgu').checked) {
-        alert("Tu dois accepter les CGU pour continuer.");
-        e.preventDefault();
-        return;
+    function afficherForfait() {
+      const params = new URLSearchParams(window.location.search);
+      const type = params.get('type');
+      const contenu = document.getElementById('contenu');
+
+      if (type === "mensuel") {
+        contenu.innerHTML = `
+          <h2 style="color:#0b7a95;">💳 Paiement mensuel – 997 $/mois</h2>
+          <p>Tu es à 1 clic de transformer ton entreprise. Paiement sécurisé mensuel.</p>
+          <a href="#" style="background:#0b7a95; color:white; padding:15px 30px; border-radius:8px; display:inline-block; margin-top:20px; text-decoration:none;">Procéder au paiement</a>
+        `;
+      } else if (type === "pack") {
+        contenu.innerHTML = `
+          <h2 style="color:#0b7a95;">🎁 Pack 3 / 6 / 12 mois</h2>
+          <p>Choisis la durée qui te convient et économise :</p>
+          <ul>
+            <li>3 mois : 2 800 $ (économisez 191 $)</li>
+            <li>6 mois : 5 400 $ (économisez 582 $)</li>
+            <li>12 mois : 9 970 $ (économisez 2 994 $)</li>
+          </ul>
+          <a href="#" style="background:#0b7a95; color:white; padding:15px 30px; border-radius:8px; display:inline-block; margin-top:20px; text-decoration:none;">Choisir une durée et payer</a>
+        `;
+      } else {
+        contenu.innerHTML = `<p style="color:red;">Erreur : aucun forfait sélectionné.</p>`;
       }
-      alert("Redirection vers le paiement...");
-      // Redirection simulée
-      window.location.href = "https://buy.stripe.com/test_bouton_exemple";
-    });
+    }
   </script>
+</head>
+<body onload="afficherForfait()" style="background: #001f27; color: white; font-family: Roboto, sans-serif; padding: 40px;">
+  <div id="contenu"></div>
 </body>
 </html>
