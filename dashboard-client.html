@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <title>Dashboard VOKA - Client</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body class="dark-mode">
+  <div class="sidebar">
+    <h2>Entreprise X</h2>
+    <a onclick="navigateTo('dashboard')">Dashboard</a>
+    <a onclick="navigateTo('cfo')">VOKA CFO</a>
+    <a onclick="navigateTo('crm')">VOKA CRM</a>
+    <a onclick="navigateTo('videos')">VOKA Vidéo</a>
+    <a onclick="navigateTo('bots')">VOKA Bots</a>
+    <a onclick="navigateTo('tunnel')">VOKA Tunnel</a>
+    <a onclick="navigateTo('calendrier')">VOKA Calendrier</a>
+    <a onclick="navigateTo('ressources')">Ressources & Documents</a>
+    <a onclick="navigateTo('temoignages')">Témoignages</a>
+    <a onclick="navigateTo('fondation')">Fondation William</a>
+  </div>
+
+  <div id="content" class="content">
+    <h1>Bienvenue dans ton Dashboard VOKA</h1>
+    <p>Choisis une section à gauche pour commencer.</p>
+    <img src="logo-voka.png" alt="Logo VOKA" style="margin-top:30px; width: 200px;" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
