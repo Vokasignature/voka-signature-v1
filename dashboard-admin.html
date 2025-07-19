@@ -1,135 +1,200 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <link rel="icon" type="image/png" href="ton-dossier/logo-voka.png">
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard Admin</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" href="logo-voka.png" />
-  <script>
-    function toggleMode() {
-      document.body.classList.toggle('light-mode');
+  <meta charset="UTF-8">
+  <title>VOKA Dashboard</title>
+  <link rel="icon" href="logo-voka.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #0a0a0a;
+      color: white;
     }
 
-    function showContent(contentId) {
-      const sections = document.querySelectorAll(".main-content");
-      sections.forEach(section => section.style.display = "none");
-      document.getElementById(contentId).style.display = "block";
-
-      const links = document.querySelectorAll("nav li");
-      links.forEach(link => link.classList.remove("active"));
-      document.querySelector(`[data-id='${contentId}']`).classList.add("active");
+    .container {
+      display: flex;
+      height: 100vh;
     }
 
-    window.onload = () => {
-      showContent('home');
+    .sidebar {
+      width: 220px;
+      background: linear-gradient(to bottom, #001a25, #0b7a95);
+      padding: 20px 10px;
+      border-top-right-radius: 20px;
+      border-bottom-right-radius: 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
     }
-  </script>
+
+    .tab {
+      background-color: #0a0a0a;
+      border-radius: 12px;
+      padding: 12px;
+      cursor: pointer;
+      transition: background 0.3s;
+      font-weight: bold;
+      color: white;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+
+    .tab:hover {
+      background-color: #0b7a95;
+    }
+
+    .main-content {
+      flex: 1;
+      padding: 40px;
+      background: #0a0a0a;
+      border-top-left-radius: 20px;
+      border-bottom-left-radius: 20px;
+      overflow-y: auto;
+    }
+
+    footer {
+      background: #111;
+      color: #999;
+      text-align: center;
+      padding: 20px 10px;
+      font-size: 14px;
+    }
+
+    footer a {
+      color: #0b7a95;
+      font-weight: bold;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    img.logo {
+      height: 60px;
+      margin: 20px auto;
+      display: block;
+    }
+
+    h2 {
+      color: #0b7a95;
+    }
+
+    a.button {
+      background: #0b7a95;
+      color: white;
+      padding: 12px 24px;
+      border-radius: 10px;
+      font-weight: bold;
+      display: inline-block;
+      margin: 10px 5px 30px 0;
+      text-decoration: none;
+    }
+
+    a.button:hover {
+      background: #099;
+    }
+  </style>
 </head>
 <body>
-  <div class="dashboard">
-    <aside class="sidebar">
-      <img src="logo-voka.png" alt="Logo VOKA" class="logo"/>
-      <ul>
-        <li class="active" data-id="home" onclick="showContent('home')">Accueil</li>
-        <li data-id="videos" onclick="showContent('videos')">Mes vidéos</li>
-        <li data-id="commande" onclick="showContent('commande')">Commander</li>
-        <li data-id="inspiration" onclick="showContent('inspiration')">Inspiration</li>
-        <li data-id="stats" onclick="showContent('stats')">Statistiques</li>
-        <li data-id="boosts" onclick="showContent('boosts')">Upsells</li>
-        <li data-id="cfo" onclick="showContent('cfo')">VOKA CFO</li>
-        <li data-id="crm" onclick="showContent('crm')">VOKA CRM</li>
-        <li data-id="bots" onclick="showContent('bots')">Bots IA</li>
-        <li data-id="calendar" onclick="window.open('https://calendly.com/voka/30min')">Calendrier</li>
-        <li data-id="ressources" onclick="showContent('ressources')">Ressources</li>
-        <li data-id="temoignages" onclick="showContent('temoignages')">Témoignages</li>
-        <li data-id="boutique" onclick="showContent('boutique')">Boutique</li>
-        <li data-id="visionnaire" onclick="showContent('visionnaire')">VOKA Visionnaire</li>
-        <li data-id="fondation" onclick="showContent('fondation')">Fondation William</li>
-      </ul>
-    </aside>
 
-    <div class="main">
-      <header>
-        <div class="user-info">
-          <img src="logo-voka.png" class="user-logo" />
-          <div class="dropdown">
-            <span>Administrateur</span>
-            <div class="dropdown-content">
-              <p>Forfait : VIP</p>
-              <a href="#">Facturation</a>
-            </div>
-          </div>
-        </div>
-        <button class="mode-toggle" onclick="toggleMode()">🌙/☀️</button>
-      </header>
+<div class="container">
+  <!-- MENU GAUCHE -->
+  <div class="sidebar">
+    <div class="tab" onclick="loadTab('dashboard')"> Dashboard</div>
+    <div class="tab" onclick="loadTab('cfo')"> CFO</div>
+    <div class="tab" onclick="loadTab('crm')"> CRM</div>
+    <div class="tab" onclick="loadTab('videos')"> Vidéos</div>
+    <div class="tab" onclick="loadTab('bots')"> Bots</div>
+    <div class="tab" onclick="loadTab('decouvre')"> Découvre VOKA</div>
+    <div class="tab" onclick="loadTab('calendrier')"> Calendrier</div>
+    <div class="tab" onclick="loadTab('ressources')"> Ressources</div>
+    <div class="tab" onclick="loadTab('temoignages')"> Témoignages</div>
+    <div class="tab" onclick="loadTab('fondation')"> Fondation</div>
+  </div>
 
-      <!-- CONTENU AU CENTRE -->
-      <main class="main-panel">
-        <section id="home" class="main-content">
-          <img src="logo-voka.png" class="logo-animated" />
-        </section>
-
-        <section id="videos" class="main-content" style="display: none;">
-          <h2>Vidéos générées</h2>
-        </section>
-
-        <section id="commande" class="main-content" style="display: none;">
-          <h2>Commander une vidéo</h2>
-          <iframe src="https://formspree.io/f/xyzpzzon" width="100%" height="500" style="border:none;"></iframe>
-        </section>
-
-        <section id="inspiration" class="main-content" style="display: none;">
-          <h2>Inspiration virale</h2>
-        </section>
-
-        <section id="stats" class="main-content" style="display: none;">
-          <h2>Statistiques</h2>
-          <p>Taux de clics, vues, conversions, tunnel…</p>
-        </section>
-
-        <section id="boosts" class="main-content" style="display: none;">
-          <h2>Upsells & boosts</h2>
-        </section>
-
-        <section id="cfo" class="main-content" style="display: none;">
-          <h2>VOKA CFO (Admin)</h2>
-        </section>
-
-        <section id="crm" class="main-content" style="display: none;">
-          <h2>CRM Admin</h2>
-        </section>
-
-        <section id="bots" class="main-content" style="display: none;">
-          <h2>Bots IA</h2>
-        </section>
-
-        <section id="ressources" class="main-content" style="display: none;">
-          <h2>Bibliothèque ressources</h2>
-        </section>
-
-        <section id="temoignages" class="main-content" style="display: none;">
-          <h2>Témoignages clients</h2>
-        </section>
-
-        <section id="boutique" class="main-content" style="display: none;">
-          <h2>Boutique VOKA</h2>
-        </section>
-
-        <section id="visionnaire" class="main-content" style="display: none;">
-          <h2>VOKA Visionnaire</h2>
-          <p>L'assistant IA le plus intelligent de la plateforme. Il analyse tout. Il évolue. Il apprend.</p>
-        </section>
-
-        <section id="fondation" class="main-content" style="display: none;">
-          <h2>Fondation William</h2>
-          <p>
-            Cet espace est privé pour le fondateur. Suivi de l’avancement, vision, mission.
-          </p>
-        </section>
-      </main>
+  <!-- CONTENU CENTRAL -->
+  <div class="main-content">
+    <div id="content">
+      <h2>👋 Bienvenue sur VOKA</h2>
+      <p>Voici ton tableau de bord. Choisis une section à gauche pour commencer.</p>
+      <a href="forfaits.html" class="button">🔍 Voir les forfaits VOKA</a>
+      <a href="https://calendly.com/voka-officiel" class="button">📅 Parler à un expert</a>
+      <br><br>
+      <img src="logo-voka.png" alt="Logo VOKA" class="logo">
     </div>
   </div>
+</div>
+
+<!-- PIED DE PAGE -->
+<footer>
+  <a href="conditions.html">📜 Conditions d'utilisation</a>
+  <br>
+  <img src="logo-voka.png" alt="VOKA Logo" class="logo">
+  <p>© 2025 VOKA – Donnez une voix à votre succès</p>
+</footer>
+
+<!-- SCRIPT JS POUR CHANGER DE SECTION -->
+<script>
+  function loadTab(tab) {
+    const content = document.getElementById('content');
+    if (tab === "dashboard") {
+      content.innerHTML = `
+        <h2 style="color:#0b7a95;">📊 VOKA Dashboard</h2>
+        <p>Vue d’ensemble de ton activité.</p>
+      `;
+    } else if (tab === "cfo") {
+      content.innerHTML = `
+        <h2 style="color:#0b7a95;">📁 VOKA CFO</h2>
+        <p>Analyse financière simplifiée.</p>
+      `;
+    } else if (tab === "crm") {
+      content.innerHTML = `
+        <h2 style="color:#0b7a95;">📇 VOKA CRM</h2>
+        <p>Gère tes clients et tes prospects.</p>
+      `;
+    } else if (tab === "videos") {
+      content.innerHTML = `
+        <h2 style="color:#0b7a95;">🎬 VOKA Vidéos</h2>
+        <p>Crée des vidéos puissantes automatiquement.</p>
+      `;
+    } else if (tab === "bots") {
+      content.innerHTML = `
+        <h2 style="color:#0b7a95;">🤖 VOKA Bots</h2>
+        <p>Utilise l’IA pour booster ton entreprise.</p>
+      `;
+    } else if (tab === "decouvre") {
+      content.innerHTML = `
+        <h2 style="color:#0b7a95;">💡 Découvre VOKA</h2>
+        <p>Une immersion dans tout ce que VOKA peut faire pour toi.</p>
+        <a href="tunnel.html" class="button">🚀 Lancer l’expérience VOKA</a>
+      `;
+    } else if (tab === "calendrier") {
+      content.innerHTML = `
+        <h2 style="color:#0b7a95;">📅 VOKA Calendrier</h2>
+        <p>Planifie tes rendez-vous et deadlines.</p>
+      `;
+    } else if (tab === "ressources") {
+      content.innerHTML = `
+        <h2 style="color:#0b7a95;">📚 VOKA Ressources</h2>
+        <p>Accès à tous les documents utiles pour ton entreprise.</p>
+      `;
+    } else if (tab === "temoignages") {
+      content.innerHTML = `
+        <h2 style="color:#0b7a95;">🗣️ VOKA Témoignages</h2>
+        <p>Ce que les autres entrepreneurs pensent de VOKA.</p>
+      `;
+    } else if (tab === "fondation") {
+      content.innerHTML = `
+        <h2 style="color:#0b7a95;">❤️ Fondation William</h2>
+        <p>La Fondation William aide les enfants oubliés. L’ouverture officielle est prévue sous peu.</p>
+      `;
+    }
+  }
+</script>
+
 </body>
 </html>
