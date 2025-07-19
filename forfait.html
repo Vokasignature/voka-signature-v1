@@ -1,95 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Forfait VOKA</title>
+  <link rel="stylesheet" href="style.css" />
   <style>
     body {
-      background-color: #000;
+      background: linear-gradient(180deg, #000000, #03151d);
       font-family: 'Roboto', sans-serif;
       color: white;
+      text-align: center;
       margin: 0;
       padding: 0;
     }
     .container {
-      max-width: 800px;
-      margin: 80px auto;
-      background: #0b7a95;
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 30px;
+    }
+    .forfait-box {
+      border: 1px solid #0b7a95;
+      border-radius: 15px;
       padding: 40px;
-      border-radius: 20px;
-      box-shadow: 0 0 30px #0b7a95;
+      margin-bottom: 30px;
+      background: rgba(11, 122, 149, 0.08);
+      box-shadow: 0 0 12px rgba(11, 122, 149, 0.2);
     }
     h1 {
-      text-align: center;
-      margin-bottom: 40px;
+      font-size: 42px;
+      margin-bottom: 10px;
+      color: #0b7a95;
     }
-    .forfait {
-      font-size: 1.3em;
-      margin-bottom: 30px;
-      line-height: 1.8em;
+    h2 {
+      color: #0b7a95;
+      font-size: 28px;
+      margin-bottom: 10px;
     }
-    label.checkbox-container {
-      display: flex;
-      align-items: center;
-      margin-bottom: 20px;
+    p {
+      font-size: 16px;
+      line-height: 1.6;
     }
-    input[type="checkbox"] {
-      margin-right: 10px;
-      transform: scale(1.3);
-    }
-    a {
-      color: #fff;
-      text-decoration: underline;
-    }
-    button {
-      display: block;
-      width: 100%;
-      padding: 18px;
-      font-size: 1.2em;
+    .btn {
+      display: inline-block;
+      margin: 15px 10px;
+      padding: 15px 30px;
+      border-radius: 30px;
+      background-color: #0b7a95;
+      color: white;
+      text-decoration: none;
       font-weight: bold;
-      color: #000;
-      background: linear-gradient(135deg, #0b7a95, #00d6ff);
-      border: none;
-      border-radius: 10px;
-      cursor: pointer;
-      transition: 0.3s;
+      transition: background 0.3s;
     }
-    button:disabled {
-      background: grey;
-      cursor: not-allowed;
+    .btn:hover {
+      background-color: #095d6c;
+    }
+    .disclaimer {
+      font-size: 0.85em;
+      color: #aaa;
+      margin-top: 30px;
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <h1>Votre Forfait VOKA</h1>
-    <div class="forfait">
-      ✅ Accès complet à la plateforme<br>
-      ✅ Dashboard immersif<br>
-      ✅ Vidéos générées IA<br>
-      ✅ CRM, CFO, Calendrier, Bots IA<br>
-      ✅ Aucun verrouillage<br>
-      ✅ Mise à jour prioritaire<br>
-      ✅ Assistant VOKA Visionnaire<br>
+    <h1>Découvrez le Forfait SIGNATURE</h1>
+    <div class="forfait-box">
+      <h2>🚀 997 $/mois – Aucun engagement</h2>
+      <p>
+        Le forfait idéal pour propulser ton entreprise.<br/>
+        🔹 Dashboard personnalisé ultra stylé<br/>
+        🔹 2 vidéos puissantes/semaine<br/>
+        🔹 Tunnel émotionnel haute conversion<br/>
+        🔹 CRM intelligent + CFO connecté<br/>
+        🔹 70+ bots IA par secteur<br/>
+        🔹 App simulée installable + calendrier intégré<br/>
+        🔹 Automatisation 95 %<br/>
+        🔹 Livraison en 72 h max
+      </p>
+
+      <a href="paiement.html?option=mensuel" class="btn">✅ Débuter maintenant – 997 $/mois</a>
+      <a href="paiement.html?option=pack" class="btn">💎 Pack 3-6-12 mois (avec rabais)</a>
+      <a href="https://calendly.com/voka/30min" class="btn" target="_blank">📞 Parler avec un expert</a>
     </div>
 
-    <label class="checkbox-container">
-      <input type="checkbox" id="cgu-checkbox">
-      J’accepte les <a href="conditions.html" target="_blank">Conditions Générales d’Utilisation</a>
-    </label>
-
-    <button id="cta-button" disabled onclick="window.open('https://calendly.com/tonlien', '_blank')">
-      ✨ Je débloque VOKA maintenant
-    </button>
+    <div class="disclaimer">
+      * Aucun forfait EMPIRE, VIP ou Start-up n’est disponible pour l’instant.<br/>
+      Tu pourras y accéder plus tard, selon ton évolution dans VOKA.
+    </div>
   </div>
-
-  <script>
-    const checkbox = document.getElementById('cgu-checkbox');
-    const button = document.getElementById('cta-button');
-
-    checkbox.addEventListener('change', () => {
-      button.disabled = !checkbox.checked;
-    });
-  </script>
 </body>
 </html>
