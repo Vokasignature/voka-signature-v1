@@ -1,89 +1,19 @@
-<!DOCTYPE html>
-<html lang="fr">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Découvre VOKA</title>
-  <link rel="stylesheet" href="style.css">
-  <style>
-    body {
-      background: linear-gradient(135deg, #000000, #0b7a95);
-      color: white;
-      font-family: 'Roboto', sans-serif;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
+<div style="padding: 40px; color: white;">
+  <h2 style="color:#0b7a95;">🎬 Découvre VOKA</h2>
+  <p style="margin-top:10px;">
+    Regarde cette expérience immersive pour comprendre ce que VOKA peut faire pour toi. À la fin, choisis ton forfait et propulse ton entreprise.
+  </p>
 
-    .tunnel-container {
-      padding: 80px 20px;
-      max-width: 900px;
-      margin: auto;
-    }
-
-    h1 {
-      font-size: 2.8em;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-size: 1.2em;
-      line-height: 1.6;
-      margin-bottom: 40px;
-    }
-
-    .cta-buttons {
-      display: flex;
-      justify-content: center;
-      gap: 30px;
-      flex-wrap: wrap;
-      margin-top: 50px;
-    }
-
-    .cta-buttons a {
-      background-color: #0b7a95;
-      padding: 18px 32px;
-      border-radius: 12px;
-      color: white;
-      font-size: 1.1em;
-      text-decoration: none;
-      transition: 0.3s ease;
-    }
-
-    .cta-buttons a:hover {
-      background-color: #095f75;
-    }
-
-    .video-section {
-      margin-top: 50px;
-    }
-
-    iframe {
-      width: 100%;
-      max-width: 700px;
-      height: 400px;
-      border: none;
-      border-radius: 12px;
-      margin-top: 20px;
-    }
-  </style>
-</head>
-<body>
-  <div class="tunnel-container">
-    <h1>Bienvenue dans l'univers VOKA</h1>
-    <p>Découvre une plateforme puissante, automatisée, pensée pour propulser ton entreprise.</p>
-
-    <div class="video-section">
-      <p><strong>🎬 Regarde cette présentation immersive :</strong></p>
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Présentation VOKA" allowfullscreen></iframe>
-    </div>
-
-    <div class="cta-buttons">
-      <a href="forfaits.html">🧠 Voir l'offre à 997$/mois</a>
-      <a href="https://calendly.com/voka/30min" target="_blank">📞 Parler à un stratège</a>
-    </div>
-
-    <p style="margin-top: 50px; font-size: 0.9em; color: #ccc;">* Tu peux rejoindre maintenant ou prendre un appel avec nous pour poser tes questions.</p>
+  <!-- Vidéo du tunnel -->
+  <div style="margin: 30px 0;">
+    <video width="100%" controls style="border-radius: 12px;">
+      <source src="video/voka-tunnel.mp4" type="video/mp4">
+      Ton navigateur ne supporte pas la vidéo.
+    </video>
   </div>
-</body>
-</html>
+
+  <!-- Bouton vers les forfaits -->
+  <a href="forfaits.html" style="display:inline-block; background: linear-gradient(to right, #0b7a95, #003a46); color:white; padding:15px 25px; border-radius:8px; text-decoration:none; font-weight:bold;">
+    🚀 Choisir mon forfait
+  </a>
+</div>
