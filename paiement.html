@@ -1,28 +1,36 @@
-<section class="forfait-section" style="background: #0a0a0a; color: white; padding: 60px 20px; text-align: center;">
-  <h2 style="color: #0b7a95; font-size: 2.2em;">🚀 Forfait Signature VOKA</h2>
-  <p style="font-size: 1.2em;">Accès complet et illimité à VOKA Version 1.0</p>
-  
-  <div style="margin-top: 40px;">
-    <!-- Paiement mensuel -->
-    <a href="https://buy.stripe.com/test_9AQ6oK12Z9XK0zyaEG" target="_blank" style="background:#0b7a95; padding: 15px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; color:white; display:inline-block; margin: 10px;">
-      🔓 Débuter maintenant – 997 $/mois
-    </a>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Choix de forfait - VOKA</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-mode">
+  <div class="content">
+    <h2 style="color:#0b7a95;">Choisis ton forfait VOKA Signature</h2>
+    <form id="formulairePaiement">
+      <label><input type="radio" name="forfait" value="997"> Mensuel – 997 $/mois</label><br>
+      <label><input type="radio" name="forfait" value="pack"> Pack 3 / 6 / 12 mois avec rabais</label><br><br>
 
-    <!-- Paiement pack 3 mois (10% de rabais) -->
-    <a href="https://buy.stripe.com/test_bIY9B40uR0FY33CdQQ" target="_blank" style="background:#0b7a95; padding: 15px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; color:white; display:inline-block; margin: 10px;">
-      🎁 Pack 3 mois – 2697 $ (au lieu de 2991 $)
-    </a>
+      <label>
+        <input type="checkbox" id="cgu"> J’accepte les <a href="conditions.html" target="_blank">Conditions Générales d’Utilisation</a>
+      </label><br><br>
 
-    <!-- Rendez-vous -->
-    <a href="https://calendly.com/voka/30min" target="_blank" style="background:#444; padding: 15px 25px; border-radius: 8px; font-weight: bold; text-decoration: none; color:white; display:inline-block; margin: 10px;">
-      📅 Prendre un rendez-vous
-    </a>
+      <button type="submit">Valider et accéder au paiement</button>
+    </form>
   </div>
 
-  <div style="margin-top: 20px;">
-    <label style="color:white;">
-      <input type="checkbox" required> 
-      J’ai lu et j’accepte les <a href="conditions.html" target="_blank" style="color:#0b7a95;">Conditions Générales d’Utilisation</a>
-    </label>
-  </div>
-</section>
+  <script>
+    document.getElementById('formulairePaiement').addEventListener('submit', function(e) {
+      if (!document.getElementById('cgu').checked) {
+        alert("Tu dois accepter les CGU pour continuer.");
+        e.preventDefault();
+        return;
+      }
+      alert("Redirection vers le paiement...");
+      // Redirection simulée
+      window.location.href = "https://buy.stripe.com/test_bouton_exemple";
+    });
+  </script>
+</body>
+</html>
