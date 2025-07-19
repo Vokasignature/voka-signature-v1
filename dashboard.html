@@ -60,10 +60,21 @@ else if (tab === "decouvre") {
 }
 
       if (tab === "dashboard") {
-        content.innerHTML = `
-          <h2 style="color:#0b7a95;">🎯 VOKA Dashboard</h2>
-          <p style="color:white;">Vue d’ensemble de ton activité.</p>
-        `;
+  content.innerHTML = `
+    <h2 style="color:#0b7a95;">🎯 VOKA Dashboard</h2>
+    <p style="color:white;">Vue d’ensemble de ton activité.</p>
+
+    <hr style="margin: 20px 0; border: 1px solid #0b7a95;">
+
+    <h2 style="color:#0b7a95;">✨ Découvre VOKA</h2>
+    <p style="color:white;">Accède à tous les outils puissants de VOKA avec ton forfait actif.</p>
+
+    <a href="forfaits.html" style="display:inline-block; background: linear-gradient(to right, #0b7a95, #003a46); color:white; padding:15px 25px; border-radius:8px; text-decoration:none; font-weight:bold; margin-top:20px;">
+      ⚡ Voir les forfaits
+    </a>
+  `;
+}
+
       } else if (tab === "cfo") {
         content.innerHTML = `
           <h2 style="color:#0b7a95;">💼 VOKA CFO</h2>
