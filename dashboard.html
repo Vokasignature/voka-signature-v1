@@ -40,6 +40,22 @@
   <script>
     function showContent(tab) {
       const content = document.getElementById("content");
+else if (tab === "decouvre") {
+  content.innerHTML = `
+    <div class="decouvre-voka" style="padding: 60px; background: linear-gradient(135deg, #0b7a95, #010e13); border-radius: 16px; text-align: center; color: white;">
+      <h2 style="font-size: 2.2em; margin-bottom: 20px;">Découvre l’univers VOKA</h2>
+      <p style="font-size: 1.1em; margin-bottom: 30px; max-width: 700px; margin-left: auto; margin-right: auto;">
+        Tu veux comprendre ce qu’est vraiment VOKA avant de te lancer ? Regarde notre tunnel immersif et ressens la différence.
+      </p>
+      <a href="ton-tunnel.html" style="padding: 16px 32px; font-size: 1.1em; border-radius: 12px; background-color: #0b7a95; color: white; text-decoration: none; transition: all 0.3s ease;">
+        🚀 Lancer l’expérience VOKA
+      </a>
+      <p style="font-size: 0.9em; margin-top: 25px; color: #ccc;">
+        * À la fin du tunnel, tu pourras choisir ton forfait et activer ton espace personnel.
+      </p>
+    </div>
+  `;
+}
 
       if (tab === "dashboard") {
         content.innerHTML = `
