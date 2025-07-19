@@ -1,110 +1,89 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <title>Tunnel VOKA</title>
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Découvre VOKA</title>
+  <link rel="stylesheet" href="style.css">
   <style>
     body {
-      margin: 0;
       background: linear-gradient(135deg, #000000, #0b7a95);
-      font-family: Roboto, sans-serif;
       color: white;
-      overflow-x: hidden;
-    }
-
-    .container {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 0;
       text-align: center;
     }
 
+    .tunnel-container {
+      padding: 80px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+
     h1 {
-      font-size: 3em;
+      font-size: 2.8em;
       margin-bottom: 20px;
-      color: #0b7a95;
     }
 
     p {
-      font-size: 1.3em;
+      font-size: 1.2em;
       line-height: 1.6;
       margin-bottom: 40px;
     }
 
+    .cta-buttons {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+      margin-top: 50px;
+    }
+
+    .cta-buttons a {
+      background-color: #0b7a95;
+      padding: 18px 32px;
+      border-radius: 12px;
+      color: white;
+      font-size: 1.1em;
+      text-decoration: none;
+      transition: 0.3s ease;
+    }
+
+    .cta-buttons a:hover {
+      background-color: #095f75;
+    }
+
     .video-section {
-      margin: 40px auto;
+      margin-top: 50px;
     }
 
     iframe {
       width: 100%;
-      max-width: 800px;
-      height: 450px;
+      max-width: 700px;
+      height: 400px;
       border: none;
-      border-radius: 10px;
-      box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
-    }
-
-    .btn {
-      display: inline-block;
-      background-color: #0b7a95;
-      color: white;
-      padding: 15px 35px;
-      border: none;
-      border-radius: 50px;
-      font-size: 1.2em;
-      text-decoration: none;
-      transition: background 0.3s ease, transform 0.3s ease;
-    }
-
-    .btn:hover {
-      background-color: #0b98b5;
-      transform: scale(1.05);
-      box-shadow: 0 0 15px rgba(11, 122, 149, 0.8);
-    }
-
-    .footer {
-      margin-top: 50px;
-      font-size: 0.9em;
-      color: #aaa;
+      border-radius: 12px;
+      margin-top: 20px;
     }
   </style>
 </head>
 <body>
-
-  <div class="container">
-    <h1>Bienvenue dans l’univers VOKA</h1>
-    <p>
-      Ce n’est pas un simple outil. C’est une révolution pour les entrepreneurs modernes. <br />
-      Automatise, propulse, inspire, vends plus intelligemment. <br />
-      Découvre ce que ton entreprise mérite vraiment.
-    </p>
+  <div class="tunnel-container">
+    <h1>Bienvenue dans l'univers VOKA</h1>
+    <p>Découvre une plateforme puissante, automatisée, pensée pour propulser ton entreprise.</p>
 
     <div class="video-section">
-      <!-- Tu peux insérer ici une vidéo YouTube, Loom, ou un lien Voka -->
-      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
+      <p><strong>🎬 Regarde cette présentation immersive :</strong></p>
+      <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Présentation VOKA" allowfullscreen></iframe>
     </div>
 
-    <a class="btn" href="https://calendly.com/voka/30min" target="_blank">
-      🔥 Réserve ton appel stratégique maintenant
-    </a>
-
-    <div class="footer">
-      <p>&copy; 2025 VOKA. Tous droits réservés.</p>
+    <div class="cta-buttons">
+      <a href="forfaits.html">🧠 Voir l'offre à 997$/mois</a>
+      <a href="https://calendly.com/voka/30min" target="_blank">📞 Parler à un stratège</a>
     </div>
-  </div>
-<!-- SECTION APPEL À L’ACTION – FIN DE TUNNEL -->
-<div style="margin-top: 60px; text-align: center;">
-  <h2 style="color: white;">🚀 Prêt à propulser ton entreprise avec VOKA ?</h2>
-  <p style="color: #ccc;">Choisis ton option ci-dessous pour commencer ton expérience VOKA SIGNATURE</p>
 
-  <div style="margin-top: 30px;">
-    <a href="paiement.html?option=mensuel" class="btn" style="margin: 10px;">✅ Débuter maintenant – 997 $/mois</a>
-    <a href="paiement.html?option=pack" class="btn" style="margin: 10px;">💎 Forfait 3 / 6 / 12 mois avec réduction</a>
-    <a href="https://calendly.com/voka/30min" class="btn" style="margin: 10px;" target="_blank">📞 Parler à un expert</a>
+    <p style="margin-top: 50px; font-size: 0.9em; color: #ccc;">* Tu peux rejoindre maintenant ou prendre un appel avec nous pour poser tes questions.</p>
   </div>
-</div>
-<!-- FIN DU TUNNEL -->
-
 </body>
 </html>
