@@ -1,136 +1,34 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <link rel="icon" type="image/png" href="ton-dossier/logo-voka.png">
-  <meta charset="UTF-8">
-  <title>Formulaire de démarrage - VOKA</title>
-  <style>
-    <script>
-  document.querySelector("form").addEventListener("submit", function(e) {
-    e.preventDefault();
-
-    const nomEntreprise = document.getElementById("nomEntreprise").value;
-    const logoFichier = document.getElementById("logo").files[0];
-    const forfait = document.querySelector('input[name="forfait"]:checked')?.value || "Signature";
-
-    // Convertir le logo en base64
-    const reader = new FileReader();
-    reader.onloadend = function () {
-      const logoBase64 = reader.result;
-
-      // Stocker dans le localStorage
-      localStorage.setItem("nomEntreprise", nomEntreprise);
-      localStorage.setItem("forfait", forfait);
-      localStorage.setItem("logo", logoBase64);
-
-      alert("Merci ! Vos informations ont été enregistrées.");
-      window.location.href = "dashboard.html";
-    };
-
-    if (logoFichier) {
-      reader.readAsDataURL(logoFichier);
-    } else {
-      localStorage.setItem("nomEntreprise", nomEntreprise);
-      localStorage.setItem("forfait", forfait);
-      localStorage.setItem("logo", ""); // Si aucun logo
-
-      alert("Merci ! Vos informations ont été enregistrées.");
-      window.location.href = "dashboard.html";
-    }
-  });
-</script>
-
-    body {
-      background-color: #000;
-      font-family: 'Roboto', sans-serif;
-      color: #fff;
-      padding: 40px;
-      max-width: 700px;
-      margin: auto;
-    }
-    h1 {
-      color: #0b7a95;
-      text-align: center;
-      margin-bottom: 30px;
-    }
-    label {
-      display: block;
-      margin-top: 20px;
-      color: #00d6ff;
-    }
-    input, select, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-top: 5px;
-      border: none;
-      border-radius: 8px;
-      background-color: #111;
-      color: #fff;
-    }
-    input[type="submit"] {
-      background-color: #0b7a95;
-      color: white;
-      margin-top: 30px;
-      cursor: pointer;
-      font-size: 16px;
-    }
-    input[type="submit"]:hover {
-      background-color: #08859f;
-    }
-    .checkbox {
-      display: flex;
-      align-items: center;
-      margin-top: 20px;
-    }
-    .checkbox input {
-      width: auto;
-      margin-right: 10px;
-    }
-    .checkbox label {
-      margin: 0;
-      color: #aaa;
-    }
-    a {
-      color: #00d6ff;
-      text-decoration: underline;
-    }
-  </style>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Formulaire Client – VOKA</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="content">
+    <h1>Bienvenue dans l’univers VOKA</h1>
+    <p>Remplis ce formulaire pour activer ton Dashboard personnalisé.</p>
 
-  <h1>Démarrez avec VOKA</h1>
+    <form action="#" method="post">
+      <label for="entreprise">Nom de l’entreprise :</label>
+      <input type="text" id="entreprise" name="entreprise" required />
 
-  <form action="https://formspree.io/f/xyzpzzon" method="POST" enctype="multipart/form-data">
-    
-    <label for="nom">Nom de l’entreprise</label>
-    <input type="text" name="nom" required>
+      <label for="secteur">Secteur d’activité :</label>
+      <input type="text" id="secteur" name="secteur" required />
 
-    <label for="logo">Logo de l’entreprise (PNG ou JPG)</label>
-    <input type="file" name="logo" accept="image/png, image/jpeg">
+      <label for="voix">Souhaites-tu fournir un texte ou ta voix pour les vidéos ?</label>
+      <select id="voix" name="voix">
+        <option value="texte">Texte</option>
+        <option value="voix">Voix (audio)</option>
+      </select>
 
-    <label for="secteur">Secteur d’activité</label>
-    <select name="secteur" required>
-      <option value="coaching">Coaching</option>
-      <option value="construction">Construction</option>
-      <option value="immobilier">Immobilier</option>
-      <option value="services">Services</option>
-      <option value="e-commerce">E-commerce</option>
-      <option value="autre">Autre</option>
-    </select>
+      <label for="logo">Ton logo (lien ou téléchargement) :</label>
+      <input type="text" id="logo" name="logo" placeholder="https://..." />
 
-    <label for="video">Texte ou message vocal à transformer en vidéo</label>
-    <textarea name="video" rows="5" placeholder="Décrivez votre message ici..."></textarea>
-
-    <label for="email">Adresse courriel</label>
-    <input type="email" name="email" required>
-
-    <div class="checkbox">
-      <input type="checkbox" name="cgu" required>
-      <label>J’ai lu et j’accepte les <a href="conditions.html" target="_blank">Conditions Générales d’Utilisation</a>.</label>
-    </div>
-
-    <input type="submit" value="Soumettre et démarrer">
-  </form>
-
+      <button type="submit">Soumettre</button>
+    </form>
+  </main>
 </body>
 </html>
