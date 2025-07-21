@@ -3,26 +3,30 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulaire d'inscription - VOKA</title>
+  <title>Formulaire Client VOKA</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="content">
-    <h1>Formulaire d'inscription</h1>
-    <form action="mailto:tonemail@tondomaine.com" method="POST" enctype="text/plain">
-      <label>Nom de l’entreprise :</label>
-      <input type="text" name="entreprise" required />
-      <label>Nom complet :</label>
-      <input type="text" name="nom" required />
-      <label>Courriel :</label>
-      <input type="email" name="email" required />
-      <label>Votre niche :</label>
-      <input type="text" name="niche" />
-      <label>Votre logo (lien ou nom du fichier) :</label>
-      <input type="text" name="logo" />
-      <label>Texte ou audio pour la première vidéo :</label>
-      <textarea name="script"></textarea>
-      <button type="submit">Envoyer</button>
+    <h1>Bienvenue chez VOKA</h1>
+    <p>Merci pour ton achat. Remplis ce formulaire pour recevoir ton dashboard personnalisé.</p>
+    <form action="mailto:tonadresse@mail.com" method="POST" enctype="text/plain">
+      <label>Nom de l'entreprise :</label><br>
+      <input type="text" name="entreprise" required /><br><br>
+
+      <label>Secteur/Niche :</label><br>
+      <input type="text" name="secteur" required /><br><br>
+
+      <label>Ton prénom :</label><br>
+      <input type="text" name="prenom" required /><br><br>
+
+      <label>Logo de l'entreprise (URL ou envoi par courriel) :</label><br>
+      <input type="text" name="logo" /><br><br>
+
+      <label>Texte ou audio pour la vidéo :</label><br>
+      <textarea name="script" rows="6" required></textarea><br><br>
+
+      <input type="submit" value="Envoyer mon info à VOKA" />
     </form>
   </main>
   <footer class="footer">
@@ -30,3 +34,4 @@
   </footer>
 </body>
 </html>
+
