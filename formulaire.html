@@ -1,37 +1,23 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formulaire Client VOKA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Formulaire VOKA</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="content">
     <h1>Bienvenue chez VOKA</h1>
-    <p>Merci pour ton achat. Remplis ce formulaire pour recevoir ton dashboard personnalisé.</p>
-    <form action="mailto:tonadresse@mail.com" method="POST" enctype="text/plain">
-      <label>Nom de l'entreprise :</label><br>
-      <input type="text" name="entreprise" required /><br><br>
-
-      <label>Secteur/Niche :</label><br>
-      <input type="text" name="secteur" required /><br><br>
-
-      <label>Ton prénom :</label><br>
-      <input type="text" name="prenom" required /><br><br>
-
-      <label>Logo de l'entreprise (URL ou envoi par courriel) :</label><br>
-      <input type="text" name="logo" /><br><br>
-
-      <label>Texte ou audio pour la vidéo :</label><br>
-      <textarea name="script" rows="6" required></textarea><br><br>
-
-      <input type="submit" value="Envoyer mon info à VOKA" />
+    <p>Remplis ce formulaire pour activer ton dashboard personnalisé.</p>
+    <form action="mailto:tonemail@tonentreprise.com" method="post" enctype="text/plain">
+      <input type="text" placeholder="Nom de ton entreprise" required><br><br>
+      <input type="email" placeholder="Adresse email" required><br><br>
+      <input type="text" placeholder="Secteur / Niche" required><br><br>
+      <input type="file" placeholder="Logo"><br><br>
+      <textarea placeholder="Notes ou instructions" rows="5"></textarea><br><br>
+      <button type="submit">Envoyer</button>
     </form>
   </main>
-  <footer class="footer">
-    <p>&copy; VOKA | <a href="cgu.html">CGU</a> | <a href="politique.html">Politique</a></p>
-  </footer>
 </body>
 </html>
-
