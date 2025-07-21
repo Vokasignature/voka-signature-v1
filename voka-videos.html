@@ -8,48 +8,48 @@
 </head>
 <body>
   <main class="content">
-    <h1>Demandes de Vidéos</h1>
-    <p>Remplis ce formulaire pour générer une vidéo puissante.</p>
-    <form>
-      <label>Type de vidéo :</label>
-      <select>
-        <option>Promotion entreprise</option>
-        <option>Service ou produit précis</option>
-      </select><br />
+    <h1>Vidéos VOKA</h1>
+    <p>Commande ta prochaine vidéo virale générée par intelligence artificielle.</p>
 
-      <label>Style visuel :</label>
-      <select>
-        <option>Professionnel</option>
-        <option>Animé</option>
-        <option>Humoristique</option>
-        <option>Science-fiction</option>
-      </select><br />
+    <form action="#" method="post" class="video-form">
+      <label for="objectif">Objectif de la vidéo :</label>
+      <select id="objectif" name="objectif">
+        <option value="attirer">Attirer de nouveaux clients</option>
+        <option value="vendre">Promouvoir un produit ou service</option>
+        <option value="branding">Renforcer la marque</option>
+      </select>
 
-      <label>Format :</label>
-      <select>
-        <option>TikTok</option>
-        <option>Instagram</option>
-        <option>Facebook</option>
-        <option>YouTube</option>
-      </select><br />
+      <label for="style">Style :</label>
+      <select id="style" name="style">
+        <option value="professionnel">Professionnel</option>
+        <option value="anime">Animé</option>
+        <option value="humour">Humoristique</option>
+        <option value="scifi">Science-fiction</option>
+      </select>
 
-      <label>Voix :</label>
-      <select>
-        <option>Clonée du client</option>
-        <option>Voix IA - masculine</option>
-        <option>Voix IA - féminine</option>
-      </select><br />
+      <label for="plateforme">Plateforme :</label>
+      <select id="plateforme" name="plateforme">
+        <option value="tiktok">TikTok</option>
+        <option value="instagram">Instagram</option>
+        <option value="facebook">Facebook</option>
+      </select>
 
-      <label>Style de voix :</label>
-      <select>
-        <option>Sérieux</option>
-        <option>Compatissant</option>
-        <option>Énergique</option>
-        <option>Inspirant</option>
-      </select><br />
+      <label for="voix">Voix :</label>
+      <select id="voix" name="voix">
+        <option value="clone">Voix du client (clone)</option>
+        <option value="ia-femme">Voix IA féminine</option>
+        <option value="ia-homme">Voix IA masculine</option>
+      </select>
 
-      <label>Texte ou message vocal :</label><br />
-      <textarea rows="5" placeholder="Écris ton script ou colle le lien audio"></textarea><br />
+      <label for="ton">Tonalité :</label>
+      <select id="ton" name="ton">
+        <option value="serieux">Sérieux</option>
+        <option value="compassion">Compatissant</option>
+        <option value="motivant">Motivant</option>
+      </select>
+
+      <label for="input">Entrez votre texte ou enregistrez votre voix :</label>
+      <textarea id="input" name="input" rows="6"></textarea>
 
       <button type="submit">Envoyer la demande</button>
     </form>
