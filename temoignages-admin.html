@@ -1,57 +1,27 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <link rel="icon" type="image/png" href="ton-dossier/logo-voka.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOKA Admin - Témoignages</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Gestion des Témoignages – Admin VOKA</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="content">
+    <h1>Témoignages Clients</h1>
+    <p>Valide, refuse ou récompense les témoignages soumis.</p>
 
-  <header><h1>VOKA Admin Personnel</h1></header>
-
-  <nav>
     <ul>
-      <li><a href="dashboard-admin.html">Mon Dashboard Admin</a></li>
-      <li><a href="fondation.html">Fondation William</a></li>
-      <li><a href="recompenses.html">Récompenses Clients</a></li>
-      <li><a href="statut.html">Statut d’Élévation</a></li>
-      <li><a href="temoignages-admin.html" class="active">Témoignages Reçus</a></li>
-      <li><a href="visionnaire.html">VOKA Visionnaire (IA)</a></li>
-      <li><a href="suggestion.html">Suggestion Éclair</a></li>
-      <li><a href="clone.html">Clone-to-Win</a></li>
-      <li><a href="influenceur.html">VOKA Influenceur</a></li>
-      <li><a href="prospecteur.html">Prospecteur IA</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="aide.html">Centre d’Aide</a></li>
+      <li><strong>Client :</strong> Entreprise X</li>
+      <li><strong>Note :</strong> ★★★★☆</li>
+      <li><strong>Texte :</strong> “VOKA a complètement changé ma façon de vendre.”</li>
+      <li><strong>Audio :</strong> <a href="#">Écouter</a></li>
+      <li><strong>Vidéo :</strong> <a href="#">Visionner</a></li>
     </ul>
-  </nav>
 
-  <main>
-    <section>
-      <h2>🧾 Témoignages reçus</h2>
-      <p>Voici les retours clients envoyés via le formulaire. À valider ou refuser.</p>
-
-      <!-- Exemple de ligne (manuelle ou automatisée dans V2.0) -->
-      <div style="background-color: #1a1a1a; padding: 20px; border-left: 5px solid #00baff; margin-bottom: 20px;">
-        <p><strong>Nom :</strong> Julie Tremblay</p>
-        <p><strong>Email :</strong> julie@email.com</p>
-        <p><strong>Témoignage écrit :</strong> « VOKA m’a changé la vie. J’ai eu mes premiers clients en 48 h. Merci ! »</p>
-        <p><strong>Audio :</strong> <a href="#">Écouter</a></p>
-        <p><strong>Vidéo :</strong> <a href="#">Regarder</a></p>
-        <p><strong>Autorisation :</strong> ✅</p>
-
-        <button onclick="alert('Témoignage validé ✨')">✅ Valider</button>
-        <button onclick="alert('Témoignage refusé ❌')">❌ Refuser</button>
-        <button onclick="alert('Badge cadeau activé 🎁')">🎁 Débloquer récompense</button>
-      </div>
-
-      <p style="margin-top: 40px; color: #888;">
-        En V2.0, ces témoignages seront collectés automatiquement via IA, analysés émotionnellement et triés selon leur impact.
-      </p>
-    </section>
+    <button>✅ Valider</button>
+    <button>❌ Refuser</button>
+    <button>🎁 Récompenser</button>
   </main>
-
 </body>
 </html>
