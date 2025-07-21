@@ -1,200 +1,48 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VOKA Dashboard</title>
-  <link rel="icon" href="logo-voka.png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
-  <style>
-    body {
-      margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #0a0a0a;
-      color: white;
-    }
-
-    .container {
-      display: flex;
-      height: 100vh;
-    }
-
-    .sidebar {
-      width: 220px;
-      background: linear-gradient(to bottom, #001a25, #0b7a95);
-      padding: 20px 10px;
-      border-top-right-radius: 20px;
-      border-bottom-right-radius: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 15px;
-    }
-
-    .tab {
-      background-color: #0a0a0a;
-      border-radius: 12px;
-      padding: 12px;
-      cursor: pointer;
-      transition: background 0.3s;
-      font-weight: bold;
-      color: white;
-      display: flex;
-      align-items: center;
-      gap: 10px;
-    }
-
-    .tab:hover {
-      background-color: #0b7a95;
-    }
-
-    .main-content {
-      flex: 1;
-      padding: 40px;
-      background: #0a0a0a;
-      border-top-left-radius: 20px;
-      border-bottom-left-radius: 20px;
-      overflow-y: auto;
-    }
-
-    footer {
-      background: #111;
-      color: #999;
-      text-align: center;
-      padding: 20px 10px;
-      font-size: 14px;
-    }
-
-    footer a {
-      color: #0b7a95;
-      font-weight: bold;
-      text-decoration: none;
-    }
-
-    footer a:hover {
-      text-decoration: underline;
-    }
-
-    img.logo {
-      height: 60px;
-      margin: 20px auto;
-      display: block;
-    }
-
-    h2 {
-      color: #0b7a95;
-    }
-
-    a.button {
-      background: #0b7a95;
-      color: white;
-      padding: 12px 24px;
-      border-radius: 10px;
-      font-weight: bold;
-      display: inline-block;
-      margin: 10px 5px 30px 0;
-      text-decoration: none;
-    }
-
-    a.button:hover {
-      background: #099;
-    }
-  </style>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-
-<div class="container">
-  <!-- MENU GAUCHE -->
   <div class="sidebar">
-    <div class="tab" onclick="loadTab('dashboard')"> Dashboard</div>
-    <div class="tab" onclick="loadTab('cfo')"> CFO</div>
-    <div class="tab" onclick="loadTab('crm')"> CRM</div>
-    <div class="tab" onclick="loadTab('videos')"> Vidéos</div>
-    <div class="tab" onclick="loadTab('bots')"> Bots</div>
-    <div class="tab" onclick="loadTab('decouvre')"> Découvre VOKA</div>
-    <div class="tab" onclick="loadTab('calendrier')"> Calendrier</div>
-    <div class="tab" onclick="loadTab('ressources')"> Ressources</div>
-    <div class="tab" onclick="loadTab('temoignages')"> Témoignages</div>
-    <div class="tab" onclick="loadTab('fondation')"> Fondation</div>
+    <div class="logo"><img src="logo-voka.png" alt="Logo VOKA" /></div>
+    <ul>
+      <li><a href="index.html"> Dashboard</a></li>
+      <li><a href="voka-cfo.html"> CFO</a></li>
+      <li><a href="voka-crm.html"> CRM</a></li>
+      <li><a href="voka-videos.html"> Vidéos</a></li>
+      <li><a href="voka-bots.html"> Bots</a></li>
+      <li><a href="voka-tunnel.html"> Tunnel</a></li>
+      <li><a href="voka-elia.html"> Elia</a></li>
+      <li><a href="voka-calendrier.html"> Calendrier</a></li>
+      <li><a href="voka-drop.html"> VOKA Drop</a></li>
+      <li><a href="voka-ressources.html"> Ressources</a></li>
+      <li><a href="voka-temoignages.html"> Témoignages</a></li>
+      <li><a href="voka-boutique.html" Boutique</a></li>
+      <li><a href="voka-social.html"> Réseaux Sociaux</a></li>
+      <li><a href="voka-preuvia.html"> Preuvia</a></li>
+      <li><a href="voka-retouria.html"> Retouria</a></li>
+      <li><a href="voka-quandca.html"> QuandÇa</a></li>
+      <li><a href="voka-tempo.html"> Tempo</a></li>
+      <li><a href="voka-tradia.html"> Tradia</a></li>
+      <li><a href="cgu.html"> CGU</a></li>
+    </ul>
   </div>
 
-  <!-- CONTENU CENTRAL -->
-  <div class="main-content">
-    <div id="content">
-      <h2>👋 Bienvenue sur VOKA</h2>
-      <p>Voici ton tableau de bord. Choisis une section à gauche pour commencer.</p>
-      <a href="forfaits.html" class="button">🔍 Voir les forfaits VOKA</a>
-      <a href="https://calendly.com/voka-officiel" class="button">📅 Parler à un expert</a>
-      <br><br>
-      <img src="logo-voka.png" alt="Logo VOKA" class="logo">
-    </div>
-  </div>
-</div>
+  <main class="content">
+    <h1>Bienvenue sur VOKA</h1>
+    <p>Choisissez un onglet dans le menu de gauche pour commencer.</p>
+  </main>
 
-<!-- PIED DE PAGE -->
-<footer>
-  <a href="conditions.html">📜 Conditions d'utilisation</a>
-  <br>
-  <img src="logo-voka.png" alt="VOKA Logo" class="logo">
-  <p>© 2025 VOKA – Donnez une voix à votre succès</p>
-</footer>
-
-<!-- SCRIPT JS POUR CHANGER DE SECTION -->
-<script>
-  function loadTab(tab) {
-    const content = document.getElementById('content');
-    if (tab === "dashboard") {
-      content.innerHTML = `
-        <h2 style="color:#0b7a95;">📊 VOKA Dashboard</h2>
-        <p>Vue d’ensemble de ton activité.</p>
-      `;
-    } else if (tab === "cfo") {
-      content.innerHTML = `
-        <h2 style="color:#0b7a95;">📁 VOKA CFO</h2>
-        <p>Analyse financière simplifiée.</p>
-      `;
-    } else if (tab === "crm") {
-      content.innerHTML = `
-        <h2 style="color:#0b7a95;">📇 VOKA CRM</h2>
-        <p>Gère tes clients et tes prospects.</p>
-      `;
-    } else if (tab === "videos") {
-      content.innerHTML = `
-        <h2 style="color:#0b7a95;">🎬 VOKA Vidéos</h2>
-        <p>Crée des vidéos puissantes automatiquement.</p>
-      `;
-    } else if (tab === "bots") {
-      content.innerHTML = `
-        <h2 style="color:#0b7a95;">🤖 VOKA Bots</h2>
-        <p>Utilise l’IA pour booster ton entreprise.</p>
-      `;
-    } else if (tab === "decouvre") {
-      content.innerHTML = `
-        <h2 style="color:#0b7a95;">💡 Découvre VOKA</h2>
-        <p>Une immersion dans tout ce que VOKA peut faire pour toi.</p>
-        <a href="tunnel.html" class="button">🚀 Lancer l’expérience VOKA</a>
-      `;
-    } else if (tab === "calendrier") {
-      content.innerHTML = `
-        <h2 style="color:#0b7a95;">📅 VOKA Calendrier</h2>
-        <p>Planifie tes rendez-vous et deadlines.</p>
-      `;
-    } else if (tab === "ressources") {
-      content.innerHTML = `
-        <h2 style="color:#0b7a95;">📚 VOKA Ressources</h2>
-        <p>Accès à tous les documents utiles pour ton entreprise.</p>
-      `;
-    } else if (tab === "temoignages") {
-      content.innerHTML = `
-        <h2 style="color:#0b7a95;">🗣️ VOKA Témoignages</h2>
-        <p>Ce que les autres entrepreneurs pensent de VOKA.</p>
-      `;
-    } else if (tab === "fondation") {
-      content.innerHTML = `
-        <h2 style="color:#0b7a95;">❤️ Fondation William</h2>
-        <p>La Fondation William aide les enfants oubliés. L’ouverture officielle est prévue sous peu.</p>
-      `;
-    }
-  }
-</script>
-
+  <footer>
+    <p>
+      <a href="cgu.html">CGU</a> |
+      <a href="politique-confidentialite.html">Politique de confidentialité</a> |
+      <a href="mailto:support@voka.ai">Contact</a>
+    </p>
+  </footer>
 </body>
 </html>
