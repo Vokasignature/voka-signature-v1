@@ -1,24 +1,36 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <link rel="icon" type="image/png" href="ton-dossier/logo-voka.png">
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOKA - Partenaires</title>
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Partenaires – VOKA</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
+  <main class="content">
+    <h1>Partenaires Stratégiques</h1>
+    <p>Voici les partenaires recommandés par VOKA dans différents domaines :</p>
 
-  <header><h1>VOKA Dashboard</h1></header>
-  <nav><!-- (menu identique) --></nav>
+    <ul>
+      <li><strong>Banques :</strong> Banque Nationale, RBC, Desjardins...</li>
+      <li><strong>Avocats :</strong> Droit des affaires, propriété intellectuelle</li>
+      <li><strong>Comptables :</strong> Fiscalité PME, CPA, optimisation</li>
+      <li><strong>Stratèges :</strong> Accompagnement personnalisé, vision long terme</li>
+    </ul>
 
-  <main>
-    <section>
-      <h2>VOKA Partenaires</h2>
-      <p>Découvre les partenaires recommandés (banques, comptables, avocats, etc.).</p>
-    </section>
+    <p>Tu peux également <strong>soumettre un partenaire</strong> que tu recommandes :</p>
+    <form action="#" method="post">
+      <label for="nom">Nom du partenaire :</label>
+      <input type="text" id="nom" name="nom" required />
+
+      <label for="domaine">Domaine :</label>
+      <input type="text" id="domaine" name="domaine" required />
+
+      <label for="region">Région géographique :</label>
+      <input type="text" id="region" name="region" required />
+
+      <button type="submit">Soumettre</button>
+    </form>
   </main>
-
 </body>
 </html>
-
