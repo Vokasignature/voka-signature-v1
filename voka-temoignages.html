@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOKA Témoignages</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="content">
+    <h1>Témoignages VOKA</h1>
+    <p>Laisse ton avis ou découvre les retours des autres entrepreneurs.</p>
+
+    <form>
+      <label for="note">Note (1 à 5) :</label><br>
+      <input type="number" id="note" name="note" min="1" max="5"><br><br>
+
+      <label for="texte">Ton témoignage :</label><br>
+      <textarea id="texte" name="texte" rows="5" cols="40"></textarea><br><br>
+
+      <label for="media">Ajoute une vidéo ou un audio (facultatif) :</label><br>
+      <input type="file" id="media" name="media" accept="audio/*,video/*"><br><br>
+
+      <input type="checkbox" id="autorisation" name="autorisation">
+      <label for="autorisation">J’autorise VOKA à utiliser mon témoignage à des fins promotionnelles</label><br><br>
+
+      <input type="submit" value="Soumettre">
+    </form>
+
+    <p><strong>Note :</strong> Les témoignages sont vérifiés avant publication.</p>
+  </main>
+</body>
+</html>
