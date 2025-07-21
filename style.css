@@ -1,53 +1,61 @@
 body {
   margin: 0;
-  font-family: Roboto, sans-serif;
-  background: #0d0d0d;
-  color: #f2f2f2;
+  font-family: 'Roboto', sans-serif;
+  background-color: #000;
+  color: #fff;
 }
-h1, h2 {
-  color: #0b7a95;
-}
-.sidebar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 220px;
-  height: 100%;
-  background: linear-gradient(to bottom, #0b7a95, #072c3a);
-  padding: 20px;
-  overflow-y: auto;
-}
+
 .content {
-  margin-left: 240px;
-  padding: 30px;
+  padding: 40px;
+  max-width: 900px;
+  margin: auto;
 }
+
+h1 {
+  color: #0b7a95;
+  font-size: 2em;
+  margin-bottom: 20px;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+ul li {
+  background: rgba(255, 255, 255, 0.05);
+  padding: 10px 15px;
+  margin: 5px 0;
+  border-radius: 8px;
+}
+
+a {
+  color: #0b7a95;
+  text-decoration: none;
+}
+
+.button {
+  display: inline-block;
+  padding: 12px 25px;
+  background: #0b7a95;
+  color: #fff;
+  border-radius: 8px;
+  margin-top: 15px;
+}
+
 .footer {
+  background: #111;
+  text-align: center;
+  padding: 20px;
   position: fixed;
   bottom: 0;
-  left: 240px;
-  width: calc(100% - 240px);
-  background: #0b7a95;
-  text-align: center;
-  padding: 10px;
-  font-size: 14px;
-}
-a { color: #ffffff; text-decoration: underline; }
-button {
-  background: #0b7a95;
-  border: none;
-  padding: 10px 20px;
-  color: white;
-  margin: 10px 5px;
-  cursor: pointer;
-}
-button:hover {
-  background: #095a6b;
-}
-input, textarea {
   width: 100%;
-  padding: 10px;
-  margin-bottom: 10px;
-  background: #1a1a1a;
-  border: 1px solid #333;
-  color: white;
+  border-top: 1px solid #333;
+  font-size: 0.9em;
 }
+
+.footer a {
+  margin: 0 10px;
+  color: #0b7a95;
+}
+
