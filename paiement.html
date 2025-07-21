@@ -3,20 +3,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Paiement VOKA Signature</title>
+  <title>Paiement VOKA</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="content">
-    <h1>Activation de ton forfait VOKA Signature</h1>
-    <p>Prix : 997 $ CAD/mois</p>
-    <p>Ou choisis 3 / 6 / 12 mois avec rabais</p>
-    <p><input type="checkbox" required /> J’ai lu et j’accepte les <a href="cgu.html">conditions d’utilisation</a></p>
-    <a href="https://calendly.com/ton-lien" class="button">Prendre un rendez-vous</a>
-    <a href="#" class="button">Procéder au paiement sécurisé</a>
+    <h1>Active ton compte VOKA</h1>
+    <p>🛡️ Paiement 100 % sécurisé</p>
+    <p>Après le paiement, tu seras redirigé vers le formulaire d’onboarding.</p>
+    
+    <form action="formulaire.html">
+      <label><input type="checkbox" required /> J’accepte les CGU</label><br><br>
+      <button type="submit">Payer et Commencer</button>
+    </form>
+
+    <h2 id="packs">Offres spéciales 3 / 6 / 12 mois</h2>
+    <p>Rabais exclusifs pour les abonnements plus longs.</p>
+    <ul>
+      <li>3 mois : 2 700 $</li>
+      <li>6 mois : 5 000 $</li>
+      <li>12 mois : 9 500 $</li>
+    </ul>
   </main>
-  <footer class="footer">
-    <p>&copy; VOKA | <a href="cgu.html">CGU</a> | <a href="politique.html">Politique</a></p>
-  </footer>
 </body>
 </html>
