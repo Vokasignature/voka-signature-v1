@@ -1,34 +1,32 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Formulaire Client – VOKA</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire d'inscription - VOKA</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <main class="content">
-    <h1>Bienvenue dans l’univers VOKA</h1>
-    <p>Remplis ce formulaire pour activer ton Dashboard personnalisé.</p>
-
-    <form action="#" method="post">
-      <label for="entreprise">Nom de l’entreprise :</label>
-      <input type="text" id="entreprise" name="entreprise" required />
-
-      <label for="secteur">Secteur d’activité :</label>
-      <input type="text" id="secteur" name="secteur" required />
-
-      <label for="voix">Souhaites-tu fournir un texte ou ta voix pour les vidéos ?</label>
-      <select id="voix" name="voix">
-        <option value="texte">Texte</option>
-        <option value="voix">Voix (audio)</option>
-      </select>
-
-      <label for="logo">Ton logo (lien ou téléchargement) :</label>
-      <input type="text" id="logo" name="logo" placeholder="https://..." />
-
-      <button type="submit">Soumettre</button>
+    <h1>Formulaire d'inscription</h1>
+    <form action="mailto:tonemail@tondomaine.com" method="POST" enctype="text/plain">
+      <label>Nom de l’entreprise :</label>
+      <input type="text" name="entreprise" required />
+      <label>Nom complet :</label>
+      <input type="text" name="nom" required />
+      <label>Courriel :</label>
+      <input type="email" name="email" required />
+      <label>Votre niche :</label>
+      <input type="text" name="niche" />
+      <label>Votre logo (lien ou nom du fichier) :</label>
+      <input type="text" name="logo" />
+      <label>Texte ou audio pour la première vidéo :</label>
+      <textarea name="script"></textarea>
+      <button type="submit">Envoyer</button>
     </form>
   </main>
+  <footer class="footer">
+    <p>&copy; VOKA | <a href="cgu.html">CGU</a> | <a href="politique.html">Politique</a></p>
+  </footer>
 </body>
 </html>
