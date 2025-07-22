@@ -1,25 +1,53 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Calendrier VOKA</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOKA Calendrier</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="content">
-    <h1>Calendrier Intégré</h1>
-    <p>Gère tes rendez-vous et tes priorités :</p>
-    <ul>
-      <li>Synchronisation Google/Outlook (à venir)</li>
-      <li>Ajout de tâches quotidiennes</li>
-      <li>Rappels automatiques par bot</li>
-    </ul>
-    <p><strong>Calendly intégré ici :</strong></p>
-    <iframe src="https://calendly.com/tonlien" width="100%" height="600" style="border:none;"></iframe>
-  </main>
-  <footer class="footer">
-    <p>&copy; VOKA | <a href="cgu.html">CGU</a> | <a href="politique.html">Politique</a></p>
-  </footer>
+  <div class="dashboard-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo-section">
+        <img src="logo-voka.png" alt="Logo VOKA" class="logo" />
+        <p class="slogan">Donnez une voix à votre succès</p>
+      </div>
+      <nav>
+        <a href="dashboard-client.html">🏠 Dashboard</a>
+        <a href="cfo.html">📊 CFO</a>
+        <a href="crm.html">📁 CRM</a>
+        <a href="voka-videos.html">🎥 Vidéos</a>
+        <a href="voka-bots.html">🤖 Bots IA</a>
+        <a href="voka-tunnel.html">🧠 Tunnel</a>
+        <a class="active" href="voka-calendrier.html">📅 Calendrier</a>
+        <a href="voka-ressources.html">📚 Ressources</a>
+        <a href="voka-temoignages.html">🌟 Témoignages</a>
+        <a href="voka-boutique.html" class="locked">🛍️ Boutique</a>
+        <a href="visionnaire.html">🧠 VOKA Visionnaire</a>
+        <a href="fondation.html">❤️ Fondation William</a>
+      </nav>
+      <footer class="footer">
+        <p>© 2025 VOKA • Créé par un entrepreneur pour les entrepreneurs</p>
+        <a href="cgu.html">CGU</a> • <a href="politique-confidentialite.html">Confidentialité</a>
+      </footer>
+    </aside>
+
+    <!-- CONTENU -->
+    <main class="main-content">
+      <h1>Mon Calendrier</h1>
+      <p>Planifie, gère et synchronise tes rendez-vous automatiquement :</p>
+      <ul>
+        <li>🗓️ Intégration avec Calendly</li>
+        <li>🔔 Rappels automatiques email/SMS</li>
+        <li>📌 Blocage de plages horaires</li>
+        <li>🧠 Optimisation des rendez-vous par IA</li>
+      </ul>
+      <div class="cta-block">
+        <a href="https://calendly.com/" class="cta-button" target="_blank">Accéder à mon Calendly</a>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
