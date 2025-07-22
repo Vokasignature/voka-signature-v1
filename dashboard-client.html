@@ -2,14 +2,55 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Dashboard VOKA Client</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mon Dashboard VOKA</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="content">
-    <h1>Bienvenue sur VOKA, [Nom du client]</h1>
-    <p>🎉 Ton écosystème est activé. Explore tes onglets à gauche pour découvrir toutes les fonctionnalités : vidéos, bots, CFO, CRM, etc.</p>
-  </main>
+  <div class="dashboard-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo-section">
+        <img src="logo-voka.png" alt="Logo VOKA" class="logo" />
+        <p class="slogan">Donnez une voix à votre succès</p>
+      </div>
+      <nav>
+        <a class="active" href="dashboard-client.html">🏠 Mon Dashboard</a>
+        <a href="cfo.html">📊 CFO</a>
+        <a href="crm.html">📁 CRM</a>
+        <a href="voka-videos.html">🎥 Vidéos</a>
+        <a href="voka-bots.html">🤖 Bots IA</a>
+        <a href="voka-tunnel.html">🧠 Tunnel</a>
+        <a href="voka-calendrier.html">📅 Calendrier</a>
+        <a href="voka-ressources.html">📚 Ressources</a>
+        <a href="voka-temoignages.html">🌟 Témoignages</a>
+        <a href="voka-boutique.html" class="locked">🛍️ Boutique</a>
+        <a href="visionnaire.html">🧠 VOKA Visionnaire</a>
+        <a href="fondation.html">❤️ Fondation William</a>
+      </nav>
+      <footer class="footer">
+        <p>© 2025 VOKA • Créé par un entrepreneur pour les entrepreneurs</p>
+        <a href="cgu.html">CGU</a> • <a href="politique-confidentialite.html">Confidentialité</a>
+      </footer>
+    </aside>
+
+    <!-- CONTENU -->
+    <main class="main-content">
+      <h1>Bienvenue sur VOKA</h1>
+      <p>Ta base d’opérations est prête. Voici ce que tu peux faire :</p>
+      <ul>
+        <li>📊 Suivre tes finances via CFO</li>
+        <li>📁 Gérer tes prospects via CRM</li>
+        <li>🎥 Recevoir tes vidéos IA</li>
+        <li>🤖 Utiliser tes bots spécialisés</li>
+        <li>🧠 Suivre ton tunnel & conversion</li>
+        <li>📚 Accéder à la bibliothèque d’outils</li>
+      </ul>
+      <p><strong>Forfait actif :</strong> VOKA Signature</p>
+      <div class="cta-block">
+        <a href="voka-videos.html" class="cta-button">Voir mes vidéos</a>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
