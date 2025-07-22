@@ -3,56 +3,53 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VOKA Vidéos</title>
+  <title>Mes Vidéos VOKA</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="content">
-    <h1>Vidéos VOKA</h1>
-    <p>Commande ta prochaine vidéo virale générée par intelligence artificielle.</p>
+  <div class="dashboard-container">
+    <!-- SIDEBAR -->
+    <aside class="sidebar">
+      <div class="logo-section">
+        <img src="logo-voka.png" alt="Logo VOKA" class="logo" />
+        <p class="slogan">Donnez une voix à votre succès</p>
+      </div>
+      <nav>
+        <a href="dashboard-client.html">🏠 Dashboard</a>
+        <a href="cfo.html">📊 CFO</a>
+        <a href="crm.html">📁 CRM</a>
+        <a class="active" href="voka-videos.html">🎥 Vidéos</a>
+        <a href="voka-bots.html">🤖 Bots IA</a>
+        <a href="voka-tunnel.html">🧠 Tunnel</a>
+        <a href="voka-calendrier.html">📅 Calendrier</a>
+        <a href="voka-ressources.html">📚 Ressources</a>
+        <a href="voka-temoignages.html">🌟 Témoignages</a>
+        <a href="voka-boutique.html" class="locked">🛍️ Boutique</a>
+        <a href="visionnaire.html">🧠 VOKA Visionnaire</a>
+        <a href="fondation.html">❤️ Fondation William</a>
+      </nav>
+      <footer class="footer">
+        <p>© 2025 VOKA • Créé par un entrepreneur pour les entrepreneurs</p>
+        <a href="cgu.html">CGU</a> • <a href="politique-confidentialite.html">Confidentialité</a>
+      </footer>
+    </aside>
 
-    <form action="#" method="post" class="video-form">
-      <label for="objectif">Objectif de la vidéo :</label>
-      <select id="objectif" name="objectif">
-        <option value="attirer">Attirer de nouveaux clients</option>
-        <option value="vendre">Promouvoir un produit ou service</option>
-        <option value="branding">Renforcer la marque</option>
-      </select>
-
-      <label for="style">Style :</label>
-      <select id="style" name="style">
-        <option value="professionnel">Professionnel</option>
-        <option value="anime">Animé</option>
-        <option value="humour">Humoristique</option>
-        <option value="scifi">Science-fiction</option>
-      </select>
-
-      <label for="plateforme">Plateforme :</label>
-      <select id="plateforme" name="plateforme">
-        <option value="tiktok">TikTok</option>
-        <option value="instagram">Instagram</option>
-        <option value="facebook">Facebook</option>
-      </select>
-
-      <label for="voix">Voix :</label>
-      <select id="voix" name="voix">
-        <option value="clone">Voix du client (clone)</option>
-        <option value="ia-femme">Voix IA féminine</option>
-        <option value="ia-homme">Voix IA masculine</option>
-      </select>
-
-      <label for="ton">Tonalité :</label>
-      <select id="ton" name="ton">
-        <option value="serieux">Sérieux</option>
-        <option value="compassion">Compatissant</option>
-        <option value="motivant">Motivant</option>
-      </select>
-
-      <label for="input">Entrez votre texte ou enregistrez votre voix :</label>
-      <textarea id="input" name="input" rows="6"></textarea>
-
-      <button type="submit">Envoyer la demande</button>
-    </form>
-  </main>
+    <!-- CONTENU -->
+    <main class="main-content">
+      <h1>Mes Vidéos</h1>
+      <p>Voici tes vidéos générées automatiquement par VOKA à partir de ta voix ou de ton texte :</p>
+      <ul>
+        <li>🎬 Vidéo de bienvenue personnalisée</li>
+        <li>💡 Vidéo émotionnelle du tunnel</li>
+        <li>🔥 Vidéos hebdomadaires virales</li>
+        <li>🎥 Variantes A/B testées automatiquement</li>
+      </ul>
+      <p><em>Les vidéos seront livrées sous 72h après soumission de ton texte ou audio.</em></p>
+      <div class="cta-block">
+        <a href="formulaire.html" class="cta-button">Soumettre une nouvelle vidéo</a>
+      </div>
+    </main>
+  </div>
 </body>
 </html>
+
