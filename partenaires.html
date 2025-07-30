@@ -1,24 +1,141 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Partenaires VOKA</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Partenaires – VOKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0b7a95, #000);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+    }
+
+    h2 {
+      color: #0b7a95;
+      margin-bottom: 20px;
+    }
+
+    .section {
+      background-color: #111;
+      border: 1px solid #0b7a95;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .section h3 {
+      color: #0b7a95;
+    }
+
+    ul {
+      list-style: none;
+      padding: 0;
+    }
+
+    li {
+      padding: 8px 0;
+    }
+
+    .btn {
+      background-color: #0b7a95;
+      color: white;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+    }
+
+    .btn:hover {
+      background-color: #095d6e;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>Partenaires recommandés</h1>
+
+<header>
+  <h1>VOKA</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="formulaire.html">Soumettre un partenaire</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Partenaires recommandés</h2>
+
+  <div class="section">
+    <h3>Banques & Financement – Québec</h3>
     <ul>
-      <li><strong>Banques :</strong> RBC, Desjardins, BNC</li>
-      <li><strong>Comptables :</strong> Experts PME, FiscalPro</li>
-      <li><strong>Notaires :</strong> Groupe Juridica</li>
-      <li><strong>Experts VOKA :</strong> Coachs, Designers, Stratèges</li>
+      <li>Desjardins – Laval</li>
+      <li>Banque Nationale – Montréal</li>
+      <li>RBC – Québec</li>
     </ul>
-    <p>Tu veux proposer un partenaire ? <a href="#">Soumettre ici</a></p>
-  </main>
-  <footer class="footer">
-    <p>&copy; VOKA | <a href="cgu.html">CGU</a> | <a href="politique.html">Politique</a></p>
-  </footer>
+  </div>
+
+  <div class="section">
+    <h3>Comptables & Fiscalistes</h3>
+    <ul>
+      <li>Groupe CFO Pro – Québec</li>
+      <li>Stratégie Fiscale+ – Brossard</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Notaires & Juridiques</h3>
+    <ul>
+      <li>Notaire Tremblay – Laval</li>
+      <li>Bureau Juris Conseil – Québec</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <h3>Soumettre un partenaire</h3>
+    <p>Vous connaissez un expert ou une ressource de confiance ? Recommandez-le ici :</p>
+    <a href="formulaire.html" class="btn">Proposer un partenaire</a>
+  </div>
+</div>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
