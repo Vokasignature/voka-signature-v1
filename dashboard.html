@@ -2,113 +2,59 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Dashboard VOKA</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOKA Dashboard</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
-    :root {
-      --voka-blue: #0b7a95;
-      --voka-red: #ff4c4c;
-      --bg-dark: #000;
-      --bg-light: #f4f4f4;
-    }
-
     body {
-      margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: var(--bg-dark);
-      color: white;
+      margin: 0;
+      background-color: #000;
+      color: #fff;
       display: flex;
+      align-items: center;
+      justify-content: center;
       height: 100vh;
-      transition: background-color 0.3s, color 0.3s;
     }
 
-    .sidebar {
-      width: 260px;
-      background: linear-gradient(180deg, #0b7a95, #000);
-      padding-top: 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 12px;
-    }
-
-    .sidebar h2 {
+    .center-box {
+      background-color: #111;
+      border: 2px solid #0b7a95;
+      padding: 40px;
+      border-radius: 12px;
       text-align: center;
-      margin-bottom: 20px;
-      font-size: 22px;
     }
 
-    .nav-link {
-      display: flex;
-      align-items: center;
-      gap: 10px;
-      padding: 12px 20px;
-      margin: 0 10px;
-      border-radius: 12px;
-      text-decoration: none;
-      color: white;
-      font-weight: 500;
-      background: rgba(255,255,255,0.05);
-      transition: background 0.3s;
-    }
-
-    .nav-link:hover {
-      background: rgba(255,255,255,0.15);
-    }
-
-    .nav-link.locked {
-      opacity: 0.4;
-      cursor: not-allowed;
-    }
-
-    .content {
-      flex: 1;
-      padding: 20px;
-      overflow-y: auto;
-    }
-
-    header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      background: var(--voka-blue);
-      padding: 15px 25px;
-      border-radius: 12px;
+    h1 {
+      color: #0b7a95;
       margin-bottom: 20px;
     }
 
-    .toggle-mode {
-      background: transparent;
-      border: 2px solid white;
-      border-radius: 8px;
-      padding: 6px 10px;
-      color: white;
+    button {
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
       cursor: pointer;
+      margin: 10px;
+      background-color: #0b7a95;
+      color: #fff;
     }
 
-    .client-info {
-      font-size: 14px;
+    button:hover {
+      background-color: #095d6e;
     }
   </style>
 </head>
 <body>
+  <div class="center-box">
+    <h1>Bienvenue dans l'univers VOKA</h1>
+    <p>Veuillez sélectionner votre accès :</p>
+    <div>
+      <button onclick="location.href='dashboard-admin.html'">Accès Admin</button>
+      <button onclick="location.href='dashboard-client.html'">Accès Client</button>
+    </div>
+  </div>
+</body>
+</html>
 
-<div class="sidebar">
-  <h2>VOKA</h2>
-  <a href="dashboard.html" class="nav-link">🏠 Accueil</a>
-  <a href="cfo.html" class="nav-link">📊 VOKA CFO</a>
-  <a href="crm.html" class="nav-link">📇 VOKA CRM</a>
-  <a href="video.html" class="nav-link">🎥 VOKA Vidéo</a>
-  <a href="bots.html" class="nav-link">🤖 VOKA Bots</a>
-  <a href="aurion.html" class="nav-link">🧠 Aurion</a>
-  <a href="ressources.html" class="nav-link">📚 Ressources</a>
-  <a href="temoignages.html" class="nav-link">⭐ Témoignages</a>
-  <a href="boutique.html" class="nav-link">🛒 Boutique</a>
-  <a href="forfaits.html" class="nav-link">💼 Forfaits</a>
-  <a href="contact.html" class="nav-link">📧 Contact</a>
-</div>
-
-<div class="content">
-  <header>
-    <div class="client-info">
-      <strong>E
