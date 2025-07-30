@@ -3,22 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Récompenses</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Récompenses – VOKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0b7a95;
+      font-size: 28px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .rewards {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #111;
+      border: 2px solid #0b7a95;
+      border-radius: 12px;
+      padding: 20px;
+      width: 280px;
+      text-align: center;
+    }
+
+    .card h2 {
+      color: #0b7a95;
+      font-size: 20px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 16px;
+      margin-bottom: 10px;
+    }
+
+    .card span {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 6px 12px;
+      background-color: #0b7a95;
+      border-radius: 20px;
+      font-size: 14px;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 30px;
+      color: white;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>Récompenses VOKA</h1>
-    <p>Tu es sur le point de débloquer des bonus exclusifs :</p>
-    <ul>
-      <li>✅ 1 mois : Badge de fidélité + vidéo surprise</li>
-      <li>✅ 3 mois : Accès à un bot stratégique premium</li>
-      <li>✅ 6 mois : Cadeau physique livré chez toi</li>
-      <li>✅ 12 mois : Rencontre exclusive + bonus Empire</li>
-    </ul>
-  </main>
-  <footer class="footer">
-    <p>&copy; VOKA | <a href="cgu.html">CGU</a> | <a href="politique.html">Politique</a></p>
-  </footer>
+
+<h1>Récompenses VOKA</h1>
+
+<div class="rewards">
+  <div class="card">
+    <h2>1 mois d'abonnement</h2>
+    <p>Cadeau : Générateur de slogan débloqué</p>
+    <span>✅ Obtenu</span>
+  </div>
+
+  <div class="card">
+    <h2>3 mois d'abonnement</h2>
+    <p>Cadeau : Audit personnalisé offert</p>
+    <span>🔓 À débloquer</span>
+  </div>
+
+  <div class="card">
+    <h2>6 mois d'abonnement</h2>
+    <p>Cadeau : Upgrade offert vers VOKA Empire (1 mois)</p>
+    <span>🔓 À débloquer</span>
+  </div>
+
+  <div class="card">
+    <h2>12 mois d'abonnement</h2>
+    <p>Cadeau : Accès exclusif à Orion Visionnaire + box physique</p>
+    <span>🔓 À débloquer</span>
+  </div>
+</div>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
