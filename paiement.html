@@ -1,29 +1,110 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Paiement VOKA</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Paiement – VOKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0b7a95, #000);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #111;
+      border: 1px solid #0b7a95;
+      border-radius: 12px;
+    }
+
+    h2 {
+      color: #0b7a95;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+    }
+
+    .btn {
+      background-color: #0b7a95;
+      color: white;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      margin-top: 20px;
+      width: 100%;
+    }
+
+    .btn:hover {
+      background-color: #095d6e;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>Active ton compte VOKA</h1>
-    <p>🛡️ Paiement 100 % sécurisé</p>
-    <p>Après le paiement, tu seras redirigé vers le formulaire d’onboarding.</p>
-    
-    <form action="formulaire.html">
-      <label><input type="checkbox" required /> J’accepte les CGU</label><br><br>
-      <button type="submit">Payer et Commencer</button>
-    </form>
 
-    <h2 id="packs">Offres spéciales 3 / 6 / 12 mois</h2>
-    <p>Rabais exclusifs pour les abonnements plus longs.</p>
-    <ul>
-      <li>3 mois : 2 700 $</li>
-      <li>6 mois : 5 000 $</li>
-      <li>12 mois : 9 500 $</li>
-    </ul>
-  </main>
+<header>
+  <h1>VOKA</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="forfait.html">Forfaits</a>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Finaliser votre inscription</h2>
+  <form action="https://buy.stripe.com/test-XXXXXX" method="GET">
+    <label>
+      <input type="checkbox" required>
+      J’ai lu et j’accepte les <a href="cgu.html" target="_blank">Conditions Générales d’Utilisation</a> de VOKA.
+    </label>
+
+    <button class="btn" type="submit">Payer maintenant</button>
+  </form>
+</div>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
