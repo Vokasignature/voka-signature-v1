@@ -1,54 +1,120 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mes Vidéos VOKA</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOKA Tunnel 8.0</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+      padding: 0;
+    }
+
+    header {
+      padding: 20px;
+      background: linear-gradient(90deg, #0b7a95, #000);
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      color: #fff;
+    }
+
+    .section {
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 32px;
+      color: #0b7a95;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+      color: #ccc;
+    }
+
+    .video {
+      margin: 40px auto;
+      max-width: 900px;
+      border: 2px solid #0b7a95;
+      border-radius: 10px;
+      overflow: hidden;
+    }
+
+    .video iframe {
+      width: 100%;
+      height: 500px;
+    }
+
+    .cta-section {
+      padding: 50px 20px;
+      text-align: center;
+    }
+
+    .cta-button {
+      background-color: #0b7a95;
+      border: none;
+      padding: 15px 30px;
+      font-size: 18px;
+      color: white;
+      border-radius: 40px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #095d6e;
+    }
+
+    .locked-message {
+      max-width: 600px;
+      margin: 40px auto;
+      text-align: center;
+      background-color: #111;
+      padding: 30px;
+      border-radius: 12px;
+      border: 1px solid #0b7a95;
+    }
+
+    .locked-message h3 {
+      color: #0b7a95;
+      margin-bottom: 20px;
+    }
+  </style>
 </head>
 <body>
-  <div class="dashboard-container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo-section">
-        <img src="logo-voka.png" alt="Logo VOKA" class="logo" />
-        <p class="slogan">Donnez une voix à votre succès</p>
-      </div>
-      <nav>
-        <a href="dashboard-client.html">🏠 Dashboard</a>
-        <a href="cfo.html">📊 CFO</a>
-        <a href="crm.html">📁 CRM</a>
-        <a class="active" href="voka-videos.html">🎥 Vidéos</a>
-        <a href="voka-bots.html">🤖 Bots IA</a>
-        <a href="voka-tunnel.html">🧠 Tunnel</a>
-        <a href="voka-calendrier.html">📅 Calendrier</a>
-        <a href="voka-ressources.html">📚 Ressources</a>
-        <a href="voka-temoignages.html">🌟 Témoignages</a>
-        <a href="voka-boutique.html" class="locked">🛍️ Boutique</a>
-        <a href="visionnaire.html">🧠 VOKA Visionnaire</a>
-        <a href="fondation.html">❤️ Fondation William</a>
-      </nav>
-      <footer class="footer">
-        <p>© 2025 VOKA • Créé par un entrepreneur pour les entrepreneurs</p>
-        <a href="cgu.html">CGU</a> • <a href="politique-confidentialite.html">Confidentialité</a>
-      </footer>
-    </aside>
+  <header>
+    <h1>VOKA – Tunnel Stratégique 8.0</h1>
+  </header>
 
-    <!-- CONTENU -->
-    <main class="main-content">
-      <h1>Mes Vidéos</h1>
-      <p>Voici tes vidéos générées automatiquement par VOKA à partir de ta voix ou de ton texte :</p>
-      <ul>
-        <li>🎬 Vidéo de bienvenue personnalisée</li>
-        <li>💡 Vidéo émotionnelle du tunnel</li>
-        <li>🔥 Vidéos hebdomadaires virales</li>
-        <li>🎥 Variantes A/B testées automatiquement</li>
-      </ul>
-      <p><em>Les vidéos seront livrées sous 72h après soumission de ton texte ou audio.</em></p>
-      <div class="cta-block">
-        <a href="formulaire.html" class="cta-button">Soumettre une nouvelle vidéo</a>
-      </div>
-    </main>
+  <div class="section">
+    <h2>Une expérience immersive comme jamais vu</h2>
+    <p>Ce tunnel a été conçu avec un niveau de stratégie avancé, combinant design captivant et séquences hautement engageantes pour guider vos visiteurs vers l'action.</p>
+  </div>
+
+  <div class="video">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Tunnel vidéo VOKA"></iframe>
+  </div>
+
+  <div class="cta-section">
+    <button class="cta-button" onclick="window.location.href='forfait.html'">Débloquer le tunnel complet</button>
+  </div>
+
+  <div class="locked-message">
+    <h3>🔒 Accès limité au tunnel stratégique</h3>
+    <p>Vous avez accès à une version de démonstration. Pour activer le tunnel complet avec ses éléments interactifs et son impact renforcé, passez au Forfait Signature.</p>
+    <button class="cta-button" onclick="window.location.href='forfait.html'">Passer au Forfait Signature</button>
   </div>
 </body>
 </html>
