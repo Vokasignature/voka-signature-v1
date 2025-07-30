@@ -3,22 +3,88 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>QuandÇa – Calendrier intelligent de l’année</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Historique – VOKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0b7a95;
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    .timeline {
+      border-left: 3px solid #0b7a95;
+      padding-left: 30px;
+    }
+
+    .event {
+      margin-bottom: 40px;
+      position: relative;
+    }
+
+    .event::before {
+      content: "";
+      position: absolute;
+      left: -11px;
+      top: 0;
+      width: 20px;
+      height: 20px;
+      background-color: #0b7a95;
+      border-radius: 50%;
+    }
+
+    .event h2 {
+      font-size: 20px;
+      color: #0b7a95;
+      margin-bottom: 5px;
+    }
+
+    .event p {
+      margin: 0;
+      font-size: 16px;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 30px;
+      color: white;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>QuandÇa</h1>
-    <p>Le calendrier intelligent de VOKA t’aide à ne plus jamais rien oublier d’important.</p>
 
-    <ul>
-      <li>Ajout d’événements vocaux ou écrits</li>
-      <li>Rappels personnalisés en fonction de ta réalité</li>
-      <li>Interaction avec VOKA ELIA pour te rappeler en langage naturel</li>
-      <li>Vue annuelle avec codes couleur (perso, pro, administratif)</li>
-    </ul>
+<h1>Historique & Évolution de VOKA</h1>
 
-    <p><em>Ton assistant personnel qui connaît ton année mieux que toi.</em></p>
-  </main>
+<div class="timeline">
+  <div class="event">
+    <h2>Juillet 2025 – Lancement de VOKA 1.0</h2>
+    <p>Première version fonctionnelle avec CRM, CFO, vidéos, bots et dashboards automatisés. Hébergement GitHub + Vercel.</p>
+  </div>
+
+  <div class="event">
+    <h2>Objectif 25 000 $ CA</h2>
+    <p>Palier déclencheur pour activer la version 2.0 avec développeur, app native, IA avancée, serveurs privés.</p>
+  </div>
+
+  <div class="event">
+    <h2>Prochaine phase : VOKA 2.0</h2>
+    <p>Automatisation complète, assistant vocal, carte interactive, onboarding instantané, app mobile native, IA émotionnelle.</p>
+  </div>
+</div>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
