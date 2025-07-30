@@ -3,24 +3,113 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Templates Mini-Site</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>VOKA Mini-Site</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0b7a95;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .template-container {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .template {
+      margin-bottom: 25px;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 8px;
+    }
+
+    .template h3 {
+      color: #0b7a95;
+      margin-bottom: 10px;
+    }
+
+    .locked {
+      opacity: 0.5;
+      position: relative;
+    }
+
+    .locked::after {
+      content: '🔒 Fonction Premium – déverrouillez avec le Forfait Signature';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.8);
+      padding: 10px 20px;
+      border: 2px dashed #0b7a95;
+      border-radius: 8px;
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .upgrade-box {
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px dashed #555;
+      border-radius: 10px;
+      background-color: #111;
+      text-align: center;
+    }
+
+    .upgrade-box p {
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .upgrade-box button {
+      background-color: #0b7a95;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      font-size: 14px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .upgrade-box button:hover {
+      background-color: #095d6e;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>Modèles de mini-site</h1>
-    <p>Choisis ou copie le modèle adapté à la niche du client :</p>
-    <ul>
-      <li><strong>Construction :</strong> mini-construction.html</li>
-      <li><strong>Coaching :</strong> mini-coach.html</li>
-      <li><strong>Beauté/Esthétique :</strong> mini-esthetique.html</li>
-      <li><strong>Services juridiques :</strong> mini-juridique.html</li>
-      <li><strong>Restauration :</strong> mini-resto.html</li>
-    </ul>
-    <p>Ces fichiers sont dans ton dossier Admin, prêtes à dupliquer.</p>
-  </main>
-  <footer class="footer">
-    <p>&copy; VOKA | <a href="cgu.html">CGU</a> | <a href="politique.html">Politique</a></p>
-  </footer>
+  <h1>VOKA Mini-Sites</h1>
+
+  <div class="template-container">
+    <div class="template">
+      <h3>Template de base activé</h3>
+      <p>Mini-site simple prêt à l’emploi, généré automatiquement selon votre formulaire d’entrée.</p>
+    </div>
+
+    <div class="template locked">
+      <h3>Templates avancés personnalisés</h3>
+      <p>Mini-sites sur mesure selon votre niche, avec sections animées et intégration des vidéos IA.</p>
+    </div>
+
+    <div class="upgrade-box">
+      <p>🚀 Débloquez les templates haut de gamme avec le Forfait Signature pour impressionner vos clients et maximiser votre crédibilité en ligne.</p>
+      <button onclick="alert('Mise à niveau vers Signature en cours...')">Débloquer tous les templates</button>
+    </div>
+  </div>
 </body>
 </html>
