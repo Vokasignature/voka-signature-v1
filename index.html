@@ -121,17 +121,17 @@
 
     .forfait-container {
       display: flex;
-      flex-direction: column;
+      flex-direction: row;
       gap: 30px;
-      align-items: center;
+      justify-content: center;
+      flex-wrap: wrap;
     }
 
     .forfait {
       background-color: #fff;
       border-radius: 10px;
       padding: 30px;
-      max-width: 600px;
-      width: 100%;
+      width: 300px;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -255,6 +255,17 @@
         <button class="cta-button">Choisir 3 mois (-5%)</button>
         <button class="cta-button">Choisir 6 mois (-10%)</button>
         <button class="cta-button">Choisir 12 mois (-15%)</button>
+      </div>
+      <div class="forfait">
+        <h3>Empire – 4997 $</h3>
+        <ul class="feature-list">
+          <li>5 vidéos/semaine ultra stylées</li>
+          <li>Suivi premium et coaching</li>
+          <li>Closeurs spécialisés</li>
+          <li>Optimisation constante</li>
+          <li>Accès complet à toutes les options VOKA</li>
+        </ul>
+        <button class="cta-button">Je veux l’Empire</button>
       </div>
     </div>
   </section>
