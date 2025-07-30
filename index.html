@@ -28,7 +28,7 @@
 
     .hero {
       text-align: center;
-      padding: 80px 20px 40px;
+      padding: 60px 20px 20px;
     }
 
     .hero h2 {
@@ -60,7 +60,7 @@
     .value-section {
       max-width: 1000px;
       margin: auto;
-      padding: 60px 20px;
+      padding: 40px 20px;
     }
 
     .value-block {
@@ -88,43 +88,35 @@
       text-align: center;
     }
 
-    .cta-red {
-      background-color: #ff0000;
-      color: white;
-      font-weight: bold;
-      padding: 15px 25px;
-      border-radius: 8px;
-      text-align: center;
-      animation: pulse 2s infinite;
+    .cta-button {
+      margin: 10px auto;
+      background-color: #0b7a95;
+      color: #fff;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
       cursor: pointer;
-      max-width: 500px;
-      margin: 40px auto 0;
-    }
-
-    @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255,0,0, 0.4); }
-      70% { box-shadow: 0 0 0 10px rgba(255,0,0, 0); }
-      100% { box-shadow: 0 0 0 0 rgba(255,0,0, 0); }
+      font-weight: bold;
     }
 
     .pricing-section {
       background: #f0f8fb;
       padding: 60px 20px;
-      color: #111;
     }
 
     .pricing-section h2 {
       text-align: center;
-      margin-bottom: 40px;
       font-size: 32px;
       color: #0b7a95;
+      margin-bottom: 40px;
     }
 
     .forfait-container {
       display: flex;
       flex-direction: column;
+      gap: 30px;
       align-items: center;
-      gap: 40px;
     }
 
     .forfait {
@@ -149,18 +141,6 @@
 
     .forfait p {
       font-size: 16px;
-    }
-
-    .cta-button {
-      margin: 10px;
-      background-color: #0b7a95;
-      color: #fff;
-      padding: 12px 24px;
-      border: none;
-      border-radius: 30px;
-      font-size: 16px;
-      cursor: pointer;
-      font-weight: bold;
     }
 
     .comparison-table {
@@ -207,74 +187,44 @@
   </section>
 
   <section class="video-section">
-    <iframe src="https://www.youtube.com/embed/TON_LIEN_YOUTUBE" title="Vidéo de présentation VOKA" allowfullscreen></iframe>
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
   </section>
 
   <section class="value-section">
-    <!-- Tous les blocs services seront insérés ici (déjà présents dans ta structure) -->
+    <div class="value-block">
+      <h3>VOKA CFO – Pilotez vos finances simplement</h3>
+      <p>Un tableau de bord complet pour visualiser revenus, dépenses, marges, taxes, prévisions. Inspiré de QuickBooks, mais plus simple, plus intelligent, connecté à votre réalité.</p>
+      <div class="cta-button-block"><button class="cta-button">Découvrir CFO</button></div>
+    </div>
+    <div class="value-block">
+      <h3>VOKA CRM – Gérez vos prospects et clients</h3>
+      <p>Relances automatiques, emails légaux, bots de suivi, fiche client intelligente. Pensé pour la vente, pas l’administratif.</p>
+      <div class="cta-button-block"><button class="cta-button">Voir CRM intégré</button></div>
+    </div>
+    <div class="value-block">
+      <h3>VOKA Visionnaire – Votre stratège IA personnel</h3>
+      <p>Un assistant ultra évolué, connecté à votre niche, qui vous guide avec clarté, suggestions, et tactiques concrètes pour votre business.</p>
+      <div class="cta-button-block"><button class="cta-button">Tester VOKA Visionnaire</button></div>
+    </div>
   </section>
 
   <section class="pricing-section">
-    <h2>Choisissez votre forfait</h2>
+    <h2>Comparez nos forfaits</h2>
     <div class="forfait-container">
       <div class="forfait">
-        <h3>Découverte</h3>
-        <p>497 $ – Pour découvrir VOKA et lancer votre système.</p>
-        <button class="cta-button">Choisir Découverte</button>
+        <h3>Découverte – 497 $</h3>
+        <p>2 Vidéos AI + mini-site + CFO de base</p>
+        <button class="cta-button">Choisir ce forfait</button>
       </div>
       <div class="forfait signature">
-        <h3>Signature (Forfait le plus vendu)</h3>
-        <p>2497 $ – Le forfait ultime pour tout automatiser.</p>
-        <button class="cta-button">Choisir Signature</button>
+        <h3>Signature – 997 $ (le plus vendu)</h3>
+        <p>2 vidéos/semaine + CFO/CRM complet + bots + dashboard luxe</p>
+        <button class="cta-button">Choisir 1 mois</button>
+        <button class="cta-button">Choisir 3 mois (-5%)</button>
+        <button class="cta-button">Choisir 6 mois (-10%)</button>
+        <button class="cta-button">Choisir 12 mois (-15%)</button>
       </div>
     </div>
-
-    <table class="comparison-table">
-      <thead>
-        <tr>
-          <th>Fonctionnalité</th>
-          <th>Découverte</th>
-          <th>Signature</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-          <td>Vidéo stratégique AI</td>
-          <td>✅</td>
-          <td>✅ (2/semaine)</td>
-        </tr>
-        <tr>
-          <td>Mini-site automatisé</td>
-          <td>✅</td>
-          <td>✅ (personnalisé)</td>
-        </tr>
-        <tr>
-          <td>CFO complet</td>
-          <td>❌</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <td>CRM intégré</td>
-          <td>❌</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <td>Dashboard gamifié</td>
-          <td>❌</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <td>App mobile simulée</td>
-          <td>❌</td>
-          <td>✅</td>
-        </tr>
-        <tr>
-          <td>Bots spécialisés</td>
-          <td>❌</td>
-          <td>✅</td>
-        </tr>
-      </tbody>
-    </table>
   </section>
 
   <footer>
