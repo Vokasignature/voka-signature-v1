@@ -3,95 +3,86 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Témoignages Admin – VOKA</title>
+  <title>Admin Témoignages</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
+      font-family: 'Roboto', sans-serif;
       background-color: #000;
       color: #fff;
-      font-family: 'Roboto', sans-serif;
       margin: 0;
       padding: 40px;
     }
 
     h1 {
       color: #0b7a95;
-      text-align: center;
       font-size: 28px;
+      text-align: center;
       margin-bottom: 30px;
+      text-transform: uppercase;
     }
 
-    .temoignage {
-      border: 2px solid #0b7a95;
+    .testimonial {
+      border: 1px solid #0b7a95;
       border-radius: 10px;
       padding: 20px;
       margin-bottom: 20px;
       background-color: #111;
     }
 
-    .temoignage h3 {
+    .testimonial h3 {
       color: #0b7a95;
-      margin-bottom: 10px;
+      margin-bottom: 5px;
     }
 
-    .temoignage p {
-      font-size: 16px;
-      line-height: 1.4;
+    .testimonial .stars {
+      color: gold;
     }
 
-    .actions {
-      margin-top: 15px;
+    .testimonial .actions {
+      margin-top: 10px;
     }
 
-    .btn {
+    .testimonial button {
+      margin-right: 10px;
       background-color: #0b7a95;
-      color: white;
       border: none;
       padding: 8px 16px;
-      font-size: 14px;
-      border-radius: 30px;
+      border-radius: 5px;
       cursor: pointer;
-      margin-right: 10px;
+      color: #fff;
+      font-weight: bold;
+      transition: background 0.3s;
     }
 
-    .btn:hover {
+    .testimonial button:hover {
       background-color: #095d6e;
-    }
-
-    footer {
-      background-color: #0b7a95;
-      text-align: center;
-      padding: 30px;
-      color: white;
-      margin-top: 60px;
     }
   </style>
 </head>
 <body>
+  <h1>Gestion des Témoignages</h1>
 
-<h1>Gestion des Témoignages</h1>
-
-<div class="temoignage">
-  <h3>Julie Moreau – Coaching santé</h3>
-  <p>“VOKA m’a permis d’automatiser 80 % de mon entreprise et de générer 5 clients en 7 jours.”</p>
-  <div class="actions">
-    <button class="btn">✅ Valider</button>
-    <button class="btn">❌ Refuser</button>
+  <div class="testimonial">
+    <h3>Jean Tremblay</h3>
+    <div class="stars">★★★★★</div>
+    <p>VOKA m'a permis de transformer complètement ma présence en ligne. Merci!</p>
+    <div class="actions">
+      <button>✅ Valider</button>
+      <button>❌ Refuser</button>
+    </div>
   </div>
-</div>
 
-<div class="temoignage">
-  <h3>Kevin Lévesque – Rénovation</h3>
-  <p>“Le bot VOKA a décroché mon premier gros contrat. Interface super intuitive.”</p>
-  <div class="actions">
-    <button class="btn">✅ Valider</button>
-    <button class="btn">❌ Refuser</button>
+  <div class="testimonial">
+    <h3>Julie Lapointe</h3>
+    <div class="stars">★★★★☆</div>
+    <p>Bon départ, j’attends les prochaines fonctionnalités avec impatience!</p>
+    <div class="actions">
+      <button>✅ Valider</button>
+      <button>❌ Refuser</button>
+    </div>
   </div>
-</div>
-
-<footer>
-  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
-</footer>
 
 </body>
 </html>
+
