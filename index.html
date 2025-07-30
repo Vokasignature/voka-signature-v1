@@ -1,173 +1,147 @@
 <!DOCTYPE html>
 <html lang="fr">
-
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VOKA - Donnez une voix à votre succès</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOKA | Libère ton empire</title>
   <style>
     body {
       margin: 0;
-      font-family: Roboto, sans-serif;
-      background: linear-gradient(to bottom right, #0a0a0a, #111);
-      color: #f5f5f5;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #012d3a, #000);
+      color: white;
+      overflow-x: hidden;
     }
-
-    header {
+    h1, h2, h3, p {
+      margin: 0;
+      padding: 0;
+    }
+    .hero {
       text-align: center;
-      padding: 80px 20px 40px;
-      background-color: #0a0a0a;
+      padding: 80px 20px 60px;
+      animation: fadeIn 2s ease;
     }
-
-    header h1 {
-      font-size: 2.5em;
-      animation: pulse 2s infinite;
-      color: #0b7a95;
+    .hero h1 {
+      font-size: 3rem;
+      margin-bottom: 20px;
+      animation: pulse 3s infinite;
     }
-
-    @keyframes pulse {
-      0% { transform: scale(1); }
-      50% { transform: scale(1.03); }
-      100% { transform: scale(1); }
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 30px;
     }
-
-    section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 60px 20px;
-    }
-
-    .forfaits {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-    }
-
-    .forfait {
-      background: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 15px;
-      padding: 30px;
-      margin: 20px 0;
-      width: 90%;
-      max-width: 600px;
-      transition: transform 0.3s;
-    }
-
-    .forfait:hover {
-      transform: scale(1.02);
-    }
-
-    .cta {
-      display: block;
-      margin: 30px auto;
-      padding: 15px 30px;
+    .cta-button {
+      padding: 15px 40px;
       background-color: #0b7a95;
       color: white;
-      font-weight: bold;
-      text-decoration: none;
-      border-radius: 10px;
-      text-align: center;
-      transition: background 0.3s;
+      border: none;
+      font-size: 1.1rem;
+      border-radius: 30px;
+      cursor: pointer;
+      transition: 0.3s ease;
     }
-
-    .cta:hover {
+    .cta-button:hover {
       background-color: #870619;
     }
-
-    .testimonial, .faq {
-      background-color: #1c1c1c;
-      border-radius: 15px;
-      padding: 30px;
+    .bloc-psychologique {
+      background: #111;
+      padding: 60px 30px;
+      text-align: center;
+    }
+    .bloc-psychologique h2 {
+      font-size: 2rem;
+      margin-bottom: 25px;
+      color: #0b7a95;
+    }
+    .bloc-psychologique p {
+      font-size: 1.1rem;
+      max-width: 800px;
+      margin: 0 auto 20px;
+      line-height: 1.6;
+    }
+    .cta-psy {
       margin-top: 40px;
     }
-
-    footer {
+    .table-comparatif {
+      margin: 60px auto;
+      width: 90%;
+      max-width: 1100px;
+      border-collapse: collapse;
+      background-color: #061f24;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .table-comparatif th, .table-comparatif td {
+      border: 1px solid #0b7a95;
+      padding: 16px;
+      text-align: center;
+    }
+    .table-comparatif th {
+      background-color: #0b7a95;
+    }
+    .footer {
       background-color: #000;
-      color: #999;
       text-align: center;
       padding: 40px 20px;
+      margin-top: 80px;
     }
-
-    footer img {
-      max-width: 150px;
-      margin-bottom: 20px;
-    }
-
-    footer a {
-      color: #999;
-      margin: 0 10px;
+    .footer a {
+      color: #0b7a95;
+      margin: 0 15px;
       text-decoration: none;
+    }
+    .footer img {
+      width: 100px;
+      margin-bottom: 15px;
+    }
+    @keyframes fadeIn {
+      from {opacity: 0; transform: translateY(30px);}
+      to {opacity: 1; transform: translateY(0);}
+    }
+    @keyframes pulse {
+      0% {transform: scale(1);}
+      50% {transform: scale(1.03);}
+      100% {transform: scale(1);}
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <h1>VOKA - Donnez une voix à votre succès</h1>
-  </header>
-
-  <section>
-    <h2 style="text-align: center;">Prêt à transformer ton entreprise avec un écosystème complet, automatisé et intelligent ?</h2>
-    <a class="cta" href="#forfaits">Je veux découvrir VOKA</a>
+  <section class="hero">
+    <h1>VOKA</h1>
+    <p>La plateforme #1 pour entrepreneurs. Un écosystème complet, automatisé et intelligent pour libérer ton esprit, ton temps, ton succès.</p>
+    <button class="cta-button">Accéder à mon espace</button>
   </section>
 
-  <section id="forfaits" class="forfaits">
-    <div class="forfait">
-      <h3>Forfait DÉCOUVERTE - 497 $/mois</h3>
-      <ul>
-        <li>2 vidéos AI personnalisées</li>
-        <li>Mini site simplifié</li>
-        <li>CFO & CRM de base</li>
-        <li>VOKA Visionnaire (limité)</li>
-        <li>Bots IA (limité selon votre niche)</li>
-        <li>Calendrier d’affaires intégré</li>
-        <li>Ressources essentielles</li>
-      </ul>
-    </div>
-    <div class="forfait">
-      <h3>Forfait SIGNATURE - 997 $/mois</h3>
-      <ul>
-        <li>4 vidéos stratégiques/mois (voix réelle ou IA)</li>
-        <li>Tunnel immersif + page d’atterrissage</li>
-        <li>Mini-site ultra personnalisé</li>
-        <li>CFO & CRM complets</li>
-        <li>VOKA Visionnaire illimité</li>
-        <li>Bots IA spécialisés + Prospecteur</li>
-        <li>App mobile installable (PWA)</li>
-        <li>Vidéos livrées en 72h</li>
-      </ul>
+  <section class="bloc-psychologique">
+    <h2>Tu n’es pas ici par hasard.</h2>
+    <p>Tu veux plus. T’es tanné de courir après des clients qui ne veulent pas de toi. T’as investi dans 9 plateformes différentes qui ne se parlent même pas.</p>
+    <p>VOKA, c’est le raccourci intelligent. 997 $ pour tout avoir. Automatisé. Visuel. Connecté. Tu fais ce que tu fais de mieux, VOKA s’occupe du reste.</p>
+    <div class="cta-psy">
+      <button class="cta-button">Je choisis la liberté maintenant</button>
     </div>
   </section>
 
-  <section class="testimonial">
-    <h2>Ils ont choisi VOKA</h2>
-    <p>« Grâce à VOKA, j’ai automatisé 80 % de mes tâches. Mes vidéos sortent chaque semaine sans effort. C’est tout simplement magique. »</p>
-    <p>— Sophie, coach en santé naturelle</p>
-  </section>
+  <table class="table-comparatif">
+    <tr>
+      <th>Ce que tu utilises</th>
+      <th>Combien tu paies</th>
+      <th>Et ça fait quoi ?</th>
+    </tr>
+    <tr>
+      <td>CRM, site web, tunnel, vidéo, email, calendrier, CFO, etc. (9 plateformes)</td>
+      <td>+1200 $ / mois</td>
+      <td>Aucun lien, aucune stratégie, tout repose sur toi</td>
+    </tr>
+    <tr>
+      <td><strong>VOKA</strong></td>
+      <td><strong>997 $ / mois</strong></td>
+      <td><strong>Tout en un. Automatisé. Installable. Intelligent. Stylé.</strong></td>
+    </tr>
+  </table>
 
-  <section class="faq">
-    <h2>Questions fréquentes</h2>
-    <h4>Est-ce que VOKA remplace une agence marketing ?</h4>
-    <p>Oui. VOKA est conçu pour offrir tout ce qu’une agence propose — et bien plus — en 100 % automatisé, pour 10x moins cher.</p>
-    <h4>Dois-je être bon en technologie ?</h4>
-    <p>Non. VOKA a été pensé pour les entrepreneurs, même débutants. Tout est guidé, simple et intuitif.</p>
-  </section>
-
-  <section style="text-align: center; padding: 60px 20px;">
-    <h2>Tu veux gagner du temps, réduire ta charge mentale et attirer les bons clients ?</h2>
-    <a class="cta" href="#forfaits">Passe à VOKA maintenant</a>
-  </section>
-
-  <footer>
-    <img src="logo-voka.png" alt="Logo VOKA" />
-    <p>Produit du Québec</p>
-    <p>
-      <a href="cgu.html">Conditions d'utilisation</a> |
-      <a href="politique-confidentialite.html">Politique de confidentialité</a> |
-      <a href="mailto:info@getvoka.com">Nous contacter</a>
-    </p>
-  </footer>
+  <div class="footer">
+    <img src="logo-voka.png" alt="Logo VOKA">
+    <p>Produit du Québec | <a href="cgu.html">Conditions d'utilisation</a> | <a href="politique-confidentialite.html">Politique de confidentialité</a> | <a href="mailto:info@getvoka.com">Nous contacter</a></p>
+  </div>
 </body>
-
 </html>
