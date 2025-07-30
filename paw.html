@@ -3,21 +3,74 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Installer VOKA App</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>Installation de l'app – VOKA</title>
+  <link rel="manifest" href="manifest.json">
+  <meta name="theme-color" content="#0b7a95">
+  <link rel="icon" href="logo-voka.png">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      text-align: center;
+      padding: 20px;
+    }
+
+    h1 {
+      color: #0b7a95;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      max-width: 600px;
+    }
+
+    button {
+      background-color: #0b7a95;
+      color: #fff;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #095d6e;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>Installer VOKA sur ton téléphone</h1>
-    <p>Voici comment ajouter l'application sur ton appareil :</p>
-    <ul>
-      <li><strong>iPhone :</strong> Clique sur "Partager" puis "Ajouter à l'écran d'accueil"</li>
-      <li><strong>Android :</strong> Clique sur les trois points puis "Installer l'application"</li>
-    </ul>
-    <p>L'app simulée fonctionne hors-ligne et ouvre automatiquement ton dashboard.</p>
-  </main>
-  <footer class="footer">
-    <p>&copy; VOKA | <a href="cgu.html">CGU</a> | <a href="politique.html">Politique</a></p>
-  </footer>
+
+<h1>Installez VOKA sur votre appareil</h1>
+<p>Pour une expérience optimale, ajoutez VOKA à votre écran d’accueil. Cette app fonctionne comme une application native sur Android ou iPhone.</p>
+
+<p>Suivez les étapes :</p>
+<ul style="text-align: left; max-width: 600px;">
+  <li>1. Sur iPhone (Safari) : cliquez sur l’icône <strong>Partager</strong> puis <strong>Ajouter à l’écran d’accueil</strong></li>
+  <li>2. Sur Android (Chrome) : cliquez sur le menu ⋮ puis <strong>Installer l’application</strong></li>
+</ul>
+
+<button onclick="window.location.href='index.html'">Retour à l’accueil</button>
+
+<script>
+  if ('serviceWorker' in navigator) {
+    navigator.serviceWorker.register('sw.js').then(function(registration) {
+      console.log('Service Worker enregistré avec succès :', registration);
+    }).catch(function(error) {
+      console.log('Erreur lors de l’enregistrement du Service Worker :', error);
+    });
+  }
+</script>
+
 </body>
 </html>
