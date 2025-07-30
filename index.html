@@ -9,189 +9,125 @@
   <style>
     body {
       margin: 0;
-      background-color: #fefefe;
+      background-color: #ffffff;
       font-family: 'Roboto', sans-serif;
       color: #111;
     }
-
     header {
       background: #0b7a95;
-      padding: 20px;
-      text-align: center;
       color: white;
-    }
-
-    header h1 {
-      margin: 0;
-      font-size: 28px;
-    }
-
-    .hero {
+      padding: 30px;
       text-align: center;
-      padding: 60px 20px 20px;
     }
-
+    header h1 {
+      font-size: 32px;
+      margin: 0;
+    }
+    .hero {
+      background: linear-gradient(to right, #0b7a95, #073d4a);
+      color: white;
+      padding: 80px 20px;
+      text-align: center;
+    }
     .hero h2 {
-      font-size: 36px;
-      margin-bottom: 10px;
-      color: #0b7a95;
+      font-size: 42px;
+      margin-bottom: 20px;
     }
-
     .hero p {
       font-size: 20px;
       max-width: 700px;
-      margin: auto;
+      margin: 0 auto;
     }
-
-    .video-section {
-      margin: 40px auto;
-      max-width: 800px;
-      border-radius: 12px;
-      overflow: hidden;
-      box-shadow: 0 0 20px #ccc;
-    }
-
-    iframe {
-      width: 100%;
-      height: 450px;
-      border: none;
-    }
-
-    .value-section {
-      max-width: 1000px;
-      margin: auto;
-      padding: 40px 20px;
-      display: flex;
-      flex-direction: column;
-      gap: 30px;
-    }
-
-    .value-block {
-      background: #fff;
-      border-left: 6px solid #0b7a95;
-      padding: 25px;
-      border-radius: 8px;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    }
-
-    .value-block:hover {
-      transform: scale(1.02);
-      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
-    }
-
-    .value-block h3 {
-      margin-top: 0;
-      color: #0b7a95;
-    }
-
     .cta-button {
-      margin: 10px auto;
-      background-color: #0b7a95;
-      color: #fff;
-      padding: 12px 24px;
+      background-color: #ff4c4c;
+      color: white;
       border: none;
       border-radius: 30px;
-      font-size: 16px;
+      padding: 14px 28px;
+      font-size: 18px;
       cursor: pointer;
-      font-weight: bold;
-      display: inline-block;
-      transition: background-color 0.3s ease, transform 0.3s ease;
+      margin-top: 30px;
+      transition: background 0.3s, transform 0.3s;
     }
-
     .cta-button:hover {
-      background-color: #095f75;
+      background-color: #d93737;
       transform: scale(1.05);
     }
-
-    .pricing-section {
-      background: #f0f8fb;
-      padding: 60px 20px;
-    }
-
-    .pricing-section h2 {
-      text-align: center;
-      font-size: 32px;
-      color: #0b7a95;
-      margin-bottom: 40px;
-    }
-
-    .forfait-container {
+    .forfait-section {
       display: flex;
       flex-direction: column;
-      gap: 30px;
-      align-items: center;
+      gap: 40px;
+      padding: 60px 20px;
+      background: #f0f8fb;
     }
-
-    .forfait {
-      background-color: #fff;
+    .forfait-card {
+      background: white;
       border-radius: 10px;
       padding: 30px;
-      width: 90%;
-      max-width: 500px;
+      box-shadow: 0 6px 16px rgba(0,0,0,0.1);
+      max-width: 700px;
+      margin: auto;
       text-align: center;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      transition: transform 0.3s;
     }
-
-    .forfait:hover {
-      transform: scale(1.03);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+    .forfait-card:hover {
+      transform: scale(1.02);
     }
-
-    .forfait.signature {
+    .forfait-card.signature {
       border: 3px solid #ff4c4c;
       animation: pulse 2s infinite;
     }
-
     @keyframes pulse {
-      0% { box-shadow: 0 0 0 0 rgba(255, 76, 76, 0.5); }
-      70% { box-shadow: 0 0 0 10px rgba(255, 76, 76, 0); }
+      0% { box-shadow: 0 0 0 0 rgba(255, 76, 76, 0.6); }
+      70% { box-shadow: 0 0 0 15px rgba(255, 76, 76, 0); }
       100% { box-shadow: 0 0 0 0 rgba(255, 76, 76, 0); }
     }
-
-    .feature-list {
-      list-style: none;
-      padding: 0;
-      margin: 20px 0;
-      text-align: left;
+    .forfait-card h3 {
+      font-size: 28px;
+      margin-bottom: 10px;
+      color: #0b7a95;
     }
-
-    .feature-list li::before {
-      content: '✓';
+    .forfait-card ul {
+      text-align: left;
+      padding: 0;
+      list-style: none;
+      margin: 20px auto;
+      max-width: 400px;
+    }
+    .forfait-card ul li::before {
+      content: '✔';
       color: #0b7a95;
       margin-right: 10px;
     }
-
-    .argument-section {
-      background: #fff;
+    .option-section {
+      background: #ffffff;
       padding: 60px 20px;
       text-align: center;
     }
-
-    .argument-section h2 {
-      font-size: 30px;
-      color: #0b7a95;
-      margin-bottom: 20px;
-    }
-
-    .argument-section p {
-      max-width: 900px;
-      margin: auto;
-      font-size: 18px;
+    .option-section h2 {
+      font-size: 34px;
       margin-bottom: 30px;
+      color: #0b7a95;
     }
-
+    .option-block {
+      max-width: 1000px;
+      margin: 20px auto;
+      padding: 20px;
+      background: #f9f9f9;
+      border-left: 6px solid #0b7a95;
+      border-radius: 8px;
+      text-align: left;
+    }
     footer {
       background: #0b7a95;
       color: white;
       padding: 30px 20px;
       text-align: center;
     }
-
-    footer a {
-      color: #fff;
-      text-decoration: underline;
+    footer p, footer a {
+      margin: 5px;
+      color: white;
+      text-decoration: none;
     }
   </style>
 </head>
@@ -201,70 +137,75 @@
   </header>
 
   <section class="hero">
-    <h2>Créez votre empire dès aujourd’hui</h2>
-    <p>Explorez tout ce que VOKA vous offre pour automatiser, gérer et faire évoluer votre entreprise.</p>
+    <h2>Terminez-en avec les 15 plateformes séparées</h2>
+    <p>Un seul écosystème complet, pensé pour les entrepreneurs modernes. Simple, puissant, automatisé.</p>
+    <button class="cta-button" onclick="document.getElementById('forfaits').scrollIntoView({ behavior: 'smooth' })">Découvrir les forfaits</button>
   </section>
 
-  <section class="video-section">
-    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" allowfullscreen></iframe>
-  </section>
-
-  <section class="value-section">
-    <div class="value-block">
-      <h3>Un écosystème tout-en-un</h3>
-      <p>Fini les abonnements multiples. Fini les outils fragmentés. VOKA regroupe vidéos, CRM, CFO, bots IA, tunnel de vente, assistant stratégique, automatisation et app mobile… en une seule plateforme.</p>
-      <button class="cta-button" onclick="document.querySelector('.pricing-section').scrollIntoView({behavior:'smooth'})">Découvrir nos forfaits</button>
+  <section id="forfaits" class="forfait-section">
+    <div class="forfait-card">
+      <h3>Découverte – 497$/mois</h3>
+      <ul>
+        <li>2 Vidéos AI</li>
+        <li>Mini-site simplifié</li>
+        <li>CFO + CRM de base</li>
+        <li>VOKA Visionnaire (limite)</li>
+        <li>Bots IA limités</li>
+        <li>Calendrier (limite)</li>
+      </ul>
+      <button class="cta-button">Choisir Découverte</button>
     </div>
-    <div class="value-block">
-      <h3>Pourquoi choisir VOKA ?</h3>
-      <p>Des dizaines d’outils regroupés pour moins de 1/5 du prix. Une IA dédiée à votre business. Une appli installable. Des vidéos émotionnelles sur mesure. Une expérience unique et gamifiée.</p>
-      <button class="cta-button" onclick="document.querySelector('.pricing-section').scrollIntoView({behavior:'smooth'})">Voir la différence</button>
+
+    <div class="forfait-card signature">
+      <h3>Signature – 997$/mois</h3>
+      <ul>
+        <li>3 Vidéos/semaine livrées en 72h</li>
+        <li>Dashboard luxe gamifié</li>
+        <li>CFO & CRM complets</li>
+        <li>70+ bots IA spécialisés</li>
+        <li>App mobile (PWA)</li>
+        <li>Calendrier, VOKA Drop, Ressources</li>
+      </ul>
+      <button class="cta-button">1 mois</button>
+      <button class="cta-button">3 mois (-5%)</button>
+      <button class="cta-button">6 mois (-10%)</button>
+      <button class="cta-button">12 mois (-15%)</button>
     </div>
   </section>
 
-  <section class="pricing-section">
-    <h2>Comparez nos forfaits</h2>
-    <div class="forfait-container">
-      <div class="forfait">
-        <h3>Découverte – 497$/mois</h3>
-        <ul class="feature-list">
-          <li>2 Vidéos AI</li>
-          <li>Mini-site simplifié</li>
-          <li>CFO et CRM de base</li>
-          <li>VOKA Visionnaire (limité)</li>
-          <li>Bots IA selon votre niche (limité)</li>
-          <li>Bibliothèque de ressources</li>
-          <li>Calendrier d'affaires (limité)</li>
-          <li>VOKA Drop (limité)</li>
-        </ul>
-        <button class="cta-button">Choisir ce forfait</button>
-      </div>
-      <div class="forfait signature">
-        <h3>Signature – 997$/mois</h3>
-        <p>(La meilleure offre)</p>
-        <ul class="feature-list">
-          <li>3 vidéos/semaine</li>
-          <li>CFO & CRM complets</li>
-          <li>70+ bots IA selon votre niche</li>
-          <li>Dashboard luxe gamifié</li>
-          <li>App mobile installable (PWA)</li>
-          <li>Tunnel émotionnel + landing page</li>
-          <li>Bibliothèque de ressources</li>
-          <li>Calendrier d'affaires</li>
-          <li>VOKA Drop</li>
-          <li>Clone-to-Win + robot prospecteur</li>
-        </ul>
-        <button class="cta-button">Choisir 1 mois</button>
-        <button class="cta-button">Choisir 3 mois (-5%)</button>
-        <button class="cta-button">Choisir 6 mois (-10%)</button>
-        <button class="cta-button">Choisir 12 mois (-15%)</button>
-      </div>
+  <section class="option-section">
+    <h2>Tout ce que VOKA vous offre</h2>
+
+    <div class="option-block">
+      <h3>VOKA Visionnaire</h3>
+      <p>Un assistant stratégique IA ultra intelligent, adapté à votre niche, qui vous guide en continu.</p>
+    </div>
+    <div class="option-block">
+      <h3>App installable sur mobile</h3>
+      <p>Installez VOKA comme une vraie application sur Android/iPhone. Accès instantané à vos outils.</p>
+    </div>
+    <div class="option-block">
+      <h3>Clone-to-Win & Robot Prospecteur</h3>
+      <p>Créez vos meilleures campagnes en 1 clic. Prospectez automatiquement selon votre secteur.</p>
+    </div>
+    <div class="option-block">
+      <h3>Vidéos stratégiques</h3>
+      <p>Création automatique de vidéos virales optimisées livrées sous 72h. À partir de texte ou voix.</p>
+    </div>
+    <div class="option-block">
+      <h3>Bibliothèque + VOKA Drop</h3>
+      <p>Accédez à des dizaines de documents utiles, modèles, aides, et outils visuels.</p>
+    </div>
+    <div class="option-block">
+      <h3>Calendrier intelligent + IA</h3>
+      <p>Synchronisez vos tâches, objectifs et relances avec automatisation intelligente.</p>
     </div>
   </section>
 
   <footer>
-    <p>© 2025 VOKA. Tous droits réservés.</p>
-    <p><a href="cgu.html">Conditions d'utilisation</a> | <a href="confidentialite.html">Politique de confidentialité</a> | <a href="mailto:info@getvoka.com">Nous contacter</a></p>
+    <p>Slogan : Donnez une voix à votre succès</p>
+    <p><a href="conditions.html">Conditions d'utilisation</a> | <a href="confidentialite.html">Politique de confidentialité</a> | <a href="mailto:info@getvoka.com">Nous contacter</a></p>
+    <p>Produit du Québec – VOKA 2025</p>
   </footer>
 </body>
 </html>
