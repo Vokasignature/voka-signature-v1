@@ -1,58 +1,113 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>CRM VOKA</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dashboard Admin – VOKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0b7a95, #000);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 40px;
+    }
+
+    .section {
+      background-color: #111;
+      border: 1px solid #0b7a95;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 30px;
+    }
+
+    .section h2 {
+      color: #0b7a95;
+    }
+
+    .section p {
+      font-size: 16px;
+    }
+
+    ul li {
+      margin-bottom: 10px;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <div class="dashboard-container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo-section">
-        <img src="logo-voka.png" alt="VOKA Logo" class="logo" />
-        <p class="slogan">Donnez une voix à votre succès</p>
-      </div>
-      <nav>
-        <a href="dashboard.html">🏠 Dashboard</a>
-        <a href="cfo.html">📊 VOKA CFO</a>
-        <a class="active" href="crm.html">📁 VOKA CRM</a>
-        <a href="voka-bots.html">🤖 VOKA Bots</a>
-        <a href="voka-videos.html">🎥 VOKA Vidéos</a>
-        <a href="voka-tunnel.html">🧠 VOKA Tunnel</a>
-        <a href="voka-calendrier.html">📅 VOKA Calendrier</a>
-        <a href="voka-ressources.html">📚 Ressources</a>
-        <a href="voka-temoignages.html">🌟 Témoignages</a>
-        <a href="voka-boutique.html" class="locked">🛍️ Boutique</a>
-        <a href="visionnaire.html">🧠 VOKA Visionnaire</a>
-        <a href="fondation.html">❤️ Fondation William</a>
-      </nav>
-      <footer class="footer">
-        <p>© 2025 VOKA • Créé par un entrepreneur pour les entrepreneurs</p>
-        <a href="cgu.html">CGU</a> • <a href="politique-confidentialite.html">Confidentialité</a>
-      </footer>
-    </aside>
 
-    <!-- CONTENU -->
-    <main class="main-content">
-      <h1>VOKA CRM</h1>
-      <p>Gère tous tes prospects et clients de façon intelligente, centralisée et automatisée.</p>
-      <section class="features">
-        <ul>
-          <li>📇 Fiches clients dynamiques avec statut</li>
-          <li>📞 Historique des échanges automatisé</li>
-          <li>🔁 Relances automatiques par email/SMS</li>
-          <li>📊 Statut de conversion visible</li>
-          <li>⏰ Rappels intelligents intégrés</li>
-          <li>✅ Vérification email avant envoi</li>
-        </ul>
-      </section>
-      <p><em>Ton robot CRM prospecte, relance et suit pour toi.</em></p>
-      <div class="cta-block">
-        <a href="prospecteur.html" class="cta-button">Accéder au Robot Prospecteur</a>
-      </div>
-    </main>
+<header>
+  <h1>VOKA</h1>
+  <nav>
+    <a href="dashboard-admin.html">Admin</a>
+    <a href="dashboard-client.html">Client</a>
+    <a href="voka-videos.html">Vidéos</a>
+    <a href="crm.html">CRM</a>
+    <a href="cfo.html">CFO</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="section">
+    <h2>Vue globale</h2>
+    <p>Accès total à tous les dashboards clients, statistiques de performance, suivis de tunnel, rétention, clics, conversion.</p>
   </div>
+
+  <div class="section">
+    <h2>Orion (IA principale)</h2>
+    <p>Outil stratégique tout-en-un : psychologie, finances, tunnel, branding, positionnement, développement de produit, vente, juridique, etc.</p>
+  </div>
+
+  <div class="section">
+    <h2>VOKA Visionnaire</h2>
+    <p>Assistant IA personnel : stratégie de croissance, réponses sur-mesure, mentorat 24/7, conseils personnalisés selon objectifs à long terme.</p>
+  </div>
+
+  <div class="section">
+    <h2>Suivi des CGU</h2>
+    <p>Liste des clients ayant accepté les conditions générales avec horodatage, preuve légale, traçabilité.</p>
+  </div>
+
+  <div class="section">
+    <h2>Fondation William</h2>
+    <p>Gestion privée. Objectif : aider les enfants oubliés. Accès réservé à l’administrateur. En construction pour l’instant.</p>
+  </div>
+</div>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
+
