@@ -2,15 +2,15 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VOKA – Donnez une voix à votre succès</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
       background-color: #000;
-      font-family: 'Roboto', sans-serif;
       color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
     }
 
     header {
@@ -23,7 +23,6 @@
 
     header h1 {
       font-size: 24px;
-      letter-spacing: 1px;
     }
 
     nav a {
@@ -35,7 +34,7 @@
 
     .hero {
       text-align: center;
-      padding: 100px 20px 50px;
+      padding: 100px 20px 60px;
       background: radial-gradient(ellipse at center, #0b7a95 0%, #000 80%);
     }
 
@@ -64,27 +63,28 @@
       background: #095d6e;
     }
 
-    .video-section {
-      margin: 60px auto;
-      width: 90%;
-      max-width: 900px;
-      border: 2px solid #0b7a95;
-      border-radius: 12px;
-      overflow: hidden;
+    .section {
+      padding: 60px 40px;
+      text-align: center;
     }
 
-    iframe {
-      width: 100%;
-      height: 500px;
-      border: none;
+    .section h3 {
+      color: #0b7a95;
+      font-size: 26px;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      font-size: 18px;
+      max-width: 800px;
+      margin: 0 auto 30px;
     }
 
     footer {
-      padding: 40px;
       background-color: #0b7a95;
       text-align: center;
+      padding: 40px;
       font-size: 14px;
-      color: white;
     }
   </style>
 </head>
@@ -93,22 +93,23 @@
 <header>
   <h1>VOKA</h1>
   <nav>
-    <a href="#forfaits">Forfaits</a>
-    <a href="#video">Vidéo</a>
-    <a href="#contact">Contact</a>
-    <a href="/dashboard.html">Se connecter</a>
+    <a href="index.html">Accueil</a>
+    <a href="forfait.html">Forfaits</a>
+    <a href="formulaire.html">Formulaire</a>
+    <a href="dashboard.html">Se connecter</a>
   </nav>
 </header>
 
 <section class="hero">
-  <h2>Créez votre empire, commencez maintenant.</h2>
-  <p>Automatisation. Performance. Stratégie. Aucun mot inutile.</p>
-  <button class="cta-button" onclick="location.href='#forfaits'">Découvrir les forfaits</button>
+  <h2>L'écosystème ultime pour entrepreneurs</h2>
+  <p>Automatisation. Stratégie. Performance. Tout commence ici.</p>
+  <button class="cta-button" onclick="location.href='formulaire.html'">Commencer maintenant</button>
 </section>
 
-<section id="video" class="video-section">
-  <!-- 🎥 Ta vidéo d'intro à insérer ici (YouTube ou Vercel embed) -->
-  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vidéo VOKA d’intro"></iframe>
+<section class="section">
+  <h3>Découvrez nos forfaits</h3>
+  <p>Choisissez entre le Forfait Découverte ou Signature selon votre ambition. L’écosystème VOKA est prêt à travailler pour vous.</p>
+  <button class="cta-button" onclick="location.href='forfait.html'">Voir les forfaits</button>
 </section>
 
 <footer>
@@ -117,6 +118,3 @@
 
 </body>
 </html>
-
-
-
