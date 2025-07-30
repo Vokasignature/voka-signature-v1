@@ -22,6 +22,27 @@
       text-transform: uppercase;
     }
 
+    .nav-countries {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .nav-countries button {
+      margin: 5px;
+      padding: 10px 20px;
+      border: none;
+      border-radius: 20px;
+      background-color: #0b7a95;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .nav-countries button:hover {
+      background-color: #095d6e;
+    }
+
     .resource-section {
       background-color: #111;
       border-radius: 12px;
@@ -65,11 +86,25 @@
       color: #0b7a95;
     }
   </style>
+  <script>
+    function scrollToCountry(id) {
+      const section = document.getElementById(id);
+      if (section) section.scrollIntoView({ behavior: 'smooth' });
+    }
+  </script>
 </head>
 <body>
   <h1>VOKA Ressources Globales</h1>
+
+  <div class="nav-countries">
+    <button onclick="scrollToCountry('canada')">🇨🇦 Canada</button>
+    <button onclick="scrollToCountry('france')">🇫🇷 France</button>
+    <button onclick="scrollToCountry('usa')">🇺🇸 États-Unis</button>
+    <button onclick="scrollToCountry('afrique')">🌍 Afrique Francophone</button>
+  </div>
+
   <div class="resource-section">
-    <div class="country">
+    <div class="country" id="canada">
       <h2><img src="/images/flags/canada.png" alt="Canada"> Canada</h2>
       <ul>
         <li>Calculateur de taxes (TPS, TVQ)</li>
@@ -78,7 +113,8 @@
         <li>Programmes fédéraux et provinciaux</li>
       </ul>
     </div>
-    <div class="country">
+
+    <div class="country" id="france">
       <h2><img src="/images/flags/france.png" alt="France"> France</h2>
       <ul>
         <li>Simulateur TVA</li>
@@ -87,7 +123,8 @@
         <li>Financements régionaux</li>
       </ul>
     </div>
-    <div class="country">
+
+    <div class="country" id="usa">
       <h2><img src="/images/flags/usa.png" alt="États-Unis"> États-Unis</h2>
       <ul>
         <li>Calculateur de sales tax par État</li>
@@ -96,7 +133,8 @@
         <li>Incubateurs et accélérateurs par région</li>
       </ul>
     </div>
-    <div class="country">
+
+    <div class="country" id="afrique">
       <h2><img src="/images/flags/afrique.png" alt="Afrique Francophone"> Afrique Francophone</h2>
       <ul>
         <li>Programmes d’appui aux PME</li>
@@ -108,3 +146,4 @@
   </div>
 </body>
 </html>
+
