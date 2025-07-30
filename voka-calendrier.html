@@ -30,11 +30,36 @@
       margin: auto;
     }
 
-    iframe {
-      width: 100%;
-      height: 600px;
-      border: none;
-      border-radius: 12px;
+    .feature {
+      margin-bottom: 25px;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 8px;
+    }
+
+    .feature h3 {
+      color: #0b7a95;
+      margin-bottom: 10px;
+    }
+
+    .locked {
+      opacity: 0.5;
+      position: relative;
+    }
+
+    .locked::after {
+      content: '🔒 Fonction Premium – déverrouillez avec le Forfait Signature';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.8);
+      padding: 10px 20px;
+      border: 2px dashed #0b7a95;
+      border-radius: 8px;
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
     }
 
     .upgrade-box {
@@ -71,12 +96,25 @@
   <h1>VOKA Calendrier</h1>
 
   <div class="calendar-container">
-    <iframe src="https://calendar.google.com" title="Calendrier VOKA"></iframe>
+    <div class="feature">
+      <h3>Accès rapide au calendrier</h3>
+      <p>Consultez vos rendez-vous et événements planifiés dans votre espace VOKA.</p>
+    </div>
+
+    <div class="feature locked">
+      <h3>Synchronisation Google/Apple Calendar</h3>
+      <p>Connectez vos agendas pour tout centraliser automatiquement.</p>
+    </div>
+
+    <div class="feature locked">
+      <h3>Rappels intelligents + gestion IA des rendez-vous</h3>
+      <p>Laissez notre IA optimiser votre emploi du temps et vous rappeler chaque tâche importante.</p>
+    </div>
+
     <div class="upgrade-box">
-      <p>🔓 Accès limité – Cette version du calendrier est disponible dans le Forfait Découverte. Pour débloquer la version complète avec rappels automatiques, synchronisation avancée et assistant IA, passez au Forfait Signature.</p>
-      <button onclick="alert('Mise à niveau vers le Forfait Signature en cours...')">Débloquer toutes les fonctions</button>
+      <p>⏱️ Débloquez les fonctions premium avec le Forfait Signature pour bénéficier d’un calendrier intelligent, connecté et stratégique.</p>
+      <button onclick="alert('Passage au Forfait Signature en cours...')">Débloquer toutes les fonctions</button>
     </div>
   </div>
-
 </body>
 </html>
