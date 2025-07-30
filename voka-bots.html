@@ -1,57 +1,101 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VOKA Bots</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOKA Bots – Assistance IA par niche</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0b7a95;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .bot-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .bot-card {
+      background-color: #111;
+      border: 2px solid #0b7a95;
+      border-radius: 12px;
+      padding: 20px;
+    }
+
+    .bot-card h3 {
+      margin-top: 0;
+      color: #0b7a95;
+      font-size: 20px;
+    }
+
+    .bot-card p {
+      font-size: 15px;
+      color: #ccc;
+    }
+
+    .bot-card button {
+      background-color: #0b7a95;
+      color: #fff;
+      border: none;
+      padding: 12px;
+      font-size: 14px;
+      border-radius: 30px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+
+    .bot-card button:hover {
+      background-color: #095d6e;
+    }
+  </style>
 </head>
 <body>
-  <div class="dashboard-container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo-section">
-        <img src="logo-voka.png" alt="Logo VOKA" class="logo" />
-        <p class="slogan">Donnez une voix à votre succès</p>
-      </div>
-      <nav>
-        <a href="dashboard-client.html">🏠 Dashboard</a>
-        <a href="cfo.html">📊 CFO</a>
-        <a href="crm.html">📁 CRM</a>
-        <a href="voka-videos.html">🎥 Vidéos</a>
-        <a class="active" href="voka-bots.html">🤖 Bots IA</a>
-        <a href="voka-tunnel.html">🧠 Tunnel</a>
-        <a href="voka-calendrier.html">📅 Calendrier</a>
-        <a href="voka-ressources.html">📚 Ressources</a>
-        <a href="voka-temoignages.html">🌟 Témoignages</a>
-        <a href="voka-boutique.html" class="locked">🛍️ Boutique</a>
-        <a href="visionnaire.html">🧠 VOKA Visionnaire</a>
-        <a href="fondation.html">❤️ Fondation William</a>
-      </nav>
-      <footer class="footer">
-        <p>© 2025 VOKA • Créé par un entrepreneur pour les entrepreneurs</p>
-        <a href="cgu.html">CGU</a> • <a href="politique-confidentialite.html">Confidentialité</a>
-      </footer>
-    </aside>
+  <h1>VOKA Bots</h1>
+  <p style="text-align: center; color: #999; margin-bottom: 40px;">Des bots IA spécialisés selon ta niche. Sélectionne le tien pour être accompagné stratégiquement.</p>
 
-    <!-- CONTENU -->
-    <main class="main-content">
-      <h1>Bots IA spécialisés</h1>
-      <p>Voici tes assistants virtuels, conçus pour t’aider dans ta niche spécifique :</p>
-      <ul>
-        <li>🛠️ Bot Construction</li>
-        <li>💼 Bot Coaching</li>
-        <li>🧴 Bot Esthétique</li>
-        <li>🧘 Bot Bien-Être</li>
-        <li>🧠 Bot Stratège</li>
-        <li>💬 Bot Closer</li>
-        <li>📝 Bot Suivi Client</li>
-      </ul>
-      <p><em>Un bot est automatiquement assigné selon ton secteur (via le formulaire d’entrée).</em></p>
-      <div class="cta-block">
-        <a href="formulaire.html" class="cta-button">Mettre à jour mon profil</a>
-      </div>
-    </main>
+  <div class="bot-container">
+    <div class="bot-card">
+      <h3>Bot IA – Construction</h3>
+      <p>Gère soumissions, relances clients, estimations, gestion de projets.</p>
+      <button>Activer</button>
+    </div>
+
+    <div class="bot-card">
+      <h3>Bot IA – Coaching</h3>
+      <p>Aide à structurer tes offres, scripts, vidéos, tunnels, publications et relances.</p>
+      <button>Activer</button>
+    </div>
+
+    <div class="bot-card">
+      <h3>Bot IA – Boutique en ligne</h3>
+      <p>Optimise tes fiches produits, séquences e-mails, paniers abandonnés et promotions.</p>
+      <button>Activer</button>
+    </div>
+
+    <div class="bot-card">
+      <h3>Bot IA – Immobilier</h3>
+      <p>Génère des annonces percutantes, gère les suivis, optimise tes rendez-vous.</p>
+      <button>Activer</button>
+    </div>
+
+    <div class="bot-card">
+      <h3>Bot IA – Service professionnel</h3>
+      <p>Positionnement stratégique, gestion des leads, création de tunnel et d'offres.</p>
+      <button>Activer</button>
+    </div>
   </div>
 </body>
 </html>
