@@ -1,22 +1,139 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Forfait VOKA</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Forfaits VOKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0b7a95, #000);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 40px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+      justify-content: center;
+    }
+
+    .card {
+      background-color: #111;
+      border: 2px solid #0b7a95;
+      border-radius: 12px;
+      padding: 30px;
+      width: 300px;
+      text-align: center;
+    }
+
+    .card h2 {
+      color: #0b7a95;
+      margin-bottom: 15px;
+    }
+
+    .card p {
+      font-size: 16px;
+      margin: 10px 0;
+    }
+
+    .locked {
+      opacity: 0.4;
+      filter: blur(1px);
+      position: relative;
+    }
+
+    .locked::after {
+      content: "🔒 Non disponible dans la version actuelle";
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background-color: #0b7a95;
+      padding: 4px 8px;
+      border-radius: 6px;
+      font-size: 12px;
+      color: #fff;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>Le Forfait Signature</h1>
-    <p>997 $ / mois – tout est débloqué.</p>
-    <p>✅ Dashboard complet, vidéos, bots IA, CRM, CFO, automatisations, app mobile…</p>
-    <p>👇 Choisis une option pour activer ton compte :</p>
-    <ul>
-      <li><a href="paiement.html" class="btn">Paiement mensuel</a></li>
-      <li><a href="paiement.html#packs" class="btn">Option 3/6/12 mois</a></li>
-      <li><a href="https://calendly.com/tonliencalendly" class="btn">Parler à un expert</a></li>
-    </ul>
-  </main>
+
+<header>
+  <h1>VOKA</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="paiement.html">Paiement</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="card">
+    <h2>DÉCOUVERTE – 497 $</h2>
+    <p>1 vidéo stratégique IA</p>
+    <p>CFO de base</p>
+    <p>Mini-site simple</p>
+    <p>Sans CRM</p>
+    <p>Objectif : découvrir l'écosystème</p>
+  </div>
+
+  <div class="card">
+    <h2>SIGNATURE – 2497 $</h2>
+    <p>Vidéo de bienvenue</p>
+    <p>2 vidéos stratégiques/semaine</p>
+    <p>Tunnel vidéo immersif</p>
+    <p>CFO + CRM complets</p>
+    <p>Dashboard + App simulée</p>
+  </div>
+
+  <div class="card locked">
+    <h2>EMPIRE – 4997 $</h2>
+    <p>5 vidéos/semaine</p>
+    <p>Suivi premium</p>
+    <p>Optimisation constante</p>
+    <p>Coaching stratégique</p>
+  </div>
+
+  <div class="card locked">
+    <h2>VIP – Sur devis</h2>
+    <p>Accompagnement sur mesure</p>
+    <p>Branding, CRM, tunnel 100% custom</p>
+    <p>Confidentialité absolue</p>
+  </div>
+</div>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
