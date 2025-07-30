@@ -1,22 +1,85 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Suggestion Éclair - VOKA</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Suggestion Éclair – VOKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0b7a95;
+      font-size: 28px;
+      margin-bottom: 30px;
+      text-align: center;
+    }
+
+    .suggestion-box {
+      background-color: #111;
+      border: 2px solid #0b7a95;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .suggestion-box h2 {
+      font-size: 22px;
+      color: #0b7a95;
+      margin-bottom: 20px;
+    }
+
+    .suggestion-box p {
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .btn-refresh {
+      display: block;
+      margin: 40px auto 0;
+      padding: 12px 24px;
+      background-color: #0b7a95;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      color: white;
+      cursor: pointer;
+    }
+
+    .btn-refresh:hover {
+      background-color: #095d6e;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 30px;
+      color: white;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>Suggestion Éclair</h1>
-    <p>Voici ta suggestion de la semaine :</p>
-    <blockquote>
-      Crée une mini vidéo en face caméra expliquant "Pourquoi j’ai lancé mon entreprise". Utilise une intro choc et un call-to-action.
-    </blockquote>
-  </main>
-  <footer class="footer">
-    <p>&copy; VOKA | <a href="cgu.html">CGU</a> | <a href="politique.html">Politique</a></p>
-  </footer>
+
+<h1>Suggestion Éclair</h1>
+
+<div class="suggestion-box">
+  <h2>🔥 Idée hebdo stratégique pour ton business :</h2>
+  <p><strong>Utilise la vidéo client N°1 comme base pour créer une version "before/after" avec narration dramatique + appel à l’action final vers le calendrier. Cela augmente l’engagement de 300 % selon les derniers tests.</strong></p>
+</div>
+
+<button class="btn-refresh">Nouvelle suggestion IA</button>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
-
