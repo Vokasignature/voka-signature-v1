@@ -4,21 +4,107 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VOKA Ressources</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0b7a95;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .resource-section {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .country {
+      margin-bottom: 40px;
+      padding: 20px;
+      border-radius: 10px;
+      background-color: #1a1a1a;
+    }
+
+    .country h2 {
+      display: flex;
+      align-items: center;
+      font-size: 20px;
+      color: #0b7a95;
+    }
+
+    .country h2 img {
+      width: 30px;
+      height: 20px;
+      margin-right: 10px;
+      border-radius: 3px;
+    }
+
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+
+    li {
+      margin-bottom: 8px;
+    }
+
+    li::before {
+      content: "📌 ";
+      color: #0b7a95;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>Ressources & Documents</h1>
-    <p>Accède à une bibliothèque d’outils, modèles et documents utiles pour ton entreprise.</p>
-
-    <ul>
-      <li>Formulaires bancaires, fiscaux, administratifs</li>
-      <li>Modèles de demande de prêt, carte de crédit, etc.</li>
-      <li>Documents utiles pour l’ouverture de compte d’entreprise</li>
-      <li>Vidéos explicatives, PDF et liens pratiques</li>
-    </ul>
-
-    <p><strong>Version 2.0 :</strong> Carte interactive par géolocalisation avec filtres par besoin (comptables, avocats, banques…)</p>
-  </main>
+  <h1>VOKA Ressources Globales</h1>
+  <div class="resource-section">
+    <div class="country">
+      <h2><img src="/images/flags/canada.png" alt="Canada"> Canada</h2>
+      <ul>
+        <li>Calculateur de taxes (TPS, TVQ)</li>
+        <li>Subventions d'entreprises</li>
+        <li>Aides aux jeunes entrepreneurs</li>
+        <li>Programmes fédéraux et provinciaux</li>
+      </ul>
+    </div>
+    <div class="country">
+      <h2><img src="/images/flags/france.png" alt="France"> France</h2>
+      <ul>
+        <li>Simulateur TVA</li>
+        <li>Subventions BPI France</li>
+        <li>Aides auto-entrepreneurs</li>
+        <li>Financements régionaux</li>
+      </ul>
+    </div>
+    <div class="country">
+      <h2><img src="/images/flags/usa.png" alt="États-Unis"> États-Unis</h2>
+      <ul>
+        <li>Calculateur de sales tax par État</li>
+        <li>SBA Grants and Loans</li>
+        <li>IRS Guide pour entrepreneurs</li>
+        <li>Incubateurs et accélérateurs par région</li>
+      </ul>
+    </div>
+    <div class="country">
+      <h2><img src="/images/flags/afrique.png" alt="Afrique Francophone"> Afrique Francophone</h2>
+      <ul>
+        <li>Programmes d’appui aux PME</li>
+        <li>Subventions panafricaines</li>
+        <li>Financements internationaux</li>
+        <li>Outils de calcul fiscal local</li>
+      </ul>
+    </div>
+  </div>
 </body>
 </html>
