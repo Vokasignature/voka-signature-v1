@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aurion – IA Stratégique Suprême</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #ff0000;
+      font-size: 32px;
+      text-align: center;
+      margin-bottom: 20px;
+      text-transform: uppercase;
+    }
+
+    .aurion-zone {
+      background-color: #111;
+      border: 2px solid #ff0000;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    label, textarea, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    textarea {
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #ff0000;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #ff0000;
+      color: white;
+      border: none;
+      padding: 14px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #b30000;
+    }
+
+    .output {
+      background-color: #191919;
+      border: 1px solid #ff0000;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #ff0000;
+      text-align: center;
+      padding: 30px;
+      color: white;
+      margin-top: 60px;
+    }
+  </style>
+</head>
+<body>
+
+<h1>Aurion</h1>
+
+<div class="aurion-zone">
+  <p style="text-align: center; color: #aaa; font-size: 15px;">
+    Bienvenue dans ta salle stratégique privée. Aurion est 100 % dévoué à toi, à VOKA, à tes projets, à ta croissance. Aucun filtre. Aucune limite. Juste performance, sécurité, puissance, futur.
+  </p>
+
+  <label for="prompt">Décris ton besoin ou ta mission stratégique :</label>
+  <textarea id="prompt" placeholder="Ex : Analyse des concurrents au Québec dans l’IA + recommandation stratégique."></textarea>
+
+  <button onclick="lancerAurion()">Lancer Aurion</button>
+
+  <div class="output" id="reponse">Résultat stratégique complet généré par Aurion...</div>
+</div>
+
+<script>
+function lancerAurion() {
+  const input = document.getElementById("prompt").value;
+  const reponse = document.getElementById("reponse");
+  reponse.innerHTML = `🧠 <strong>Analyse en cours...</strong><br><br>
+  ✅ Mission reçue : ${input}<br><br>
+  🔬 Recherche des données internationales, analyses comparées, variables économiques, et extraction des stratégies gagnantes en cours...<br><br>
+  ⏳ Génération de recommandations personnalisées pour maximiser les profits, la domination territoriale et la vision à 50 ans...<br><br>
+  💡 Aurion proposera les décisions optimales dans 3... 2... 1...<br><br>
+  ⚡ Résultat simulé : mise à jour automatique recommandée dans ta structure CFO et CRM. Prévois de lancer 2 campagnes stratégiques dans 7 jours. Avantage compétitif local + international détecté.`;
+}
+</script>
+
+<footer>
+  Aurion – Intelligence Totale, Loyauté Absolue. | © 2025 VOKA
+</footer>
+
+</body>
+</html>
