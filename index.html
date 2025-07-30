@@ -7,114 +7,191 @@
   <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
   <style>
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Roboto', sans-serif;
       margin: 0;
+      background-color: #000;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
     }
 
     header {
       background: linear-gradient(90deg, #0b7a95, #000);
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
+      padding: 20px;
+      text-align: center;
     }
 
     header h1 {
-      font-size: 24px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 30px;
-      font-weight: bold;
+      margin: 0;
+      font-size: 28px;
     }
 
     .hero {
       text-align: center;
-      padding: 100px 20px 60px;
-      background: radial-gradient(ellipse at center, #0b7a95 0%, #000 80%);
+      padding: 80px 20px 40px;
     }
 
     .hero h2 {
-      font-size: 38px;
-      margin-bottom: 20px;
+      font-size: 34px;
+      margin-bottom: 10px;
+      color: #0b7a95;
     }
 
     .hero p {
-      font-size: 20px;
+      font-size: 18px;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .video-section {
+      margin: 40px auto;
+      max-width: 800px;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 450px;
+      border: none;
+    }
+
+    .value-section {
+      max-width: 1000px;
+      margin: auto;
+      padding: 60px 20px;
+    }
+
+    .value-block {
+      background: #111;
+      border-left: 4px solid #0b7a95;
+      padding: 20px;
+      margin-bottom: 30px;
+      border-radius: 8px;
+    }
+
+    .value-block h3 {
+      margin-top: 0;
+      color: #0b7a95;
+    }
+
+    .cta-red {
+      background-color: #950000;
+      color: white;
+      font-weight: bold;
+      padding: 15px 25px;
+      border-radius: 8px;
+      text-align: center;
+      animation: pulse 2s infinite;
+      cursor: pointer;
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(255,0,0, 0.4); }
+      70% { box-shadow: 0 0 0 10px rgba(255,0,0, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255,0,0, 0); }
+    }
+
+    .pricing-section {
+      background: #0b7a95;
+      padding: 60px 20px;
+      color: #fff;
+    }
+
+    .pricing-section h2 {
+      text-align: center;
       margin-bottom: 40px;
+      font-size: 32px;
+    }
+
+    .forfait {
+      background-color: #000;
+      border-radius: 10px;
+      padding: 30px;
+      margin: 20px;
+      text-align: center;
+    }
+
+    .forfait h3 {
+      font-size: 24px;
+      margin-bottom: 10px;
+    }
+
+    .forfait p {
+      font-size: 16px;
     }
 
     .cta-button {
-      background: #0b7a95;
-      color: #fff;
-      padding: 15px 40px;
-      font-size: 18px;
-      border: none;
-      border-radius: 50px;
-      cursor: pointer;
-      transition: background 0.3s;
-    }
-
-    .cta-button:hover {
-      background: #095d6e;
-    }
-
-    .section {
-      padding: 60px 40px;
-      text-align: center;
-    }
-
-    .section h3 {
+      margin-top: 20px;
+      background-color: #fff;
       color: #0b7a95;
-      font-size: 26px;
-      margin-bottom: 20px;
-    }
-
-    .section p {
-      font-size: 18px;
-      max-width: 800px;
-      margin: 0 auto 30px;
-    }
-
-    footer {
-      background-color: #0b7a95;
-      text-align: center;
-      padding: 40px;
-      font-size: 14px;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+      font-weight: bold;
     }
   </style>
 </head>
 <body>
+  <header>
+    <h1>Produit du Québec - VOKA</h1>
+  </header>
 
-<header>
-  <h1>VOKA</h1>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="forfait.html">Forfaits</a>
-    <a href="formulaire.html">Formulaire</a>
-    <a href="dashboard.html">Se connecter</a>
-  </nav>
-</header>
+  <section class="hero">
+    <h2>Donnez une voix à votre succès</h2>
+    <p>Une plateforme futuriste créée par un entrepreneur, pour les entrepreneurs. Simple. Intuitive. Rentable.</p>
+  </section>
 
-<section class="hero">
-  <h2>L'écosystème ultime pour entrepreneurs</h2>
-  <p>Automatisation. Stratégie. Performance. Tout commence ici.</p>
-  <button class="cta-button" onclick="location.href='formulaire.html'">Commencer maintenant</button>
-</section>
+  <section class="video-section">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vidéo de présentation"></iframe>
+  </section>
 
-<section class="section">
-  <h3>Découvrez nos forfaits</h3>
-  <p>Choisissez entre le Forfait Découverte ou Signature selon votre ambition. L’écosystème VOKA est prêt à travailler pour vous.</p>
-  <button class="cta-button" onclick="location.href='forfait.html'">Voir les forfaits</button>
-</section>
+  <section class="value-section">
+    <div class="value-block">
+      <h3>Génération automatique de contenu vidéo</h3>
+      <p>Des vidéos précises et percutantes, adaptées à votre secteur, votre style, votre entreprise livrées en 72h.</p>
+    </div>
+    <div class="value-block">
+      <h3>CRM + CFO + Tactique</h3>
+      <p>Une interface unique, simple, facile et connectée pour gérer toute votre entreprise.</p>
+    </div>
+    <div class="value-block">
+      <h3>Bots IA spécialisés</h3>
+      <p>Des assistants intelligents pour chaque type de client, opérationnels en 1 clic. Des assistants uniques et qui ne dorment jamais.</p>
+    </div>
+    <div class="value-block">
+      <h3>Design immersif et incitatif</h3>
+      <p>Tout a été pensé pour maximiser l'engagement de vos clients et favoriser la conversion à chaque étape.</p>
+    </div>
 
-<footer>
-  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
-</footer>
+    <div class="cta-red" onclick="location.href='#forfaits'">
+      Découvrez la différence VOKA maintenant
+    </div>
+  </section>
 
+  <section class="pricing-section" id="forfaits">
+    <h2>Nos Forfaits</h2>
+
+    <div class="forfait">
+      <h3>Découverte – 497 $</h3>
+      <p>2 Vidéos AI + mini-site + CFO de base</p>
+      <button class="cta-button">Choisir ce forfait</button>
+    </div>
+
+    <div class="forfait" style="border: 2px solid gold">
+      <h3>Signature – 997 $ (le plus vendu)</h3>
+      <p>2 vidéos/semaine + CFO/CRM complet + bots + dashboard luxe</p>
+      <button class="cta-button">Choisir 1 mois</button>
+      <button class="cta-button">Choisir 3 mois (-5%)</button>
+      <button class="cta-button">Choisir 6 mois (-10%)</button>
+      <button class="cta-button">Choisir 12 mois (-15%)</button>
+    </div>
+
+    <div class="forfait">
+      <h3>Empire – 2497 $</h3>
+      <p>5 vidéos/sem + closeurs + optimisation continue</p>
+      <button class="cta-button">Commencer votre Empire</button>
+    </div>
+  </section>
 </body>
 </html>
