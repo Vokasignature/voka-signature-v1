@@ -1,56 +1,116 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>VOKA CFO</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0b7a95, #000);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 40px;
+    }
+
+    .section-title {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: #0b7a95;
+    }
+
+    .card {
+      background-color: #111;
+      border: 1px solid #0b7a95;
+      border-radius: 12px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card h3 {
+      color: #0b7a95;
+      margin-top: 0;
+    }
+
+    .card p {
+      font-size: 16px;
+    }
+
+    footer {
+      padding: 40px;
+      background-color: #0b7a95;
+      text-align: center;
+      font-size: 14px;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-  <div class="dashboard-container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo-section">
-        <img src="logo-voka.png" alt="Logo VOKA" class="logo" />
-        <p class="slogan">Donnez une voix à votre succès</p>
-      </div>
-      <nav>
-        <a href="dashboard-client.html">🏠 Dashboard</a>
-        <a class="active" href="cfo.html">📊 CFO</a>
-        <a href="crm.html">📁 CRM</a>
-        <a href="voka-videos.html">🎥 Vidéos</a>
-        <a href="voka-bots.html">🤖 Bots</a>
-        <a href="voka-tunnel.html">🧠 Tunnel</a>
-        <a href="voka-calendrier.html">📅 Calendrier</a>
-        <a href="voka-ressources.html">📚 Ressources</a>
-        <a href="voka-temoignages.html">🌟 Témoignages</a>
-        <a href="voka-boutique.html" class="locked">🛍️ Boutique</a>
-        <a href="visionnaire.html">🧠 VOKA Visionnaire</a>
-        <a href="fondation.html">❤️ Fondation William</a>
-      </nav>
-      <footer class="footer">
-        <p>© 2025 VOKA • Créé par un entrepreneur pour les entrepreneurs</p>
-        <a href="cgu.html">CGU</a> • <a href="politique-confidentialite.html">Confidentialité</a>
-      </footer>
-    </aside>
 
-    <!-- CONTENU -->
-    <main class="main-content">
-      <h1>VOKA CFO</h1>
-      <p>Ton outil intelligent pour gérer tes finances d’entreprise.</p>
-      <ul>
-        <li>📈 Suivi des revenus, dépenses et marges</li>
-        <li>📊 Analyse automatique de rentabilité</li>
-        <li>📎 Génération de devis et factures PDF</li>
-        <li>💸 Préparation de rapports de taxes</li>
-        <li>🚨 Alerte sur les anomalies financières</li>
-      </ul>
-      <p><em>Ce module ne remplace pas un CPA, mais il te donne une visibilité immédiate sur ta performance.</em></p>
-      <div class="cta-block">
-        <a href="#" class="cta-button">Ajouter une dépense</a>
-        <a href="#" class="cta-button">Ajouter un revenu</a>
-      </div>
-    </main>
+<header>
+  <h1>VOKA</h1>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="crm.html">CRM</a>
+    <a href="cfo.html">CFO</a>
+    <a href="voka-videos.html">Vidéos</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2 class="section-title">Centre Financier (CFO)</h2>
+
+  <div class="card">
+    <h3>Vue d’ensemble</h3>
+    <p>Suivez vos revenus, dépenses, marges et taxes. Ce module vous aide à prendre des décisions claires et rapides.</p>
   </div>
+
+  <div class="card">
+    <h3>Analyse intelligente</h3>
+    <p>Un robot intégré détecte les failles, pertes financières, et vous alerte en temps réel.</p>
+  </div>
+
+  <div class="card">
+    <h3>Outils disponibles</h3>
+    <ul>
+      <li>Générateur de factures & devis</li>
+      <li>Rapport de taxes cliquable (PDF)</li>
+      <li>Exportation rapide vers comptabilité</li>
+    </ul>
+  </div>
+
+  <div class="card">
+    <h3>Note</h3>
+    <p>Ce CFO ne remplace pas un CPA. Utilisez-le comme outil de pilotage intelligent.</p>
+  </div>
+</div>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
