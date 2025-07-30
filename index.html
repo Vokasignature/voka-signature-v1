@@ -8,15 +8,16 @@
   <style>
     body {
       margin: 0;
-      background-color: #000;
+      background-color: #fefefe;
       font-family: 'Roboto', sans-serif;
-      color: #fff;
+      color: #111;
     }
 
     header {
-      background: linear-gradient(90deg, #0b7a95, #000);
+      background: #0b7a95;
       padding: 20px;
       text-align: center;
+      color: white;
     }
 
     header h1 {
@@ -30,13 +31,13 @@
     }
 
     .hero h2 {
-      font-size: 34px;
+      font-size: 36px;
       margin-bottom: 10px;
       color: #0b7a95;
     }
 
     .hero p {
-      font-size: 18px;
+      font-size: 20px;
       max-width: 700px;
       margin: auto;
     }
@@ -46,7 +47,7 @@
       max-width: 800px;
       border-radius: 12px;
       overflow: hidden;
-      box-shadow: 0 0 20px #0b7a95;
+      box-shadow: 0 0 20px #ccc;
     }
 
     iframe {
@@ -62,16 +63,18 @@
     }
 
     .value-block {
-      background: #111;
-      border-left: 4px solid #0b7a95;
-      padding: 20px;
+      background: #fff;
+      border-left: 6px solid #0b7a95;
+      padding: 25px;
       margin-bottom: 30px;
       border-radius: 8px;
-      transition: transform 0.3s ease;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .value-block:hover {
-      transform: scale(1.03);
+      transform: scale(1.02);
+      box-shadow: 0 8px 20px rgba(0,0,0,0.15);
     }
 
     .value-block h3 {
@@ -80,7 +83,7 @@
     }
 
     .cta-red {
-      background-color: #950000;
+      background-color: #ff0000;
       color: white;
       font-weight: bold;
       padding: 15px 25px;
@@ -99,15 +102,16 @@
     }
 
     .pricing-section {
-      background: #0b7a95;
+      background: #f0f8fb;
       padding: 60px 20px;
-      color: #fff;
+      color: #111;
     }
 
     .pricing-section h2 {
       text-align: center;
       margin-bottom: 40px;
       font-size: 32px;
+      color: #0b7a95;
     }
 
     .forfait-container {
@@ -118,12 +122,13 @@
     }
 
     .forfait {
-      background-color: #000;
+      background-color: #fff;
       border-radius: 10px;
       padding: 30px;
       max-width: 600px;
       width: 100%;
       text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     .forfait.signature {
@@ -142,8 +147,8 @@
 
     .cta-button {
       margin: 10px;
-      background-color: #fff;
-      color: #0b7a95;
+      background-color: #0b7a95;
+      color: #fff;
       padding: 12px 24px;
       border: none;
       border-radius: 30px;
@@ -153,11 +158,12 @@
     }
 
     .comparison-table {
-      background: #000;
-      color: #fff;
+      background: #fff;
+      color: #111;
       border-collapse: collapse;
       margin: 40px auto;
       width: 90%;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
     }
 
     .comparison-table th,
@@ -169,17 +175,18 @@
 
     .comparison-table th {
       background: #0b7a95;
+      color: #fff;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Produit du Québec - VOKA</h1>
+    <h1>Produit du Québec – VOKA</h1>
   </header>
 
   <section class="hero">
     <h2>Donnez une voix à votre succès</h2>
-    <p>Une plateforme futuriste créée par un entrepreneur, pour les entrepreneurs. Simple. Intuitive. Rentable.</p>
+    <p>Une plateforme créée pour propulser les entrepreneurs du Québec vers l’élite mondiale. Simple. Intuitive. Rentable.</p>
   </section>
 
   <section class="video-section">
@@ -188,20 +195,20 @@
 
   <section class="value-section">
     <div class="value-block">
-      <h3>Génération automatique de contenu vidéo</h3>
-      <p>Des vidéos précises et percutantes, adaptées à votre secteur, livrées en 72h.</p>
+      <h3>Vidéo puissante livrée en 72h</h3>
+      <p>Vous donnez votre voix ou votre texte – on s’occupe du reste. C’est rapide, automatique et impactant.</p>
     </div>
     <div class="value-block">
-      <h3>CRM + CFO + Dashboard gamifié</h3>
-      <p>Une interface unique et connectée pour gérer toute votre entreprise.</p>
+      <h3>Mini-site généré automatiquement</h3>
+      <p>Votre présence web en ligne dès le premier jour, sans effort, 100% sur mesure.</p>
     </div>
     <div class="value-block">
-      <h3>Bots IA spécialisés</h3>
-      <p>Des assistants intelligents pour chaque type de client, opérationnels en 1 clic.</p>
+      <h3>Dashboard immersif</h3>
+      <p>Une interface gamifiée, claire et stratégique pour tout gérer en 1 seul endroit.</p>
     </div>
     <div class="value-block">
-      <h3>Design immersif et incitatif</h3>
-      <p>Tout a été pensé pour maximiser l'engagement et favoriser la conversion à chaque étape.</p>
+      <h3>Expérience VOKA</h3>
+      <p>La seule plateforme pensée comme un empire, où chaque détail est calibré pour votre succès.</p>
     </div>
     <div class="cta-red" onclick="location.href='#forfaits'">
       Découvrez la différence VOKA maintenant
@@ -213,17 +220,17 @@
     <div class="forfait-container">
       <div class="forfait">
         <h3>Découverte – 497 $</h3>
-        <p>Vidéo AI + mini-site + CFO de base</p>
+        <p>1 Vidéo AI + mini-site + CFO de base</p>
         <button class="cta-button">Choisir ce forfait</button>
       </div>
 
       <div class="forfait signature">
         <h3>Signature – 2497 $ (le plus vendu)</h3>
         <p>2 vidéos/semaine + CFO/CRM complet + bots + dashboard luxe</p>
-        <button class="cta-button">Choisir 1 mois</button>
-        <button class="cta-button">Choisir 3 mois (-5%)</button>
-        <button class="cta-button">Choisir 6 mois (-10%)</button>
-        <button class="cta-button">Choisir 12 mois (-15%)</button>
+        <button class="cta-button">1 mois</button>
+        <button class="cta-button">3 mois (-5%)</button>
+        <button class="cta-button">6 mois (-10%)</button>
+        <button class="cta-button">12 mois (-15%)</button>
       </div>
     </div>
 
@@ -237,39 +244,34 @@
       </thead>
       <tbody>
         <tr>
-          <td>Vidéos par semaine</td>
-          <td>1 (initiale seulement)</td>
-          <td>2 vidéos personnalisées / semaine</td>
+          <td>Vidéos</td>
+          <td>1 (initiale)</td>
+          <td>2 par semaine – livrées 72h</td>
         </tr>
         <tr>
           <td>Mini-site</td>
-          <td>Version simple</td>
-          <td>Personnalisé selon votre secteur</td>
+          <td>Basique</td>
+          <td>Personnalisé selon la niche</td>
         </tr>
         <tr>
-          <td>CFO / CRM</td>
+          <td>CFO & CRM</td>
           <td>CFO de base</td>
-          <td>CFO complet + CRM intégré</td>
+          <td>CFO complet + CRM inclus</td>
+        </tr>
+        <tr>
+          <td>Dashboard</td>
+          <td>Standard</td>
+          <td>Luxe + gamifié</td>
+        </tr>
+        <tr>
+          <td>App mobile simulée</td>
+          <td>Non incluse</td>
+          <td>Incluse</td>
         </tr>
         <tr>
           <td>Bots IA</td>
           <td>Non inclus</td>
-          <td>70+ bots IA spécialisés</td>
-        </tr>
-        <tr>
-          <td>Dashboard</td>
-          <td>Version standard</td>
-          <td>Gamifié style Versace</td>
-        </tr>
-        <tr>
-          <td>Livraison vidéos</td>
-          <td>1 vidéo livrée</td>
-          <td>2 vidéos/semaine – 72h max</td>
-        </tr>
-        <tr>
-          <td>Application</td>
-          <td>Non incluse</td>
-          <td>App installable simulée (PWA)</td>
+          <td>70+ bots spécialisés</td>
         </tr>
       </tbody>
     </table>
@@ -277,5 +279,3 @@
 </body>
 </html>
 
-</body>
-</html>
