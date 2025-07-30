@@ -46,6 +46,7 @@
       max-width: 800px;
       border-radius: 12px;
       overflow: hidden;
+      box-shadow: 0 0 20px #0b7a95;
     }
 
     iframe {
@@ -66,6 +67,11 @@
       padding: 20px;
       margin-bottom: 30px;
       border-radius: 8px;
+      transition: transform 0.3s ease;
+    }
+
+    .value-block:hover {
+      transform: scale(1.03);
     }
 
     .value-block h3 {
@@ -82,6 +88,8 @@
       text-align: center;
       animation: pulse 2s infinite;
       cursor: pointer;
+      max-width: 500px;
+      margin: 40px auto 0;
     }
 
     @keyframes pulse {
@@ -102,12 +110,25 @@
       font-size: 32px;
     }
 
+    .forfait-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 40px;
+    }
+
     .forfait {
       background-color: #000;
       border-radius: 10px;
       padding: 30px;
-      margin: 20px;
+      max-width: 600px;
+      width: 100%;
       text-align: center;
+    }
+
+    .forfait.signature {
+      border: 3px solid #ff4c4c;
+      animation: pulse 2s infinite;
     }
 
     .forfait h3 {
@@ -120,7 +141,7 @@
     }
 
     .cta-button {
-      margin-top: 20px;
+      margin: 10px;
       background-color: #fff;
       color: #0b7a95;
       padding: 12px 24px;
@@ -129,6 +150,25 @@
       font-size: 16px;
       cursor: pointer;
       font-weight: bold;
+    }
+
+    .comparison-table {
+      background: #000;
+      color: #fff;
+      border-collapse: collapse;
+      margin: 40px auto;
+      width: 90%;
+    }
+
+    .comparison-table th,
+    .comparison-table td {
+      border: 1px solid #0b7a95;
+      padding: 12px 16px;
+      text-align: center;
+    }
+
+    .comparison-table th {
+      background: #0b7a95;
     }
   </style>
 </head>
@@ -149,21 +189,20 @@
   <section class="value-section">
     <div class="value-block">
       <h3>Génération automatique de contenu vidéo</h3>
-      <p>Des vidéos précises et percutantes, adaptées à votre secteur, votre style, votre entreprise livrées en 72h.</p>
+      <p>Des vidéos précises et percutantes, adaptées à votre secteur, livrées en 72h.</p>
     </div>
     <div class="value-block">
-      <h3>CRM + CFO + Tactique</h3>
-      <p>Une interface unique, simple, facile et connectée pour gérer toute votre entreprise.</p>
+      <h3>CRM + CFO + Dashboard gamifié</h3>
+      <p>Une interface unique et connectée pour gérer toute votre entreprise.</p>
     </div>
     <div class="value-block">
       <h3>Bots IA spécialisés</h3>
-      <p>Des assistants intelligents pour chaque type de client, opérationnels en 1 clic. Des assistants uniques et qui ne dorment jamais.</p>
+      <p>Des assistants intelligents pour chaque type de client, opérationnels en 1 clic.</p>
     </div>
     <div class="value-block">
       <h3>Design immersif et incitatif</h3>
-      <p>Tout a été pensé pour maximiser l'engagement de vos clients et favoriser la conversion à chaque étape.</p>
+      <p>Tout a été pensé pour maximiser l'engagement et favoriser la conversion à chaque étape.</p>
     </div>
-
     <div class="cta-red" onclick="location.href='#forfaits'">
       Découvrez la différence VOKA maintenant
     </div>
@@ -171,27 +210,72 @@
 
   <section class="pricing-section" id="forfaits">
     <h2>Nos Forfaits</h2>
+    <div class="forfait-container">
+      <div class="forfait">
+        <h3>Découverte – 497 $</h3>
+        <p>Vidéo AI + mini-site + CFO de base</p>
+        <button class="cta-button">Choisir ce forfait</button>
+      </div>
 
-    <div class="forfait">
-      <h3>Découverte – 497 $</h3>
-      <p>2 Vidéos AI + mini-site + CFO de base</p>
-      <button class="cta-button">Choisir ce forfait</button>
+      <div class="forfait signature">
+        <h3>Signature – 2497 $ (le plus vendu)</h3>
+        <p>2 vidéos/semaine + CFO/CRM complet + bots + dashboard luxe</p>
+        <button class="cta-button">Choisir 1 mois</button>
+        <button class="cta-button">Choisir 3 mois (-5%)</button>
+        <button class="cta-button">Choisir 6 mois (-10%)</button>
+        <button class="cta-button">Choisir 12 mois (-15%)</button>
+      </div>
     </div>
 
-    <div class="forfait" style="border: 2px solid gold">
-      <h3>Signature – 997 $ (le plus vendu)</h3>
-      <p>2 vidéos/semaine + CFO/CRM complet + bots + dashboard luxe</p>
-      <button class="cta-button">Choisir 1 mois</button>
-      <button class="cta-button">Choisir 3 mois (-5%)</button>
-      <button class="cta-button">Choisir 6 mois (-10%)</button>
-      <button class="cta-button">Choisir 12 mois (-15%)</button>
-    </div>
-
-    <div class="forfait">
-      <h3>Empire – 2497 $</h3>
-      <p>5 vidéos/sem + closeurs + optimisation continue</p>
-      <button class="cta-button">Commencer votre Empire</button>
-    </div>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Fonctionnalité</th>
+          <th>Découverte</th>
+          <th>Signature</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>Vidéos par semaine</td>
+          <td>1 (initiale seulement)</td>
+          <td>2 vidéos personnalisées / semaine</td>
+        </tr>
+        <tr>
+          <td>Mini-site</td>
+          <td>Version simple</td>
+          <td>Personnalisé selon votre secteur</td>
+        </tr>
+        <tr>
+          <td>CFO / CRM</td>
+          <td>CFO de base</td>
+          <td>CFO complet + CRM intégré</td>
+        </tr>
+        <tr>
+          <td>Bots IA</td>
+          <td>Non inclus</td>
+          <td>70+ bots IA spécialisés</td>
+        </tr>
+        <tr>
+          <td>Dashboard</td>
+          <td>Version standard</td>
+          <td>Gamifié style Versace</td>
+        </tr>
+        <tr>
+          <td>Livraison vidéos</td>
+          <td>1 vidéo livrée</td>
+          <td>2 vidéos/semaine – 72h max</td>
+        </tr>
+        <tr>
+          <td>Application</td>
+          <td>Non incluse</td>
+          <td>App installable simulée (PWA)</td>
+        </tr>
+      </tbody>
+    </table>
   </section>
+</body>
+</html>
+
 </body>
 </html>
