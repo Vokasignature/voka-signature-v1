@@ -1,69 +1,119 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <link rel="icon" type="image/png" href="ton-dossier/logo-voka.png">
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Centre d’aide</title>
-  <link rel="stylesheet" href="style.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>VOKA – Donnez une voix à votre succès</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0b7a95, #000);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+      letter-spacing: 1px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 100px 20px 50px;
+      background: radial-gradient(ellipse at center, #0b7a95 0%, #000 80%);
+    }
+
+    .hero h2 {
+      font-size: 38px;
+      margin-bottom: 20px;
+    }
+
+    .hero p {
+      font-size: 20px;
+      margin-bottom: 40px;
+    }
+
+    .cta-button {
+      background: #0b7a95;
+      color: #fff;
+      padding: 15px 40px;
+      font-size: 18px;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background: #095d6e;
+    }
+
+    .video-section {
+      margin: 60px auto;
+      width: 90%;
+      max-width: 900px;
+      border: 2px solid #0b7a95;
+      border-radius: 12px;
+      overflow: hidden;
+    }
+
+    iframe {
+      width: 100%;
+      height: 500px;
+      border: none;
+    }
+
+    footer {
+      padding: 40px;
+      background-color: #0b7a95;
+      text-align: center;
+      font-size: 14px;
+      color: white;
+    }
+  </style>
 </head>
 <body>
-<body>
-  <div class="sidebar">
-    <a href="dashboard.html">Dashboard</a>
-    <a href="voka-cfo.html">CFO</a>
-    <a href="voka-crm.html">CRM</a>
-    <a href="voka-videos.html">Vidéos</a>
-    <a href="voka-bots.html">Bots</a>
-    <a href="voka-tunnel.html">Tunnel</a>
-    <a href="elia.html">Elia</a>
-    <a href="calendrier.html">Calendrier</a>
-    <a href="voka-drop.html">VOKA Drop</a>
-    <a href="ressources.html">Ressources</a>
-    <a href="temoignages.html">Témoignages</a>
-    <a href="boutique.html">Boutique</a>
-    <a href="reseaux.html">Réseaux Sociaux</a>
-    <a href="preuvia.html">Preuvia</a>
-    <a href="quandca.html">QuandÇa</a>
-    <a href="tempo.html">Tempo</a>
-    <a href="tradia.html">Tradia</a>
-    <a href="cgu.html">CGU</a>
-  </div>
 
-  <div class="main-content">
-    <!-- ici commence le contenu propre à la page -->
-
-  <header><h1>Centre d’Aide VOKA</h1></header>
-
+<header>
+  <h1>VOKA</h1>
   <nav>
-    <ul>
-      <li><a href="dashboard-admin.html">Dashboard Admin</a></li>
-      <li><a href="faq.html">FAQ</a></li>
-      <li><a href="aide.html" class="active">Centre d’Aide</a></li>
-    </ul>
+    <a href="#forfaits">Forfaits</a>
+    <a href="#video">Vidéo</a>
+    <a href="#contact">Contact</a>
+    <a href="/dashboard.html">Se connecter</a>
   </nav>
+</header>
 
-  <main>
-    <section>
-      <h2>🛠️ Besoin d’aide ?</h2>
-      <p>Remplis le formulaire ci-dessous et un agent IA ou un humain te répondra rapidement :</p>
+<section class="hero">
+  <h2>Créez votre empire, commencez maintenant.</h2>
+  <p>Automatisation. Performance. Stratégie. Aucun mot inutile.</p>
+  <button class="cta-button" onclick="location.href='#forfaits'">Découvrir les forfaits</button>
+</section>
 
-      <form action="https://formspree.io/f/xyzpzzon" method="POST">
-        <label for="nom">Nom :</label>
-        <input type="text" name="nom" id="nom" required>
+<section id="video" class="video-section">
+  <!-- Vidéo d'intro à insérer ici (YouTube ou Vercel embed) -->
+  <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Vidéo VOKA d’intro"></iframe>
+</section>
 
-        <label for="email">Email :</label>
-        <input type="email" name="email" id="email" required>
-
-        <label for="message">Message :</label>
-        <textarea name="message" id="message" rows="5" required></textarea>
-
-        <button type="submit">Envoyer la demande</button>
-      </form>
-
-      <p style="margin-top: 30px;">⏱ Réponse sous 48 h maximum (ou instantanée via bot IA selon le forfait).</p>
-    </section>
-  </main>
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
 
 </body>
 </html>
