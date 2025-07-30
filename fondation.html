@@ -1,59 +1,93 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <link rel="icon" type="image/png" href="ton-dossier/logo-voka.png">
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Fondation William</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Fondation William – VOKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0b7a95, #000);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+    }
+
+    .container {
+      padding: 40px;
+      text-align: center;
+    }
+
+    .message {
+      background-color: #111;
+      border: 1px solid #0b7a95;
+      border-radius: 12px;
+      padding: 40px;
+      margin: 0 auto;
+      max-width: 700px;
+    }
+
+    h2 {
+      color: #0b7a95;
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
 
-  <header><h1>VOKA Dashboard</h1></header>
-
+<header>
+  <h1>VOKA</h1>
   <nav>
-    <ul>
-      <li><a href="dashboard.html">Accueil</a></li>
-      <li><a href="formulaire.html">Formulaire</a></li>
-      <li><a href="cfo.html">VOKA CFO</a></li>
-      <li><a href="crm.html">VOKA CRM</a></li>
-      <li><a href="bots.html">VOKA Bots</a></li>
-      <li><a href="videos.html">VOKA Vidéos</a></li>
-      <li><a href="tunnel.html">VOKA Tunnel</a></li>
-      <li><a href="calendrier.html">VOKA Calendrier</a></li>
-      <li><a href="ressources.html">VOKA Ressources</a></li>
-      <li><a href="temoignages.html">VOKA Témoignages</a></li>
-      <li><a href="boutique.html">VOKA Boutique</a></li>
-      <li><a href="partenaires.html">VOKA Partenaires</a></li>
-      <li><a href="fondation.html" class="active">Fondation William</a></li>
-    </ul>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="voka-ressources.html">Ressources</a>
+    <a href="fondation.html">Fondation</a>
   </nav>
+</header>
 
-  <main>
-    <section>
-      <h2>💙 Fondation William</h2>
-      <p style="font-style: italic;">« Ensemble, tout devient possible. »</p>
+<div class="container">
+  <div class="message">
+    <h2>Fondation William</h2>
+    <p>La Fondation William a pour mission d’aider les enfants atteints d’autisme, de trisomie 21 ou de troubles intellectuels à s’épanouir.</p>
+    <p>L’ouverture officielle est prévue sous peu. Merci pour votre intérêt et votre patience.</p>
+    <p><em>Ensemble, tout devient possible.</em></p>
+  </div>
+</div>
 
-      <img src="fondation-logo.png" alt="Logo Fondation William" style="max-width: 200px; margin: 30px 0;">
-
-      <p>
-        La Fondation William vient en aide aux jeunes enfants oubliés, notamment ceux atteints d’autisme,
-        de trisomie 21, ou de troubles intellectuels. Notre mission est d’offrir un soutien émotionnel,
-        éducatif et humain grâce à :
-      </p>
-
-      <ul>
-        <li>✅ Une plateforme communautaire pour connecter les parents (filtrée par région)</li>
-        <li>✅ Une future application pour enfants, incluant un compagnon virtuel qui parle et console</li>
-        <li>✅ Des fonctionnalités ludiques : encouragements à sortir, découvrir, jouer, rêver</li>
-        <li>✅ Une interface de sécurité parentale connectée à celle de l’enfant</li>
-      </ul>
-
-      <div style="margin-top: 40px; padding: 20px; background-color: #0a0a0a; border-left: 5px solid #00baff;">
-        <p>🎁 Chaque abonnement VOKA contribue directement à cette cause. Merci pour votre soutien. 💙</p>
-      </div>
-    </section>
-  </main>
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
 
 </body>
 </html>
+
