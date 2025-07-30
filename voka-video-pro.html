@@ -1,41 +1,106 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Gestion des Vidéos – Admin</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOKA – Générateur Vidéo PRO</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+    }
+
+    header {
+      padding: 20px;
+      background: linear-gradient(90deg, #0b7a95, #000);
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      color: #fff;
+    }
+
+    .container {
+      padding: 60px 20px;
+      max-width: 1000px;
+      margin: auto;
+      text-align: center;
+    }
+
+    .section {
+      margin-bottom: 50px;
+    }
+
+    .section h2 {
+      font-size: 28px;
+      color: #0b7a95;
+      margin-bottom: 15px;
+    }
+
+    .section p {
+      font-size: 17px;
+      color: #ccc;
+      max-width: 700px;
+      margin: auto;
+    }
+
+    .locked-message {
+      background-color: #111;
+      border: 1px solid #0b7a95;
+      border-radius: 10px;
+      padding: 30px;
+      margin-top: 40px;
+    }
+
+    .cta-button {
+      background-color: #0b7a95;
+      border: none;
+      padding: 14px 28px;
+      font-size: 16px;
+      color: white;
+      border-radius: 40px;
+      cursor: pointer;
+      margin-top: 20px;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #095d6e;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>Gestion des Vidéos Client</h1>
-    <p>Voici toutes les demandes reçues. Gère-les facilement.</p>
+  <header>
+    <h1>VOKA – Générateur Vidéo PRO</h1>
+  </header>
 
-    <table>
-      <thead>
-        <tr>
-          <th>Client</th>
-          <th>Message / Script</th>
-          <th>Style</th>
-          <th>Voix</th>
-          <th>Format</th>
-          <th>Statut</th>
-        </tr>
-      </thead>
-      <tbody>
-        <!-- Exemple statique. À remplacer par contenu dynamique plus tard -->
-        <tr>
-          <td>Entreprise X</td>
-          <td>Promo service auto</td>
-          <td>Professionnel</td>
-          <td>Voix IA féminine</td>
-          <td>TikTok</td>
-          <td>À faire</td>
-        </tr>
-      </tbody>
-    </table>
+  <div class="container">
+    <div class="section">
+      <h2>Optimisez vos vidéos automatiquement</h2>
+      <p>Générez plusieurs versions de vos vidéos avec des variantes de voix, de style, d'intro, de VFX et d'appels à l'action. Idéal pour tester, analyser et dupliquer les meilleures performances.</p>
+    </div>
 
-    <button>Exporter les demandes</button>
-  </main>
+    <div class="section">
+      <h2>Analyse des variantes</h2>
+      <p>Identifiez la meilleure combinaison pour chaque niche, public ou plateforme à partir des performances observées.</p>
+    </div>
+
+    <div class="section">
+      <h2>Duplication stratégique</h2>
+      <p>Réutilisez vos meilleures vidéos optimisées dans d'autres secteurs, avec ajustements automatiques proposés par VOKA.</p>
+    </div>
+
+    <div class="locked-message">
+      <h2>🔒 Accès restreint pour votre forfait</h2>
+      <p>Cette fonction est disponible uniquement avec le Forfait Signature. Passez à Signature pour débloquer le générateur complet et créer des vidéos hautement performantes en un clic.</p>
+      <button class="cta-button" onclick="window.location.href='forfait.html'">Passer au Forfait Signature</button>
+    </div>
+  </div>
+
 </body>
 </html>
