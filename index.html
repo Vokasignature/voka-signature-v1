@@ -1,160 +1,173 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VOKA - Donnez une voix à votre succès</title>
-  <link rel="icon" type="image/png" href="favicon.png">
   <style>
     body {
       margin: 0;
-      font-family: 'Roboto', sans-serif;
-      background-color: #000;
-      color: #fff;
+      font-family: Roboto, sans-serif;
+      background: linear-gradient(to bottom right, #0a0a0a, #111);
+      color: #f5f5f5;
     }
+
     header {
-      background: linear-gradient(90deg, #0b7a95, #052e4d);
-      padding: 30px 20px;
       text-align: center;
+      padding: 80px 20px 40px;
+      background-color: #0a0a0a;
     }
+
     header h1 {
-      font-size: 3em;
+      font-size: 2.5em;
       animation: pulse 2s infinite;
+      color: #0b7a95;
     }
+
     @keyframes pulse {
-      0% { text-shadow: 0 0 5px #870619; }
-      50% { text-shadow: 0 0 20px #870619; }
-      100% { text-shadow: 0 0 5px #870619; }
+      0% { transform: scale(1); }
+      50% { transform: scale(1.03); }
+      100% { transform: scale(1); }
     }
-    .section {
+
+    section {
+      max-width: 1000px;
+      margin: auto;
       padding: 60px 20px;
-      text-align: center;
     }
-    .fade-in {
-      animation: fadeIn 2s ease-in-out forwards;
-      opacity: 0;
+
+    .forfaits {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
     }
-    @keyframes fadeIn {
-      0% { opacity: 0; transform: translateY(20px); }
-      100% { opacity: 1; transform: translateY(0); }
+
+    .forfait {
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 15px;
+      padding: 30px;
+      margin: 20px 0;
+      width: 90%;
+      max-width: 600px;
+      transition: transform 0.3s;
     }
-    .cta-button {
-      background-color: #0b7a95;
-      border: none;
+
+    .forfait:hover {
+      transform: scale(1.02);
+    }
+
+    .cta {
+      display: block;
+      margin: 30px auto;
       padding: 15px 30px;
-      margin-top: 30px;
-      font-size: 1.2em;
-      color: #fff;
+      background-color: #0b7a95;
+      color: white;
+      font-weight: bold;
+      text-decoration: none;
       border-radius: 10px;
-      cursor: pointer;
-      transition: background-color 0.3s;
+      text-align: center;
+      transition: background 0.3s;
     }
-    .cta-button:hover {
+
+    .cta:hover {
       background-color: #870619;
     }
-    .footer {
-      background-color: #111;
-      padding: 40px 20px;
-      text-align: center;
-      font-size: 0.9em;
+
+    .testimonial, .faq {
+      background-color: #1c1c1c;
+      border-radius: 15px;
+      padding: 30px;
+      margin-top: 40px;
     }
-    .footer a {
-      color: #0b7a95;
+
+    footer {
+      background-color: #000;
+      color: #999;
+      text-align: center;
+      padding: 40px 20px;
+    }
+
+    footer img {
+      max-width: 150px;
+      margin-bottom: 20px;
+    }
+
+    footer a {
+      color: #999;
       margin: 0 10px;
       text-decoration: none;
     }
-    .forfait-section {
-      background-color: #111;
-      padding: 80px 20px;
-    }
-    .forfait-section h2 {
-      font-size: 2em;
-      margin-bottom: 30px;
-    }
-    .forfait {
-      border: 2px solid #0b7a95;
-      border-radius: 15px;
-      margin: 30px auto;
-      padding: 30px;
-      max-width: 600px;
-      background-color: #000;
-      box-shadow: 0 0 15px #0b7a95;
-      transition: transform 0.3s ease;
-    }
-    .forfait:hover {
-      transform: scale(1.03);
-    }
-    .forfait h3 {
-      color: #0b7a95;
-      font-size: 1.5em;
-      margin-bottom: 20px;
-    }
-    .forfait ul {
-      list-style: none;
-      padding: 0;
-      text-align: left;
-    }
-    .forfait ul li::before {
-      content: "✓ ";
-      color: #0b7a95;
-    }
   </style>
 </head>
+
 <body>
   <header>
     <h1>VOKA - Donnez une voix à votre succès</h1>
   </header>
 
-  <section class="section fade-in">
-    <video width="80%" controls>
-      <source src="voka-promo.mp4" type="video/mp4">
-      Votre navigateur ne supporte pas la vidéo.
-    </video>
+  <section>
+    <h2 style="text-align: center;">Prêt à transformer ton entreprise avec un écosystème complet, automatisé et intelligent ?</h2>
+    <a class="cta" href="#forfaits">Je veux découvrir VOKA</a>
   </section>
 
-  <section class="section fade-in">
-    <h2>Prêt à transformer ton entreprise avec un écosystème complet, automatisé et intelligent ?</h2>
-    <button class="cta-button" onclick="location.href='#forfaits'">Découvrir les forfaits</button>
-  </section>
-
-  <section class="forfait-section" id="forfaits">
-    <h2>Forfaits VOKA</h2>
-
+  <section id="forfaits" class="forfaits">
     <div class="forfait">
       <h3>Forfait DÉCOUVERTE - 497 $/mois</h3>
       <ul>
-        <li>2 vidéos IA personnalisées</li>
-        <li>Mini-site simplifié</li>
+        <li>2 vidéos AI personnalisées</li>
+        <li>Mini site simplifié</li>
         <li>CFO & CRM de base</li>
         <li>VOKA Visionnaire (limité)</li>
-        <li>Bot IA selon votre niche (limité)</li>
+        <li>Bots IA (limité selon votre niche)</li>
         <li>Calendrier d’affaires intégré</li>
-        <li>Accès à la bibliothèque VOKA Drop (limité)</li>
+        <li>Ressources essentielles</li>
       </ul>
-      <button class="cta-button">Choisir ce forfait</button>
     </div>
-
     <div class="forfait">
       <h3>Forfait SIGNATURE - 997 $/mois</h3>
       <ul>
-        <li>2 vidéos stratégiques/semaine livrées sous 72h</li>
-        <li>Mini-site personnalisé + tunnel émotionnel</li>
-        <li>CFO + CRM complet</li>
-        <li>VOKA Visionnaire complet</li>
-        <li>Bots IA spécialisés selon votre niche</li>
-        <li>Calendrier intégré intelligent</li>
-        <li>App mobile PWA installable</li>
-        <li>VOKA Drop illimité</li>
-        <li>Clone-to-Win + robot prospecteur</li>
-        <li>Ressources stratégiques & IA collaborative</li>
+        <li>4 vidéos stratégiques/mois (voix réelle ou IA)</li>
+        <li>Tunnel immersif + page d’atterrissage</li>
+        <li>Mini-site ultra personnalisé</li>
+        <li>CFO & CRM complets</li>
+        <li>VOKA Visionnaire illimité</li>
+        <li>Bots IA spécialisés + Prospecteur</li>
+        <li>App mobile installable (PWA)</li>
+        <li>Vidéos livrées en 72h</li>
       </ul>
-      <button class="cta-button">Choisir ce forfait</button>
     </div>
   </section>
 
-  <div class="footer">
-    <img src="logo-voka.png" alt="Logo VOKA" width="100" style="margin-bottom: 15px;">
-    <div>Produit du Québec | <a href="cgu.html">Conditions d'utilisation</a> | <a href="politique-confidentialite.html">Politique de confidentialité</a> | <a href="contact.html">Nous contacter</a></div>
-  </div>
+  <section class="testimonial">
+    <h2>Ils ont choisi VOKA</h2>
+    <p>« Grâce à VOKA, j’ai automatisé 80 % de mes tâches. Mes vidéos sortent chaque semaine sans effort. C’est tout simplement magique. »</p>
+    <p>— Sophie, coach en santé naturelle</p>
+  </section>
+
+  <section class="faq">
+    <h2>Questions fréquentes</h2>
+    <h4>Est-ce que VOKA remplace une agence marketing ?</h4>
+    <p>Oui. VOKA est conçu pour offrir tout ce qu’une agence propose — et bien plus — en 100 % automatisé, pour 10x moins cher.</p>
+    <h4>Dois-je être bon en technologie ?</h4>
+    <p>Non. VOKA a été pensé pour les entrepreneurs, même débutants. Tout est guidé, simple et intuitif.</p>
+  </section>
+
+  <section style="text-align: center; padding: 60px 20px;">
+    <h2>Tu veux gagner du temps, réduire ta charge mentale et attirer les bons clients ?</h2>
+    <a class="cta" href="#forfaits">Passe à VOKA maintenant</a>
+  </section>
+
+  <footer>
+    <img src="logo-voka.png" alt="Logo VOKA" />
+    <p>Produit du Québec</p>
+    <p>
+      <a href="cgu.html">Conditions d'utilisation</a> |
+      <a href="politique-confidentialite.html">Politique de confidentialité</a> |
+      <a href="mailto:info@getvoka.com">Nous contacter</a>
+    </p>
+  </footer>
 </body>
+
 </html>
