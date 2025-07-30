@@ -1,55 +1,106 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mes Vidéos VOKA</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>VOKA – Mes Vidéos</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      background-color: #000;
+      font-family: 'Roboto', sans-serif;
+      color: #fff;
+    }
+
+    header {
+      padding: 20px;
+      background: linear-gradient(90deg, #0b7a95, #000);
+      text-align: center;
+    }
+
+    header h1 {
+      margin: 0;
+      font-size: 26px;
+      color: #fff;
+    }
+
+    .container {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .video-card {
+      background-color: #111;
+      border: 1px solid #0b7a95;
+      border-radius: 10px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .video-card h2 {
+      margin-top: 0;
+      font-size: 20px;
+      color: #0b7a95;
+    }
+
+    .video-card p {
+      color: #ccc;
+    }
+
+    .cta-button {
+      background-color: #0b7a95;
+      border: none;
+      padding: 10px 20px;
+      font-size: 14px;
+      color: white;
+      border-radius: 40px;
+      cursor: pointer;
+      margin-top: 10px;
+      transition: background 0.3s;
+    }
+
+    .cta-button:hover {
+      background-color: #095d6e;
+    }
+
+    .locked-message {
+      background-color: #111;
+      border: 1px solid #0b7a95;
+      border-radius: 10px;
+      padding: 30px;
+      margin-top: 40px;
+      text-align: center;
+    }
+  </style>
 </head>
 <body>
-  <div class="dashboard-container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo-section">
-        <img src="logo-voka.png" alt="Logo VOKA" class="logo" />
-        <p class="slogan">Donnez une voix à votre succès</p>
-      </div>
-      <nav>
-        <a href="dashboard-client.html">🏠 Dashboard</a>
-        <a href="cfo.html">📊 CFO</a>
-        <a href="crm.html">📁 CRM</a>
-        <a class="active" href="voka-videos.html">🎥 Vidéos</a>
-        <a href="voka-bots.html">🤖 Bots IA</a>
-        <a href="voka-tunnel.html">🧠 Tunnel</a>
-        <a href="voka-calendrier.html">📅 Calendrier</a>
-        <a href="voka-ressources.html">📚 Ressources</a>
-        <a href="voka-temoignages.html">🌟 Témoignages</a>
-        <a href="voka-boutique.html" class="locked">🛍️ Boutique</a>
-        <a href="visionnaire.html">🧠 VOKA Visionnaire</a>
-        <a href="fondation.html">❤️ Fondation William</a>
-      </nav>
-      <footer class="footer">
-        <p>© 2025 VOKA • Créé par un entrepreneur pour les entrepreneurs</p>
-        <a href="cgu.html">CGU</a> • <a href="politique-confidentialite.html">Confidentialité</a>
-      </footer>
-    </aside>
+  <header>
+    <h1>VOKA – Mes Vidéos</h1>
+  </header>
 
-    <!-- CONTENU -->
-    <main class="main-content">
-      <h1>Mes Vidéos</h1>
-      <p>Voici tes vidéos générées automatiquement par VOKA à partir de ta voix ou de ton texte :</p>
-      <ul>
-        <li>🎬 Vidéo de bienvenue personnalisée</li>
-        <li>💡 Vidéo émotionnelle du tunnel</li>
-        <li>🔥 Vidéos hebdomadaires virales</li>
-        <li>🎥 Variantes A/B testées automatiquement</li>
-      </ul>
-      <p><em>Les vidéos seront livrées sous 72h après soumission de ton texte ou audio.</em></p>
-      <div class="cta-block">
-        <a href="formulaire.html" class="cta-button">Soumettre une nouvelle vidéo</a>
-      </div>
-    </main>
+  <div class="container">
+    <div class="video-card">
+      <h2>Vidéo stratégique #1</h2>
+      <p>Date : 28 juillet 2025</p>
+      <button class="cta-button">Rejouer</button>
+      <button class="cta-button">Demander une nouvelle version</button>
+    </div>
+
+    <div class="video-card">
+      <h2>Vidéo stratégique #2</h2>
+      <p>Date : 25 juillet 2025</p>
+      <button class="cta-button">Rejouer</button>
+      <button class="cta-button">Demander une nouvelle version</button>
+    </div>
+
+    <div class="locked-message">
+      <h2>🔒 Accès restreint pour votre forfait</h2>
+      <p>Accédez à l’historique complet de vos vidéos avec le Forfait Signature.</p>
+      <button class="cta-button" onclick="window.location.href='forfait.html'">Passer au Forfait Signature</button>
+    </div>
   </div>
+
 </body>
 </html>
-
