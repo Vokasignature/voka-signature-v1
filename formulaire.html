@@ -1,23 +1,131 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Formulaire VOKA</title>
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulaire – VOKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0b7a95, #000);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 700px;
+      margin: 50px auto;
+      padding: 30px;
+      background-color: #111;
+      border-radius: 12px;
+      border: 1px solid #0b7a95;
+    }
+
+    h2 {
+      color: #0b7a95;
+      margin-bottom: 20px;
+    }
+
+    label {
+      display: block;
+      margin: 15px 0 5px;
+    }
+
+    input, textarea, select {
+      width: 100%;
+      padding: 10px;
+      border-radius: 6px;
+      border: none;
+      margin-bottom: 20px;
+      background-color: #222;
+      color: #fff;
+    }
+
+    input[type="file"] {
+      background-color: transparent;
+      color: #fff;
+    }
+
+    button {
+      background-color: #0b7a95;
+      color: white;
+      padding: 12px 30px;
+      border: none;
+      border-radius: 30px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    button:hover {
+      background-color: #095d6e;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>Bienvenue chez VOKA</h1>
-    <p>Remplis ce formulaire pour activer ton dashboard personnalisé.</p>
-    <form action="mailto:tonemail@tonentreprise.com" method="post" enctype="text/plain">
-      <input type="text" placeholder="Nom de ton entreprise" required><br><br>
-      <input type="email" placeholder="Adresse email" required><br><br>
-      <input type="text" placeholder="Secteur / Niche" required><br><br>
-      <input type="file" placeholder="Logo"><br><br>
-      <textarea placeholder="Notes ou instructions" rows="5"></textarea><br><br>
-      <button type="submit">Envoyer</button>
-    </form>
-  </main>
+
+<header>
+  <h1>VOKA</h1>
+  <nav>
+    <a href="index.html">Accueil</a>
+    <a href="dashboard.html">Dashboard</a>
+  </nav>
+</header>
+
+<div class="container">
+  <h2>Formulaire d'intégration VOKA</h2>
+  <form action="https://formspree.io/f/xyzpzzon" method="POST" enctype="multipart/form-data">
+    <label for="entreprise">Nom de l’entreprise</label>
+    <input type="text" id="entreprise" name="entreprise" required>
+
+    <label for="secteur">Secteur d’activité</label>
+    <input type="text" id="secteur" name="secteur" required>
+
+    <label for="email">Adresse e-mail</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="logo">Logo de l’entreprise (PNG/JPG)</label>
+    <input type="file" id="logo" name="logo" accept="image/*">
+
+    <label for="texte">Script ou texte de présentation (optionnel)</label>
+    <textarea id="texte" name="texte" rows="4"></textarea>
+
+    <label for="audio">Fichier vocal (optionnel)</label>
+    <input type="file" id="audio" name="audio" accept="audio/*">
+
+    <button type="submit">Envoyer</button>
+  </form>
+</div>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
