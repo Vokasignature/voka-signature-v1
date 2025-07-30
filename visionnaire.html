@@ -3,52 +3,117 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>VOKA Visionnaire</title>
-  <link rel="stylesheet" href="style.css" />
+  <title>VOKA Visionnaire – Assistant Stratégique IA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0b7a95;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .zone-visionnaire {
+      background-color: #111;
+      border: 2px solid #0b7a95;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    label, textarea, select, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    textarea, select {
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #0b7a95;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #0b7a95;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #095d6e;
+    }
+
+    .reponse {
+      background-color: #0b7a95;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 30px;
+      color: white;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-  <div class="dashboard-container">
-    <!-- SIDEBAR -->
-    <aside class="sidebar">
-      <div class="logo-section">
-        <img src="logo-voka.png" alt="VOKA Logo" class="logo" />
-        <p class="slogan">Donnez une voix à votre succès</p>
-      </div>
-      <nav>
-        <a href="dashboard-client.html">🏠 Dashboard</a>
-        <a href="cfo.html">📊 CFO</a>
-        <a href="crm.html">📁 CRM</a>
-        <a href="voka-videos.html">🎥 Vidéos</a>
-        <a href="voka-bots.html">🤖 Bots</a>
-        <a href="voka-tunnel.html">🧠 Tunnel</a>
-        <a href="voka-calendrier.html">📅 Calendrier</a>
-        <a href="voka-ressources.html">📚 Ressources</a>
-        <a href="voka-temoignages.html">🌟 Témoignages</a>
-        <a href="voka-boutique.html" class="locked">🛍️ Boutique</a>
-        <a class="active" href="visionnaire.html">🧠 VOKA Visionnaire</a>
-        <a href="fondation.html">❤️ Fondation William</a>
-      </nav>
-      <footer class="footer">
-        <p>© 2025 VOKA • Créé par un entrepreneur pour les entrepreneurs</p>
-        <a href="cgu.html">CGU</a> • <a href="politique-confidentialite.html">Confidentialité</a>
-      </footer>
-    </aside>
 
-    <!-- CONTENU -->
-    <main class="main-content">
-      <h1>VOKA Visionnaire</h1>
-      <p>Ton assistant stratégique personnel, plus intelligent que ChatGPT.</p>
-      <ul>
-        <li>🧠 Répond à toutes tes questions d'affaires</li>
-        <li>📈 Propose des stratégies personnalisées selon ta niche</li>
-        <li>📊 Analyse tes tunnels, vidéos, CRM, et finances</li>
-        <li>💡 Suggère chaque semaine des idées puissantes</li>
-        <li>🎯 Évolue avec ton style, ton secteur et tes objectifs</li>
-      </ul>
-      <p><em>Ce module est en constante évolution. Tu peux poser ta question maintenant :</em></p>
-      <textarea placeholder="Pose ta question ici..." class="input-large"></textarea>
-      <button class="cta-button">Envoyer à VOKA Visionnaire</button>
-    </main>
-  </div>
+<h1>VOKA Visionnaire</h1>
+
+<div class="zone-visionnaire">
+  <p style="font-size: 16px; color: #aaa; text-align: center;">
+    Visionnaire est votre assistant IA commercial dédié à VOTRE entreprise. Il ne parle que de VOTRE niche. Il ne donne aucun accès à VOKA interne ou à Aurion. Usage exclusivement stratégique, marketing, développement, organisation.
+  </p>
+
+  <label for="probleme">Décrivez votre défi actuel :</label>
+  <textarea id="probleme" placeholder="Ex : J’ai de la difficulté à convertir mes prospects en clients."></textarea>
+
+  <label for="objectif">Quel est votre objectif ?</label>
+  <textarea id="objectif" placeholder="Ex : Augmenter mes ventes de 30 % ce mois-ci."></textarea>
+
+  <button onclick="genererPlan()">Obtenir un plan de Visionnaire</button>
+
+  <div class="reponse" id="resultat">Votre plan stratégique personnalisé apparaîtra ici...</div>
+</div>
+
+<script>
+function genererPlan() {
+  const pb = document.getElementById("probleme").value;
+  const obj = document.getElementById("objectif").value;
+  const resultat = document.getElementById("resultat");
+  resultat.innerHTML = `🎯 <strong>Défi détecté :</strong> ${pb}<br><br>
+  ✅ <strong>Objectif visé :</strong> ${obj}<br><br>
+  🔍 <strong>Plan proposé :</strong><br>
+  • Clarifiez votre offre avec des mots simples et puissants<br>
+  • Créez un tunnel de conversion immersif adapté à votre niche<br>
+  • Automatisez vos relances par courriel + SMS<br>
+  • Utilisez 2 vidéos par semaine avec un appel à l’action clair<br>
+  • Offrez un bonus d’entrée ou un test gratuit pour accélérer la conversion`;
+}
+</script>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
