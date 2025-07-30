@@ -4,19 +4,117 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VOKA Elia</title>
-  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: #000;
+      color: #fff;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0b7a95;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+      text-transform: uppercase;
+    }
+
+    .elia-container {
+      background-color: #111;
+      border-radius: 12px;
+      padding: 30px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .feature {
+      margin-bottom: 25px;
+      padding: 20px;
+      background-color: #1a1a1a;
+      border-radius: 8px;
+    }
+
+    .feature h3 {
+      color: #0b7a95;
+      margin-bottom: 10px;
+    }
+
+    .locked {
+      opacity: 0.5;
+      position: relative;
+    }
+
+    .locked::after {
+      content: '🔒 Fonction Premium – déverrouillez avec le Forfait Signature';
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: rgba(0,0,0,0.8);
+      padding: 10px 20px;
+      border: 2px dashed #0b7a95;
+      border-radius: 8px;
+      color: #fff;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    .upgrade-box {
+      margin-top: 30px;
+      padding: 20px;
+      border: 2px dashed #555;
+      border-radius: 10px;
+      background-color: #111;
+      text-align: center;
+    }
+
+    .upgrade-box p {
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 20px;
+    }
+
+    .upgrade-box button {
+      background-color: #0b7a95;
+      color: white;
+      border: none;
+      padding: 10px 25px;
+      font-size: 14px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    .upgrade-box button:hover {
+      background-color: #095d6e;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>Elia – Ton assistante IA</h1>
-    <p>Pose-lui des questions, note tes idées, reçois des rappels stratégiques et une aide en continu.</p>
+  <h1>VOKA Elia</h1>
 
-    <ul>
-      <li>Analyse intelligente de ton activité</li>
-      <li>Suggestions personnalisées selon ton profil</li>
-      <li>Connexion directe avec ton agenda</li>
-      <li>Support vocal ou texte</li>
-    </ul>
-  </main>
+  <div class="elia-container">
+    <div class="feature">
+      <h3>Rappels personnalisés</h3>
+      <p>Recevez des rappels quotidiens sur vos tâches, objectifs ou rendez-vous depuis Elia.</p>
+    </div>
+
+    <div class="feature locked">
+      <h3>Intégration vocale & gestion des priorités</h3>
+      <p>Parlez directement à Elia pour organiser votre semaine selon vos urgences et opportunités.</p>
+    </div>
+
+    <div class="feature locked">
+      <h3>Suivi émotionnel & motivationnel</h3>
+      <p>Elia s'adapte à votre humeur, vous motive et vous aide à rester concentré sur votre mission d'entrepreneur.</p>
+    </div>
+
+    <div class="upgrade-box">
+      <p>🧠 Débloquez la version complète d'Elia avec le Forfait Signature pour bénéficier d’un assistant personnel intelligent, empathique et stratégique.</p>
+      <button onclick="alert('Passage au Forfait Signature en cours...')">Débloquer toutes les fonctions</button>
+    </div>
+  </div>
 </body>
 </html>
