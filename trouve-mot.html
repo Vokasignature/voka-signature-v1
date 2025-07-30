@@ -3,22 +3,111 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>TR0UVE-MOT – Générateur de mots puissants</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Assistant Mots Puissants – VOKA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+      padding: 40px;
+    }
+
+    h1 {
+      color: #0b7a95;
+      font-size: 28px;
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .box-mots {
+      background-color: #111;
+      border: 2px solid #0b7a95;
+      border-radius: 10px;
+      padding: 30px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    label, textarea, select, button {
+      display: block;
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    textarea, select {
+      background-color: #000;
+      color: #fff;
+      border: 1px solid #0b7a95;
+      border-radius: 8px;
+      padding: 12px;
+      font-size: 16px;
+    }
+
+    button {
+      background-color: #0b7a95;
+      color: white;
+      border: none;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 30px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #095d6e;
+    }
+
+    .resultat {
+      background-color: #0b7a95;
+      padding: 20px;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 30px;
+      color: white;
+      margin-top: 60px;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>TROUVE-MOT</h1>
-    <p>Ce module t’aide à trouver les mots qui déclenchent une vraie réaction chez ton client.</p>
 
-    <ul>
-      <li>Mots émotionnels classés par impact (peur, envie, curiosité…)</li>
-      <li>Suggestions intelligentes selon ton objectif (CTA, slogan, pub…)</li>
-      <li>Listes de mots testés qui déclenchent des clics</li>
-      <li>Outil d’assemblage de punchlines puissantes</li>
-    </ul>
+<h1>Assistant Mots Puissants</h1>
 
-    <p><em>Avec TROUVE-MOT, tu n’écris plus… tu hypnotises.</em></p>
-  </main>
+<div class="box-mots">
+  <label for="context">Décris ton intention (vente, appel à l'action, branding, etc.) :</label>
+  <textarea id="context" placeholder="Exemple : appel à l'action pour réserver un appel découverte."></textarea>
+
+  <label for="ton">Quel ton veux-tu utiliser ?</label>
+  <select id="ton">
+    <option value="autoritaire">Autoritaire</option>
+    <option value="confiant">Confiant</option>
+    <option value="urgent">Urgent</option>
+    <option value="haut-de-gamme">Haut de gamme</option>
+  </select>
+
+  <button onclick="genererMots()">Générer mes mots puissants</button>
+
+  <div class="resultat" id="output">Ta recommandation VOKA apparaîtra ici...</div>
+</div>
+
+<script>
+function genererMots() {
+  const contexte = document.getElementById("context").value;
+  const ton = document.getElementById("ton").value;
+  const output = document.getElementById("output");
+  output.innerHTML = `🔑 Exemple de mots forts pour ton contexte :<br><br><strong>${contexte}</strong><br><br>• Offre exclusive<br>• Maintenant<br>• Transformation<br>• Incontournable<br>• Déclic immédiat<br><br><em>Ton : ${ton}</em>`;
+}
+</script>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
