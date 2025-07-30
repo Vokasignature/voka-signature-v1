@@ -61,13 +61,15 @@
       max-width: 1000px;
       margin: auto;
       padding: 40px 20px;
+      display: flex;
+      flex-direction: column;
+      gap: 30px;
     }
 
     .value-block {
       background: #fff;
       border-left: 6px solid #0b7a95;
       padding: 25px;
-      margin-bottom: 30px;
       border-radius: 8px;
       transition: transform 0.3s ease, box-shadow 0.3s ease;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
@@ -83,11 +85,6 @@
       color: #0b7a95;
     }
 
-    .cta-button-block {
-      margin-top: 20px;
-      text-align: center;
-    }
-
     .cta-button {
       margin: 10px auto;
       background-color: #0b7a95;
@@ -98,7 +95,7 @@
       font-size: 16px;
       cursor: pointer;
       font-weight: bold;
-      display: block;
+      display: inline-block;
       transition: background-color 0.3s ease, transform 0.3s ease;
     }
 
@@ -121,17 +118,17 @@
 
     .forfait-container {
       display: flex;
-      flex-direction: row;
+      flex-direction: column;
       gap: 30px;
-      justify-content: center;
-      flex-wrap: wrap;
+      align-items: center;
     }
 
     .forfait {
       background-color: #fff;
       border-radius: 10px;
       padding: 30px;
-      width: 300px;
+      width: 90%;
+      max-width: 500px;
       text-align: center;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -148,41 +145,41 @@
     }
 
     @keyframes pulse {
-      0% {
-        box-shadow: 0 0 0 0 rgba(255, 76, 76, 0.5);
-      }
-      70% {
-        box-shadow: 0 0 0 10px rgba(255, 76, 76, 0);
-      }
-      100% {
-        box-shadow: 0 0 0 0 rgba(255, 76, 76, 0);
-      }
-    }
-
-    .forfait h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-    }
-
-    .forfait p {
-      font-size: 16px;
+      0% { box-shadow: 0 0 0 0 rgba(255, 76, 76, 0.5); }
+      70% { box-shadow: 0 0 0 10px rgba(255, 76, 76, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(255, 76, 76, 0); }
     }
 
     .feature-list {
       list-style: none;
       padding: 0;
       margin: 20px 0;
-    }
-
-    .feature-list li {
       text-align: left;
-      margin-bottom: 8px;
     }
 
     .feature-list li::before {
       content: '✓';
       color: #0b7a95;
       margin-right: 10px;
+    }
+
+    .argument-section {
+      background: #fff;
+      padding: 60px 20px;
+      text-align: center;
+    }
+
+    .argument-section h2 {
+      font-size: 30px;
+      color: #0b7a95;
+      margin-bottom: 20px;
+    }
+
+    .argument-section p {
+      max-width: 900px;
+      margin: auto;
+      font-size: 18px;
+      margin-bottom: 30px;
     }
 
     footer {
@@ -192,14 +189,15 @@
       text-align: center;
     }
 
-    footer p {
-      margin: 5px 0;
+    footer a {
+      color: #fff;
+      text-decoration: underline;
     }
   </style>
 </head>
 <body>
   <header>
-    <h1>Produit du Québec – VOKA</h1>
+    <h1>VOKA – Donnez une voix à votre succès</h1>
   </header>
 
   <section class="hero">
@@ -213,19 +211,14 @@
 
   <section class="value-section">
     <div class="value-block">
-      <h3>VOKA CFO – Pilotez vos finances simplement</h3>
-      <p>Un tableau de bord complet pour visualiser revenus, dépenses, marges, taxes, prévisions. Inspiré de QuickBooks, mais plus simple, plus intelligent, connecté à votre réalité.</p>
-      <div class="cta-button-block"><button class="cta-button">Découvrir CFO</button></div>
+      <h3>Un écosystème tout-en-un</h3>
+      <p>Fini les abonnements multiples. Fini les outils fragmentés. VOKA regroupe vidéos, CRM, CFO, bots IA, tunnel de vente, assistant stratégique, automatisation et app mobile… en une seule plateforme.</p>
+      <button class="cta-button" onclick="document.querySelector('.pricing-section').scrollIntoView({behavior:'smooth'})">Découvrir nos forfaits</button>
     </div>
     <div class="value-block">
-      <h3>VOKA CRM – Gérez vos prospects et clients</h3>
-      <p>Relances automatiques, emails légaux, bots de suivi, fiche client intelligente. Pensé pour la vente, pas l’administratif.</p>
-      <div class="cta-button-block"><button class="cta-button">Voir CRM intégré</button></div>
-    </div>
-    <div class="value-block">
-      <h3>VOKA Visionnaire – Votre stratège IA personnel</h3>
-      <p>Un assistant ultra évolué, connecté à votre niche, qui vous guide avec clarté, suggestions, et tactiques concrètes pour votre business.</p>
-      <div class="cta-button-block"><button class="cta-button">Tester VOKA Visionnaire</button></div>
+      <h3>Pourquoi choisir VOKA ?</h3>
+      <p>Des dizaines d’outils regroupés pour moins de 1/5 du prix. Une IA dédiée à votre business. Une appli installable. Des vidéos émotionnelles sur mesure. Une expérience unique et gamifiée.</p>
+      <button class="cta-button" onclick="document.querySelector('.pricing-section').scrollIntoView({behavior:'smooth'})">Voir la différence</button>
     </div>
   </section>
 
@@ -237,29 +230,29 @@
         <ul class="feature-list">
           <li>2 Vidéos AI</li>
           <li>Mini-site simplifié</li>
-          <li>CFO et crm de base</li>
-          <li>Voka visionnaire (limité)</li>
+          <li>CFO et CRM de base</li>
+          <li>VOKA Visionnaire (limité)</li>
           <li>Bots IA selon votre niche (limité)</li>
-          <li>Bibliothèque de ressourse</li>
-          <li>Calendier d'affaire (limité)</li>
-          <li>Voka drop (limité)</li>
+          <li>Bibliothèque de ressources</li>
+          <li>Calendrier d'affaires (limité)</li>
+          <li>VOKA Drop (limité)</li>
         </ul>
         <button class="cta-button">Choisir ce forfait</button>
       </div>
       <div class="forfait signature">
         <h3>Signature – 997$/mois</h3>
-        <h3>(le plus vendu)</h3>
+        <p>(La meilleure offre)</p>
         <ul class="feature-list">
-          <li>2 vidéos/semaine</li>
+          <li>3 vidéos/semaine</li>
           <li>CFO & CRM complets</li>
           <li>70+ bots IA selon votre niche</li>
           <li>Dashboard luxe gamifié</li>
-          <li>App installable (PWA)</li>
-          <li>Tunnel émotionnel et landing page premium</li>
-          <li>Bibliothèque de ressourse</li>
-          <li>Calendier d'affaire</li>
-          <li>Voka drop</li>
-          <li>Et beaucoup plus...</li>
+          <li>App mobile installable (PWA)</li>
+          <li>Tunnel émotionnel + landing page</li>
+          <li>Bibliothèque de ressources</li>
+          <li>Calendrier d'affaires</li>
+          <li>VOKA Drop</li>
+          <li>Clone-to-Win + robot prospecteur</li>
         </ul>
         <button class="cta-button">Choisir 1 mois</button>
         <button class="cta-button">Choisir 3 mois (-5%)</button>
@@ -271,7 +264,7 @@
 
   <footer>
     <p>© 2025 VOKA. Tous droits réservés.</p>
-    <p><a href="#" style="color: #fff; text-decoration: underline;">Conditions d'utilisation</a> | <a href="#" style="color: #fff; text-decoration: underline;">Politique de confidentialité</a></p>
+    <p><a href="cgu.html">Conditions d'utilisation</a> | <a href="confidentialite.html">Politique de confidentialité</a> | <a href="mailto:info@getvoka.com">Nous contacter</a></p>
   </footer>
 </body>
 </html>
