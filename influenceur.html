@@ -1,25 +1,117 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>VOKA Influenceur</title>
-  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background-color: #000;
+      color: #fff;
+      font-family: 'Roboto', sans-serif;
+      margin: 0;
+    }
+
+    header {
+      background: linear-gradient(90deg, #0b7a95, #000);
+      padding: 20px 40px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    header h1 {
+      font-size: 24px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin-left: 30px;
+      font-weight: bold;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: 50px auto;
+      padding: 30px;
+    }
+
+    .module {
+      background-color: #111;
+      border: 1px solid #0b7a95;
+      border-radius: 12px;
+      padding: 30px;
+      margin-bottom: 30px;
+    }
+
+    .module h2 {
+      color: #0b7a95;
+      margin-top: 0;
+    }
+
+    .module p {
+      font-size: 16px;
+      margin-bottom: 20px;
+    }
+
+    .btn {
+      background-color: #0b7a95;
+      color: #fff;
+      padding: 12px 25px;
+      border: none;
+      border-radius: 30px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+
+    .btn:hover {
+      background-color: #095d6e;
+    }
+
+    footer {
+      background-color: #0b7a95;
+      text-align: center;
+      padding: 40px;
+      font-size: 14px;
+    }
+  </style>
 </head>
 <body>
-  <main class="content">
-    <h1>VOKA Influenceur</h1>
-    <p>Créer du contenu marketing viral et percutant :</p>
-    <ul>
-      <li>Générateur de scripts + captions</li>
-      <li>Analyse des vidéos gagnantes</li>
-      <li>Hashtags et titres adaptés à la niche</li>
-      <li>Robot Clone & Domine</li>
-    </ul>
-    <p><em>Bientôt connecté à l’IA vidéo avec VFX intégrés.</em></p>
-  </main>
-  <footer class="footer">
-    <p>&copy; VOKA | <a href="cgu.html">CGU</a> | <a href="politique.html">Politique</a></p>
-  </footer>
+
+<header>
+  <h1>VOKA</h1>
+  <nav>
+    <a href="dashboard.html">Dashboard</a>
+    <a href="influenceur.html">VOKA Influenceur</a>
+    <a href="formulaire.html">Formulaire</a>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="module">
+    <h2>Générateur de publicités</h2>
+    <p>Créez rapidement des publicités puissantes adaptées à votre secteur et vos objectifs. Basé sur les meilleures performances VOKA.</p>
+    <button class="btn">Générer une publicité</button>
+  </div>
+
+  <div class="module">
+    <h2>Générateur de scripts & e-mails</h2>
+    <p>Structurez vos séquences de communication avec des textes stratégiques adaptés à vos prospects.</p>
+    <button class="btn">Créer une séquence</button>
+  </div>
+
+  <div class="module">
+    <h2>Clone & Domine</h2>
+    <p>Analyse automatique des contenus les plus performants et duplication intelligente pour votre propre usage (adapté à votre niche).</p>
+    <button class="btn">Activer le clone</button>
+  </div>
+</div>
+
+<footer>
+  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
+</footer>
+
 </body>
 </html>
