@@ -1,100 +1,163 @@
 <!DOCTYPE html>
 <html lang="fr">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Conditions Générales d’Utilisation – VOKA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>VOKA - Donnez une voix à votre succès</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
   <style>
     body {
-      background-color: #000;
-      color: #fff;
-      font-family: 'Roboto', sans-serif;
       margin: 0;
-      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      background: linear-gradient(to bottom, #000000, #0b0b0b);
+      color: #fff;
     }
-
     header {
-      background: linear-gradient(90deg, #0b7a95, #000);
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    header h1 {
-      font-size: 24px;
-    }
-
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin-left: 30px;
-      font-weight: bold;
-    }
-
-    .container {
-      padding: 40px;
-    }
-
-    h2 {
-      color: #0b7a95;
-      font-size: 28px;
-      margin-bottom: 20px;
-    }
-
-    p {
-      line-height: 1.6;
-      margin-bottom: 20px;
-    }
-
-    ul {
-      margin-bottom: 20px;
-    }
-
-    li {
-      margin-bottom: 10px;
-    }
-
-    footer {
-      background-color: #0b7a95;
       text-align: center;
-      padding: 40px;
-      font-size: 14px;
+      padding: 2rem 1rem 1rem;
+    }
+    .logo {
+      font-size: 2.8rem;
+      font-weight: 900;
+      color: #0b7a95;
+      animation: pulse 2s infinite;
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    .hero {
+      text-align: center;
+      padding: 2rem;
+    }
+    .hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+    .hero p {
+      font-size: 1.2rem;
+      color: #ccc;
+      margin-bottom: 1.5rem;
+    }
+    .cta {
+      background-color: #0b7a95;
+      color: white;
+      border: none;
+      padding: 1rem 2rem;
+      font-size: 1.1rem;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+    }
+    .cta:hover {
+      background-color: #065865;
+    }
+    .video-container {
+      display: flex;
+      justify-content: center;
+      padding: 1rem;
+    }
+    .video-container iframe {
+      width: 90%;
+      max-width: 720px;
+      height: 400px;
+      border-radius: 10px;
+      box-shadow: 0 0 15px #0b7a95;
+    }
+    .section {
+      padding: 2rem;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section h2 {
+      color: #0b7a95;
+      font-size: 2rem;
+      text-align: center;
+    }
+    .block {
+      background: #111;
+      padding: 2rem;
+      margin: 1.5rem 0;
+      border-radius: 20px;
+      box-shadow: 0 0 15px rgba(11, 122, 149, 0.3);
+      transition: transform 0.3s ease;
+    }
+    .block:hover {
+      transform: translateY(-5px);
+    }
+    .footer {
+      background-color: #000;
+      text-align: center;
+      padding: 2rem 1rem;
+      font-size: 0.9rem;
+      color: #aaa;
+    }
+    .footer a {
+      color: #aaa;
+      text-decoration: none;
+      margin: 0 0.5rem;
+    }
+    .footer a:hover {
+      color: #fff;
+    }
+    .footer-logo {
+      margin-top: 1rem;
+      width: 100px;
     }
   </style>
 </head>
 <body>
+  <header>
+    <div class="logo">VOKA</div>
+    <p>Donnez une voix à votre succès</p>
+  </header>
 
-<header>
-  <h1>VOKA</h1>
-  <nav>
-    <a href="index.html">Accueil</a>
-    <a href="dashboard.html">Dashboard</a>
-    <a href="contact.html">Contact</a>
-  </nav>
-</header>
+  <section class="hero">
+    <h1>Terminez-en avec les 15 plateformes séparées</h1>
+    <p>Un seul écosystème complet, pensé par un entrepreneur pour les entrepreneurs modernes.<br>Simple, puissant, automatisé.</p>
+    <button class="cta">Découvrir les forfaits</button>
+  </section>
 
-<div class="container">
-  <h2>Conditions Générales d’Utilisation</h2>
-  <p>En utilisant la plateforme VOKA, vous acceptez sans réserve les présentes conditions générales.</p>
+  <div class="video-container">
+    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" frameborder="0" allowfullscreen></iframe>
+  </div>
 
-  <ul>
-    <li>Vous êtes seul responsable de l’utilisation de votre dashboard.</li>
-    <li>Vous comprenez que VOKA ne garantit aucun résultat (revenu, viralité, succès).</li>
-    <li>Les vidéos générées restent la propriété de l'utilisateur mais VOKA peut les utiliser à des fins marketing avec autorisation.</li>
-    <li>Le non-respect des règles peut entraîner la suspension ou suppression de l'accès.</li>
-    <li>Les paiements sont non remboursables, sauf exception définie contractuellement.</li>
-    <li>Les informations sont confidentielles et protégées par nos mesures de sécurité.</li>
-    <li>Les CGU peuvent être modifiées. Vous serez informé en cas de changement.</li>
-  </ul>
+  <section class="section">
+    <h2>Notre Écosystème</h2>
+    <div class="block">✅ VOKA Visionnaire – assistant IA stratégique qui s'adapte à vous</div>
+    <div class="block">✅ App mobile installable – votre entreprise au bout des doigts</div>
+    <div class="block">✅ Clone-to-Win + robot prospecteur intégré</div>
+    <div class="block">✅ VOKA Drop + bibliothèque intelligente de contenu</div>
+    <div class="block">✅ Vidéos stratégiques livrées en 72h max</div>
+    <div class="block">✅ Calendrier intelligent et connecté à vos objectifs</div>
+    <div class="block">✅ E.L.I.A – accompagnement personnalisé automatisé</div>
+    <div class="block">✅ Social Intelligence – votre IA collaborative et connectée</div>
+  </section>
 
-  <p>En cochant la case avant paiement, vous acceptez ces conditions de manière formelle.</p>
-</div>
+  <section class="section">
+    <h2>Comparatif visuel : VOKA vs les autres</h2>
+    <div class="block">
+      <p><strong>Agence classique :</strong> 10 000 $/mois<br>✔ Stratégie floue<br>✖ Automatisation<br>✖ App mobile<br>✖ Interconnexion</p>
+      <p><strong>9 plateformes séparées :</strong> 1350 $/mois<br>✔ Certains outils<br>✖ Synchronisation<br>✖ IA spécialisée<br>✖ Dashboard unique</p>
+      <p><strong>VOKA :</strong> 997 $/mois<br>✔ Automatisé<br>✔ Tout centralisé<br>✔ IA stratégique<br>✔ App mobile<br>✔ Visibilité immédiate</p>
+    </div>
+  </section>
 
-<footer>
-  © 2025 VOKA. Tous droits réservés. | info@getvoka.com
-</footer>
+  <section class="section">
+    <h2>Témoignages & FAQ</h2>
+    <div class="block">“Grâce à VOKA, j'ai doublé mes ventes en 30 jours.” — Julie C.</div>
+    <div class="block">Q: Est-ce compliqué à utiliser? <br>R: Non. Tout est automatisé et guidé pas à pas.</div>
+  </section>
 
+  <section class="section">
+    <h2>Prêt à faire décoller votre business?</h2>
+    <button class="cta">Je veux mon écosystème maintenant</button>
+  </section>
+
+  <footer class="footer">
+    <img src="logo-voka.png" alt="VOKA Logo" class="footer-logo" />
+    <p>Produit du Québec | <a href="cgu.html">Conditions d'utilisation</a> | <a href="politique-confidentialite.html">Politique de confidentialité</a> | <a href="mailto:info@getvoka.com">Nous contacter</a></p>
+  </footer>
 </body>
 </html>
