@@ -2,261 +2,150 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>VOKA - Donnez une voix à votre succès</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background: #0b0b0b;
+      background-color: #000;
       color: white;
-    }
-    h1, h2, h3 {
-      text-transform: uppercase;
-      letter-spacing: 1px;
-    }
-    .hero {
-      background: linear-gradient(120deg, #0b7a95, #0b0b0b);
-      padding: 100px 20px;
-      text-align: center;
-    }
-    .hero h1 {
-      font-size: 2.5rem;
-      animation: pulse 2s infinite;
-    }
-    .hero p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      margin-bottom: 30px;
-    }
-    @keyframes pulse {
-      0% { transform: scale(1); opacity: 1; }
-      50% { transform: scale(1.02); opacity: 0.95; }
-      100% { transform: scale(1); opacity: 1; }
-    }
-    .cta-button {
-      background-color: #0b7a95;
-      color: white;
-      padding: 14px 32px;
-      border: none;
-      border-radius: 50px;
-      font-size: 1.2rem;
-      cursor: pointer;
-      transition: 0.3s ease;
-    }
-    .cta-button:hover {
-      background-color: #870619;
     }
     section {
-      padding: 80px 20px;
-    }
-    .block {
-      max-width: 1200px;
-      margin: auto;
-      padding: 40px;
-      border-radius: 20px;
-      margin-bottom: 40px;
-      animation: fadeIn 1s ease forwards;
-      opacity: 0;
-    }
-    @keyframes fadeIn {
-      to { opacity: 1; transform: translateY(0); }
-      from { opacity: 0; transform: translateY(30px); }
-    }
-    .block-blue {
-      background: linear-gradient(120deg, #0b7a95, #052e4d);
-    }
-    .block-dark {
-      background: #111;
-    }
-    .video-container {
+      padding: 60px 20px;
       text-align: center;
-      margin-bottom: 40px;
     }
-    .video-container iframe {
-      width: 90%;
-      max-width: 960px;
-      height: 540px;
-      border-radius: 16px;
+    .hero {
+      background: linear-gradient(to bottom right, #0b7a95, #052e4d);
+      animation: fadeIn 2s ease-in-out;
+    }
+    .hero h1 {
+      font-size: 2rem;
+      animation: fadeInUp 2s ease-in-out forwards;
+    }
+    .hero p {
+      margin-top: 20px;
+      font-size: 1.2rem;
+      animation: fadeInUp 3s ease-in-out forwards;
+    }
+    .cta {
+      margin-top: 30px;
+      padding: 15px 25px;
+      font-size: 1.1rem;
+      background-color: #0b7a95;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      animation: pulse 4s infinite ease-in-out;
+    }
+    .cta:hover {
+      background-color: #870619;
     }
     .comparison-table {
       width: 100%;
       border-collapse: collapse;
-      margin-top: 30px;
+      margin-top: 40px;
     }
-    .comparison-table th,
-    .comparison-table td {
-      border: 1px solid #555;
+    .comparison-table th, .comparison-table td {
       padding: 12px;
-      text-align: center;
+      text-align: left;
+      border-bottom: 1px solid #333;
     }
     .comparison-table th {
       background-color: #0b7a95;
-      color: white;
+    }
+    .alt-section {
+      background-color: #111;
+    }
+    .gradient-section {
+      background: linear-gradient(to right, #0b7a95, #052e4d);
     }
     .footer {
-      background: black;
+      background-color: #000;
       text-align: center;
-      padding: 30px;
-      font-size: 0.9rem;
+      padding: 40px 20px;
     }
     .footer a {
-      color: #999;
+      color: #0b7a95;
+      margin: 0 10px;
       text-decoration: none;
-      margin: 0 12px;
     }
-    .footer img {
-      height: 50px;
-      margin-bottom: 10px;
+    .forfaits {
+      text-align: center;
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes pulse {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
     }
   </style>
 </head>
-
 <body>
-
-  <div class="hero">
-    <h1>VOKA — Donnez une voix à votre succès</h1>
-    <p>Un seul écosystème complet. Pensé par un entrepreneur, pour les entrepreneurs modernes.</p>
-    <a href="#forfaits"><button class="cta-button">Découvrir les forfaits</button></a>
-  </div>
-
-  <div class="video-container">
-    <iframe src="https://www.youtube.com/embed/DhFYB3N9VbE" frameborder="0" allowfullscreen></iframe>
-  </div>
-
-  <section class="block block-blue">
-    <h2>Assistant IA stratégique VOKA Visionnaire</h2>
-    <p>Un confident ultra intelligent pour guider chaque décision stratégique de ton entreprise.</p>
+  <section class="hero">
+    <h1>VOKA - Donnez une voix à votre succès</h1>
+    <p>Un seul écosystème complet, pensé par un entrepreneur pour les entrepreneurs modernes. Simple, puissant, automatisé.</p>
+    <button class="cta">Libère-toi maintenant</button>
   </section>
 
-  <section class="block block-dark">
-    <h2>App installable haute gamme</h2>
-    <p>Gère ton entreprise complète sur ton cellulaire comme une vraie appli mobile, disponible partout.</p>
+  <section class="alt-section">
+    <p style="font-style: italic;">« Le problème, ce n’est pas ton entreprise. C’est les outils que tu utilises pour la faire grandir. »</p>
   </section>
 
-  <section class="block block-blue">
-    <h2>Clone-to-Win + Robot Prospecteur</h2>
-    <p>Réutilise les vidéos performantes et laisse ton robot prospecter pour toi pendant que tu dors.</p>
+  <section class="gradient-section">
+    <p>Tu peux continuer comme avant. À bricoler. À espérer. À t’épuiser. Ou tu peux appuyer sur ce bouton. Et tout change.</p>
+    <button class="cta">Reprends le contrôle</button>
   </section>
 
-  <section class="block block-dark">
-    <h2>VOKA Drop + Bibliothèque intelligente</h2>
-    <p>Accès à une banque complète de contenus, scripts, prompts, outils pour faire croître ton entreprise.</p>
-  </section>
-
-  <section class="block block-blue">
-    <h2>Vidéos 4K livrées en 72h</h2>
-    <p>Vidéo livrée en moins de 72h, basée sur ta propre voix ou une voix IA de haute qualité.</p>
-  </section>
-
-  <section class="block block-dark">
-    <h2>Calendrier d'affaires intelligent intégré</h2>
-    <p>Planifie automatiquement tes rendez-vous et reçois des rappels directement depuis ton dashboard.</p>
-  </section>
-
-  <section class="block block-blue">
-    <h2>Elia — Accompagnement stratégique automatisé</h2>
-    <p>Chaque jour, ton assistant Elia te guide, t’inspire et t’aide à rester aligné sur tes objectifs.</p>
-  </section>
-
-  <section class="block block-dark">
-    <h2>IA Collaborative & Intelligence Sociale</h2>
-    <p>Une IA qui apprend avec toi, interagit avec tes clients, et renforce ton image publique automatiquement.</p>
-  </section>
-
-  <section class="block block-blue">
-    <h2>Comparatif : Plateformes vs VOKA</h2>
+  <section class="alt-section">
+    <h2>Comparatif : VOKA vs les plateformes classiques</h2>
     <table class="comparison-table">
-      <tr>
-        <th>Outil / Fonction</th>
-        <th>Ce que tu utilises</th>
-        <th>Combien tu paies</th>
-        <th>Ce que ça fait (vraiment)</th>
-        <th>VOKA</th>
-      </tr>
-      <tr>
-        <td>CRM</td>
-        <td>Outil séparé</td>
-        <td>297 $/mois</td>
-        <td>Interface froide, aucun support, fait tout seul</td>
-        <td>Intégré + connecté aux bots</td>
-      </tr>
-      <tr>
-        <td>Vidéos</td>
-        <td>Lumen5 / autre</td>
-        <td>149 $/mois</td>
-        <td>Montage manuel, lent, sans impact</td>
-        <td>Vidéo livrée 72h IA ou voix perso</td>
-      </tr>
-      <tr>
-        <td>App Mobile</td>
-        <td>Non incluse</td>
-        <td>—</td>
-        <td>Tu gères tout manuellement, pas d’accessibilité</td>
-        <td>PWA installable, tout au bout des doigts</td>
-      </tr>
-      <tr>
-        <td>Finances</td>
-        <td>Quickbooks</td>
-        <td>79 $/mois</td>
-        <td>Rien de connecté, comptabilité seule</td>
-        <td>CFO intégré connecté au reste</td>
-      </tr>
-      <tr>
-        <td>Total</td>
-        <td>+950 $/mois</td>
-        <td>Plusieurs plateformes</td>
-        <td>Non reliées, perte de temps et d’énergie</td>
-        <td><strong>VOKA = 997 $/mois, tout inclus</strong></td>
-      </tr>
+      <thead>
+        <tr>
+          <th>Fonction</th>
+          <th>Ce que tu utilises</th>
+          <th>Combien tu paies (CAD)</th>
+          <th>Et ça fait quoi ?</th>
+          <th>VOKA</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr><td>CRM</td><td>1 plateforme isolée</td><td>497$</td><td>Vieux, sans IA, aucun lien avec ton CFO ou tes vidéos</td><td>Intégré, connecté, IA intelligente</td></tr>
+        <tr><td>Créateur de tunnels</td><td>Funnel builder moyen</td><td>149$</td><td>Banal, zéro branding</td><td>Tunnel 8.0 immersif, haut de gamme</td></tr>
+        <tr><td>Vidéos promotionnelles</td><td>Logiciel IA basique</td><td>149$</td><td>Robotique, à refaire</td><td>Vidéos 4K livrées en 72h, IA ou ta voix</td></tr>
+        <tr><td>Finances</td><td>Comptabilité manuelle</td><td>100$+</td><td>Temps perdu, aucun lien avec tes leads</td><td>CFO intégré connecté au reste</td></tr>
+        <tr><td>App mobile</td><td>Aucune</td><td>-</td><td>Impossible de tout gérer</td><td>App PWA installable, design luxe</td></tr>
+      </tbody>
     </table>
   </section>
 
-  <section class="block block-dark">
-    <h2 id="forfaits">Forfaits VOKA</h2>
-    <p><strong>DÉCOUVERTE – 497 $/mois</strong><br/>
-      • 2 vidéos AI / mois<br/>
-      • Mini-site simplifié<br/>
-      • CFO & CRM de base<br/>
-      • Visionnaire IA (limité)<br/>
-      • Robots IA (limités)<br/>
-      • Calendrier, ressources inclus
-    </p>
-    <hr/>
-    <p><strong>SIGNATURE – 997 $/mois</strong><br/>
-      • 2 vidéos/semaine IA ou voix perso<br/>
-      • Mini-site personnalisé + Tunnel<br/>
-      • CFO / CRM complet<br/>
-      • Bots stratégiques<br/>
-      • App mobile installable<br/>
-      • VOKA Visionnaire complet<br/>
-      • Automatisation 95 %<br/>
-      • Livraison vidéos 72h
-    </p>
+  <section class="alt-section">
+    <h2>Tu as déjà tout essayé.</h2>
+    <p>Tu mérites une plateforme qui travaille pour toi. Tu peux continuer à te débattre... ou tu peux te libérer.</p>
+    <button class="cta">Oui, je veux VOKA</button>
   </section>
 
-  <section class="block block-blue">
-    <h2>Témoignages clients</h2>
-    <p>« J’ai tout arrêté… et j’ai embarqué avec VOKA. Depuis, tout est clair, structuré, automatisé. »<br/>
-    « Mes vidéos livrées en 48h ont généré plus de résultats que 3 mois de pub avec une agence. »</p>
+  <section class="forfaits gradient-section">
+    <h2>Forfaits VOKA</h2>
+    <p>À partir de seulement 997 $ – pour un écosystème complet et automatisé.</p>
+    <a href="#" class="cta">Voir les forfaits complets</a>
   </section>
 
-  <section class="block block-dark">
-    <h2>FAQ</h2>
-    <p><strong>Est-ce vraiment automatique ?</strong><br/>Oui, tout est généré automatiquement selon votre profil et vos objectifs.</p>
-    <p><strong>Est-ce adapté à mon domaine ?</strong><br/>VOKA détecte votre secteur et assigne les bons outils, bots et vidéos sur-mesure.</p>
-  </section>
-
-  <section class="block block-blue" style="text-align:center;">
-    <h2>Tu peux continuer à bricoler… ou devenir le patron de ton empire</h2>
-    <a href="#forfaits"><button class="cta-button">Libère-toi maintenant</button></a>
-  </section>
-
-  <div class="footer">
-    <img src="logo-voka.png" alt="Logo VOKA" />
-    <p>Produit du Québec | <a href="cgu.html">Conditions d'utilisation</a> | <a href="politique-confidentialite.html">Politique de confidentialité</a> | <a href="mailto:info@getvoka.com">Nous contacter</a></p>
-  </div>
-
+  <footer class="footer">
+    <img src="logo-voka.png" alt="Logo VOKA" height="40" /><br />
+    <p>Produit du Québec</p>
+    <a href="cgu.html">Conditions d'utilisation</a> |
+    <a href="politique-confidentialite.html">Politique de confidentialité</a> |
+    <a href="mailto:info@getvoka.com">Nous contacter</a>
+  </footer>
 </body>
 </html>
