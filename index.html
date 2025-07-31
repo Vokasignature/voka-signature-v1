@@ -97,6 +97,49 @@
   </style>
 </head>
 <body>
+  <section style="background: linear-gradient(to bottom, #004d5a, #002f35); padding: 100px 20px; text-align: center; color: #e6f9ff; font-family: 'Roboto', sans-serif;">
+  <h1 style="font-size: 42px; font-weight: bold; animation: fadeIn 2s ease-out;">VOKA - Donne une voix à ton succès</h1>
+  <p style="margin-top: 20px; font-size: 20px; max-width: 800px; margin-left: auto; margin-right: auto; animation: fadeIn 3s ease-out;">
+    Un seul écosystème complet, pensé par un entrepreneur pour les entrepreneurs modernes. Simple, puissant, automatisé.
+  </p>
+
+  <div style="margin-top: 40px; display: flex; flex-direction: column; align-items: center; justify-content: center;">
+    <video controls autoplay muted playsinline loop style="max-width: 90%; width: 720px; height: auto; border-radius: 20px; box-shadow: 0 0 20px rgba(0,0,0,0.4); animation: fadeIn 4s ease-out;">
+      <source src="https://voka-videos.s3.amazonaws.com/video-intro-voka.mp4" type="video/mp4">
+      Ton navigateur ne supporte pas la vidéo.
+    </video>
+
+    <a href="#forfaits" style="margin-top: 30px; padding: 14px 32px; font-size: 18px; background-color: #0b7a95; color: white; border-radius: 10px; text-decoration: none; font-weight: bold; transition: background 0.4s ease, transform 0.2s ease; animation: pulse 4s infinite;">
+      Libère-toi maintenant
+    </a>
+  </div>
+
+  <style>
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes pulse {
+      0% { box-shadow: 0 0 0 0 rgba(135,6,25, 0.6); }
+      70% { box-shadow: 0 0 0 20px rgba(135,6,25, 0); }
+      100% { box-shadow: 0 0 0 0 rgba(135,6,25, 0); }
+    }
+
+    a:hover {
+      background-color: #870619;
+      transform: scale(1.05);
+    }
+
+    @media only screen and (max-width: 768px) {
+      h1 { font-size: 32px; }
+      p { font-size: 16px; }
+      a { font-size: 16px; padding: 12px 24px; }
+      video { width: 100% !important; }
+    }
+  </style>
+</section>
+
   <div class="hero">
     <h1>VOKA - Donne une voix à ton succès</h1>
     <p>Un seul écosystème complet, pensé par un entrepreneur pour les entrepreneurs modernes. Simple, puissant, automatisé.</p>
