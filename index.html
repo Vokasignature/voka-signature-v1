@@ -2,150 +2,235 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>VOKA - Donnez une voix à votre succès</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>VOKA - Donne une voix à ton succès</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
   <style>
     body {
       margin: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #000;
+      background: linear-gradient(to bottom, #035865, #000000);
       color: white;
+    }
+    header {
+      text-align: center;
+      padding: 60px 20px 40px;
+    }
+    header h1 {
+      font-size: 2.5rem;
+      animation: pulse 3s infinite;
     }
     section {
-      padding: 60px 20px;
+      padding: 40px 20px;
       text-align: center;
     }
-    .hero {
-      background: linear-gradient(to bottom right, #0b7a95, #052e4d);
-      animation: fadeIn 2s ease-in-out;
+    .fade-in {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 1s ease-out forwards;
     }
-    .hero h1 {
-      font-size: 2rem;
-      animation: fadeInUp 2s ease-in-out forwards;
-    }
-    .hero p {
-      margin-top: 20px;
-      font-size: 1.2rem;
-      animation: fadeInUp 3s ease-in-out forwards;
-    }
-    .cta {
-      margin-top: 30px;
-      padding: 15px 25px;
-      font-size: 1.1rem;
+    .delay-1 { animation-delay: 0.5s; }
+    .delay-2 { animation-delay: 1.5s; }
+    .delay-3 { animation-delay: 2.5s; }
+    .btn {
       background-color: #0b7a95;
       color: white;
+      padding: 14px 28px;
       border: none;
       border-radius: 5px;
       cursor: pointer;
-      animation: pulse 4s infinite ease-in-out;
+      margin-top: 20px;
+      font-weight: bold;
+      animation: breathe 4s infinite;
     }
-    .cta:hover {
+    .btn:hover {
       background-color: #870619;
     }
-    .comparison-table {
-      width: 100%;
-      border-collapse: collapse;
+    .table-container {
+      overflow-x: auto;
       margin-top: 40px;
     }
-    .comparison-table th, .comparison-table td {
-      padding: 12px;
-      text-align: left;
-      border-bottom: 1px solid #333;
+    table {
+      width: 100%;
+      max-width: 1200px;
+      margin: auto;
+      border-collapse: collapse;
+      color: white;
     }
-    .comparison-table th {
+    th, td {
+      border: 1px solid #0b7a95;
+      padding: 14px;
+      text-align: left;
+    }
+    th {
       background-color: #0b7a95;
     }
-    .alt-section {
-      background-color: #111;
-    }
-    .gradient-section {
-      background: linear-gradient(to right, #0b7a95, #052e4d);
+    .forfaits {
+      background-color: #000;
+      padding: 60px 20px;
     }
     .footer {
-      background-color: #000;
       text-align: center;
-      padding: 40px 20px;
+      padding: 20px;
+      background-color: black;
+      font-size: 0.9rem;
     }
     .footer a {
       color: #0b7a95;
       margin: 0 10px;
       text-decoration: none;
     }
-    .forfaits {
-      text-align: center;
+    video {
+      max-width: 80%;
+      margin-top: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 15px #0b7a95;
     }
-    @keyframes fadeIn {
-      from { opacity: 0; }
-      to { opacity: 1; }
-    }
+
+    /* Animations */
     @keyframes fadeInUp {
-      from { opacity: 0; transform: translateY(40px); }
-      to { opacity: 1; transform: translateY(0); }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
     }
-    @keyframes pulse {
+
+    @keyframes breathe {
       0% { transform: scale(1); }
       50% { transform: scale(1.05); }
       100% { transform: scale(1); }
     }
+
+    @keyframes pulse {
+      0% { color: #fff; }
+      50% { color: #0b7a95; }
+      100% { color: #fff; }
+    }
+
+    .subtitle {
+      font-size: 1.2rem;
+      margin-top: 20px;
+    }
+    .impact {
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-top: 40px;
+    }
   </style>
 </head>
 <body>
-  <section class="hero">
-    <h1>VOKA - Donnez une voix à votre succès</h1>
-    <p>Un seul écosystème complet, pensé par un entrepreneur pour les entrepreneurs modernes. Simple, puissant, automatisé.</p>
-    <button class="cta">Libère-toi maintenant</button>
+
+  <header>
+    <h1>VOKA - Donne une voix à ton succès</h1>
+    <p class="subtitle">Un seul écosystème complet, pensé par un entrepreneur pour les entrepreneurs modernes. Simple, puissant, automatisé.</p>
+    <button class="btn">Libère-toi maintenant</button>
+    <video controls autoplay muted loop>
+      <source src="https://cdn.videvo.net/videvo_files/video/free/2019-07/small_watermarked/190616_C_004_preview.webm" type="video/webm">
+      Ton navigateur ne supporte pas la vidéo.
+    </video>
+  </header>
+
+  <section>
+    <p class="fade-in delay-1 impact">« Le problème, ce n’est pas ton entreprise. C’est les outils que tu utilises pour la faire grandir. »</p>
+    <p class="fade-in delay-2 impact">Tu peux continuer comme avant. À bricoler. À espérer. À t’épuiser. <br>Ou tu peux appuyer sur ce bouton. Et tout change.</p>
+    <button class="btn">Reprends le contrôle</button>
   </section>
 
-  <section class="alt-section">
-    <p style="font-style: italic;">« Le problème, ce n’est pas ton entreprise. C’est les outils que tu utilises pour la faire grandir. »</p>
+  <section>
+    <h2>VOKA vs les autres plateformes</h2>
+    <div class="table-container">
+      <table>
+        <thead>
+          <tr>
+            <th>Fonction</th>
+            <th>Ce que tu utilises</th>
+            <th>Coût CAD/mois</th>
+            <th>Résultat</th>
+            <th>VOKA</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>CRM</td>
+            <td>Hubspot, Salesforce</td>
+            <td>497$</td>
+            <td>Désorganisé, sans IA</td>
+            <td>IA connectée à ton CFO et tunnels</td>
+          </tr>
+          <tr>
+            <td>Tunnels</td>
+            <td>ClickFunnels, Systeme.io</td>
+            <td>149-297$</td>
+            <td>Funnel moyen, pas de branding</td>
+            <td>Tunnel 8.0 immersif, branding luxe</td>
+          </tr>
+          <tr>
+            <td>Vidéos</td>
+            <td>Logiciel IA basique</td>
+            <td>149$/vidéo</td>
+            <td>Générique, à refaire</td>
+            <td>Livrée en 72h, voix IA ou toi</td>
+          </tr>
+          <tr>
+            <td>Finances</td>
+            <td>Excel ou Quickbooks</td>
+            <td>100$+</td>
+            <td>Temps perdu, erreurs</td>
+            <td>CFO intelligent connecté à tout</td>
+          </tr>
+          <tr>
+            <td>App mobile</td>
+            <td>Aucune</td>
+            <td>-</td>
+            <td>Rien à distance</td>
+            <td>App PWA luxe installable</td>
+          </tr>
+          <tr>
+            <td>Prospection</td>
+            <td>Aucun bot</td>
+            <td>-</td>
+            <td>Tu fais tout</td>
+            <td>Bot prospecteur VOKA</td>
+          </tr>
+          <tr>
+            <td>IA stratégique</td>
+            <td>Rien</td>
+            <td>-</td>
+            <td>Aucune aide</td>
+            <td>VOKA Visionnaire intégré</td>
+          </tr>
+          <tr>
+            <td>Montage vidéo</td>
+            <td>Freelance ou manuel</td>
+            <td>200$+</td>
+            <td>Long, coûteux</td>
+            <td>Intégré, rapide, stylisé</td>
+          </tr>
+          <tr>
+            <td>Support entreprise</td>
+            <td>Rien</td>
+            <td>-</td>
+            <td>Tu te débrouilles</td>
+            <td>Bibliothèque Ressources VOKA</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
   </section>
 
-  <section class="gradient-section">
-    <p>Tu peux continuer comme avant. À bricoler. À espérer. À t’épuiser. Ou tu peux appuyer sur ce bouton. Et tout change.</p>
-    <button class="cta">Reprends le contrôle</button>
-  </section>
-
-  <section class="alt-section">
-    <h2>Comparatif : VOKA vs les plateformes classiques</h2>
-    <table class="comparison-table">
-      <thead>
-        <tr>
-          <th>Fonction</th>
-          <th>Ce que tu utilises</th>
-          <th>Combien tu paies (CAD)</th>
-          <th>Et ça fait quoi ?</th>
-          <th>VOKA</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td>CRM</td><td>1 plateforme isolée</td><td>497$</td><td>Vieux, sans IA, aucun lien avec ton CFO ou tes vidéos</td><td>Intégré, connecté, IA intelligente</td></tr>
-        <tr><td>Créateur de tunnels</td><td>Funnel builder moyen</td><td>149$</td><td>Banal, zéro branding</td><td>Tunnel 8.0 immersif, haut de gamme</td></tr>
-        <tr><td>Vidéos promotionnelles</td><td>Logiciel IA basique</td><td>149$</td><td>Robotique, à refaire</td><td>Vidéos 4K livrées en 72h, IA ou ta voix</td></tr>
-        <tr><td>Finances</td><td>Comptabilité manuelle</td><td>100$+</td><td>Temps perdu, aucun lien avec tes leads</td><td>CFO intégré connecté au reste</td></tr>
-        <tr><td>App mobile</td><td>Aucune</td><td>-</td><td>Impossible de tout gérer</td><td>App PWA installable, design luxe</td></tr>
-      </tbody>
-    </table>
-  </section>
-
-  <section class="alt-section">
-    <h2>Tu as déjà tout essayé.</h2>
-    <p>Tu mérites une plateforme qui travaille pour toi. Tu peux continuer à te débattre... ou tu peux te libérer.</p>
-    <button class="cta">Oui, je veux VOKA</button>
-  </section>
-
-  <section class="forfaits gradient-section">
+  <section class="forfaits">
     <h2>Forfaits VOKA</h2>
-    <p>À partir de seulement 997 $ – pour un écosystème complet et automatisé.</p>
-    <a href="#" class="cta">Voir les forfaits complets</a>
+    <p>À partir de seulement 997 $ – pour un écosystème complet et automatisé.</p>
+    <button class="btn" onclick="location.href='forfaits.html'">Voir les forfaits complets</button>
   </section>
 
   <footer class="footer">
-    <img src="logo-voka.png" alt="Logo VOKA" height="40" /><br />
-    <p>Produit du Québec</p>
+    <img src="logo-voka.png" alt="Logo VOKA" width="100"><br>
+    Produit du Québec<br><br>
     <a href="cgu.html">Conditions d'utilisation</a> |
-    <a href="politique-confidentialite.html">Politique de confidentialité</a> |
-    <a href="mailto:info@getvoka.com">Nous contacter</a>
+    <a href="confidentialite.html">Politique de confidentialité</a> |
+    <a href="contact.html">Nous contacter</a>
   </footer>
+
 </body>
 </html>
